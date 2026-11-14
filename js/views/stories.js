@@ -1,6 +1,6 @@
 // القسم 2: الحكايات «الشاهد يحكي» — قائمة القصص + مشغّل الفيلم التفاعلي.
 // يقرأ النص من content/stories.json والإخراج البصري من content/scenes.json.
-import { store, content, pick, fill, html, wait } from '../core.js';
+import { content, fill, html, num, pick, store, wait } from '../core.js';
 import { Stage, thumbnail } from '../film/engine.js';
 import { createSiraj } from '../siraj.js';
 import { sparkle } from '../sky.js';
@@ -11,46 +11,82 @@ const WORD_MS = 150;
 const STAR = '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3l6.2 13.400 14.600 1.700-10.800 10 2.900 14.400L24 35.300 11.100 42.500 14 28.100 3.200 18.100l14.600-1.700z" fill="#ffd77a" stroke="#fff4cf" stroke-width="2" stroke-linejoin="round"/></svg>';
 
 export default async function stories(el, ctx) {
-  const [data, scenes] = await Promise.all([content('stories'), content('scenes')]);
+  const [data, scenes, lib] = await Promise.all([content('stories'), content('scenes'), content('library')]);
   const story = data.stories.find(s => s.id === ctx.args[0]);
-  return story ? player(el, ctx, story, scenes[story.id] || {}) : list(el, ctx, data.stories, scenes);
+  return story ? player(el, ctx, story, scenes[story.id] || {}) : list(el, ctx, data.stories, scenes, lib);
 }
 
-// ——— قائمة الحكايات ———
-function list(el, { ui, go }, all, scenes) {
-  const t = ui.stories;
+// ——— مكتبة الحكايات: رفوف، وفي كل رف دروس مرتّبة (content/library.json) ———
+function list(el, { ui, go }, all, scenes, lib) {
+  const t = ui.stories, byId = Object.fromEntries(all.map(s => [s.id, s]));
+  const shelves = lib.shelves.map(sh => ({ ...sh, ready: sh.items.filter(it => byId[it.story]) }));
   const page = html(`
-    <section class="page">
+    <section class="page lib">
       <header class="page__head">
         <a class="backlink" href="#/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span></span></a>
         <h1></h1><p></p>
       </header>
-      <div class="cards"></div>
+      <nav class="lib__shelves"></nav>
+      <div class="lib__head"><h2></h2><p></p></div>
+      <ol class="lib__path"></ol>
     </section>`);
-  page.querySelector('.backlink span').textContent = t.back;
-  page.querySelector('h1').textContent = t.title;
-  page.querySelector('.page__head p').textContent = t.sub;
-  const cards = page.querySelector('.cards');
-  all.forEach((s, i) => {
-    const dir = scenes[s.id] || {};
-    const spec = dir.scenes?.[dir.thumb || 0] || FALLBACK;
-    const done = store.state.completed.includes(s.id);
-    const a = html(`
-      <a class="card" href="#/stories/${encodeURIComponent(s.id)}" style="--i:${i}">
-        ${thumbnail(spec)}
-        <span class="card__tag"></span>
-        <span class="card__body"><b></b><small></small></span>
-      </a>`);
-    a.querySelector('b').textContent = s.title;
-    a.querySelector('small').textContent = s.category;
-    const tag = a.querySelector('.card__tag');
-    tag.textContent = done ? `★ ${t.done}` : t.new;
-    tag.classList.toggle('is-done', done);
-    a.addEventListener('click', e => { e.preventDefault(); sfx.door(); go(a.getAttribute('href'), a); });
-    cards.append(a);
+  const $ = q => page.querySelector(q);
+  $('.backlink span').textContent = t.back;
+  $('h1').textContent = t.title;
+  $('.page__head p').textContent = t.sub;
+  $('.backlink').addEventListener('click', () => sfx.tap());
+  const nav = $('.lib__shelves'), path = $('.lib__path');
+  nav.setAttribute('aria-label', t.shelves_label);
+
+  function show(id, quiet) {
+    const sh = shelves.find(x => x.id === id) || shelves[0];
+    store.set({ shelf: sh.id });
+    nav.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.id === sh.id));
+    const read = sh.ready.filter(it => store.state.completed.includes(it.story)).length;
+    $('.lib__head h2').textContent = sh.title;
+    $('.lib__head p').textContent = sh.ready.length ? `${sh.sub} · ${fill(t.shelf_progress, { i: num(read), n: num(sh.ready.length) })}` : sh.sub;
+    path.textContent = '';
+    const nextUp = sh.ready.find(it => !store.state.completed.includes(it.story));
+    sh.items.forEach((it, i) => {
+      const s = byId[it.story], li = html(`<li class="lib__step" style="--i:${Math.min(i, 8)}"><b class="lib__num"></b></li>`);
+      li.querySelector('b').textContent = num(i + 1);
+      if (s) {
+        const dir = scenes[s.id] || {}, spec = dir.scenes?.[dir.thumb || 0] || FALLBACK, done = store.state.completed.includes(s.id);
+        const a = html(`
+          <a class="card" href="#/stories/${encodeURIComponent(s.id)}">
+            ${thumbnail(spec)}
+            <span class="card__tag"></span>
+            <span class="card__body"><small></small><b></b></span>
+          </a>`);
+        a.querySelector('b').textContent = s.title;
+        a.querySelector('small').textContent = it.name;
+        const tag = a.querySelector('.card__tag');
+        tag.textContent = done ? `★ ${t.done}` : it === nextUp ? t.next_up : t.new;
+        tag.classList.toggle('is-done', done);
+        li.classList.toggle('is-done', done); li.classList.toggle('is-next', it === nextUp);
+        a.addEventListener('click', e => { e.preventDefault(); sfx.door(); go(a.getAttribute('href'), a); });
+        li.append(a);
+      } else {
+        const d = html('<div class="lib__soon"><span></span><small></small></div>');
+        d.querySelector('span').textContent = it.name;
+        d.querySelector('small').textContent = t.soon;
+        li.classList.add('is-soon'); li.append(d);
+      }
+      path.append(li);
+    });
+    if (!quiet) sfx.tap();
+  }
+
+  shelves.forEach(sh => {
+    const b = html('<button class="lib__shelf" type="button" aria-pressed="false"><b></b><small></small></button>');
+    b.dataset.id = sh.id;
+    b.querySelector('b').textContent = sh.title;
+    b.querySelector('small').textContent = sh.ready.length ? num(sh.ready.length) : t.soon;
+    b.addEventListener('click', () => { show(sh.id); b.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' }); });
+    nav.append(b);
   });
-  page.querySelector('.backlink').addEventListener('click', () => sfx.tap());
   el.append(page);
+  show(shelves.some(x => x.id === store.state.shelf) ? store.state.shelf : (shelves.find(x => x.ready.length) || shelves[0]).id, true);
 }
 
 // ——— مشغّل الفيلم ———
