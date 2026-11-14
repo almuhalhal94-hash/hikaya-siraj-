@@ -247,7 +247,7 @@
     view.innerHTML = ''; view.className = 'view out v-' + (HS.views[parts[0]] ? parts[0] : 'home'); view.scrollTop = 0;
     document.body.classList.remove('in-story');
     cur = v; $('#hud-back').hidden = v === HS.views.home; HS.backTo = v.back || 'home';
-    try { v.enter(view, parts[1]); } catch (e) { console.error(e); }
+    try { v.enter(view, parts[1], parts[2]); } catch (e) { console.error(e); }
     HS.hud();
     requestAnimationFrame(() => requestAnimationFrame(() => view.classList.remove('out')));
     busy = false;
