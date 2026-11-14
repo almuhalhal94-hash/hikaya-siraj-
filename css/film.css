@@ -198,3 +198,78 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .fcard__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 4px; }
 .btn--ghost { background: rgba(30, 60, 107, .7); color: var(--gold); border: 2px solid var(--gold-deep); box-shadow: 0 5px 0 #0a1630; }
 .btn--ghost:active { box-shadow: 0 1px 0 #0a1630; }
+
+
+/* ——— داخل الغار: إضافات كهف الفتية (النهار، ميل الشمس، الكلب بالوصيد) ——— */
+.cv-day { opacity: 0; transition: opacity 5s ease; }
+[data-sky="day"] .cv-day { opacity: 1; }
+.stage[data-set="cave"][data-sky="day"] .stars { opacity: .05; }
+.cv-sun { opacity: 0; transition: opacity 5s ease; }
+[data-sun="rise"] .cv-sun--rise, [data-sun="set"] .cv-sun--set { opacity: .55; }
+.cv-dog { opacity: 0; transition: opacity 2.4s ease; }
+[data-dog="on"] .cv-dog { opacity: 1; }
+
+/* ——— البحر والسفينة ——— */
+.se-ship, .se-rock, .se-light, .se-whale, .se-yaqtin, .se-sun, .dp-whale, .dp-bob, .dp-glow, .dp-weed path { transform-box: fill-box; transform-origin: center; }
+.se-dawn, .se-storm, .se-clouds { opacity: 0; transition: opacity 6s ease; }
+.se-moon { transition: opacity 5s ease; }
+.se-sun { opacity: 0; transform: translateY(200px); transition: transform 13s cubic-bezier(.2, .6, .3, 1), opacity 5s ease; }
+[data-set="sea"][data-time="dawn"] .se-dawn { opacity: 1; }
+[data-set="sea"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="sea"][data-time="dawn"] .se-moon { opacity: .1; }
+[data-set="sea"][data-time="dawn"] .se-sun { opacity: 1; transform: none; }
+[data-sky="storm"] .se-storm { opacity: .82; } [data-sky="storm"] .se-clouds { opacity: 1; }
+[data-set="sea"][data-sky="storm"] .stars, [data-sky="storm"] .se-moon { opacity: 0; }
+.se-clouds ellipse { animation: se-drift 16s ease-in-out infinite alternate; } .se-clouds ellipse:nth-child(even) { animation-duration: 22s; animation-direction: alternate-reverse; }
+@keyframes se-drift { from { transform: translateX(-60px); } to { transform: translateX(60px); } }
+.se-wave { animation: se-wave 9s linear infinite; transition: transform 4s ease; }
+.se-wave--far { animation-duration: 16s; } .se-wave--near { animation-duration: 7s; animation-direction: reverse; } .se-wave--front { animation-duration: 11s; }
+@keyframes se-wave { to { translate: var(--len) 0; } }
+.se-water { transition: opacity 3s ease, transform 4s ease; transform-origin: 600px 900px; }
+[data-waves="high"] .se-water { transform: translateY(-14px); }
+[data-waves="high"] .se-wave { animation-duration: 3.4s; }
+.se-rock { transform-origin: 50% 92%; animation: se-rock 5s ease-in-out infinite; }
+[data-waves="high"] .se-rock { animation: se-rock-high 2.2s ease-in-out infinite; }
+@keyframes se-rock { 0%, 100% { transform: rotate(-2deg) translateY(0); } 50% { transform: rotate(2.4deg) translateY(-6px); } }
+@keyframes se-rock-high { 0%, 100% { transform: rotate(-8deg) translateY(8px); } 50% { transform: rotate(9deg) translateY(-22px); } }
+.se-ship { transition: transform 9s ease-in, opacity 6s ease; }
+[data-ship="gone"] .se-ship { transform: translateX(900px) scale(.6); opacity: 0; }
+[data-ship="none"] .se-ship { opacity: 0; transition: none; }
+.se-sail { transition: opacity 2s ease; } [data-sail="off"] .se-sail { opacity: 0; }
+.se-hills, .se-ground, .se-judi, .se-shore, .se-whale, .se-rain { opacity: 0; transition: opacity 3s ease; }
+[data-land="dry"] .se-hills, [data-land="dry"] .se-ground { opacity: 1; } [data-land="dry"] .se-ground--lit { opacity: .5; }
+[data-land="dry"] .se-water { opacity: 0; }
+[data-land="dry"] .se-rock { animation: none; }
+[data-land="judi"] .se-judi { opacity: 1; } [data-land="judi"] .se-rock { animation: none; transform: rotate(-2deg); }
+[data-shore="on"] .se-shore { opacity: 1; }
+.se-wave--front { transition: opacity 3s ease; } [data-shore="on"] .se-wave--front { opacity: 0; }
+.se-yaqtin { transform-origin: 30% 100%; transform: scale(.2); opacity: 0; transition: transform 5s var(--ease-out) 1.5s, opacity 2s ease 1.5s; }
+[data-shore="on"] .se-yaqtin { transform: none; opacity: 1; }
+.se-whale { transform: translateY(70px); transition: transform 3s var(--ease-out), opacity 2s ease; }
+[data-whale="on"] .se-whale { opacity: 1; transform: none; animation: se-rock 4s ease-in-out infinite; }
+.se-light { opacity: 0; transition: transform 5s ease-in-out, opacity 3s ease; animation: st-breathe 3.6s ease-in-out infinite; }
+[data-light="ship"] .se-light { opacity: 1; }
+[data-light="water"] .se-light { opacity: .75; transform: translate(300px, 120px) scale(.55); animation: none; }
+[data-light="shore"] .se-light { opacity: 1; transform: translate(-300px, 200px) scale(1.5); animation: none; }
+[data-rain="on"] .se-rain { opacity: .6; animation: se-rain .5s linear infinite; }
+@keyframes se-rain { from { transform: translate(40px, -130px); } to { transform: translate(0, 0); } }
+.stage[data-set="sea"] .stage__tint { background: linear-gradient(180deg, rgba(255, 176, 90, .0) 40%, rgba(255, 190, 110, .3)); }
+.stage[data-set="sea"][data-time="dawn"] .stage__tint { opacity: 1; }
+
+/* ——— الأعماق والحوت ——— */
+.dp-rays { opacity: .5; transition: opacity 4s ease; animation: ms-ray 7s ease-in-out infinite; }
+.dp-fish { animation: dp-swim 26s linear infinite; }
+@keyframes dp-swim { from { transform: translateX(500px); } to { transform: translateX(-900px); } }
+.dp-bob { animation: dp-bob 6s ease-in-out infinite; }
+@keyframes dp-bob { 0%, 100% { transform: translateY(0) rotate(-1.5deg); } 50% { transform: translateY(-22px) rotate(1.5deg); } }
+.dp-whale { transition: transform 11s ease-in-out; }
+[data-whale="far"] .dp-whale { transform: translate(240px, 60px) scale(.62); }
+[data-whale="rise"] .dp-whale { transform: translate(-80px, -150px) rotate(-10deg); }
+.dp-glow { opacity: 0; transition: opacity 3s ease; animation: st-breathe 3.4s ease-in-out infinite; }
+[data-glow="faint"] .dp-glow { opacity: .3; } [data-glow="full"] .dp-glow { opacity: 1; }
+.dp-dark { opacity: 0; transition: opacity 4s ease; }
+[data-dark="on"] .dp-dark { opacity: .5; } [data-dark="on"] .dp-rays { opacity: .06; }
+[data-glow="full"] .dp-dark { opacity: .12; }
+.dp-weed path { transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; } .dp-weed path:nth-child(even) { animation-delay: -3s; animation-duration: 9s; }
+.stage[data-set="deep"] .stage__tint { background: radial-gradient(circle at 50% 52%, rgba(255, 215, 122, .34), transparent 62%); }
+.stage[data-set="deep"][data-glow="full"] .stage__tint { opacity: 1; }

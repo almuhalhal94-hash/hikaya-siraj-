@@ -1,27 +1,800 @@
 {
-  "_schema": "الإخراج البصري لكل قصة (المفتاح = id القصة في stories.json). لكل مشهد بنفس ترتيب القصة: set الديكور (mountain جبل، cave داخل الغار، mosque المسجد)، state حالته، camera حركة الكاميرا من/إلى [x, y, حجم اللقطة] على لوحة 1200×800 ومدتها dur بالثواني، fx الجزيئات (dust غبار، motes ذرات نور، wind ريح، leaves ورق يتساقط)، sfx المؤثر الصوتي. thumb رقم المشهد المستخدم صورةً للبطاقة. choice.state ما يتغير في اللقطة عند الاختيار الصحيح.",
+  "_schema": "الإخراج البصري لكل قصة (المفتاح = id القصة في stories.json). لكل مشهد بنفس ترتيب القصة: set الديكور (mountain جبل، cave داخل الغار، mosque المسجد، sea البحر والسفينة، deep أعماق البحر والحوت)، state حالته، camera حركة الكاميرا من/إلى [x, y, حجم اللقطة] على لوحة 1200×800 ومدتها dur بالثواني، fx الجزيئات (dust غبار، motes ذرات نور، wind ريح، leaves ورق يتساقط، bubbles فقاعات)، sfx المؤثر الصوتي. thumb رقم المشهد المستخدم صورةً للبطاقة. choice.state ما يتغير في اللقطة عند الاختيار الصحيح.",
   "ghar-thawr": {
     "thumb": 0,
     "scenes": [
-      { "set": "mountain", "state": { "time": "night", "cave": "dim" }, "camera": { "from": [600, 430, 760], "to": [610, 320, 430], "dur": 16 }, "fx": ["wind"], "sfx": "wind" },
-      { "set": "mountain", "state": { "time": "night", "cave": "dim", "trail": "on" }, "camera": { "from": [470, 640, 480], "to": [590, 400, 460], "dur": 13 }, "fx": ["wind", "dust"], "sfx": "wind" },
-      { "set": "cave", "state": { "light": "faint", "feet": "none" }, "camera": { "from": [600, 470, 700], "to": [600, 450, 560], "dur": 14 }, "fx": ["dust"], "sfx": "glow" },
-      { "set": "cave", "state": { "light": "faint", "feet": "present" }, "camera": { "from": [600, 450, 560], "to": [606, 480, 450], "dur": 10 }, "fx": ["dust", "wind"], "sfx": "steps" },
-      { "set": "cave", "state": { "light": "full", "feet": "leaving" }, "camera": { "from": [606, 480, 450], "to": [600, 450, 640], "dur": 14 }, "fx": ["motes"], "sfx": "glow" },
-      { "set": "mountain", "state": { "time": "dawn", "cave": "bright" }, "camera": { "from": [610, 320, 440], "to": [640, 400, 760], "dur": 16 }, "fx": ["motes"], "sfx": "wind" }
+      {
+        "set": "mountain",
+        "state": {
+          "time": "night",
+          "cave": "dim"
+        },
+        "camera": {
+          "from": [
+            600,
+            430,
+            760
+          ],
+          "to": [
+            610,
+            320,
+            430
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "night",
+          "cave": "dim",
+          "trail": "on"
+        },
+        "camera": {
+          "from": [
+            470,
+            640,
+            480
+          ],
+          "to": [
+            590,
+            400,
+            460
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind",
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "faint",
+          "feet": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            470,
+            700
+          ],
+          "to": [
+            600,
+            450,
+            560
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "faint",
+          "feet": "present"
+        },
+        "camera": {
+          "from": [
+            600,
+            450,
+            560
+          ],
+          "to": [
+            606,
+            480,
+            450
+          ],
+          "dur": 10
+        },
+        "fx": [
+          "dust",
+          "wind"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "full",
+          "feet": "leaving"
+        },
+        "camera": {
+          "from": [
+            606,
+            480,
+            450
+          ],
+          "to": [
+            600,
+            450,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "dawn",
+          "cave": "bright"
+        },
+        "camera": {
+          "from": [
+            610,
+            320,
+            440
+          ],
+          "to": [
+            640,
+            400,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      }
     ],
-    "choice": { "state": { "light": "full" } }
+    "choice": {
+      "state": {
+        "light": "full"
+      }
+    }
   },
   "jidh-alnakhla": {
     "thumb": 1,
     "scenes": [
-      { "set": "mosque", "state": { "jidh": "normal" }, "camera": { "from": [600, 380, 760], "to": [680, 400, 540], "dur": 15 }, "fx": ["dust"], "sfx": "glow" },
-      { "set": "mosque", "state": { "jidh": "happy" }, "camera": { "from": [680, 400, 540], "to": [700, 410, 440], "dur": 12 }, "fx": ["dust", "motes"], "sfx": "star" },
-      { "set": "mosque", "state": { "jidh": "lonely", "minbar": "on" }, "camera": { "from": [700, 410, 460], "to": [560, 420, 560], "dur": 13 }, "fx": ["dust"], "sfx": "creak" },
-      { "set": "mosque", "state": { "jidh": "cry", "minbar": "on" }, "camera": { "from": [600, 420, 540], "to": [700, 400, 440], "dur": 11 }, "fx": ["leaves"], "sfx": "creak" },
-      { "set": "mosque", "state": { "jidh": "embrace", "minbar": "on" }, "camera": { "from": [700, 400, 440], "to": [700, 410, 480], "dur": 12 }, "fx": ["motes"], "sfx": "glow" },
-      { "set": "mosque", "state": { "jidh": "calm", "minbar": "on" }, "camera": { "from": [700, 410, 480], "to": [600, 380, 760], "dur": 16 }, "fx": ["dust", "motes"], "sfx": "glow" }
+      {
+        "set": "mosque",
+        "state": {
+          "jidh": "normal"
+        },
+        "camera": {
+          "from": [
+            600,
+            380,
+            760
+          ],
+          "to": [
+            680,
+            400,
+            540
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "jidh": "happy"
+        },
+        "camera": {
+          "from": [
+            680,
+            400,
+            540
+          ],
+          "to": [
+            700,
+            410,
+            440
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "dust",
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "jidh": "lonely",
+          "minbar": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            410,
+            460
+          ],
+          "to": [
+            560,
+            420,
+            560
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "jidh": "cry",
+          "minbar": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            540
+          ],
+          "to": [
+            700,
+            400,
+            440
+          ],
+          "dur": 11
+        },
+        "fx": [
+          "leaves"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "jidh": "embrace",
+          "minbar": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            400,
+            440
+          ],
+          "to": [
+            700,
+            410,
+            480
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "jidh": "calm",
+          "minbar": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            410,
+            480
+          ],
+          "to": [
+            600,
+            380,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust",
+          "motes"
+        ],
+        "sfx": "glow"
+      }
     ],
-    "choice": { "state": { "jidh": "embrace" } }
+    "choice": {
+      "state": {
+        "jidh": "embrace"
+      }
+    }
+  },
+  "hut-yunus": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "deep",
+        "state": {
+          "whale": "far"
+        },
+        "camera": {
+          "from": [
+            600,
+            400,
+            780
+          ],
+          "to": [
+            640,
+            430,
+            640
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "bubbles"
+        ],
+        "sfx": "bubble"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "night",
+          "light": "ship"
+        },
+        "camera": {
+          "from": [
+            520,
+            420,
+            760
+          ],
+          "to": [
+            600,
+            420,
+            520
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "night",
+          "waves": "high",
+          "light": "water",
+          "whale": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            520
+          ],
+          "to": [
+            760,
+            470,
+            520
+          ],
+          "dur": 11
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "deep",
+        "state": {
+          "dark": "on",
+          "glow": "faint"
+        },
+        "camera": {
+          "from": [
+            640,
+            380,
+            700
+          ],
+          "to": [
+            620,
+            440,
+            520
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "bubbles"
+        ],
+        "sfx": "bubble"
+      },
+      {
+        "set": "deep",
+        "state": {
+          "dark": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            440,
+            520
+          ],
+          "to": [
+            620,
+            440,
+            600
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "bubbles",
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "ship": "none",
+          "shore": "on",
+          "light": "shore"
+        },
+        "camera": {
+          "from": [
+            520,
+            500,
+            760
+          ],
+          "to": [
+            360,
+            560,
+            640
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wave"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
+  },
+  "safinat-nuh": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "land": "dry",
+          "sail": "off"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            780
+          ],
+          "to": [
+            600,
+            430,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "land": "dry",
+          "sail": "off",
+          "light": "ship"
+        },
+        "camera": {
+          "from": [
+            600,
+            430,
+            560
+          ],
+          "to": [
+            640,
+            440,
+            460
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust",
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "land": "dry",
+          "sail": "off",
+          "sky": "storm",
+          "rain": "on",
+          "light": "ship"
+        },
+        "camera": {
+          "from": [
+            640,
+            440,
+            480
+          ],
+          "to": [
+            600,
+            400,
+            640
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "sail": "off",
+          "sky": "storm",
+          "rain": "on",
+          "waves": "high",
+          "light": "ship"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            700
+          ],
+          "to": [
+            600,
+            440,
+            520
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "sail": "off",
+          "time": "night",
+          "land": "judi",
+          "light": "ship"
+        },
+        "camera": {
+          "from": [
+            600,
+            440,
+            520
+          ],
+          "to": [
+            600,
+            430,
+            680
+          ],
+          "dur": 14
+        },
+        "fx": [],
+        "sfx": "wave"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "sail": "off",
+          "time": "dawn",
+          "land": "judi",
+          "light": "ship"
+        },
+        "camera": {
+          "from": [
+            600,
+            430,
+            680
+          ],
+          "to": [
+            600,
+            400,
+            780
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "ship"
+      }
+    }
+  },
+  "ashab-alkahf": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "mountain",
+        "state": {
+          "time": "night",
+          "cave": "dim"
+        },
+        "camera": {
+          "from": [
+            760,
+            520,
+            700
+          ],
+          "to": [
+            620,
+            330,
+            480
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "night",
+          "cave": "warm",
+          "trail": "on"
+        },
+        "camera": {
+          "from": [
+            430,
+            660,
+            520
+          ],
+          "to": [
+            600,
+            380,
+            440
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "warm",
+          "feet": "none",
+          "dog": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            480,
+            720
+          ],
+          "to": [
+            590,
+            470,
+            560
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "faint",
+          "feet": "none",
+          "dog": "on",
+          "sky": "day",
+          "sun": "rise"
+        },
+        "camera": {
+          "from": [
+            590,
+            470,
+            560
+          ],
+          "to": [
+            620,
+            480,
+            480
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust",
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "full",
+          "feet": "none",
+          "dog": "on",
+          "sky": "day"
+        },
+        "camera": {
+          "from": [
+            620,
+            480,
+            480
+          ],
+          "to": [
+            600,
+            450,
+            660
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "dawn",
+          "cave": "bright"
+        },
+        "camera": {
+          "from": [
+            620,
+            330,
+            460
+          ],
+          "to": [
+            600,
+            420,
+            780
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      }
+    ],
+    "choice": {
+      "state": {
+        "sun": "set"
+      }
+    }
   }
 }

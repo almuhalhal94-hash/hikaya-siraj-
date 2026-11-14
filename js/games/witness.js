@@ -73,7 +73,7 @@ function pairs(board, api) {
   const deck = shuffled(data.who_is_witness.flatMap((item, k) => [{ k, item, side: 'w' }, { k, item, side: 's' }]));
   let open = [], matched = 0, misses = 0, busy = false;
 
-  const root = html('<div class="wt wt--pairs"><div class="wt__grid"></div></div>');
+  const root = html(`<div class="wt wt--pairs"><div class="wt__grid${deck.length > 8 ? ' wt__grid--many' : ''}"></div></div>`);
   const grid = root.querySelector('.wt__grid');
   deck.forEach((c, i) => {
     const b = html(`
@@ -96,7 +96,7 @@ function pairs(board, api) {
         if (!api.alive()) return;
         [x, y].forEach(o => { o.b.classList.add('is-match'); o.b.disabled = true; sparkle(o.b, { count: 9, power: 3 }); });
         sfx.star(); api.cheer();
-        if (matched === data.who_is_witness.length) api.win(misses <= 1 ? 3 : misses <= 3 ? 2 : 1);
+        if (matched === data.who_is_witness.length) api.win(misses <= data.who_is_witness.length ? 3 : misses <= data.who_is_witness.length * 2 ? 2 : 1);
       } else {
         busy = true; misses++;
         await wait(1100);

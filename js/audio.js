@@ -55,6 +55,8 @@ export const sfx = {
   success() { tone({ from: 700, to: 1400, dur: 0.45, gain: 0.08 }); noise({ from: 4000, to: 9000, dur: 0.5, gain: 0.03, q: 3, delay: 0.1 }); },
   steps() { [0, 0.55, 0.95, 1.7, 2.2].forEach(d => { tone({ from: 95, to: 55, dur: 0.14, type: 'triangle', gain: 0.13, delay: d }); noise({ from: 500, to: 200, dur: 0.12, gain: 0.03, delay: d }); }); },
   creak() { noise({ from: 520, to: 260, dur: 0.7, gain: 0.07, q: 9 }); noise({ from: 300, to: 420, dur: 0.6, gain: 0.05, q: 9, delay: 0.8 }); },
+  wave() { noise({ from: 180, to: 520, dur: 1.5, gain: 0.07, q: 0.8 }); noise({ from: 400, to: 160, dur: 1.4, gain: 0.05, q: 0.8, delay: 1.1 }); },
+  bubble() { [0, 0.16, 0.3].forEach((d, i) => tone({ from: 320 + i * 90, to: 760 + i * 120, dur: 0.12, gain: 0.05, delay: d })); },
   step() { tone({ from: 440, to: 520, dur: 0.06, gain: 0.05 }); },
   flip() { noise({ from: 900, to: 2600, dur: 0.16, gain: 0.05, q: 2 }); tone({ from: 380, to: 560, dur: 0.1, type: 'triangle', gain: 0.06, delay: 0.03 }); },
   oops() { tone({ from: 330, to: 220, dur: 0.22, type: 'triangle', gain: 0.08 }); }

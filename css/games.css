@@ -15,7 +15,9 @@
 .gm { max-width: 600px; display: grid; gap: 12px; }
 .gm__top { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px 10px; animation: door-in .8s var(--ease-out) backwards; }
 .gm__top h1 { grid-column: 1 / -1; grid-row: 2; text-align: center; font-size: clamp(1.5rem, 6.4vw, 2rem); font-weight: 800; color: var(--gold); line-height: 1.3; text-shadow: 0 0 22px rgba(255, 215, 122, .4); }
-.gm__levels { justify-self: end; display: flex; gap: 8px; }
+.gm__levels { justify-self: end; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; min-width: 0; }
+.gm__levels:has(a:nth-child(5)) { grid-column: 1 / -1; grid-row: 3; justify-self: center; gap: 6px; }
+.gm__levels:has(a:nth-child(5)) .gm__lvl { width: 40px; height: 46px; border-radius: 14px; }
 .gm__lvl {
   position: relative; width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center; align-content: center; gap: 1px; line-height: 1;
   font-weight: 800; color: var(--gold); background: linear-gradient(180deg, rgba(60, 96, 160, .38), rgba(20, 40, 84, .46)); border: 1px solid rgba(255, 233, 168, .34);
@@ -100,6 +102,10 @@
 .wt__face--w { padding: 0; background: #0a1630; }
 .wt__face--w .wt__art, .wt__face--w .stage--thumb { position: absolute; inset: 0; }
 .wt__face--w b { position: absolute; inset: auto 0 0 0; padding: 26px 8px 8px; color: var(--gold); background: linear-gradient(180deg, transparent, rgba(3, 6, 15, .92) 70%); }
+.wt__grid--many { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.wt__grid--many .wt__face--front b { font-size: clamp(.82rem, 3.5vw, 1.05rem); }
+.wt__grid--many .wt__face--back::after { width: 32px; height: 32px; }
+@media (min-width: 760px) { .wt__grid--many { grid-template-columns: repeat(5, 1fr); width: min(100%, 600px); } }
 .wt__flip.is-match .wt__face { border-color: var(--teal); box-shadow: 0 0 0 2px var(--teal), 0 0 34px rgba(95, 214, 200, .6); }
 
 /* ——— طريق الهجرة ——— */
