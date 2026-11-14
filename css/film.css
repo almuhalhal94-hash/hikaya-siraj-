@@ -299,3 +299,35 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .lib__step .card__body small { color: var(--teal-soft); font-weight: 800; }
 .lib__soon { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 52px; padding: 8px 16px; border-radius: 18px; background: rgba(10, 22, 48, .55); border: 1.5px dashed rgba(143, 161, 196, .4); color: #b6c4e2; font-weight: 800; }
 .lib__soon small { flex: none; padding: 2px 12px; border-radius: 12px; font-size: .82rem; color: #8fa1c4; background: rgba(143, 161, 196, .16); }
+
+
+/* ——— الجنة والأرض (آدم عليه السلام) ——— */
+.gd-light, .gd-mark, .gd-glow, .gd-sway, .gd-sun, .gd-sprouts path { transform-box: fill-box; transform-origin: center; }
+.gd-eden, .gd-earth, .gd-dawn { transition: opacity 5s ease; }
+.gd-earth, .gd-dawn { opacity: 0; }
+.stage[data-set="garden"] .stars { opacity: .12; }
+[data-place="earth"] .gd-eden { opacity: 0; } [data-place="earth"] .gd-earth { opacity: 1; }
+.stage[data-set="garden"][data-place="earth"] .stars { opacity: 1; }
+[data-place="earth"][data-time="dawn"] .gd-dawn { opacity: 1; }
+.stage[data-set="garden"][data-place="earth"][data-time="dawn"] .stars { opacity: .08; }
+.gd-ridge { fill: #1a1c3c; transition: fill 6s ease, opacity 5s ease; } [data-place="earth"][data-time="dawn"] .gd-ridge { fill: #4a3460; }
+.gd-sun { opacity: .5; transition: opacity 5s ease, transform 12s cubic-bezier(.2, .6, .3, 1); animation: st-breathe 7s ease-in-out infinite; }
+[data-place="earth"] .gd-sun { opacity: 0; transform: translateY(160px); } [data-place="earth"][data-time="dawn"] .gd-sun { opacity: .9; transform: none; }
+.gd-sway { transform-origin: 50% 100%; animation: sway 8s ease-in-out infinite; } .gd-sway--slow { animation-duration: 11s; }
+.gd-ripple { stroke-dasharray: 60 40; animation: gd-flow 5s linear infinite; }
+@keyframes gd-flow { to { stroke-dashoffset: -200; } }
+.gd-mark { opacity: 0; transition: opacity 3s ease; animation: st-breathe 3.2s ease-in-out infinite; }
+[data-tree="mark"] .gd-mark { opacity: .8; }
+.gd-fruit { transition: opacity 3s ease; }
+.gd-light { opacity: 0; transition: opacity 3s ease; animation: st-breathe 3.6s ease-in-out infinite; } .gd-light--b { animation-delay: -1.6s; }
+[data-light="one"] .gd-light--a, [data-light="pair"] .gd-light { opacity: 1; }
+.gd-lights { transition: transform 7s ease-in-out, opacity 3s ease; }
+[data-near="tree"] .gd-lights { transform: translate(150px, 34px); }
+[data-near="low"] .gd-lights { transform: translate(60px, 70px); }
+[data-near="land"] .gd-lights { transform: translate(140px, 50px); }
+.gd-dusk { opacity: 0; transition: opacity 4s ease; } [data-mood="dark"] .gd-dusk { opacity: .58; }
+.gd-glow { opacity: 0; transition: opacity 3.5s ease; animation: st-breathe 4.4s ease-in-out infinite; } [data-glow="full"] .gd-glow { opacity: .38; }
+.gd-sprouts path { transform-origin: 50% 100%; transform: scale(0); transition: transform 4s var(--ease-out) 2s; }
+[data-place="earth"][data-time="dawn"] .gd-sprouts path { transform: none; }
+.stage[data-set="garden"] .stage__tint { background: radial-gradient(circle at 50% 60%, rgba(255, 232, 170, .34), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="garden"][data-glow="full"] .stage__tint { opacity: 1; }

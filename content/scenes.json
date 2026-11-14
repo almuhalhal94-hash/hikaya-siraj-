@@ -796,5 +796,164 @@
         "sun": "set"
       }
     }
+  },
+  "adam-alard": {
+    "thumb": 2,
+    "scenes": [
+      {
+        "set": "garden",
+        "state": {
+          "place": "earth",
+          "time": "night"
+        },
+        "camera": {
+          "from": [
+            600,
+            430,
+            820
+          ],
+          "to": [
+            600,
+            470,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "garden",
+        "state": {
+          "light": "one"
+        },
+        "camera": {
+          "from": [
+            600,
+            470,
+            760
+          ],
+          "to": [
+            520,
+            500,
+            540
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "garden",
+        "state": {
+          "light": "one",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            520,
+            500,
+            540
+          ],
+          "to": [
+            600,
+            450,
+            700
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "garden",
+        "state": {
+          "light": "pair",
+          "near": "tree",
+          "tree": "mark",
+          "mood": "dark"
+        },
+        "camera": {
+          "from": [
+            600,
+            470,
+            700
+          ],
+          "to": [
+            720,
+            470,
+            500
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "leaves"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "garden",
+        "state": {
+          "light": "pair",
+          "near": "low",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            700,
+            500,
+            520
+          ],
+          "to": [
+            560,
+            520,
+            480
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "garden",
+        "state": {
+          "place": "earth",
+          "time": "dawn",
+          "light": "pair",
+          "near": "land"
+        },
+        "camera": {
+          "from": [
+            600,
+            500,
+            520
+          ],
+          "to": [
+            600,
+            440,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "mood": "calm",
+        "glow": "full"
+      }
+    }
   }
 }

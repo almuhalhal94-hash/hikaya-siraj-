@@ -263,4 +263,96 @@ function deep() {
   </g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep };
+// ——— نخلة (جذع وسعف) تُستعمل في أكثر من ديكور ———
+function palm(x, y, k = 1, lean = 0, cls = '') {
+  return `<g class="palm ${cls}" transform="translate(${x} ${y}) scale(${k})" fill="none" stroke-linecap="round">
+    <path d="M0 0q${14 + lean}-110 ${lean}-230" stroke-width="16"/>
+    <g stroke-width="9" transform="translate(${lean} -230)">
+      <path d="M0 0q-60-56-128-10"/><path d="M0 0q-74-8-108 62"/><path d="M0 0q-30-76-98-86"/>
+      <path d="M0 0q62-58 130-18"/><path d="M0 0q78-10 112 56"/><path d="M0 0q34-76 98-82"/><path d="M0 0q4-70-10-100"/>
+    </g>
+  </g>`;
+}
+
+// ——— الجنة والأرض (آدم عليه السلام): لا يُرسم أحد؛ آدم وزوجه نور فقط، ولا تُرسم الملائكة ولا إبليس ———
+function gtree(x, y, k, c1, c2, fruit = '') {
+  return `<g transform="translate(${x} ${y}) scale(${k})">
+    <path d="M-14 0q10-70-6-150h40q-16 80-6 150z" fill="#3a2a1c"/>
+    <g class="gd-sway"><circle cx="-70" cy="-190" r="78" fill="${c1}"/><circle cx="70" cy="-196" r="84" fill="${c1}"/><circle cx="0" cy="-260" r="96" fill="${c1}"/>
+    <circle cx="-34" cy="-286" r="54" fill="${c2}"/><circle cx="52" cy="-240" r="40" fill="${c2}" opacity=".7"/>${fruit}</g>
+  </g>`;
+}
+function garden() {
+  const r = rng(41); let blooms = '', tufts = '', fruit = '', sprouts = '';
+  for (let i = 0; i < 46; i++) { const x = -500 + r() * 2200, y = 640 + r() * r() * 520; blooms += `<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${(3 + r() * 5).toFixed(1)}" fill="${['#ffd77a', '#fff4cf', '#f6a5c0', '#bfeee8'][i % 4]}"/>`; }
+  for (let i = 0; i < 60; i++) { const x = -600 + r() * 2400, y = 624 + r() * r() * 560; tufts += `M${x.toFixed(0)} ${y.toFixed(0)}q-6-16-14-20M${x.toFixed(0)} ${y.toFixed(0)}q2-18 0-26M${x.toFixed(0)} ${y.toFixed(0)}q8-14 16-18`; }
+  for (const [x, y] of [[-96, -214], [-40, -150], [36, -180], [100, -230], [-10, -300], [64, -322], [-78, -306]]) fruit += `<circle cx="${x}" cy="${y}" r="11" fill="#ffd77a"/><circle cx="${x - 3}" cy="${y - 3}" r="4" fill="#fff4cf"/>`;
+  for (let i = 0; i < 9; i++) { const x = 180 + r() * 840, y = 650 + r() * 160; sprouts += `<path d="M${x.toFixed(0)} ${y.toFixed(0)}v-26m0 6q-16-4-20-20 18 0 20 20zm0-8q16-4 20-22-18 2-20 22z"/>`; }
+  return `${DEFS}
+  <defs>
+    <linearGradient id="g-eden" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a2748"/><stop offset=".4" stop-color="#1c6470"/><stop offset=".62" stop-color="#7fc9a8"/><stop offset=".76" stop-color="#ffe9a8"/></linearGradient>
+    <linearGradient id="g-meadow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f9a6a"/><stop offset=".35" stop-color="#1c6b52"/><stop offset="1" stop-color="#0a2c2a"/></linearGradient>
+    <linearGradient id="g-soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a87a48"/><stop offset=".4" stop-color="#6b4a2c"/><stop offset="1" stop-color="#2a1c12"/></linearGradient>
+    <linearGradient id="g-river" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8fe0da"/><stop offset=".5" stop-color="#e8fffb"/><stop offset="1" stop-color="#8fe0da"/></linearGradient>
+  </defs>
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    <rect class="gd-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    <rect class="gd-eden" x="-700" y="-500" width="2600" height="1500" fill="url(#g-eden)"/>
+    ${stars(70, 53, [-400, 1600], [-300, 420])}
+    <g class="gd-sun"><circle cx="600" cy="470" r="520" fill="url(#g-warm)"/></g>
+  </g>
+  <g data-d=".3">
+    <g class="gd-eden">
+      <path d="M-700 560q220-130 470-60t420-70 430 60 420-80 460 90v900H-700z" fill="#1d6a66"/>
+      <g opacity=".85">${gtree(-120, 520, 0.5, '#1a5a55', '#22706a')}${gtree(120, 500, 0.42, '#1a5a55', '#22706a')}${gtree(420, 530, 0.4, '#1a5a55', '#22706a')}${gtree(640, 515, 0.34, '#1a5a55', '#22706a')}${gtree(980, 480, 0.46, '#1a5a55', '#22706a')}${gtree(1240, 520, 0.54, '#1a5a55', '#22706a')}${gtree(1500, 500, 0.4, '#1a5a55', '#22706a')}</g>
+    </g>
+    <path class="gd-earth gd-ridge" d="M-700 580-420 470-300 520-150 420 20 520 180 450 330 540 520 480 700 560 880 470 1040 540 1220 450 1420 540 1900 470V1400H-700z"/>
+  </g>
+  <g data-d=".6">
+    <g class="gd-eden">
+      <path d="M-700 566q300-40 620 0t640-6 660 4 680-10v70q-340 16-680 10t-660 0-640 4-620-2z" fill="url(#g-river)"/>
+      <path class="gd-ripple" d="M-600 590h90m120 12h70m160-16h110m90 22h60m150-20h100m120 14h80m140-18h100m110 16h70m130-12h90" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+    </g>
+  </g>
+  <g data-d=".75">
+    <g class="gd-eden">
+      ${gtree(60, 660, 1.05, '#1f7a5a', '#35a878', '<circle cx="-60" cy="-220" r="8" fill="#f6a5c0"/><circle cx="40" cy="-170" r="8" fill="#f6a5c0"/><circle cx="84" cy="-250" r="8" fill="#f6a5c0"/>')}
+      ${gtree(1150, 650, 1.1, '#1f7a5a', '#35a878', '<circle cx="-70" cy="-200" r="8" fill="#fff4cf"/><circle cx="30" cy="-300" r="8" fill="#fff4cf"/><circle cx="90" cy="-190" r="8" fill="#fff4cf"/>')}
+      ${gtree(-330, 680, 0.9, '#1b6c52', '#2c9a6c')}${gtree(1540, 670, 0.95, '#1b6c52', '#2c9a6c')}
+      ${gtree(250, 640, 0.78, '#1b6c52', '#2c9a6c', '<circle cx="-50" cy="-230" r="8" fill="#ffd77a"/><circle cx="60" cy="-190" r="8" fill="#ffd77a"/>')}${gtree(960, 650, 0.84, '#1b6c52', '#2c9a6c')}
+    </g>
+  </g>
+  <g data-d="1">
+    <path class="gd-eden" d="M-700 1400V640q260-50 560-22t520-14 480 18 480-20 560 30v768z" fill="url(#g-meadow)"/>
+    <path class="gd-earth" d="M-700 1400V640q260-50 560-22t520-14 480 18 480-20 560 30v768z" fill="url(#g-soil)"/>
+    <path class="gd-earth" d="M-700 660q300-44 640-14t600-2 700-12 660 30v36q-360-40-700-22t-640 10-620-10-640 22z" fill="#d9a868" opacity=".45"/>
+    <g class="gd-eden">
+      <path d="${tufts}" fill="none" stroke="#5fd09a" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+      ${blooms}
+      <g transform="translate(790 668)">
+        <circle class="gd-mark" cy="-230" r="250" fill="url(#g-warm)"/>
+        <ellipse cx="0" cy="4" rx="120" ry="16" fill="#000" opacity=".28"/>
+        <path d="M-22 0q16-90-10-180l-40-40 14-10 38 30 12-60h18l8 62 40-36 14 12-44 44q-22 88-6 174z" fill="#4a3220"/>
+        <g class="gd-sway gd-sway--slow"><circle cx="-92" cy="-240" r="92" fill="#16624e"/><circle cx="94" cy="-250" r="98" fill="#16624e"/><circle cx="0" cy="-330" r="118" fill="#1b7a5e"/><circle cx="-40" cy="-360" r="62" fill="#2fae82"/><circle cx="70" cy="-300" r="44" fill="#2fae82" opacity=".7"/>
+        <g class="gd-fruit">${fruit}</g></g>
+      </g>
+    </g>
+    <g class="gd-earth gd-sprouts" fill="#5fd09a" stroke="#5fd09a" stroke-width="4" stroke-linecap="round">${sprouts}</g>
+    <rect class="gd-dusk" ${BIG} fill="#040b18"/>
+    <g class="gd-lights">
+      <g class="gd-light gd-light--b"><circle cx="372" cy="560" r="84" fill="url(#g-warm)"/><circle cx="372" cy="560" r="6" fill="#fff"/></g>
+      <g class="gd-light gd-light--a"><circle cx="470" cy="540" r="120" fill="url(#g-warm)"/><circle cx="470" cy="540" r="8" fill="#fff"/></g>
+    </g>
+    <ellipse class="gd-glow" cx="600" cy="560" rx="900" ry="620" fill="url(#g-warm)"/>
+  </g>
+  <g data-d="1.3">
+    <g class="gd-eden" fill="#07231f">
+      <path d="M-700-500h700q-60 190-250 250t-250 300-200 140z"/><path d="M1900-500h-640q70 200 250 260t230 300 160 120z"/>
+      <path d="M-700 1400V900q170-70 300 30t170 470zM1900 1400V880q-190-60-310 40t-150 480z"/>
+    </g>
+    <path class="gd-earth" d="M-700 1400V920l230-70 170 60 110 490zM1900 1400V900l-250-60-160 70-90 490z" fill="#150d08"/>
+  </g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden };
