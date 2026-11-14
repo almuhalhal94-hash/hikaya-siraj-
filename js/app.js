@@ -4,9 +4,10 @@ import { initSky, initFx } from './sky.js';
 import { sfx, setSound } from './audio.js';
 import home from './views/home.js';
 import soon from './views/soon.js';
+import stories from './views/stories.js';
 
 // كل قسم يُسجَّل هنا عند بنائه؛ ما لم يُبنَ بعد يعرض صفحة «قريبًا».
-const routes = { '': home, stories: soon, games: soon, adhkar: soon, house: soon };
+const routes = { '': home, stories, games: soon, adhkar: soon, house: soon };
 
 const view = document.getElementById('view');
 const veil = document.getElementById('veil');
