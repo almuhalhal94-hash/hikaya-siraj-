@@ -1,7 +1,7 @@
 // أدوات مشتركة: التخزين المحلي، تحميل المحتوى، ووقت اليوم.
 
 const KEY = 'hikaya-siraj:v1';
-const defaults = { name: '', sound: true, stars: 0, lastStory: '', completed: [], days: [], badges: [], adhkar: null, adhkarTotal: { morning: 0, evening: 0 } };
+const defaults = { name: '', sound: true, stars: 0, lastStory: '', completed: [], days: [], badges: [], adhkar: null, adhkarTotal: { morning: 0, evening: 0 }, games: {} };
 
 function read() {
   try { return { ...defaults, ...JSON.parse(localStorage.getItem(KEY) || '{}') }; }

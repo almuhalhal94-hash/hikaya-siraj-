@@ -1,4 +1,5 @@
 {
+  "_schema": "أسئلة الألعاب ومستوياتها. order_levels: كل مستوى قصة (story) و pick أرقام الأحداث المعروضة منها (بلا pick = كل الأحداث). who_is_witness: story يربط الشاهد بصورته في scenes.json. witness_levels: mode إما pick (اختيار القصة، options عدد الخيارات) أو pairs (بطاقات مقلوبة تُطابَق). hijra_maze.levels: cols/rows حجم المتاهة، seed بذرة توليدها، loops فتحات إضافية تسهّلها، dark ظلام يكشفه نور الفانوس.",
   "order_events": [
     {
       "story": "ghar-thawr",
@@ -20,14 +21,90 @@
       ]
     }
   ],
+  "order_levels": [
+    {
+      "story": "jidh-alnakhla",
+      "pick": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "story": "ghar-thawr",
+      "pick": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "story": "jidh-alnakhla"
+    },
+    {
+      "story": "ghar-thawr"
+    }
+  ],
   "who_is_witness": [
-    { "witness": "غار ثور", "answer": "قصة الهجرة", "wrong": ["قصة يونس عليه السلام", "قصة زمزم"] },
-    { "witness": "جذع النخلة", "answer": "شوق الجذع للنبي ﷺ", "wrong": ["قصة الهجرة", "ناقة صالح"] }
+    {
+      "witness": "غار ثور",
+      "story": "ghar-thawr",
+      "answer": "قصة الهجرة",
+      "wrong": [
+        "قصة يونس عليه السلام",
+        "قصة زمزم"
+      ]
+    },
+    {
+      "witness": "جذع النخلة",
+      "story": "jidh-alnakhla",
+      "answer": "شوق الجذع للنبي ﷺ",
+      "wrong": [
+        "قصة الهجرة",
+        "ناقة صالح"
+      ]
+    }
+  ],
+  "witness_levels": [
+    {
+      "mode": "pick",
+      "options": 2
+    },
+    {
+      "mode": "pick",
+      "options": 3
+    },
+    {
+      "mode": "pairs"
+    }
   ],
   "hijra_maze": {
     "start": "مكة",
     "end": "المدينة",
-    "stops": ["غار ثور"],
-    "note": "متاهة بسيطة يقود فيها الطفل الفانوس من مكة إلى المدينة مرورًا بالغار، وتصعب بالمستويات"
+    "stops": [
+      "غار ثور"
+    ],
+    "note": "متاهة بسيطة يقود فيها الطفل الفانوس من مكة إلى المدينة مرورًا بالغار، وتصعب بالمستويات",
+    "levels": [
+      {
+        "cols": 5,
+        "rows": 5,
+        "seed": 11,
+        "loops": 3
+      },
+      {
+        "cols": 6,
+        "rows": 7,
+        "seed": 23,
+        "loops": 2
+      },
+      {
+        "cols": 7,
+        "rows": 9,
+        "seed": 37,
+        "loops": 1,
+        "dark": true
+      }
+    ]
   }
 }

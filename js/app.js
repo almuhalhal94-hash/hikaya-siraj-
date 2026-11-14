@@ -6,9 +6,10 @@ import home from './views/home.js';
 import soon from './views/soon.js';
 import stories from './views/stories.js';
 import adhkar from './views/adhkar.js';
+import games from './views/games.js';
 
 // كل قسم يُسجَّل هنا عند بنائه؛ ما لم يُبنَ بعد يعرض صفحة «قريبًا».
-const routes = { '': home, stories, games: soon, adhkar, house: soon };
+const routes = { '': home, stories, games, adhkar, house: soon };
 
 const view = document.getElementById('view');
 const veil = document.getElementById('veil');
