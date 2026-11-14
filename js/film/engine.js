@@ -105,7 +105,11 @@ export class Stage {
     else this.move = { from: same ? { ...this.cam } : { x: fx, y: fy, s: fs }, to, t0: performance.now(), dur: (spec.camera.dur || 14) * 1000 };
     this.particles.set(this.still ? [] : spec.fx || []);
     this.svg.querySelectorAll('animateMotion').forEach(a => { try { a.beginElement(); } catch { /* غير مدعوم */ } });
-    if (!same) { this.frame(performance.now()); await wait(80); this.cut.classList.remove('is-on'); }
+    if (!same) {
+      this.frame(performance.now());
+      this.svg.classList.remove('is-settle'); void this.svg.getBoundingClientRect(); this.svg.classList.add('is-settle');
+      await wait(80); this.cut.classList.remove('is-on');
+    }
   }
 
   /** يغيّر حالة الديكور (مثل light:"full")؛ التحريك في CSS. */

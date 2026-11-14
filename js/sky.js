@@ -8,7 +8,8 @@ export function initSky(canvas) {
   const c = canvas.getContext('2d');
   const still = reducedMotion();
   let w = 0, h = 0, stars = [], shoot = null, nextShoot = 3500;
-  let px = 0, py = 0, tx = 0, ty = 0;
+  let px = 0, py = 0, tx = 0, ty = 0, lastPx = 0, lastPy = 0;
+  const root = document.documentElement.style, fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   function seed() {
     stars = Array.from({ length: 190 }, () => {
@@ -32,6 +33,10 @@ export function initSky(canvas) {
   function draw(t) {
     c.clearRect(0, 0, w, h);
     px += (tx - px) * 0.04; py += (ty - py) * 0.04;
+    if (fine && (Math.abs(px - lastPx) > 0.002 || Math.abs(py - lastPy) > 0.002)) { // عمق المؤشر للقمر والأرض
+      lastPx = px; lastPy = py;
+      root.setProperty('--px', px.toFixed(3)); root.setProperty('--py', py.toFixed(3));
+    }
     const n = w < 600 ? 120 : stars.length;
     for (let i = 0; i < n; i++) {
       const s = stars[i];
