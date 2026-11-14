@@ -229,6 +229,24 @@ body:not(.is-ready) #view, body:not(.is-ready) .topbar { opacity: 0; }
 .rise { animation: rise 6s ease-in-out infinite; }
 @keyframes rise { 0%, 100% { translate: 0 10px; } 50% { translate: 0 -4px; } }
 
+/* ——— القسم 6: نجومي، أوسمتي، هدية اليوم ——— */
+.home.is-asking .mine, .home.is-asking .gift { display: none; }
+.gift { display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 20px 0 14px; border-radius: 26px; font-weight: 800; font-size: 1.1rem; color: #06343a; background: linear-gradient(180deg, #d7fff8, var(--teal)); box-shadow: 0 5px 0 #1f6f66, 0 0 30px rgba(95, 214, 200, .55); animation: door-in .8s var(--ease-out) 1s backwards, gift-bob 1.8s ease-in-out 2s infinite; transition: scale .5s var(--ease-spring), opacity .5s; }
+.gift svg { width: 34px; height: 34px; }
+.gift.is-open { scale: 1.4; opacity: 0; }
+@keyframes gift-bob { 50% { translate: 0 -6px; rotate: -2deg; } }
+.mine { display: grid; justify-items: center; gap: 8px; width: min(100%, 620px); padding: 14px 12px 12px; border-radius: 26px; background: linear-gradient(180deg, rgba(30, 60, 107, .5), rgba(10, 22, 48, .7)); border: 1.5px solid rgba(255, 215, 122, .3); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); animation: door-in .9s var(--ease-out) 1s backwards; }
+.mine h2 { font-size: 1.2rem; font-weight: 800; color: var(--gold); }
+.mine__stars { max-width: none; height: 40px; line-height: 38px; }
+.mine__badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.badge { width: 78px; display: grid; justify-items: center; gap: 2px; padding: 4px 2px; font-weight: 800; font-size: .78rem; line-height: 1.3; color: #8fa1c4; text-align: center; }
+.badge i { width: 46px; filter: grayscale(1) brightness(.5); opacity: .6; transition: filter .6s, opacity .6s; }
+.badge svg { display: block; width: 100%; }
+.badge.is-got { color: var(--cream); }
+.badge.is-got i { filter: drop-shadow(0 0 10px rgba(255, 215, 122, .7)); opacity: 1; }
+.badge:active { transform: scale(.94); }
+.mine__hint { min-height: 1.6em; font-weight: 800; font-size: .98rem; color: var(--teal-soft); text-align: center; }
+
 /* ——— صفحة «قريبًا» ——— */
 .soon { display: grid; justify-items: center; gap: 26px; padding: 8vh 16px 0; }
 

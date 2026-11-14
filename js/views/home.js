@@ -1,7 +1,7 @@
 // القسم 1: الصفحة الرئيسية — سِراج يرحّب بالطفل باسمه، وأربعة أبواب متحركة.
-import { store, pick, fill, dayPart, html, wait } from '../core.js';
+import { dayKey, dayPart, fill, html, num, pick, store, wait } from '../core.js';
 import { createSiraj } from '../siraj.js';
-import { sparkle } from '../sky.js';
+import { sparkle, setKidStars } from '../sky.js';
 import { sfx } from '../audio.js';
 
 // مشهد صغير حيّ خلف كل باب (رسم بالكود).
@@ -52,6 +52,9 @@ const SCENES = {
     </svg>`
 };
 
+const MEDAL = '<svg viewBox="0 0 48 56" aria-hidden="true"><path d="M14 2h8l4 14h-8zM34 2h-8l-4 14h8z" fill="#5fd6c8"/><circle cx="24" cy="34" r="19" fill="#ffd77a" stroke="#c9a24a" stroke-width="3"/><path d="M24 21l3.800 8 8.800 1-6.500 6 1.800 8.700L24 40.300l-7.900 4.400 1.800-8.700-6.500-6 8.800-1z" fill="#fff4cf"/></svg>';
+const GIFT = '<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="20" width="34" height="23" rx="4" fill="#5fd6c8"/><rect x="4" y="13" width="40" height="10" rx="4" fill="#8fe0d6"/><path d="M21 13h6v30h-6z" fill="#ffd77a"/><path d="M24 13q-12-12-15-4t15 4q12-12 15-4t-15 4z" fill="none" stroke="#ffd77a" stroke-width="3.500" stroke-linejoin="round"/></svg>';
+
 function cleanName(raw) {
   return raw.replace(/<[^>]*>/g, '').replace(/[^\p{L}\p{M}\s]/gu, '').replace(/\s+/g, ' ').trim().slice(0, 16);
 }
@@ -87,8 +90,62 @@ export default async function home(el, { ui, lines, go, refreshChip }) {
     });
     doors.append(a);
   });
-  page.append(doors);
+  const mine = html(`<section class="mine"><span class="chip mine__stars"></span><h2></h2><div class="mine__badges"></div><p class="mine__hint" aria-live="polite"></p></section>`);
+  page.append(doors, mine);
   el.append(page);
+
+  // ——— القسم 6: نجومي، أوسمتي، وهدية اليوم ———
+  const D = ui.daily;
+  const earned = b => {
+    const s = store.state, r = b.rule;
+    if (r.type === 'story') return s.completed.includes(r.id);
+    if (r.type === 'stories') return s.completed.length >= r.n;
+    if (r.type === 'adhkar') return (s.adhkarTotal?.[r.kind] || 0) >= r.n;
+    if (r.type === 'gameStars') return Object.values(s.games || {}).flat().reduce((a, v) => a + (v || 0), 0) >= r.n;
+    if (r.type === 'days') return s.days.length >= r.n;
+    if (r.type === 'house') return (s.house || []).length >= r.n;
+    return false;
+  };
+  function paintMine() {
+    mine.querySelector('.mine__stars').textContent = `★ ${fill(D.stars, { n: num(store.state.stars) })}`;
+    mine.querySelector('h2').textContent = D.badges_title;
+    const row = mine.querySelector('.mine__badges'); row.textContent = '';
+    D.badges.forEach((b, i) => {
+      const got = store.state.badges.includes(b.id);
+      const btn = html(`<button class="badge${got ? ' is-got' : ''}" type="button" style="--i:${i}"><i>${MEDAL}</i><b></b></button>`);
+      btn.querySelector('b').textContent = b.name;
+      btn.addEventListener('click', () => { sfx.tap(); mine.querySelector('.mine__hint').textContent = fill(got ? D.badge_got : D.badge_locked, b); if (got) sparkle(btn, { count: 8, power: 3 }); });
+      row.append(btn);
+    });
+  }
+  /** يمنح الأوسمة المستحقة ويعلن أولها. */
+  function awardBadges() {
+    const fresh = D.badges.filter(b => !store.state.badges.includes(b.id) && earned(b));
+    if (!fresh.length) return false;
+    store.set({ badges: [...store.state.badges, ...fresh.map(b => b.id)] });
+    paintMine();
+    siraj.say(fill(D.badge_new, { badge: fresh[0].name, name: store.state.name }));
+    sfx.success(); siraj.react('joy');
+    const node = mine.querySelectorAll('.badge')[D.badges.indexOf(fresh[0])];
+    setTimeout(() => sparkle(node, { count: 24, power: 5 }), 600);
+    return true;
+  }
+  function offerGift() {
+    if (store.state.gift === dayKey()) return;
+    const g = html(`<button class="gift" type="button">${GIFT}<span></span></button>`);
+    g.querySelector('span').textContent = D.gift;
+    g.setAttribute('aria-label', D.gift_label);
+    g.addEventListener('click', () => {
+      store.set({ gift: dayKey(), stars: store.state.stars + 1 });
+      setKidStars(store.state.stars);
+      sfx.success(); siraj.react('joy'); sparkle(g, { count: 30, power: 6 });
+      siraj.say(fill(pick(lines.daily_surprise), vars()));
+      g.classList.add('is-open'); setTimeout(() => g.remove(), 700);
+      paintMine();
+    });
+    hero.append(g);
+  }
+  paintMine();
 
   const vars = () => ({ name: store.state.name });
 
@@ -146,6 +203,7 @@ export default async function home(el, { ui, lines, go, refreshChip }) {
   if (store.state.name) {
     siraj.say(fill(pick(lines.greetings[dayPart()]), vars()));
     openDoors();
+    if (!awardBadges()) offerGift(); else setTimeout(offerGift, 4000);
   } else {
     askName(pick(lines.greetings.first_visit));
   }

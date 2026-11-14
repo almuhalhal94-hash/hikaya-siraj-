@@ -4,6 +4,16 @@ import { reducedMotion } from './core.js';
 const TAU = Math.PI * 2;
 const STAR_COLORS = ['#ffffff', '#fff4cf', '#ffe9a8', '#bfeee8'];
 
+let kid = []; // نجوم الطفل الذهبية: واحدة لكل نجمة جمعها (حتى ٦٠)
+/** يضيء في السماء نجومًا ذهبية بعدد نجوم الطفل. */
+export function setKidStars(n) {
+  const m = Math.min(Math.max(n | 0, 0), 60);
+  kid = Array.from({ length: m }, (_, i) => {
+    const a = i * 2.39996, r = 0.12 + 0.36 * Math.sqrt((i + 0.5) / 60);
+    return { x: 0.5 + Math.cos(a) * r * 1.1, y: 0.3 + Math.sin(a) * r * 0.62, d: 0.9, r: 2 + (i % 3) * 0.35, p: i * 1.7, s: 0.8 + (i % 5) * 0.2, col: '#ffd77a' };
+  });
+}
+
 export function initSky(canvas) {
   const c = canvas.getContext('2d');
   const still = reducedMotion();
@@ -37,9 +47,9 @@ export function initSky(canvas) {
       lastPx = px; lastPy = py;
       root.setProperty('--px', px.toFixed(3)); root.setProperty('--py', py.toFixed(3));
     }
-    const n = w < 600 ? 120 : stars.length;
-    for (let i = 0; i < n; i++) {
-      const s = stars[i];
+    const n = w < 600 ? 120 : stars.length, m = n + kid.length;
+    for (let i = 0; i < m; i++) {
+      const s = i < n ? stars[i] : kid[i - n];
       const a = still ? 0.8 : 0.3 + 0.7 * (0.5 + 0.5 * Math.sin(t * 0.001 * s.s + s.p));
       const x = s.x * w + px * s.d * 22, y = s.y * h + py * s.d * 14;
       c.globalAlpha = a; c.fillStyle = s.col;

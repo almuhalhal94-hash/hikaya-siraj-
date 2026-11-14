@@ -212,5 +212,81 @@
         "need": 10
       }
     ]
+  },
+  "daily": {
+    "gift": "هدية اليوم",
+    "gift_label": "افتح هدية اليوم من سِراج",
+    "stars": "نجومي: {n}",
+    "badges_title": "أوسمتي",
+    "badge_new": "وسام جديد: «{badge}»! ما شاء الله يا {name}!",
+    "badge_locked": "{name}: {hint}",
+    "badge_got": "{name}: حصلتَ عليه",
+    "badges": [
+      {
+        "id": "ghar",
+        "name": "صديق الغار",
+        "hint": "اقرأ حكاية غار ثور",
+        "rule": {
+          "type": "story",
+          "id": "ghar-thawr"
+        }
+      },
+      {
+        "id": "morning",
+        "name": "حافظ أذكار الصباح",
+        "hint": "أتمَّ أذكار الصباح ٣ مرات",
+        "rule": {
+          "type": "adhkar",
+          "kind": "morning",
+          "n": 3
+        }
+      },
+      {
+        "id": "evening",
+        "name": "نور المساء",
+        "hint": "أتمَّ أذكار المساء ٣ مرات",
+        "rule": {
+          "type": "adhkar",
+          "kind": "evening",
+          "n": 3
+        }
+      },
+      {
+        "id": "reader",
+        "name": "قارئ الحكايات",
+        "hint": "اقرأ ٥ حكايات",
+        "rule": {
+          "type": "stories",
+          "n": 5
+        }
+      },
+      {
+        "id": "player",
+        "name": "بطل الألعاب",
+        "hint": "اجمع ١٥ نجمة من الألعاب",
+        "rule": {
+          "type": "gameStars",
+          "n": 15
+        }
+      },
+      {
+        "id": "friend",
+        "name": "صديق سِراج",
+        "hint": "زُر سِراج ٣ أيام",
+        "rule": {
+          "type": "days",
+          "n": 3
+        }
+      },
+      {
+        "id": "decor",
+        "name": "مزيّن البيت",
+        "hint": "ضع ٥ زينات في بيت سِراج",
+        "rule": {
+          "type": "house",
+          "n": 5
+        }
+      }
+    ]
   }
 }

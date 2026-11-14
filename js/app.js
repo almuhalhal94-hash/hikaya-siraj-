@@ -1,6 +1,6 @@
 // نقطة البداية: الموجّه (hash router)، الانتقالات بين الصفحات، وشريط الأعلى.
 import { store, content, dayPart, wait, reducedMotion, touchDay } from './core.js';
-import { initSky, initFx } from './sky.js';
+import { initSky, initFx, setKidStars } from './sky.js';
 import { sfx, setSound } from './audio.js';
 import home from './views/home.js';
 import soon from './views/soon.js';
@@ -38,6 +38,7 @@ async function render() {
   if (cleanup) cleanup();
   view.textContent = '';
   window.scrollTo(0, 0);
+  setKidStars(store.state.stars);
   cleanup = await mount(view, { ...ctx, args });
   view.classList.remove('is-leaving');
 }
