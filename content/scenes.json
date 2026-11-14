@@ -2057,5 +2057,172 @@
         "glow": "full"
       }
     }
+  },
+  "shuayb-almizan": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "scale": "even",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            420,
+            520,
+            760
+          ],
+          "to": [
+            330,
+            600,
+            520
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "scale": "tilt",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            330,
+            600,
+            520
+          ],
+          "to": [
+            330,
+            620,
+            440
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "scale": "tilt",
+          "light": "well",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            330,
+            620,
+            440
+          ],
+          "to": [
+            460,
+            610,
+            600
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "scale": "tilt",
+          "light": "well"
+        },
+        "camera": {
+          "from": [
+            460,
+            610,
+            600
+          ],
+          "to": [
+            480,
+            580,
+            680
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "scale": "tilt",
+          "light": "far",
+          "flock": "on",
+          "road": "on"
+        },
+        "camera": {
+          "from": [
+            480,
+            580,
+            680
+          ],
+          "to": [
+            640,
+            560,
+            760
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "gone",
+          "scale": "even",
+          "light": "far",
+          "flock": "on",
+          "road": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            760
+          ],
+          "to": [
+            520,
+            560,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "scale": "even",
+        "glow": "full"
+      }
+    }
   }
 }
