@@ -1902,5 +1902,160 @@
         "glow": "full"
       }
     }
+  },
+  "ayyub-alayn": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {},
+        "camera": {
+          "from": [
+            700,
+            420,
+            800
+          ],
+          "to": [
+            780,
+            540,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            780,
+            540,
+            600
+          ],
+          "to": [
+            660,
+            600,
+            460
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            660,
+            600,
+            460
+          ],
+          "to": [
+            660,
+            500,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            660,
+            500,
+            640
+          ],
+          "to": [
+            650,
+            560,
+            480
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "spring": "on",
+          "palm": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            650,
+            560,
+            480
+          ],
+          "to": [
+            760,
+            600,
+            560
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "bubble"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "pair": "on",
+          "flock": "on",
+          "spring": "on",
+          "palm": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            760,
+            600,
+            560
+          ],
+          "to": [
+            740,
+            520,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
