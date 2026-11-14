@@ -7,11 +7,15 @@ import { sfx } from '../audio.js';
 import order from '../games/order.js';
 import witness from '../games/witness.js';
 import maze from '../games/maze.js';
+import blank from '../games/blank.js';
+import catchStars from '../games/catch.js';
 
 const GAMES = {
   order: { mount: order, levels: d => d.order_levels },
   witness: { mount: witness, levels: d => d.witness_levels },
-  maze: { mount: maze, levels: d => d.hijra_maze.levels }
+  maze: { mount: maze, levels: d => d.hijra_maze.levels },
+  blank: { mount: blank, levels: d => d.blank_levels },
+  catch: { mount: catchStars, levels: d => d.catch_levels }
 };
 const CHEVRON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const LOCK = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.500" width="14" height="10" rx="3" fill="currentColor"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round"/></svg>';
@@ -40,6 +44,19 @@ const ART = {
     <path d="M68 150V100h50V54h60v46h44" fill="none" stroke="#ffd77a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 11"/>
     <g class="gm-art__float" transform="translate(222 100)"><circle r="26" fill="#ffd77a" opacity=".3"/><path d="M-7-9q7-11 14 0z" fill="#c9a24a"/><path d="M-8-9H8q6 10 0 20H-8q-6-10 0-20z" fill="#ffd77a" stroke="#c9a24a" stroke-width="2"/><ellipse cy="2" rx="3.500" ry="6" fill="#fff4cf"/></g>
     <path d="M256 60l3.500 7.500 8 1-6 5.500 1.600 8-7.100-4-7.100 4 1.600-8-6-5.500 8-1z" fill="#5fd6c8"/>
+  </svg>`,
+  blank: `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="320" height="200" fill="#3a2356"/><circle cx="160" cy="90" r="120" fill="#ff9ec4" opacity=".1"/>
+    <rect x="40" y="26" width="240" height="70" rx="18" fill="#fff4cf" stroke="#ffd77a" stroke-width="3"/>
+    <path d="M214 52h44M214 72h30M60 72h40" stroke="#5b4a2a" stroke-width="7" stroke-linecap="round" opacity=".55"/>
+    <rect class="pulse" x="118" y="42" width="80" height="24" rx="10" fill="none" stroke="#e08a2e" stroke-width="3.500" stroke-dasharray="7 6" style="transform-box:fill-box;transform-origin:center"/>
+    <g class="gm-art__float"><rect x="52" y="112" width="84" height="34" rx="17" fill="#24507d" stroke="#ffd77a" stroke-width="2.500"/><path d="M74 129h40" stroke="#fff4cf" stroke-width="6" stroke-linecap="round"/></g>
+    <g class="gm-art__float gm-art__float--b"><rect x="184" y="110" width="84" height="34" rx="17" fill="#ffd77a" stroke="#fff4cf" stroke-width="2.500"/><path d="M206 127h40" stroke="#3a2a05" stroke-width="6" stroke-linecap="round"/></g>
+  </svg>`,
+  catch: `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="320" height="200" fill="#0b1d45"/><circle cx="160" cy="170" r="110" fill="#ffd77a" opacity=".12"/>
+    <g fill="#ffd77a" stroke="#fff4cf" stroke-width="1.500" stroke-linejoin="round"><path class="gm-art__fall" d="M90 26l5 11 12 1.500-9 8 2.500 12L90 52l-10.500 6.500L82 46.500l-9-8 12-1.500z"/><path class="gm-art__fall gm-art__fall--b" d="M222 44l4 9 10 1-7.500 7 2 10-8.500-5-8.500 5 2-10-7.500-7 10-1z"/><path class="gm-art__fall gm-art__fall--c" d="M160 12l3.500 7.500 8 1-6 5.500 1.600 8-7.100-4-7.100 4 1.600-8-6-5.500 8-1z"/></g>
+    <g class="gm-art__slide" transform="translate(120 108)"><circle r="34" fill="#ffd77a" opacity=".3"/><circle cy="-27" r="4" fill="none" stroke="#c9a24a" stroke-width="2.500"/><path d="M-11-13q11-18 22 0z" fill="#c9a24a"/><path d="M-12-13H12q9 15 0 30H-12q-9-15 0-30z" fill="#ffd77a" stroke="#c9a24a" stroke-width="2.500"/><ellipse cy="3" rx="5" ry="9" fill="#fff4cf"/></g>
   </svg>`
 };
 

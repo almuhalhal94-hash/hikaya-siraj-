@@ -1,5 +1,5 @@
 {
-  "_schema": "أسئلة الألعاب ومستوياتها. order_levels: كل مستوى قصة (story) و pick أرقام الأحداث المعروضة منها (بلا pick = كل الأحداث). who_is_witness: story يربط الشاهد بصورته في scenes.json. witness_levels: mode إما pick (اختيار القصة، options عدد الخيارات) أو pairs (بطاقات مقلوبة تُطابَق). hijra_maze.levels: cols/rows حجم المتاهة، seed بذرة توليدها، loops فتحات إضافية تسهّلها، dark ظلام يكشفه نور الفانوس.",
+  "_schema": "أسئلة الألعاب ومستوياتها. order_levels: كل مستوى قصة (story) و pick أرقام الأحداث المعروضة منها (بلا pick = كل الأحداث). who_is_witness: story يربط الشاهد بصورته في scenes.json. witness_levels: mode إما pick (اختيار القصة، options عدد الخيارات) أو pairs (بطاقات مقلوبة تُطابَق). hijra_maze.levels: cols/rows حجم المتاهة، seed بذرة توليدها، loops فتحات إضافية تسهّلها، dark ظلام يكشفه نور الفانوس. fill_blank: جمل من نص القصص فيها ___ مكان الكلمة الناقصة (لا تُفرَّغ كلمة من آية أو حديث). blank_levels: count عدد الجمل و options عدد الخيارات. catch_levels: secs مدة الجولة، rate عدد ما يسقط في الثانية، speed سرعة السقوط، clouds نسبة الغيوم، goals ما يلزم لنجمة ونجمتين وثلاث.",
   "order_events": [
     {
       "story": "ghar-thawr",
@@ -106,5 +106,146 @@
         "dark": true
       }
     ]
-  }
+  },
+  "fill_blank": [
+    {
+      "story": "ghar-thawr",
+      "text": "أنا غارُ ___، كهفٌ صغيرٌ في جبلٍ عالٍ قربَ مكة.",
+      "answer": "ثور",
+      "wrong": [
+        "حراء",
+        "أُحد"
+      ]
+    },
+    {
+      "story": "ghar-thawr",
+      "text": "خرج النبي ﷺ وأبو بكر مهاجرَين من مكة إلى ___.",
+      "answer": "المدينة",
+      "wrong": [
+        "الطائف",
+        "الشام"
+      ]
+    },
+    {
+      "story": "ghar-thawr",
+      "text": "اختبأ النبي ﷺ وصاحبه في الغار ___ ليالٍ.",
+      "answer": "ثلاثَ",
+      "wrong": [
+        "سبعَ",
+        "عشرَ"
+      ]
+    },
+    {
+      "story": "ghar-thawr",
+      "text": "وقف المشركون عند ___ الغار ولم يروهما.",
+      "answer": "باب",
+      "wrong": [
+        "سقف",
+        "بئر"
+      ]
+    },
+    {
+      "story": "ghar-thawr",
+      "text": "من كان اللهُ معه فلن ___ أبدًا.",
+      "answer": "يضيع",
+      "wrong": [
+        "ينام",
+        "يلعب"
+      ]
+    },
+    {
+      "story": "jidh-alnakhla",
+      "text": "كان النبي ﷺ إذا خطب يستند إلى ___ نخلة.",
+      "answer": "جذعِ",
+      "wrong": [
+        "ورقِ",
+        "ثمرِ"
+      ]
+    },
+    {
+      "story": "jidh-alnakhla",
+      "text": "كان الجذع في مسجد رسول الله ﷺ في ___.",
+      "answer": "المدينة",
+      "wrong": [
+        "مكة",
+        "الطائف"
+      ]
+    },
+    {
+      "story": "jidh-alnakhla",
+      "text": "صُنع للنبي ﷺ ___ من خشب يخطب عليه.",
+      "answer": "منبرٌ",
+      "wrong": [
+        "بابٌ",
+        "سريرٌ"
+      ]
+    },
+    {
+      "story": "jidh-alnakhla",
+      "text": "حنّ الجذع وبكى كما يبكي ___.",
+      "answer": "الصغير",
+      "wrong": [
+        "الطير",
+        "المطر"
+      ]
+    },
+    {
+      "story": "jidh-alnakhla",
+      "text": "نزل النبي ﷺ وضمّ الجذع حتى ___.",
+      "answer": "سكن",
+      "wrong": [
+        "طار",
+        "انكسر"
+      ]
+    }
+  ],
+  "blank_levels": [
+    {
+      "count": 4,
+      "options": 2
+    },
+    {
+      "count": 6,
+      "options": 3
+    },
+    {
+      "count": 10,
+      "options": 3
+    }
+  ],
+  "catch_levels": [
+    {
+      "secs": 25,
+      "rate": 1.1,
+      "speed": 150,
+      "clouds": 0,
+      "goals": [
+        8,
+        12,
+        16
+      ]
+    },
+    {
+      "secs": 30,
+      "rate": 1.4,
+      "speed": 200,
+      "clouds": 0.2,
+      "goals": [
+        12,
+        17,
+        22
+      ]
+    },
+    {
+      "secs": 35,
+      "rate": 1.8,
+      "speed": 260,
+      "clouds": 0.3,
+      "goals": [
+        18,
+        25,
+        32
+      ]
+    }
+  ]
 }
