@@ -605,7 +605,7 @@ function land() {
     </g>
     <g class="ld-shirt" transform="translate(640 560)">
       <circle r="150" fill="url(#g-warm)"/>
-      <path d="M-34-70q34 22 68 0l62 30-22 44-30-14v92h-88v-92l-30 14-22-44z" fill="#f1e4c3" stroke="#b99a48" stroke-width="3" stroke-linejoin="round"/><path d="M-34-70q34 40 68 0" fill="none" stroke="#b99a48" stroke-width="3"/>
+      <path d="M-34-70q34 22 68 0l62 30-22 44-30-14l12 140h-112l12-140-30 14-22-44z" fill="#f1e4c3" stroke="#b99a48" stroke-width="3" stroke-linejoin="round"/><path d="M-34-70q34 40 68 0" fill="none" stroke="#b99a48" stroke-width="3"/>
     </g>
     <g class="ld-flock" fill="url(#g-warm)">${flock}</g>
     <g class="ld-lights">

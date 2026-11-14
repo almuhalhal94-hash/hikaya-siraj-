@@ -1736,5 +1736,171 @@
         "glow": "full"
       }
     }
+  },
+  "yusuf-alqamis": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "dream": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            760
+          ],
+          "to": [
+            600,
+            250,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "well": "on",
+          "light": "inwell",
+          "shirt": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            420,
+            700
+          ],
+          "to": [
+            740,
+            560,
+            520
+          ],
+          "dur": 10
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "well": "on",
+          "light": "well",
+          "caravan": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            740,
+            560,
+            520
+          ],
+          "to": [
+            860,
+            580,
+            620
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "silos": "on",
+          "light": "town",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            760,
+            560,
+            700
+          ],
+          "to": [
+            420,
+            540,
+            640
+          ],
+          "dur": 10
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "silos": "on",
+          "light": "town",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            420,
+            540,
+            640
+          ],
+          "to": [
+            380,
+            580,
+            520
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "silos": "on",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on",
+          "shirt": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            460,
+            560,
+            600
+          ],
+          "to": [
+            620,
+            520,
+            700
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
