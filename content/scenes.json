@@ -1577,5 +1577,164 @@
         "glow": "full"
       }
     }
+  },
+  "ismail-alwadi": {
+    "thumb": 5,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {},
+        "camera": {
+          "from": [
+            640,
+            440,
+            840
+          ],
+          "to": [
+            640,
+            500,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            500,
+            620
+          ],
+          "to": [
+            680,
+            560,
+            480
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            680,
+            560,
+            480
+          ],
+          "to": [
+            640,
+            520,
+            600
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "road",
+          "pair": "on",
+          "kaaba": "base",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            600
+          ],
+          "to": [
+            700,
+            580,
+            500
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "road",
+          "pair": "on",
+          "kaaba": "built",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            700,
+            580,
+            500
+          ],
+          "to": [
+            660,
+            520,
+            560
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "road",
+          "pair": "on",
+          "kaaba": "built",
+          "time": "dawn",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            660,
+            520,
+            560
+          ],
+          "to": [
+            640,
+            460,
+            840
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
