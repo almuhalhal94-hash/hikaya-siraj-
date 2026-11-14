@@ -91,7 +91,10 @@ export default async function home(el, { ui, lines, go, refreshChip }) {
     doors.append(a);
   });
   const mine = html(`<section class="mine"><span class="chip mine__stars"></span><h2></h2><div class="mine__badges"></div><p class="mine__hint" aria-live="polite"></p></section>`);
-  page.append(doors, mine);
+  const pl = html(`<a class="parents-link" href="#/parents"></a>`);
+  pl.textContent = t.parents_link;
+  pl.addEventListener('click', e => { e.preventDefault(); sfx.tap(); go('#/parents'); });
+  page.append(doors, mine, pl);
   el.append(page);
 
   // ——— القسم 6: نجومي، أوسمتي، وهدية اليوم ———
