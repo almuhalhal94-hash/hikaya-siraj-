@@ -1,7 +1,7 @@
 // أدوات مشتركة: التخزين المحلي، تحميل المحتوى، ووقت اليوم.
 
 const KEY = 'hikaya-siraj:v1';
-const defaults = { name: '', sound: true, stars: 0, lastStory: '', completed: [], days: [], badges: [] };
+const defaults = { name: '', sound: true, stars: 0, lastStory: '', completed: [], days: [], badges: [], adhkar: null, adhkarTotal: { morning: 0, evening: 0 } };
 
 function read() {
   try { return { ...defaults, ...JSON.parse(localStorage.getItem(KEY) || '{}') }; }
@@ -40,6 +40,21 @@ export function dayPart(date = new Date()) {
   const h = date.getHours();
   return h >= 4 && h < 16 ? 'morning' : 'evening';
 }
+
+/** مفتاح اليوم بالتوقيت المحلي: 2026-01-31 */
+export function dayKey(d = new Date()) {
+  const p = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+/** يسجّل زيارة اليوم (لحديقة الأيام). الغياب لا يُنقص شيئًا. */
+export function touchDay() {
+  const k = dayKey();
+  if (!store.state.days.includes(k)) store.set({ days: [...store.state.days, k] });
+}
+
+/** أرقام عربية مشرقية. */
+export const num = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
 
 export const wait = ms => new Promise(r => setTimeout(r, ms));
 

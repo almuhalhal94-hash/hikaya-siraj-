@@ -1,13 +1,14 @@
 // نقطة البداية: الموجّه (hash router)، الانتقالات بين الصفحات، وشريط الأعلى.
-import { store, content, dayPart, wait, reducedMotion } from './core.js';
+import { store, content, dayPart, wait, reducedMotion, touchDay } from './core.js';
 import { initSky, initFx } from './sky.js';
 import { sfx, setSound } from './audio.js';
 import home from './views/home.js';
 import soon from './views/soon.js';
 import stories from './views/stories.js';
+import adhkar from './views/adhkar.js';
 
 // كل قسم يُسجَّل هنا عند بنائه؛ ما لم يُبنَ بعد يعرض صفحة «قريبًا».
-const routes = { '': home, stories, games: soon, adhkar: soon, house: soon };
+const routes = { '': home, stories, games: soon, adhkar, house: soon };
 
 const view = document.getElementById('view');
 const veil = document.getElementById('veil');
@@ -60,6 +61,7 @@ async function go(hash, origin) {
 
 async function start() {
   document.documentElement.dataset.time = dayPart();
+  touchDay();
   initSky(document.getElementById('sky'));
   initFx(document.getElementById('fx'));
 
