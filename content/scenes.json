@@ -955,5 +955,154 @@
         "glow": "full"
       }
     }
+  },
+  "hud-alrih": {
+    "thumb": 1,
+    "scenes": [
+      {
+        "set": "dunes",
+        "state": {},
+        "camera": {
+          "from": [
+            300,
+            470,
+            620
+          ],
+          "to": [
+            560,
+            460,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dunes",
+        "state": {},
+        "camera": {
+          "from": [
+            600,
+            440,
+            760
+          ],
+          "to": [
+            600,
+            400,
+            520
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "call"
+        },
+        "camera": {
+          "from": [
+            600,
+            430,
+            560
+          ],
+          "to": [
+            500,
+            520,
+            520
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "call",
+          "cloud": "come"
+        },
+        "camera": {
+          "from": [
+            520,
+            480,
+            560
+          ],
+          "to": [
+            620,
+            380,
+            760
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "away",
+          "cloud": "come",
+          "storm": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            400,
+            760
+          ],
+          "to": [
+            600,
+            440,
+            600
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "safe",
+          "city": "after",
+          "time": "night"
+        },
+        "camera": {
+          "from": [
+            600,
+            440,
+            600
+          ],
+          "to": [
+            540,
+            470,
+            800
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "call"
+      }
+    }
   }
 }

@@ -355,4 +355,70 @@ function garden() {
   </g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep, garden };
+// ——— كثبان الأحقاف ومساكن عاد (هود عليه السلام): لا يُرسم أحد؛ هود نور فقط ———
+function pillar(x, h, w = 34) {
+  return `<g transform="translate(${x} 0)"><rect x="${-w / 2}" y="${-h}" width="${w}" height="${h}" fill="url(#g-stone)"/>
+    <rect x="${-w / 2 - 8}" y="${-h - 16}" width="${w + 16}" height="16" rx="3" fill="#e9c98c"/><rect x="${-w / 2 - 6}" y="-12" width="${w + 12}" height="12" fill="#8a6234"/>
+    <path d="M${-w / 6} ${-h + 6}V-14M${w / 6} ${-h + 6}V-14" stroke="#7a5426" stroke-width="2.5" opacity=".45"/></g>`;
+}
+function dunes() {
+  const r = rng(77); let sand = '', ripples = '';
+  for (let i = 0; i < 60; i++) { const x = -700 + r() * 2600, y = -300 + r() * 1500, l = 120 + r() * 320; sand += `M${x.toFixed(0)} ${y.toFixed(0)}h${l.toFixed(0)}`; }
+  for (let i = 0; i < 11; i++) { const y = 760 + i * 52; ripples += `M-700 ${y}q330-${26 + i * 2} 660 0t660 0 660 0 660 0`; }
+  return `${DEFS}
+  <defs>
+    <linearGradient id="g-desert" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#20387a"/><stop offset=".36" stop-color="#7a6a9c"/><stop offset=".56" stop-color="#f0a66a"/><stop offset=".72" stop-color="#ffe2a4"/></linearGradient>
+    <linearGradient id="g-stone" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e2b877"/><stop offset=".55" stop-color="#c79450"/><stop offset="1" stop-color="#8a6234"/></linearGradient>
+    <linearGradient id="g-dune" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9b876"/><stop offset=".5" stop-color="#b98248"/><stop offset="1" stop-color="#5a3a1c"/></linearGradient>
+    <linearGradient id="g-cloud" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1420"/><stop offset=".7" stop-color="#3a2a24"/><stop offset="1" stop-color="#6b4a2a"/></linearGradient>
+  </defs>
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    ${stars(70, 19, [-400, 1600], [-300, 420])}
+    <rect class="du-day" x="-700" y="-500" width="2600" height="1500" fill="url(#g-desert)"/>
+    <g class="du-sun"><circle cx="880" cy="430" r="380" fill="url(#g-warm)"/><circle cx="880" cy="430" r="58" fill="#fff4cf"/></g>
+    <rect class="du-stormsky" ${BIG} fill="#4a321c"/>
+    <g class="du-cloud">
+      <path d="M-700 430q120-150 330-120 60-150 260-140 120-130 330-70 160-110 340-20 190-70 300 60 220-40 340 120 200 0 300 170H-700z" fill="url(#g-cloud)"/>
+      <path d="M-500 430q140-90 300-60 90-110 280-80 150-90 320-20 170-60 300 40 180-30 300 120z" fill="#2a1e22" opacity=".8"/>
+    </g>
+  </g>
+  <g data-d=".3">
+    <path class="du-far" d="M-700 560q240-110 500-50t460-60 440 50 420-70 480 80v900H-700z"/>
+  </g>
+  <g data-d=".75">
+    <g class="du-city">
+      <path class="du-hill" d="M-200 700q200-150 440-150h700q260 0 460 150v700H-200z"/>
+      <g transform="translate(0 556)">
+        <rect x="318" y="-150" width="170" height="150" fill="#b98248"/><rect x="306" y="-166" width="194" height="18" fill="#e2b877"/>
+        <path d="M318-166v-22h26v22m22 0v-22h26v22m22 0v-22h26v22m22 0v-22h26v22" fill="#e2b877"/>
+        <rect class="du-door" x="384" y="-70" width="40" height="70" rx="20" fill="#3a2412"/>
+        <rect x="716" y="-110" width="150" height="110" fill="#b98248"/><rect x="706" y="-124" width="170" height="16" fill="#e2b877"/>
+        <rect class="du-door" x="772" y="-60" width="36" height="60" rx="18" fill="#3a2412"/>
+        ${pillar(250, 250)}${pillar(540, 330, 38)}${pillar(600, 380, 40)}${pillar(660, 330, 38)}${pillar(930, 270)}${pillar(1000, 210, 30)}${pillar(180, 190, 30)}
+        <rect x="520" y="-352" width="160" height="20" rx="3" fill="#e9c98c"/><rect x="578" y="-404" width="44" height="18" rx="3" fill="#e9c98c"/>
+      </g>
+      <g class="du-green">
+        <g stroke="#1f5a3c">${palm(130, 620, 0.5, -8)}${palm(1070, 616, 0.55, 10)}${palm(450, 606, 0.42, 6)}${palm(840, 606, 0.44, -6)}</g>
+        <ellipse cx="620" cy="604" rx="130" ry="15" fill="#7fd6d0"/><ellipse cx="620" cy="602" rx="80" ry="6" fill="#e8fffb" opacity=".7"/>
+        <path d="M240 610q20-22 44 0zM300 614q16-18 36 0zM880 612q22-22 46 0zM950 616q16-18 34 0zM770 620q18-20 40 0zM450 618q16-18 36 0z" fill="#2f8a58"/>
+      </g>
+      <path class="du-drift" d="M-200 760q180-170 420-130t380-10 380 20 420-40 300 160v700H-200z" fill="url(#g-dune)"/>
+    </g>
+  </g>
+  <g data-d="1">
+    <path class="du-near" d="M-700 1400V700q300-90 620-40t560-30 520 40 500-50 400 60v720z" fill="url(#g-dune)"/>
+    <path d="M-700 720q300-90 620-40t560-30 520 40 500-50 400 60v24q-200-50-400-40t-500 50-520-40-560 30-620 20z" fill="#ffe2a4" opacity=".4"/>
+    <path d="${ripples}" fill="none" stroke="#5a3a1c" stroke-width="3" opacity=".22"/>
+    <rect class="du-veil" ${BIG} fill="#070d26"/>
+    <g class="du-light"><circle cx="380" cy="640" r="110" fill="url(#g-warm)"/><circle cx="380" cy="640" r="8" fill="#fff"/></g>
+    <g class="du-flock" fill="url(#g-warm)"><circle cx="300" cy="668" r="34"/><circle cx="340" cy="690" r="28"/><circle cx="430" cy="686" r="30"/><circle cx="262" cy="700" r="24"/></g>
+  </g>
+  <g data-d="1.3">
+    <rect class="du-haze" ${BIG} fill="#8a5e30"/>
+    <g class="du-sand"><path d="${sand}" fill="none" stroke="#f3d6a0" stroke-width="5" stroke-linecap="round"/></g>
+    <path d="M-700 1400V960q260-80 480 0t420 440zM1900 1400V940q-240-70-460 20t-380 440z" fill="#3a2412"/>
+  </g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes };
