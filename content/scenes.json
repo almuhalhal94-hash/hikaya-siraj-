@@ -1263,5 +1263,160 @@
     "choice": {
       "state": {}
     }
+  },
+  "ibrahim-alnar": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "ur",
+        "state": {
+          "fire": "small"
+        },
+        "camera": {
+          "from": [
+            880,
+            560,
+            560
+          ],
+          "to": [
+            880,
+            590,
+            320
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "ur",
+        "state": {
+          "light": "temple"
+        },
+        "camera": {
+          "from": [
+            300,
+            470,
+            640
+          ],
+          "to": [
+            300,
+            510,
+            520
+          ],
+          "dur": 7
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "ur",
+        "state": {
+          "light": "temple",
+          "idols": "broken"
+        },
+        "camera": {
+          "from": [
+            300,
+            510,
+            520
+          ],
+          "to": [
+            300,
+            520,
+            580
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "ur",
+        "state": {
+          "idols": "broken",
+          "fire": "huge"
+        },
+        "camera": {
+          "from": [
+            700,
+            470,
+            820
+          ],
+          "to": [
+            880,
+            440,
+            620
+          ],
+          "dur": 8
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "ur",
+        "state": {
+          "idols": "broken",
+          "fire": "cool",
+          "light": "fire"
+        },
+        "camera": {
+          "from": [
+            880,
+            440,
+            620
+          ],
+          "to": [
+            880,
+            470,
+            500
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "ur",
+        "state": {
+          "idols": "broken",
+          "fire": "ember",
+          "light": "free",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            880,
+            480,
+            560
+          ],
+          "to": [
+            860,
+            470,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "fire"
+      }
+    }
   }
 }

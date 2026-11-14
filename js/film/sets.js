@@ -476,4 +476,62 @@ function hijr() {
   </g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr };
+// ——— معبد الأصنام والنار العظيمة (إبراهيم عليه السلام): لا يُرسم أحد؛ إبراهيم نور فقط، والأصنام حجارة قائمة بلا ملامح ———
+function tongue(x, k, cls, delay) {
+  return `<g transform="translate(${x} 0) scale(${k})"><path class="ur-fl ${cls}" style="animation-delay:${delay}s" d="M0 0C-74-30-66-124-22-176-30-122 10-112 4-250 64-176 78-70 0 0z"/></g>`;
+}
+function idol(x, k, n) {
+  return `<g transform="translate(${x} 0) scale(${k})"><g class="ur-idol ur-idol--${n}"><path d="M-24 0V-112q24-40 48 0V0z"/><path d="M-24-70h48" fill="none" stroke="#000" stroke-width="4" opacity=".25"/></g></g>`;
+}
+function ur() {
+  const r = rng(29); let bricks = '', rubble = '';
+  for (let y = 380; y < 640; y += 34) bricks += `M40 ${y}H560`;
+  for (let i = 0; i < 16; i++) { const x = 110 + r() * 380, y = 596 + r() * 10, w = 8 + r() * 16; rubble += `<path d="M${x.toFixed(0)} ${y.toFixed(0)}l${w.toFixed(0)}-${(w * 0.7).toFixed(0)} ${(w * 0.8).toFixed(0)} ${(w * 0.7).toFixed(0)}z"/>`; }
+  return `${DEFS}
+  <defs><linearGradient id="g-mud" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a4130"/><stop offset="1" stop-color="#2c1d18"/></linearGradient></defs>
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    <rect class="ur-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    ${stars(90, 13, [-400, 1600], [-300, 460])}
+    <path class="ur-moon" d="M1010 90a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
+    <g class="ur-sun"><circle cx="1050" cy="520" r="340" fill="url(#g-warm)"/></g>
+  </g>
+  <g data-d=".3">
+    <path class="ur-far" d="M-700 560h200v-60h90v-50h70v50h60v60h180v-40h120v40h140v-90h50v-60h60v-50h80v50h60v60h50v90h170v-50h130v50h210v-70h80v-40h70v40h60v70h500v900H-700z"/>
+  </g>
+  <g data-d="1">
+    <path class="ur-ground" d="M-700 1400V640q320-20 660-8t640-4 660 6 640-10v776z"/>
+    <g class="ur-temple">
+      <rect x="40" y="360" width="520" height="280" fill="url(#g-mud)"/><path d="${bricks}" stroke="#000" stroke-width="3" opacity=".22"/>
+      <path d="M40 360h520v-20H40zM40 340v-26h44v26m44 0v-26h44v26m44 0v-26h44v26m44 0v-26h44v26m44 0v-26h44v26m44 0v-26h44v26" fill="#5a4130"/>
+      <path d="M90 640h420l-24-40H114z" fill="#6b4e3a"/><path d="M114 600h372v-10H114z" fill="#8a6a4e"/>
+      <ellipse class="ur-niche" cx="300" cy="520" rx="210" ry="150" fill="url(#g-warm)"/>
+      <g class="ur-torch" transform="translate(84 470)"><rect x="-5" y="0" width="10" height="130" fill="#2c1d18"/><path d="M-16 0h32l-6 16h-20z" fill="#8a6a4e"/><path class="ur-fl ur-fl--c" d="M0 0q-20-14-6-44 0 18 10 14-4-22 8-36 14 34-12 66z"/></g>
+      <g class="ur-torch" transform="translate(516 470)"><rect x="-5" y="0" width="10" height="130" fill="#2c1d18"/><path d="M-16 0h32l-6 16h-20z" fill="#8a6a4e"/><path class="ur-fl ur-fl--c" style="animation-delay:-.4s" d="M0 0q-20-14-6-44 0 18 10 14-4-22 8-36 14 34-12 66z"/></g>
+      <g transform="translate(0 600)" class="ur-idols">
+        ${idol(160, 0.7, 1)}${idol(218, 0.9, 2)}${idol(382, 0.9, 3)}${idol(440, 0.7, 4)}${idol(120, 0.5, 5)}${idol(480, 0.5, 6)}
+        <g class="ur-rubble">${rubble}</g>
+        <g transform="translate(300 0) scale(1.5)"><path class="ur-big" d="M-26 0V-118q26-44 52 0V0z"/><path d="M-26-74h52M-26-30h52" fill="none" stroke="#000" stroke-width="3" opacity=".25"/></g>
+      </g>
+    </g>
+    <g transform="translate(880 652)">
+      <circle class="ur-fireglow" cy="-150" r="430" fill="url(#g-warm)"/>
+      <path class="ur-pit" d="M-250 0v-44h56v-22h60v22h50v-26h64v26h54v-24h60v24h50v-20h56v64z"/>
+      <g class="ur-fire">
+        ${tongue(-120, 1.25, 'ur-fl--a', 0)}${tongue(110, 1.35, 'ur-fl--a', -0.5)}${tongue(0, 1.9, 'ur-fl--a', -0.9)}
+        ${tongue(-70, 1.15, 'ur-fl--b', -0.3)}${tongue(64, 1.3, 'ur-fl--b', -0.7)}${tongue(-150, 0.8, 'ur-fl--b', -1.1)}${tongue(160, 0.75, 'ur-fl--b', -0.2)}
+        ${tongue(-24, 1.05, 'ur-fl--c', -0.6)}${tongue(40, 0.85, 'ur-fl--c', -1)}${tongue(-96, 0.6, 'ur-fl--c', -0.1)}${tongue(108, 0.6, 'ur-fl--c', -0.8)}
+        ${tongue(6, 0.6, 'ur-fl--d', -0.4)}
+      </g>
+      <path class="ur-wood" d="M-170-6l150-30 10 14-150 30zM170-6L20-36 10-22l150 30zM-90-2h180v14H-90z"/>
+      <path class="ur-pit ur-pit--front" d="M-270 20v-40h70v-16h64v16h60v-18h70v18h64v-16h70v16h60v-14h52v54z"/>
+    </g>
+    <g class="ur-light"><circle cx="300" cy="680" r="150" fill="url(#g-warm)"/><circle cx="300" cy="680" r="80" fill="url(#g-white)"/><circle cx="300" cy="680" r="10" fill="#fff"/></g>
+    <g class="ur-light2"><circle cx="1010" cy="700" r="70" fill="url(#g-warm)"/><circle cx="1010" cy="700" r="6" fill="#fff"/></g>
+  </g>
+  <g data-d="1.3">
+    <path d="M-700 1400V930l210-60 150 50 120 480zM1900 1400V910l-230-50-150 60-110 480z" fill="#04050c"/>
+  </g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur };

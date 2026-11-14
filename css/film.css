@@ -357,7 +357,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-city="after"] .du-drift { transform: translateY(52px); } [data-city="after"] .du-green { opacity: 0; } [data-city="after"] .du-door { fill: #120a06; }
 [data-storm="on"] .du-drift { transform: translateY(120px); }
 .du-light, .du-flock { opacity: 0; transition: transform 8s ease-in-out, opacity 3s ease; }
-.du-light { animation: st-breathe 3.6s ease-in-out infinite; }
+.du-light { animation: lt-breathe 3.6s ease-in-out infinite; }
 [data-light="call"] .du-light, [data-light="away"] .du-light, [data-light="safe"] .du-light { opacity: 1; }
 [data-light="away"] .du-light, [data-light="away"] .du-flock { transform: translate(-150px, 60px); }
 [data-light="safe"] .du-light, [data-light="safe"] .du-flock { transform: translate(-60px, 40px); }
@@ -387,7 +387,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-camel="gone"] .hj-camelwrap { opacity: 0; transform: none; transition: opacity 5s ease; }
 .hj-camelbody { fill: #1a1024; stroke: #1a1024; transform-origin: 50% 100%; animation: hj-graze 5s ease-in-out infinite; }
 @keyframes hj-graze { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-2.5deg) translateY(1px); } }
-.hj-light, .hj-flock { opacity: 0; transition: transform 9s ease-in-out, opacity 3s ease; } .hj-light { animation: st-breathe 3.6s ease-in-out infinite; }
+.hj-light, .hj-flock { opacity: 0; transition: transform 9s ease-in-out, opacity 3s ease; } .hj-light { animation: lt-breathe 3.6s ease-in-out infinite; }
 [data-light="on"] .hj-light, [data-light="away"] .hj-light { opacity: 1; } [data-light="away"] .hj-flock { opacity: .65; }
 [data-light="away"] .hj-light, [data-light="away"] .hj-flock { transform: translate(-330px, 70px); }
 .stage[data-set="hijr"][data-quake="on"] .stage__svg { animation: hj-quake .22s linear infinite; }
@@ -396,3 +396,43 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .stage[data-set="hijr"][data-quake="on"] .stage__tint { animation: hj-cry 2.4s ease-in-out infinite; }
 @keyframes hj-cry { 0%, 100% { opacity: 0; } 50% { opacity: .7; } }
 [data-homes="dark"] .hj-oasis { opacity: .35; }
+
+
+/* ——— معبد الأصنام والنار (إبراهيم عليه السلام) ——— */
+.ur-fl, .ur-fire, .ur-fireglow, .ur-light, .ur-light2, .ur-idol, .ur-sun { transform-box: fill-box; }
+.ur-dawn { opacity: 0; transition: opacity 6s ease; } .ur-moon { transition: opacity 5s ease; }
+.ur-sun { opacity: 0; transform: translateY(200px); transition: transform 13s ease-out, opacity 5s ease; }
+.ur-far { fill: #101838; transition: fill 6s ease; } .ur-ground { fill: #15142c; transition: fill 6s ease; }
+[data-set="ur"][data-time="dawn"] .ur-dawn { opacity: 1; } [data-set="ur"][data-time="dawn"] .ur-moon { opacity: .1; }
+.stage[data-set="ur"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="ur"][data-time="dawn"] .ur-sun { opacity: 1; transform: none; }
+[data-set="ur"][data-time="dawn"] .ur-far { fill: #5b4480; } [data-set="ur"][data-time="dawn"] .ur-ground { fill: #7a5a4a; }
+.ur-fl { transform-origin: 50% 100%; animation: ur-flick 1.3s ease-in-out infinite; transition: fill 3.5s ease; }
+@keyframes ur-flick { 0%, 100% { transform: scale(1, 1) skewX(0); } 30% { transform: scale(.92, 1.12) skewX(-5deg); } 65% { transform: scale(1.06, .9) skewX(6deg); } }
+.ur-fl--a { fill: #c8321e; opacity: .85; } .ur-fl--b { fill: #ff8a2a; animation-duration: 1s; } .ur-fl--c { fill: #ffd24a; animation-duration: .8s; } .ur-fl--d { fill: #fff4cf; animation-duration: .7s; }
+.ur-fire { transform-origin: 50% 100%; transform: scale(0); opacity: 0; transition: transform 5s var(--ease-out), opacity 2.5s ease; }
+.ur-fireglow { transform-origin: center; opacity: 0; transition: opacity 4s ease; animation: st-breathe 2.2s ease-in-out infinite; }
+.ur-pit { fill: #3a2c2a; } .ur-pit--front { fill: #241a1c; } .ur-wood { fill: #3a2412; }
+[data-fire="small"] .ur-fire { transform: scale(.3); opacity: 1; } [data-fire="small"] .ur-fireglow { opacity: .35; }
+[data-fire="huge"] .ur-fire { transform: none; opacity: 1; } [data-fire="huge"] .ur-fireglow { opacity: .95; }
+[data-fire="cool"] .ur-fire { transform: scale(.86); opacity: .92; } [data-fire="cool"] .ur-fireglow { opacity: .7; }
+[data-fire="cool"] .ur-fl { animation-duration: 3.2s; }
+[data-fire="cool"] .ur-fl--a { fill: #1f5f8a; } [data-fire="cool"] .ur-fl--b { fill: #3fb7c4; } [data-fire="cool"] .ur-fl--c { fill: #bfeee8; } [data-fire="cool"] .ur-fl--d { fill: #fff; }
+[data-fire="ember"] .ur-fire { transform: scale(.16); opacity: .7; } [data-fire="ember"] .ur-fireglow { opacity: .15; }
+.ur-idol, .ur-big { fill: #6f6a7a; } .ur-big { fill: #7d7888; }
+.ur-idol { transform-origin: 50% 100%; transition: transform 1.4s cubic-bezier(.5, 0, .9, .6); }
+.ur-idol--2, .ur-idol--5 { transition-delay: .5s; } .ur-idol--3 { transition-delay: 1s; } .ur-idol--4, .ur-idol--6 { transition-delay: 1.5s; }
+[data-idols="broken"] .ur-idol--1, [data-idols="broken"] .ur-idol--2, [data-idols="broken"] .ur-idol--5 { transform: rotate(-84deg) translateX(-10px); }
+[data-idols="broken"] .ur-idol--3, [data-idols="broken"] .ur-idol--4, [data-idols="broken"] .ur-idol--6 { transform: rotate(82deg) translateX(10px); }
+.ur-rubble { fill: #5a5666; opacity: 0; transition: opacity 1.5s ease 1.6s; } [data-idols="broken"] .ur-rubble { opacity: 1; }
+.ur-niche { opacity: .22; transition: opacity 4s ease; } .ur-temple { transition: opacity 4s ease; }
+.ur-torch .ur-fl { animation-duration: .9s; }
+.ur-light, .ur-light2 { transform-origin: center; opacity: 0; transition: transform 7s ease-in-out, opacity 3s ease; animation: lt-breathe 3.6s ease-in-out infinite; }
+[data-light="temple"] .ur-light, [data-light="fire"] .ur-light, [data-light="free"] .ur-light { opacity: 1; }
+[data-light="fire"] .ur-light { transform: translate(580px, -150px) scale(1.15); }
+[data-light="free"] .ur-light { transform: translate(640px, 20px); } [data-light="free"] .ur-light2 { opacity: .9; }
+.stage[data-set="ur"] .stage__tint { background: radial-gradient(circle at 55% 62%, rgba(255, 140, 50, .4), rgba(200, 50, 30, .12) 70%); }
+.stage[data-set="ur"][data-fire="huge"] .stage__tint { opacity: 1; }
+.stage[data-set="ur"][data-fire="cool"] .stage__tint { opacity: 1; background: radial-gradient(circle at 55% 60%, rgba(190, 238, 232, .34), rgba(63, 183, 196, .08) 70%); }
+/* نبض النور بخاصية scale المستقلة حتى لا يُلغي الإزاحة بـtransform */
+@keyframes lt-breathe { 50% { scale: 1.1; } }
