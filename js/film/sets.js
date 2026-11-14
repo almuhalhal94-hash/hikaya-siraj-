@@ -534,4 +534,89 @@ function ur() {
   </g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur };
+// ——— أرض وبلدة (ديكور عام لقصص عدة): عناصره كلها مخفية وتُظهرها الحالات. لا يُرسم أحد؛ الأنبياء وأهلهم أنوار ———
+const CAMEL = '<path d="M-84-112C-104-140-120-180-140-212l-34 8q-12-6-6-18l32-18 4-12 8 10c22 6 30 26 38 52 10 26 26 32 46 30 28-4 40-44 66-44s40 38 62 46c22 6 32 28 30 54-4 20-44 26-104 24-40-2-70-6-84-32z"/><path d="M-72-96l-6 96h14l8-90zM-46-88l4 88h14l-2-88zM62-90l12 90h14l-8-94zM86-98l16 98h14l-14-104z"/>';
+function house(x, w, h, dome) {
+  const wins = [];
+  for (let i = 0; i < Math.max(1, Math.round(w / 60)); i++) wins.push(`<rect class="ld-win" x="${x + 16 + i * 52}" y="${-h + 26}" width="20" height="28" rx="10"/>`);
+  return `<rect x="${x}" y="${-h}" width="${w}" height="${h}" fill="url(#g-mudwall)"/><rect x="${x - 6}" y="${-h - 10}" width="${w + 12}" height="12" fill="#6b5340"/>
+    ${dome ? `<path d="M${x + w * 0.2} ${-h - 10}q${w * 0.3}-${w * 0.5} ${w * 0.6} 0z" fill="#6b5340"/>` : ''}${wins.join('')}
+    <path class="ld-win" d="M${x + w / 2 - 13} 0v-40q13-16 26 0V0z"/>`;
+}
+function land() {
+  const r = rng(57); let dream = '', rub = '', dates = '', flock = '';
+  for (let i = 0; i < 11; i++) { const a = Math.PI * (0.08 + 0.84 * i / 10); dream += `<path transform="translate(${(600 - Math.cos(a) * 250).toFixed(0)} ${(210 - Math.sin(a) * 150).toFixed(0)})" d="M0-15l4 10 11 1-8 7 2 11-9-6-9 6 2-11-8-7 11-1z"/>`; }
+  for (let i = 0; i < 26; i++) { const x = 90 + r() * 440, w = 16 + r() * 40; rub += `<path d="M${x.toFixed(0)} 644l${(w * 0.4).toFixed(0)}-${(8 + r() * 26).toFixed(0)} ${(w * 0.6).toFixed(0)} ${(4 + r() * 10).toFixed(0)}v20z"/>`; }
+  for (const [x, y] of [[-14, -180], [0, -170], [14, -182], [-6, -158], [8, -160]]) dates += `<circle cx="${x}" cy="${y}" r="7"/>`;
+  for (const [x, y, q] of [[-90, 26, 30], [-52, 44, 26], [70, 40, 28], [112, 22, 24], [-128, 48, 22], [150, 50, 22]]) flock += `<circle cx="${640 + x}" cy="${650 + y}" r="${q}"/>`;
+  return `${DEFS}
+  <defs><linearGradient id="g-mudwall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3a36"/><stop offset="1" stop-color="#2a2028"/></linearGradient></defs>
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    <rect class="ld-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    ${stars(90, 83, [-400, 1600], [-300, 460])}
+    <path class="ld-moon" d="M240 80a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
+    <g class="ld-sun"><circle cx="940" cy="480" r="380" fill="url(#g-warm)"/><circle cx="940" cy="480" r="60" fill="#fff4cf"/></g>
+    <g class="ld-dream"><circle cx="600" cy="150" r="230" fill="url(#g-warm)" opacity=".5"/><g fill="#fff4cf">${dream}</g>
+      <circle cx="540" cy="150" r="34" fill="#ffd77a"/><path d="M640 118a34 34 0 1 0 30 52 28 28 0 0 1-30-52z" fill="#fff4cf"/></g>
+  </g>
+  <g data-d=".3">
+    <path class="ld-ridge" d="M-700 580-460 470-330 530-190 430-40 530 110 450 250 540 420 470 570 550 720 480 880 430 1020 520 1170 450 1330 540 1500 460 1900 600V1400H-700z"/>
+  </g>
+  <g data-d="1">
+    <path class="ld-ground" d="M-700 1400V640q320-22 660-8t640-6 660 8 640-12v778z"/>
+    <path class="ld-groundlit" d="M-700 652q320-22 660-8t640-6 660 8 640-12v26q-320 18-640 12t-660-8-640 6-660 8z"/>
+    <path class="ld-road" d="M330 660q200 60 420 50t520 150" fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="3 22"/>
+    <g class="ld-rubble" fill="#2a2028">${rub}</g>
+    <g class="ld-town" transform="translate(0 646)">
+      ${house(90, 120, 150, true)}${house(214, 100, 210, false)}${house(320, 130, 130, false)}${house(452, 90, 180, true)}
+      <g class="ld-silos">${[560, 632, 704].map(x => `<path d="M${x} 0v-120q30-60 60 0V0z" fill="#b98548"/><path d="M${x + 22} 0v-34q8-10 16 0V0z" fill="#3a2412"/><path d="M${x} -70h60" stroke="#8a6234" stroke-width="4"/>`).join('')}</g>
+    </g>
+    <g class="ld-scale" transform="translate(330 760)">
+      <path d="M-60 0h120l-14-18H-46zM-7-18h14v-210H-7z" fill="#8a6234"/><circle cy="-234" r="13" fill="#ffd77a"/>
+      <g class="ld-beam"><g transform="translate(0 -230)">
+        <rect x="-150" y="-6" width="300" height="12" rx="6" fill="#c9995a"/>
+        <path d="M-140 0l-36 96M-140 0l36 96M140 0l-36 96M140 0l36 96" stroke="#e2b877" stroke-width="3"/>
+        <path d="M-186 96q46 44 92 0zM94 96q46 44 92 0z" fill="#ffd77a"/><path d="M118 96h44v-22h-44z" fill="#6b5340"/>
+      </g></g>
+    </g>
+    <g class="ld-kaabawrap" transform="translate(640 652)"><g class="ld-kaaba">
+      <rect x="-86" y="-190" width="172" height="190" fill="#3a3340"/><path d="M-86-190h172v10H-86z" fill="#5a5262"/>
+      <path d="M-86-152h172M-86-114h172M-86-76h172M-86-38h172M-40-190v38M30-152v38M-10-114v38M50-76v38M-50-38V0" stroke="#1c1822" stroke-width="3"/>
+      <path d="M-22 0v-64h44V0z" fill="#17131c"/>
+    </g></g>
+    <g class="ld-well" transform="translate(800 672)">
+      <path d="M-58 0v-46q58-18 116 0V0q-58 18-116 0z" fill="#5a5262"/><ellipse cy="-46" rx="58" ry="14" fill="#120e18"/>
+      <path d="M-58-24q58 18 116 0" fill="none" stroke="#3a3340" stroke-width="4"/>
+      <path d="M-52-46v-92h10v92zM42-46v-92h10v92zM-60-138h120v-10H-60z" fill="#6b441d"/><path d="M0-138v60" stroke="#e2d2a8" stroke-width="3"/><path d="M-12-78h24l-4 22h-16z" fill="#8a6234"/>
+    </g>
+    <g class="ld-spring" transform="translate(800 690)">
+      <ellipse rx="150" ry="24" fill="#2f8f9a"/><ellipse cy="-3" rx="96" ry="11" fill="#bfeee8" opacity=".7"/>
+      <g class="ld-gush" fill="none" stroke="#e8fffb" stroke-width="6" stroke-linecap="round"><path d="M0-4q-10-50-34-34"/><path d="M0-4q0-66 0-70"/><path d="M0-4q10-50 34-34"/></g>
+      <path d="M-170 6q-8-30-22-36M-170 6v-44M-170 6q8-30 22-36M170 8q-8-26-20-32M170 8v-40M170 8q8-26 20-32M-110 22q-6-22-16-26M-110 22q6-22 16-26M110 24q-6-22-16-26M110 24q6-22 16-26" fill="none" stroke="#3f9a62" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <g class="ld-palm"><g stroke="#1c5238">${palm(950, 706, 0.9, -12)}</g><g transform="translate(940 706) scale(.9)" fill="#c9792a">${dates}</g></g>
+    <g class="ld-caravan" fill="#150e1c"><g transform="translate(980 716) scale(.62)">${CAMEL}</g><g transform="translate(1110 724) scale(.7)">${CAMEL}</g><g transform="translate(1250 716) scale(.6)">${CAMEL}</g></g>
+    <g class="ld-cradle" transform="translate(640 712)">
+      <ellipse cy="-40" rx="170" ry="150" fill="url(#g-warm)"/>
+      <path d="M-84-6q84 30 168 0" fill="none" stroke="#6b441d" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-70-64h140l-14 56q-56 14-112 0z" fill="url(#g-wood)"/><path d="M-70-64q-4-34 26-44v44z" fill="#8a6234"/><path d="M-60-40h118M-56-22h110" stroke="#4a2d10" stroke-width="3" opacity=".5"/>
+      <ellipse cx="14" cy="-66" rx="52" ry="10" fill="#fff4cf"/>
+    </g>
+    <g class="ld-shirt" transform="translate(640 560)">
+      <circle r="150" fill="url(#g-warm)"/>
+      <path d="M-34-70q34 22 68 0l62 30-22 44-30-14v92h-88v-92l-30 14-22-44z" fill="#f1e4c3" stroke="#b99a48" stroke-width="3" stroke-linejoin="round"/><path d="M-34-70q34 40 68 0" fill="none" stroke="#b99a48" stroke-width="3"/>
+    </g>
+    <g class="ld-flock" fill="url(#g-warm)">${flock}</g>
+    <g class="ld-lights">
+      <g class="ld-b"><circle cx="722" cy="664" r="80" fill="url(#g-warm)"/><circle cx="722" cy="664" r="6" fill="#fff"/></g>
+      <g class="ld-a"><circle cx="640" cy="650" r="115" fill="url(#g-warm)"/><circle cx="640" cy="650" r="8" fill="#fff"/></g>
+    </g>
+    <ellipse class="ld-glow" cx="640" cy="620" rx="900" ry="620" fill="url(#g-warm)"/>
+  </g>
+  <g data-d="1.3">
+    <path class="ld-front" d="M-700 1400V930l210-60 150 50 120 480zM1900 1400V910l-230-50-150 60-110 480z"/>
+  </g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land };

@@ -436,3 +436,38 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .stage[data-set="ur"][data-fire="cool"] .stage__tint { opacity: 1; background: radial-gradient(circle at 55% 60%, rgba(190, 238, 232, .34), rgba(63, 183, 196, .08) 70%); }
 /* نبض النور بخاصية scale المستقلة حتى لا يُلغي الإزاحة بـtransform */
 @keyframes lt-breathe { 50% { scale: 1.1; } }
+
+
+/* ——— أرض وبلدة (ديكور عام: لوط، إسماعيل، يوسف، أيوب، شعيب، عيسى عليهم السلام) ——— */
+.ld-sun, .ld-kaaba, .ld-gush, .ld-a, .ld-b, .ld-glow, .ld-shirt, .ld-cradle, .ld-palm .palm { transform-box: fill-box; transform-origin: center; }
+.ld-dawn, .ld-dream, .ld-town, .ld-rubble, .ld-silos, .ld-scale, .ld-well, .ld-spring, .ld-palm, .ld-caravan, .ld-cradle, .ld-shirt, .ld-flock, .ld-a, .ld-b, .ld-glow, .ld-road, .ld-kaabawrap { opacity: 0; transition: opacity 4s ease; }
+.ld-moon { transition: opacity 5s ease; }
+.ld-sun { opacity: 0; transform: translateY(220px); transition: transform 13s cubic-bezier(.2, .6, .3, 1), opacity 5s ease; }
+.ld-ridge { fill: #121a40; transition: fill 6s ease; } .ld-ground { fill: #191734; transition: fill 6s ease; } .ld-groundlit { fill: #3a3a78; opacity: .4; transition: fill 6s ease; } .ld-front { fill: #04050c; transition: fill 6s ease; }
+.ld-road { stroke: #5a66a8; } [data-road="on"] .ld-road { opacity: .7; }
+[data-set="land"][data-time="dawn"] .ld-dawn { opacity: 1; } [data-set="land"][data-time="dawn"] .ld-moon { opacity: .1; }
+.stage[data-set="land"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="land"][data-time="dawn"] .ld-sun { opacity: 1; transform: none; }
+[data-set="land"][data-time="dawn"] .ld-ridge { fill: #5b4480; } [data-set="land"][data-time="dawn"] .ld-ground { fill: #9a6e48; } [data-set="land"][data-time="dawn"] .ld-groundlit { fill: #f3c888; } [data-set="land"][data-time="dawn"] .ld-front { fill: #1c0f14; } [data-set="land"][data-time="dawn"] .ld-road { stroke: #ffe0a8; }
+[data-dream="on"] .ld-dream { opacity: 1; }
+[data-town="on"] .ld-town, [data-town="dark"] .ld-town { opacity: 1; } [data-town="gone"] .ld-rubble { opacity: 1; } [data-town="gone"] .ld-town { transition-duration: 2s; }
+.ld-win { fill: #0c0914; transition: fill 3s ease; } [data-town="on"] .ld-win { fill: #ffd77a; }
+[data-silos="on"] .ld-silos { opacity: 1; }
+[data-scale] .ld-scale { opacity: 1; } .ld-beam { transform-box: fill-box; transform-origin: 50% 4%; transition: transform 2.4s var(--ease-spring, ease); }
+[data-scale="tilt"] .ld-beam { transform: rotate(-13deg); }
+[data-kaaba] .ld-kaabawrap { opacity: 1; } .ld-kaaba { transform-origin: 50% 100%; transform: scaleY(.22); transition: transform 9s ease-out; } [data-kaaba="built"] .ld-kaaba { transform: none; }
+[data-well="on"] .ld-well { opacity: 1; } [data-spring="on"] .ld-spring { opacity: 1; } [data-palm="on"] .ld-palm { opacity: 1; }
+.ld-gush { transform-origin: 50% 100%; animation: ld-gush 1.6s ease-in-out infinite; } @keyframes ld-gush { 50% { transform: scaleY(1.35); } }
+.ld-palm .palm { transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; }
+.ld-caravan { transform: translateX(460px); transition: transform 9s var(--ease-out), opacity 3s ease; } [data-caravan="on"] .ld-caravan { opacity: 1; transform: none; }
+[data-caravan="gone"] .ld-caravan { opacity: 0; transform: translateX(-500px); transition: transform 10s ease-in, opacity 8s ease-in; }
+[data-cradle="on"] .ld-cradle { opacity: 1; } [data-shirt="on"] .ld-shirt { opacity: 1; animation: lt-breathe 4s ease-in-out infinite; }
+.ld-lights, .ld-flock { translate: var(--lx, 0) var(--ly, 0); transition: translate 8s ease-in-out, opacity 4s ease; }
+.ld-a, .ld-b { animation: st-breathe 3.6s ease-in-out infinite; } .ld-b { animation-delay: -1.5s; }
+[data-light] .ld-a { opacity: 1; } [data-pair="on"] .ld-b { opacity: 1; } [data-flock="on"] .ld-flock { opacity: .75; }
+[data-light="town"] { --lx: -330px; } [data-light="well"] { --lx: 40px; --ly: 30px; } [data-light="far"] { --lx: 330px; --ly: 20px; } [data-light="road"] { --lx: 150px; --ly: 60px; }
+[data-light="inwell"] { --lx: 160px; --ly: 0px; } [data-light="inwell"] .ld-a { opacity: .45; scale: .5; }
+[data-light="low"] { --ly: 50px; } [data-light="low"] .ld-a { opacity: .6; }
+[data-glow="full"] .ld-glow { opacity: .4; }
+.stage[data-set="land"] .stage__tint { background: radial-gradient(circle at 50% 60%, rgba(255, 232, 170, .3), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="land"][data-glow="full"] .stage__tint { opacity: 1; }

@@ -1418,5 +1418,164 @@
         "light": "fire"
       }
     }
+  },
+  "lut-alfajr": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            760,
+            400,
+            620
+          ],
+          "to": [
+            640,
+            440,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "light": "town"
+        },
+        "camera": {
+          "from": [
+            500,
+            460,
+            760
+          ],
+          "to": [
+            320,
+            520,
+            560
+          ],
+          "dur": 9
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "light": "town"
+        },
+        "camera": {
+          "from": [
+            320,
+            520,
+            560
+          ],
+          "to": [
+            340,
+            560,
+            460
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "light": "town",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            340,
+            560,
+            460
+          ],
+          "to": [
+            320,
+            540,
+            540
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "light": "road",
+          "flock": "on",
+          "road": "on"
+        },
+        "camera": {
+          "from": [
+            360,
+            540,
+            560
+          ],
+          "to": [
+            640,
+            560,
+            700
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "gone",
+          "light": "far",
+          "flock": "on",
+          "road": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            640,
+            540,
+            700
+          ],
+          "to": [
+            700,
+            460,
+            840
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
