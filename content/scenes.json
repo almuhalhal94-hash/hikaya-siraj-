@@ -2224,5 +2224,162 @@
         "glow": "full"
       }
     }
+  },
+  "musa-alasa": {
+    "thumb": 5,
+    "scenes": [
+      {
+        "set": "mountain",
+        "state": {
+          "time": "night",
+          "cave": "warm"
+        },
+        "camera": {
+          "from": [
+            600,
+            460,
+            800
+          ],
+          "to": [
+            610,
+            360,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "night",
+          "cave": "bright",
+          "trail": "on"
+        },
+        "camera": {
+          "from": [
+            610,
+            360,
+            560
+          ],
+          "to": [
+            612,
+            300,
+            420
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "call",
+          "staff": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            760
+          ],
+          "to": [
+            520,
+            520,
+            540
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "call",
+          "staff": "snake"
+        },
+        "camera": {
+          "from": [
+            520,
+            520,
+            540
+          ],
+          "to": [
+            540,
+            600,
+            460
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "light": "shore"
+        },
+        "camera": {
+          "from": [
+            500,
+            440,
+            760
+          ],
+          "to": [
+            420,
+            520,
+            600
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "ship": "none",
+          "split": "on",
+          "yaqtin": "off",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            620
+          ],
+          "to": [
+            600,
+            520,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wave"
+      }
+    ],
+    "choice": {
+      "state": {}
+    }
   }
 }

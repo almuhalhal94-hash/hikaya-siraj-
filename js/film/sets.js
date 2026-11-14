@@ -226,6 +226,13 @@ function sea() {
         <ellipse cx="300" cy="690" rx="34" ry="24" fill="#e9d48a" stroke="#b99a48" stroke-width="3"/>
       </g>
     </g>
+    <g class="se-split">
+      <path d="M-700 1400V430Q-100 400 460 290V530L220 1400z" fill="#0f2c60"/><path d="M1900 1400V430Q1300 400 740 290V530l240 870z" fill="#0f2c60"/>
+      <path d="M-700 430Q-100 400 460 290v60Q-100 450-700 480zM1900 430Q1300 400 740 290v60q560 100 1160 130z" fill="#3a6ab0" opacity=".7"/>
+      <path d="M460 350v180L220 1400h-90zM740 350v180l240 870h90z" fill="#1c4488" opacity=".8"/>
+      <path d="M460 530h280l240 870H220z" fill="#b99560"/><path d="M560 530h80l70 870H490z" fill="#e2c48c" opacity=".45"/>
+      <g class="se-cross" fill="url(#g-warm)"><circle cx="540" cy="900" r="44"/><circle cx="668" cy="930" r="40"/><circle cx="600" cy="990" r="44"/><circle cx="510" cy="1010" r="34"/><circle cx="700" cy="1030" r="34"/><circle cx="600" cy="800" r="100"/><circle cx="600" cy="800" r="8" fill="#fff"/></g>
+    </g>
   </g>
   <g data-d="1.3">
     <g class="se-water">${wave(680, 22, 560, '#081a3c', 'se-wave--front')}</g>
@@ -411,6 +418,9 @@ function dunes() {
     <path d="M-700 720q300-90 620-40t560-30 520 40 500-50 400 60v24q-200-50-400-40t-500 50-520-40-560 30-620 20z" fill="#ffe2a4" opacity=".4"/>
     <path d="${ripples}" fill="none" stroke="#5a3a1c" stroke-width="3" opacity=".22"/>
     <rect class="du-veil" ${BIG} fill="#070d26"/>
+    <g class="du-staff" fill="none" stroke-linecap="round"><path d="M500 716V560q0-26 24-26" stroke="#6b441d" stroke-width="11"/><path d="M500 716V560q0-26 24-26" stroke="#c9995a" stroke-width="3"/></g>
+    <g class="du-ropes" fill="none" stroke="#3a2a1c" stroke-width="8" stroke-linecap="round"><path d="M610 716q14-14 28 0t28 0 28 0"/><path d="M640 746q14-14 28 0t28 0 28 0"/><path d="M720 720q14-14 28 0t28 0"/><path d="M600 770q14-14 28 0t28 0"/></g>
+    <g class="du-snake" fill="none" stroke-linecap="round"><path d="M430 740q70 20 90-30t-30-80 20-90 70-40" stroke="#2f6a3a" stroke-width="26"/><path d="M430 740q70 20 90-30t-30-80 20-90 70-40" stroke="#6fbf6a" stroke-width="6" stroke-dasharray="14 18"/><circle cx="584" cy="498" r="20" fill="#2f6a3a" stroke="none"/></g>
     <g class="du-light"><circle cx="380" cy="640" r="110" fill="url(#g-warm)"/><circle cx="380" cy="640" r="8" fill="#fff"/></g>
     <g class="du-flock" fill="url(#g-warm)"><circle cx="300" cy="668" r="34"/><circle cx="340" cy="690" r="28"/><circle cx="430" cy="686" r="30"/><circle cx="262" cy="700" r="24"/></g>
   </g>

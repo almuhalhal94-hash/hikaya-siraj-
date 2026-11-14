@@ -471,3 +471,16 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-glow="full"] .ld-glow { opacity: .4; }
 .stage[data-set="land"] .stage__tint { background: radial-gradient(circle at 50% 60%, rgba(255, 232, 170, .3), rgba(255, 215, 122, .05) 72%); }
 .stage[data-set="land"][data-glow="full"] .stage__tint { opacity: 1; }
+
+
+/* ——— إضافات حكاية موسى عليه السلام: العصا والحية في dunes، وانفلاق البحر في sea ——— */
+.du-staff, .du-snake, .du-ropes { opacity: 0; transition: opacity 1.6s ease; }
+[data-staff="on"] .du-staff { opacity: 1; } [data-staff="snake"] .du-snake { opacity: 1; }
+[data-staff="snake"] .du-ropes { animation: du-eaten 9s ease forwards; }
+@keyframes du-eaten { 0% { opacity: 0; } 12%, 55% { opacity: 1; } 100% { opacity: 0; } }
+.du-snake { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 2.4s ease-in-out infinite; }
+.se-split { opacity: 0; transition: opacity 2.5s ease; } [data-split="on"] .se-split { opacity: 1; }
+[data-split="on"] .se-wave--front { opacity: 0; }
+.se-cross { transform-box: fill-box; transform-origin: 50% 0; transform: translateY(240px); transition: transform 14s ease-out; }
+[data-split="on"] .se-cross { transform: translateY(-230px) scale(.5); }
+[data-yaqtin="off"] .se-yaqtin { display: none; }
