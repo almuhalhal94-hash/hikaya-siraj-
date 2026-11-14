@@ -150,9 +150,9 @@
       if (document.hidden || t - last < 40) return; last = t;
       g.clearRect(0, 0, sky.w, sky.h);
       for (const s of sky.stars) { g.globalAlpha = 0.35 + 0.65 * Math.abs(Math.sin(s.p + (t / 1000) * s.v)); g.fillStyle = '#fff'; g.beginPath(); g.arc(s.x, s.y, s.s, 0, 6.28); g.fill(); }
-      for (const s of sky.gold) {
+      for (const s of sky.showGold ? sky.gold : []) {
         const a = 0.6 + 0.4 * Math.sin(s.p + t / 700), R = s.s * (0.9 + 0.15 * Math.sin(s.p + t / 500));
-        g.globalAlpha = a * 0.35; g.fillStyle = '#ffd77a'; g.beginPath(); g.arc(s.x, s.y, R * 2.6, 0, 6.28); g.fill();
+        g.globalAlpha = a * 0.16; g.fillStyle = '#ffd77a'; g.beginPath(); g.arc(s.x, s.y, R * 2.2, 0, 6.28); g.fill();
         g.globalAlpha = a; g.beginPath();
         for (let i = 0; i < 8; i++) { const ang = (i / 8) * 6.28 - 1.57, rr = i % 2 ? R * 0.42 : R; g.lineTo(s.x + Math.cos(ang) * rr, s.y + Math.sin(ang) * rr); }
         g.closePath(); g.fill();
@@ -246,7 +246,7 @@
     HS.$$('.modal').forEach((m) => m.remove());
     view.innerHTML = ''; view.className = 'view out v-' + (HS.views[parts[0]] ? parts[0] : 'home'); view.scrollTop = 0;
     document.body.classList.remove('in-story');
-    cur = v; $('#hud-back').hidden = v === HS.views.home; HS.backTo = v.back || 'home';
+    sky.showGold = v === HS.views.home || v === HS.views.house; cur = v; $('#hud-back').hidden = v === HS.views.home; HS.backTo = v.back || 'home';
     try { v.enter(view, parts[1], parts[2]); } catch (e) { console.error(e); }
     HS.hud();
     requestAnimationFrame(() => requestAnimationFrame(() => view.classList.remove('out')));
