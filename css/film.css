@@ -365,3 +365,34 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .stage[data-set="dunes"] .stage__tint { background: linear-gradient(180deg, rgba(255, 176, 90, 0) 45%, rgba(255, 190, 110, .28)); opacity: 1; }
 .stage[data-set="dunes"][data-storm="on"] .stage__tint, .stage[data-set="dunes"][data-time="night"] .stage__tint { opacity: 0; }
 .du-veil { opacity: 0; transition: opacity 6s ease; } [data-set="dunes"][data-time="night"] .du-veil { opacity: .5; }
+
+
+/* ——— جبال الحِجر وبيوت ثمود (صالح عليه السلام) ——— */
+.hj-light, .hj-flock, .hj-sun, .hj-camelwrap, .hj-camelbody, .hj-shine { transform-box: fill-box; transform-origin: center; }
+.hj-dawn { opacity: 0; transition: opacity 6s ease; } .hj-moon { transition: opacity 5s ease; }
+.hj-sun { opacity: 0; transform: translateY(220px); transition: transform 13s cubic-bezier(.2, .6, .3, 1), opacity 5s ease; }
+.hj-far { fill: #121a40; transition: fill 6s ease; } .hj-rock { fill: #252050; transition: fill 6s ease; } .hj-lit { fill: #3a3478; opacity: .28; transition: fill 6s ease; }
+.hj-ground { fill: #1a1838; transition: fill 6s ease; } .hj-groundlit { fill: #4a4488; opacity: .4; transition: fill 6s ease; } .hj-front { fill: #05060f; transition: fill 6s ease; }
+.hj-recess { fill: #000; opacity: .28; } .hj-trim { fill: #fff; opacity: .1; }
+.hj-win { fill: #080612; transition: fill 3s ease; } [data-homes="lit"] .hj-win { fill: #ffd77a; filter: drop-shadow(0 0 14px rgba(255, 215, 122, .7)); }
+.hj-oasis { transition: opacity 4s ease; } .hj-oasis .palm { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; }
+.hj-shine { animation: st-breathe 4s ease-in-out infinite; }
+[data-set="hijr"][data-time="dawn"] .hj-dawn { opacity: 1; } [data-set="hijr"][data-time="dawn"] .hj-moon { opacity: .1; }
+.stage[data-set="hijr"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="hijr"][data-time="dawn"] .hj-sun { opacity: 1; transform: none; }
+[data-set="hijr"][data-time="dawn"] .hj-far { fill: #7a4f78; } [data-set="hijr"][data-time="dawn"] .hj-rock { fill: #9a563e; } [data-set="hijr"][data-time="dawn"] .hj-lit { fill: #e8a06a; }
+[data-set="hijr"][data-time="dawn"] .hj-ground { fill: #a8703e; } [data-set="hijr"][data-time="dawn"] .hj-groundlit { fill: #f3c888; } [data-set="hijr"][data-time="dawn"] .hj-front { fill: #1c0f14; }
+.hj-camelwrap { opacity: 0; transform: translateX(420px); transition: transform 7s var(--ease-out), opacity 3s ease; }
+[data-camel="on"] .hj-camelwrap { opacity: 1; transform: none; }
+[data-camel="gone"] .hj-camelwrap { opacity: 0; transform: none; transition: opacity 5s ease; }
+.hj-camelbody { fill: #1a1024; stroke: #1a1024; transform-origin: 50% 100%; animation: hj-graze 5s ease-in-out infinite; }
+@keyframes hj-graze { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-2.5deg) translateY(1px); } }
+.hj-light, .hj-flock { opacity: 0; transition: transform 9s ease-in-out, opacity 3s ease; } .hj-light { animation: st-breathe 3.6s ease-in-out infinite; }
+[data-light="on"] .hj-light, [data-light="away"] .hj-light { opacity: 1; } [data-light="away"] .hj-flock { opacity: .65; }
+[data-light="away"] .hj-light, [data-light="away"] .hj-flock { transform: translate(-330px, 70px); }
+.stage[data-set="hijr"][data-quake="on"] .stage__svg { animation: hj-quake .22s linear infinite; }
+@keyframes hj-quake { 0%, 100% { translate: 0 0; } 25% { translate: 5px -3px; } 50% { translate: -5px 2px; } 75% { translate: 3px 4px; } }
+.stage[data-set="hijr"] .stage__tint { background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, .5), rgba(190, 210, 255, .12) 70%); }
+.stage[data-set="hijr"][data-quake="on"] .stage__tint { animation: hj-cry 2.4s ease-in-out infinite; }
+@keyframes hj-cry { 0%, 100% { opacity: 0; } 50% { opacity: .7; } }
+[data-homes="dark"] .hj-oasis { opacity: .35; }

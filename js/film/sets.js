@@ -421,4 +421,59 @@ function dunes() {
   </g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes };
+// ——— جبال الحِجر وبيوت ثمود المنحوتة (صالح عليه السلام): لا يُرسم أحد؛ صالح نور فقط، والناقة ظلّ ———
+function carved(x, y, w, h) {
+  const d = w * 0.3, win = w * 0.16;
+  return `<g transform="translate(${x} ${y})">
+    <path class="hj-recess" d="M${-w / 2} 0V${-h}h${w}V0z"/>
+    <path class="hj-trim" d="M${-w / 2 - 10} ${-h}h${w + 20}v-14h${-w - 20}zM${-w / 2} ${-h * 0.62}h${w}v-8h${-w}z"/>
+    <path class="hj-win" d="M${-d / 2} 0v${-h * 0.42}q${d / 2}-${d * 0.6} ${d} 0V0zM${-w * 0.32 - win / 2} ${-h * 0.74}h${win}v${-win * 1.3}h${-win}zM${w * 0.32 - win / 2} ${-h * 0.74}h${win}v${-win * 1.3}h${-win}z"/>
+  </g>`;
+}
+function hijr() {
+  const r = rng(91); let strata = '', crops = '';
+  for (let y = 250; y < 640; y += 44) strata += `M-700 ${y}q650 ${(r() * 30 - 15).toFixed(0)} 1300 0t1300 0`;
+  for (let i = 0; i < 26; i++) { const x = 60 + r() * 520, y = 716 + r() * 70; crops += `M${x.toFixed(0)} ${y.toFixed(0)}q-7-18-16-22M${x.toFixed(0)} ${y.toFixed(0)}v-28M${x.toFixed(0)} ${y.toFixed(0)}q7-18 16-22`; }
+  return `${DEFS}
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    <rect class="hj-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    ${stars(90, 67, [-400, 1600], [-300, 420])}
+    <path class="hj-moon" d="M300 70a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
+    <g class="hj-sun"><circle cx="330" cy="400" r="360" fill="url(#g-warm)"/><circle cx="330" cy="400" r="60" fill="#fff4cf"/></g>
+  </g>
+  <g data-d=".3">
+    <path class="hj-far" d="M-700 520h160l30-90h190l30 60h130l40-120h230l30 90h150l40-60h200l30 80h170l40-110h210l30 100h140l30-70h180l30 110h200v900H-700z"/>
+  </g>
+  <g data-d=".75">
+    <path class="hj-rock" d="M-700 1400V360q60-70 150-60 40-90 150-80 70-70 170-30 60-90 190-70 90-50 180 10 80-60 190-10 110-40 180 50 100-30 170 50 120-20 180 70 110 0 170 80 90 10 130 70v970z"/>
+    <path class="hj-lit" d="M-140 220q70-70 170-30l-60 130-130 60zM210 120q90-50 180 10l-40 150-150-20zM580 130q80-60 190-10l-70 150-130 20zM950 170q100-30 170 50l-110 110-80-40zM1300 290q110 0 170 80l-150 60z"/>
+    <path d="${strata}" fill="none" stroke="#000" stroke-width="5" opacity=".1"/>
+    <g class="hj-homes">${carved(300, 650, 190, 250)}${carved(620, 650, 240, 320)}${carved(930, 650, 180, 230)}${carved(20, 650, 150, 190)}${carved(1200, 650, 160, 200)}</g>
+  </g>
+  <g data-d="1">
+    <path class="hj-ground" d="M-700 1400V660q300-36 640-12t600-4 700-10 660 26v740z"/>
+    <path class="hj-groundlit" d="M-700 676q300-36 640-12t600-4 700-10 660 26v30q-360-34-700-18t-640 8-620-8-640 18z"/>
+    <g class="hj-oasis">
+      <path d="${crops}" fill="none" stroke="#3f9a62" stroke-width="4" stroke-linecap="round"/>
+      <g stroke="#1c5238">${palm(120, 720, 0.62, -10)}${palm(560, 706, 0.5, 8)}</g>
+      <ellipse cx="350" cy="730" rx="170" ry="28" fill="#2f8f9a"/><ellipse class="hj-shine" cx="350" cy="726" rx="110" ry="12" fill="#bfeee8" opacity=".7"/>
+    </g>
+    <g class="hj-camelwrap"><g class="hj-camel" transform="translate(600 742) scale(1.15)">
+      <ellipse cx="-10" cy="-120" rx="230" ry="190" fill="url(#g-warm)" opacity=".75"/>
+      <ellipse cx="6" cy="2" rx="120" ry="10" fill="#000" opacity=".3"/>
+      <g class="hj-camelbody">
+        <path d="M-84-112C-104-140-120-180-140-212l-34 8q-12-6-6-18l32-18 4-12 8 10c22 6 30 26 38 52 10 26 26 32 46 30 28-4 40-44 66-44s40 38 62 46c22 6 32 28 30 54-4 20-44 26-104 24-40-2-70-6-84-32z"/>
+        <path d="M-72-96l-6 96h14l8-90zM-46-88l4 88h14l-2-88zM62-90l12 90h14l-8-94zM86-98l16 98h14l-14-104z"/>
+        <path d="M104-124q18 22 10 60" fill="none" stroke-width="6" stroke-linecap="round"/>
+      </g>
+    </g></g>
+    <g class="hj-light"><circle cx="840" cy="660" r="110" fill="url(#g-warm)"/><circle cx="840" cy="660" r="8" fill="#fff"/></g>
+    <g class="hj-flock" fill="url(#g-warm)"><circle cx="910" cy="690" r="30"/><circle cx="950" cy="672" r="24"/><circle cx="880" cy="712" r="26"/></g>
+  </g>
+  <g data-d="1.3">
+    <path class="hj-front" d="M-700 1400V900l200-90 90 40 60 120 160 60 60 370zM1900 1400V880l-180-70-110 50-70 110-150 70-50 360z"/>
+  </g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr };

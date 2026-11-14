@@ -1104,5 +1104,164 @@
         "light": "call"
       }
     }
+  },
+  "salih-alhijr": {
+    "thumb": 2,
+    "scenes": [
+      {
+        "set": "hijr",
+        "state": {
+          "homes": "lit"
+        },
+        "camera": {
+          "from": [
+            300,
+            430,
+            640
+          ],
+          "to": [
+            620,
+            440,
+            840
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "hijr",
+        "state": {
+          "homes": "lit",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            460,
+            760
+          ],
+          "to": [
+            700,
+            520,
+            540
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "hijr",
+        "state": {
+          "homes": "lit",
+          "light": "on",
+          "camel": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            700,
+            520,
+            560
+          ],
+          "to": [
+            640,
+            560,
+            620
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "hijr",
+        "state": {
+          "homes": "lit",
+          "light": "on",
+          "camel": "gone"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            620
+          ],
+          "to": [
+            640,
+            480,
+            700
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "hijr",
+        "state": {
+          "homes": "dark",
+          "light": "away",
+          "camel": "gone",
+          "quake": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            460,
+            700
+          ],
+          "to": [
+            620,
+            440,
+            600
+          ],
+          "dur": 10
+        },
+        "fx": [
+          "dust",
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "hijr",
+        "state": {
+          "homes": "dark",
+          "light": "away",
+          "camel": "gone",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            620,
+            440,
+            600
+          ],
+          "to": [
+            520,
+            480,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {}
+    }
   }
 }
