@@ -5455,5 +5455,170 @@
         "glow": "full"
       }
     }
+  },
+  "aisha-aliqd": {
+    "thumb": 5,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "necklace": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            480,
+            1000
+          ],
+          "to": [
+            640,
+            560,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "pair": "on",
+          "peep": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            580,
+            1000
+          ],
+          "to": [
+            620,
+            660,
+            620
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "caravan": "on",
+          "road": "on",
+          "flock": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            760,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "caravan": "on",
+          "flock": "on",
+          "light": "mid",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            600,
+            700
+          ],
+          "to": [
+            700,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "caravan": "on",
+          "necklace": "under"
+        },
+        "camera": {
+          "from": [
+            900,
+            600,
+            900
+          ],
+          "to": [
+            1100,
+            680,
+            560
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "lamp": "on",
+          "light": "on",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            680,
+            560
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "glow": "full"
+      }
+    }
   }
 }

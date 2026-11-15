@@ -617,3 +617,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 /* خديجة رضي الله عنها في dar: blanket=on غطاء مخطط (زمّلوني)، vessel=on إناء طعام يتوهّج */
 .dr-blanket, .dr-vessel { opacity: 0; transition: opacity 3s ease; } [data-blanket="on"] .dr-blanket, [data-vessel="on"] .dr-vessel { opacity: 1; }
 .dr-blglow, .dr-vsglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+/* عائشة رضي الله عنها في land: necklace (on/under) عِقد من خرز يلمع، وunder يضعه صغيرًا تحت الجمل الأوسط */
+.ld-neckwrap { opacity: 0; transition: opacity 3s ease; } [data-necklace] .ld-neckwrap { opacity: 1; }
+.ld-nkglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.ld-neckwrap { transition: opacity 3s ease, translate 3s ease, scale 3s ease; } [data-necklace="under"] .ld-neckwrap { translate: 470px 150px; scale: .45; transform-origin: 640px 600px; }

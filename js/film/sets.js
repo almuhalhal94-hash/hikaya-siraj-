@@ -667,6 +667,10 @@ function land() {
       <path d="M-70-150q70 14 140 0M-74-120q74 14 148 0M-78-90q78 14 156 0M-80-60q80 14 160 0M-82-30q82 14 164 0M-84 0q84 14 168 0M-60-180q60 14 120 0" fill="none" stroke="#d8dee8" stroke-width="7" stroke-dasharray="7 5" opacity=".95"/>
       <path d="M-50-250q50 44 100 0" fill="none" stroke="#c9a24a" stroke-width="6"/>
       <g transform="translate(190 -40)"><circle r="74" fill="#6b441d" stroke="#c9a24a" stroke-width="8"/><circle r="18" fill="#c9a24a"/><circle r="48" fill="none" stroke="#4a2d10" stroke-width="4"/></g></g>
+    <g class="ld-neckwrap"><g class="ld-necklace" transform="translate(640 600)"><circle class="ld-nkglow" r="190" fill="url(#g-warm)"/>
+      <ellipse rx="96" ry="70" fill="none" stroke="#c9a24a" stroke-width="3"/>
+      <g>${Array.from({ length: 22 }, (_, i) => { const a = i / 22 * Math.PI * 2; return `<circle cx="${(Math.cos(a) * 96).toFixed(1)}" cy="${(Math.sin(a) * 70).toFixed(1)}" r="${i % 2 ? 8 : 10}" fill="${i % 2 ? '#fff4cf' : '#e2482a'}"/>`; }).join('')}</g>
+      <path d="M0 70l-16 26 16 26 16-26z" fill="#ffd77a" stroke="#8a6234" stroke-width="3"/></g></g>
     <g class="ld-flock" fill="url(#g-warm)">${flock}</g>
     <g class="ld-lights">
       <g class="ld-b"><circle cx="722" cy="664" r="80" fill="url(#g-warm)"/><circle cx="722" cy="664" r="6" fill="#fff"/></g>
