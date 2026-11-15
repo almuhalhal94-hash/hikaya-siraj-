@@ -551,3 +551,6 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-set="haram"][data-glow="full"] .hr-glow { opacity: .4; }
 .stage[data-set="haram"] .stage__tint { background: radial-gradient(circle at 50% 62%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
 .stage[data-set="haram"][data-glow="full"] .stage__tint { opacity: 1; }
+
+.mh-book { opacity: 0; transition: opacity 3s ease; } [data-book="on"] .mh-book { opacity: 1; }
+.mh-book circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
