@@ -575,3 +575,6 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-ride="on"] .ld-lights { animation: ld-ride 9s ease-in-out infinite; }
 @keyframes ld-ride { 0%, 100% { translate: 0 0; } 45%, 55% { translate: 380px 24px; } }
 .ld-wall { fill: #1c1834; transition: fill 6s ease; } [data-set="land"][data-time="dawn"] .ld-wall { fill: #5a3a26; }
+/* قوس (سعد بن أبي وقاص رضي الله عنه) في land */
+.ld-bow { opacity: 0; transition: opacity 3s ease; } [data-bow="on"] .ld-bow { opacity: 1; }
+.ld-bowglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }

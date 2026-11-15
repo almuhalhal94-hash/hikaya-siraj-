@@ -3971,5 +3971,171 @@
         "glow": "full"
       }
     }
+  },
+  "saad-alqaws": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "bow": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            560,
+            520,
+            860
+          ],
+          "to": [
+            500,
+            560,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "light": "town"
+        },
+        "camera": {
+          "from": [
+            360,
+            560,
+            760
+          ],
+          "to": [
+            320,
+            600,
+            560
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "light": "town",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            320,
+            600,
+            560
+          ],
+          "to": [
+            400,
+            540,
+            760
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "bow": "on",
+          "arrows": "on",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            580,
+            860
+          ],
+          "to": [
+            620,
+            600,
+            640
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust",
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "light": "mid",
+          "pair": "on",
+          "bow": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            560,
+            800
+          ],
+          "to": [
+            600,
+            600,
+            580
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "bow": "on",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            560,
+            580,
+            560
+          ],
+          "to": [
+            580,
+            500,
+            880
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
