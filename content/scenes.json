@@ -2843,5 +2843,161 @@
         "glow": "full"
       }
     }
+  },
+  "isa-almahd": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "cradle": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            480,
+            760
+          ],
+          "to": [
+            640,
+            600,
+            440
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            640,
+            600,
+            440
+          ],
+          "to": [
+            640,
+            500,
+            640
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "palm": "on",
+          "spring": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            500,
+            640
+          ],
+          "to": [
+            800,
+            580,
+            560
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "leaves"
+        ],
+        "sfx": "bubble"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "cradle": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            560,
+            640
+          ],
+          "to": [
+            520,
+            580,
+            600
+          ],
+          "dur": 10
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "cradle": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            520,
+            580,
+            600
+          ],
+          "to": [
+            620,
+            620,
+            440
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "light": "mid",
+          "flock": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            620,
+            600,
+            480
+          ],
+          "to": [
+            520,
+            500,
+            800
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
