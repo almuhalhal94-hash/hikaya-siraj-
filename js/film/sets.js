@@ -587,6 +587,10 @@ function land() {
     <path class="ld-ground" d="M-700 1400V640q320-22 660-8t640-6 660 8 640-12v778z"/>
     <path class="ld-groundlit" d="M-700 652q320-22 660-8t640-6 660 8 640-12v26q-320 18-640 12t-660-8-640 6-660 8z"/>
     <path class="ld-road" d="M330 660q200 60 420 50t520 150" fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="3 22"/>
+    <g class="ld-trench"><path class="ld-mound" d="M-700 742q180-34 360-18t360-14 360 16 360-12 360 14 360-18 360 16v18H-700z"/>
+      <path class="ld-ditch" d="M-700 760q400-22 800-8t800-2 800-10v50q-400 16-800 10t-800 0-800 6z"/>
+      <path class="ld-wall" d="M-700 760q400-22 800-8t800-2 800-10v22q-400 8-800 10t-800 0-800 10z"/>
+      <path class="ld-lip" d="M-700 760q400-22 800-8t800-2 800-10" fill="none" stroke-width="5"/></g>
     <g class="ld-rubble" fill="#2a2028">${rub}</g>
     <g class="ld-town" transform="translate(0 646)">
       ${house(90, 120, 150, true)}${house(214, 100, 210, false)}${house(320, 130, 130, false)}${house(452, 90, 180, true)}

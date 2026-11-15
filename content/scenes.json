@@ -3800,5 +3800,176 @@
         "glow": "full"
       }
     }
+  },
+  "zubayr-alkhandaq": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "trench": "on",
+          "town": "dark"
+        },
+        "camera": {
+          "from": [
+            520,
+            560,
+            900
+          ],
+          "to": [
+            560,
+            620,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "trench": "on",
+          "town": "dark",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            720
+          ],
+          "to": [
+            680,
+            640,
+            560
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "trench": "on",
+          "town": "dark",
+          "light": "mid",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            680,
+            640,
+            560
+          ],
+          "to": [
+            690,
+            650,
+            440
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "trench": "on",
+          "town": "dark",
+          "light": "mid",
+          "ride": "on"
+        },
+        "camera": {
+          "from": [
+            760,
+            640,
+            820
+          ],
+          "to": [
+            800,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust",
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "trench": "on",
+          "town": "dark",
+          "light": "mid",
+          "pair": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            680,
+            620,
+            640
+          ],
+          "to": [
+            680,
+            600,
+            480
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "trench": "on",
+          "town": "on",
+          "light": "town",
+          "flock": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            360,
+            600,
+            520
+          ],
+          "to": [
+            480,
+            540,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }

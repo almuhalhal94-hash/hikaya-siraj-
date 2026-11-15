@@ -567,3 +567,11 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-arrow { transform: translate(0, var(--y)); animation: ld-fly 3.2s linear infinite; animation-delay: var(--d); opacity: 0; }
 @keyframes ld-fly { 0% { transform: translate(0, var(--y)); opacity: 0; } 10% { opacity: 1; } 70% { opacity: 1; } 85%, 100% { transform: translate(-560px, calc(var(--y) + 40px)); opacity: 0; } }
 .stage[data-shake="on"] .stage__svg { animation: hj-quake .22s linear infinite; }
+
+/* خندق (الزبير رضي الله عنه، يوم الأحزاب) في land، ونور يذهب ويعود */
+.ld-trench { opacity: 0; transition: opacity 3s ease; } [data-trench="on"] .ld-trench { opacity: 1; }
+.ld-ditch { fill: #05040a; } .ld-mound { fill: #2a2440; transition: fill 6s ease; } .ld-lip { stroke: #4a4478; transition: stroke 6s ease; }
+[data-set="land"][data-time="dawn"] .ld-mound { fill: #6e4c32; } [data-set="land"][data-time="dawn"] .ld-lip { stroke: #d9a86a; }
+[data-ride="on"] .ld-lights { animation: ld-ride 9s ease-in-out infinite; }
+@keyframes ld-ride { 0%, 100% { translate: 0 0; } 45%, 55% { translate: 380px 24px; } }
+.ld-wall { fill: #1c1834; transition: fill 6s ease; } [data-set="land"][data-time="dawn"] .ld-wall { fill: #5a3a26; }
