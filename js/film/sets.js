@@ -684,6 +684,18 @@ function land() {
 }
 
 // ——— المحراب (زكريا ويحيى عليهما السلام): لا يُرسم أحد ولا تُرسم الملائكة؛ أنوار فقط ———
+// صحف القرآن المجموعة (حفصة رضي الله عنها): رزمة صحف مربوطة تتوهّج، ومصاحف صغيرة تنطلق منها إلى الآفاق (copies=on)
+function suhuf(x, y) {
+  let sheets = '', books = '';
+  [[-8, -4], [4, 3], [-3, 10], [6, 17]].forEach(([r, dy], i) => { sheets += `<g transform="translate(0 ${-dy * 2}) rotate(${r})"><rect x="-96" y="-62" width="192" height="124" rx="6" fill="${i % 2 ? '#f1e4c3' : '#fff4cf'}" stroke="#b98548" stroke-width="3"/></g>`; });
+  let lines = ''; for (let k = 0; k < 5; k++) lines += `M-74 ${-66 + k * 20}h${k % 2 ? 120 : 148}`;
+  [[-560, -200], [-380, -330], [0, -400], [380, -330], [560, -200], [-300, 120], [300, 120]].forEach(([tx, ty], i) => { books += `<g class="sf-bk" style="--tx:${tx}px;--ty:${ty}px;--d:${(i * .55).toFixed(2)}s"><rect x="-26" y="-34" width="52" height="68" rx="5" fill="#1f5a4a" stroke="#c9a24a" stroke-width="3"/><rect x="-16" y="-22" width="32" height="44" rx="3" fill="none" stroke="#c9a24a" stroke-width="2"/></g>`; });
+  return `<g class="sf-wrap" transform="translate(${x} ${y})"><circle class="sf-glow" cy="-30" r="190" fill="url(#g-warm)"/>${sheets}
+    <path d="${lines}" stroke="#2f8f9a" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+    <path d="M-104-14h208v18h-208z" fill="#8a3a2a"/><path d="M-10-24h20v38h-20z" fill="#c9792a"/>
+    <g class="sf-copies">${books}</g></g>`;
+}
+
 function mihrab() {
   let bricks = '';
   for (let y = -60; y < 640; y += 46) bricks += `M-700 ${y}H1900`;
@@ -709,6 +721,7 @@ function mihrab() {
     <path d="M400 700h400l70 220H330z" fill="url(#g-rug)"/><path d="M420 716h360l52 180H368z" fill="none" stroke="#ffd77a" stroke-width="4" opacity=".6"/>
     <g class="mh-fruit" transform="translate(330 664)"><ellipse cx="0" cy="-30" rx="110" ry="90" fill="url(#g-warm)" opacity=".6"/><path d="M-56-14q56 44 112 0l-14 22h-84z" fill="#b98548"/><circle cx="-26" cy="-22" r="14" fill="#e2482a"/><circle cx="2" cy="-28" r="15" fill="#ffb03a"/><circle cx="28" cy="-22" r="13" fill="#7fbf5a"/><circle cx="-10" cy="-40" r="11" fill="#c9792a"/><circle cx="16" cy="-42" r="10" fill="#e2482a"/></g>
     <g class="mh-book" transform="translate(600 640)"><circle cy="-40" r="150" fill="url(#g-warm)"/><path d="M-70 0l70-30 70 30z" fill="#6b441d"/><path d="M-70 0V6l70-30 70 30V0" fill="#4a2d10"/><path d="M0-30l-74-18v-46l74 18z" fill="#fff4cf"/><path d="M0-30l74-18v-46L0-76z" fill="#f1e4c3"/><path d="M-60-60l50 12M-60-70l50 12M10-48l50-12M10-58l50-12" stroke="#2f8f9a" stroke-width="3"/><path d="M0-76v46" stroke="#c9a24a" stroke-width="3"/></g>
+    ${suhuf(600, 800)}
     <g class="mh-b"><circle cx="500" cy="640" r="74" fill="url(#g-warm)"/><circle cx="500" cy="640" r="6" fill="#fff"/></g>
     <g class="mh-a"><circle cx="600" cy="620" r="120" fill="url(#g-warm)"/><circle cx="600" cy="620" r="8" fill="#fff"/></g>
     <ellipse class="mh-glow" cx="600" cy="500" rx="900" ry="640" fill="url(#g-warm)"/>
@@ -767,6 +780,7 @@ function dar() {
     <g class="dr-vessel" transform="translate(420 700)"><circle class="dr-vsglow" cy="-20" r="110" fill="url(#g-warm)"/>
       <path d="M-46-30h92q-6 50-46 54-40-4-46-54z" fill="#b98548" stroke="#4a2d10" stroke-width="3"/><ellipse cy="-30" rx="46" ry="11" fill="#e8a658"/><path d="M-30 24h60" stroke="#6b441d" stroke-width="6" stroke-linecap="round"/>
       <path d="M-12-52q-6-14 4-26M8-52q-6-14 4-26" fill="none" stroke="#fff4cf" stroke-width="3" stroke-linecap="round" opacity=".7"/></g>
+    ${suhuf(600, 810)}
     <g class="dr-lights">
       <g class="dr-b"><circle cx="680" cy="680" r="90" fill="url(#g-white)"/><circle cx="680" cy="680" r="7" fill="#fff"/></g>
       <g class="dr-a"><circle cx="560" cy="700" r="110" fill="url(#g-warm)"/><circle cx="560" cy="700" r="8" fill="#fff"/></g>

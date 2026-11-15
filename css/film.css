@@ -621,3 +621,8 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-neckwrap { opacity: 0; transition: opacity 3s ease; } [data-necklace] .ld-neckwrap { opacity: 1; }
 .ld-nkglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
 .ld-neckwrap { transition: opacity 3s ease, translate 3s ease, scale 3s ease; } [data-necklace="under"] .ld-neckwrap { translate: 470px 150px; scale: .45; transform-origin: 640px 600px; }
+/* حفصة رضي الله عنها في dar وmihrab: suhuf=on رزمة صحف القرآن تتوهّج، copies=on مصاحف صغيرة تنطلق منها إلى الآفاق */
+.sf-wrap, .sf-copies { opacity: 0; transition: opacity 3s ease; } [data-suhuf="on"] .sf-wrap, [data-copies="on"] .sf-copies { opacity: 1; }
+.sf-glow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.sf-bk { opacity: 0; animation: sf-fly 4s var(--ease-out) infinite; animation-delay: var(--d); }
+@keyframes sf-fly { 0% { transform: translate(0, -30px) scale(.5); opacity: 0; } 15% { opacity: 1; } 75% { opacity: 1; } 100% { transform: translate(var(--tx), var(--ty)) scale(1); opacity: 0; } }

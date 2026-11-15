@@ -5620,5 +5620,166 @@
         "glow": "full"
       }
     }
+  },
+  "hafsa-alsuhuf": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "suhuf": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            760,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            600,
+            1000
+          ],
+          "to": [
+            620,
+            680,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "peep": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            900
+          ],
+          "to": [
+            620,
+            660,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "suhuf": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1000
+          ],
+          "to": [
+            580,
+            700,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "time": "dawn",
+          "suhuf": "on",
+          "copies": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            700,
+            620
+          ],
+          "to": [
+            600,
+            600,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "lamp": "on",
+          "light": "on",
+          "suhuf": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            760,
+            600
+          ],
+          "to": [
+            600,
+            580,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
