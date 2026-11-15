@@ -583,6 +583,7 @@ function land() {
     <g class="ld-sun"><circle cx="940" cy="480" r="380" fill="url(#g-warm)"/><circle cx="940" cy="480" r="60" fill="#fff4cf"/></g>
     <g class="ld-dream"><circle cx="600" cy="150" r="230" fill="url(#g-warm)" opacity=".5"/><g fill="#fff4cf">${dream}</g>
       <circle cx="540" cy="150" r="34" fill="#ffd77a"/><path d="M640 118a34 34 0 1 0 30 52 28 28 0 0 1-30-52z" fill="#fff4cf"/></g>
+    <g class="ld-pleiades" transform="translate(600 170)"><circle class="ld-plglow" r="190" fill="url(#g-warm)"/><g fill="#fff4cf">${[[-60, -30, 9], [-20, -54, 8], [26, -40, 10], [60, -6, 8], [14, 6, 11], [-34, 22, 8], [40, 44, 7]].map(([x, y, q], i) => `<path class="ld-pl" style="--d:${-i * 0.6}s" transform="translate(${x} ${y}) scale(${q / 10})" d="M0-15l4 10 11 1-8 7 2 11-9-6-9 6 2-11-8-7 11-1z"/>`).join('')}</g></g>
   </g>
   <g data-d=".3">
     <path class="ld-ridge" d="M-700 580-460 470-330 530-190 430-40 530 110 450 250 540 420 470 570 550 720 480 880 430 1020 520 1170 450 1330 540 1500 460 1900 600V1400H-700z"/>

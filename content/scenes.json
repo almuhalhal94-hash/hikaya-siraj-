@@ -4639,5 +4639,165 @@
         "glow": "full"
       }
     }
+  },
+  "salman-althurayya": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "pleiades": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1000
+          ],
+          "to": [
+            600,
+            300,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "road": "on",
+          "caravan": "on",
+          "light": "road"
+        },
+        "camera": {
+          "from": [
+            700,
+            560,
+            1000
+          ],
+          "to": [
+            900,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "pleiades": "on",
+          "town": "on",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            900
+          ],
+          "to": [
+            600,
+            420,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "light": "town",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            300,
+            560,
+            900
+          ],
+          "to": [
+            320,
+            600,
+            620
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            900
+          ],
+          "to": [
+            580,
+            600,
+            620
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            560
+          ],
+          "to": [
+            700,
+            480,
+            900
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }

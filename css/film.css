@@ -594,3 +594,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-cloak, .ld-idhkhir, .ld-book { opacity: 0; transition: opacity 3s ease; } [data-cloak="on"] .ld-cloak, [data-idhkhir="on"] .ld-idhkhir, [data-book="on"] .ld-book { opacity: 1; }
 .ld-cloakglow, .ld-bookglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
 .ld-idhkhir path { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 6s ease-in-out infinite; }
+/* سلمان الفارسي: نجوم الثريّا في سماء ديكور land */
+.ld-pleiades { opacity: 0; transition: opacity 4s ease; } [data-pleiades="on"] .ld-pleiades { opacity: 1; }
+.ld-plglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 4s ease-in-out infinite; opacity: .55; }
+.ld-pl { animation: ld-twinkle 2.4s ease-in-out infinite; animation-delay: var(--d); } @keyframes ld-twinkle { 50% { opacity: .45; } }
