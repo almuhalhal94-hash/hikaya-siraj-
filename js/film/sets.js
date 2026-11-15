@@ -721,6 +721,10 @@ function dar() {
       <circle class="dr-chainglow" r="150" fill="url(#g-warm)"/>
       <g fill="none" stroke="#9aa0b0" stroke-width="9"><ellipse cx="-120" cy="0" rx="26" ry="16"/><ellipse cx="-74" cy="0" rx="26" ry="16"/><ellipse class="dr-l" cx="-28" cy="0" rx="26" ry="16"/><ellipse class="dr-r" cx="28" cy="0" rx="26" ry="16"/><ellipse cx="74" cy="0" rx="26" ry="16"/><ellipse cx="120" cy="0" rx="26" ry="16"/></g>
     </g>
+    <g class="dr-sandals" transform="translate(600 870)"><circle class="dr-sglow" r="170" fill="url(#g-warm)"/>
+      <g class="dr-s1" transform="translate(-44 6) rotate(-10)"><path d="M0-62c22 0 30 22 28 50-2 30-8 50-6 70 2 22-6 42-22 42s-24-20-22-42c2-20-4-40-6-70-2-28 6-50 28-50z" fill="#9a6a3a" stroke="#4a2d10" stroke-width="4"/><path d="M-26-20q26-22 52 0" fill="none" stroke="#c9792a" stroke-width="10" stroke-linecap="round"/><path d="M-4-50l4 30 4-30" fill="none" stroke="#c9792a" stroke-width="5"/></g><g class="dr-s2" transform="translate(44 -14) rotate(8)"><path d="M0-62c22 0 30 22 28 50-2 30-8 50-6 70 2 22-6 42-22 42s-24-20-22-42c2-20-4-40-6-70-2-28 6-50 28-50z" fill="#9a6a3a" stroke="#4a2d10" stroke-width="4"/><path d="M-26-20q26-22 52 0" fill="none" stroke="#c9792a" stroke-width="10" stroke-linecap="round"/><path d="M-4-50l4 30 4-30" fill="none" stroke="#c9792a" stroke-width="5"/></g></g>
+    <g class="dr-call" transform="translate(600 300)" fill="none" stroke="#fff4cf" stroke-width="6" stroke-linecap="round">
+      <path style="--d:0s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/><path style="--d:1s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/><path style="--d:2s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/></g>
     <g class="dr-deeds">
       <g transform="translate(330 640)"><circle r="70" fill="url(#g-warm)"/><path d="M-30 4q30 30 60 0z" fill="#c9995a"/><circle cx="-8" cy="-2" r="9" fill="#c9792a"/><circle cx="10" cy="-4" r="8" fill="#e8a658"/></g>
       <g transform="translate(470 590)"><circle r="70" fill="url(#g-warm)"/><path d="M14-30a26 26 0 1 0 22 40 22 22 0 0 1-22-40z" fill="#fff4cf"/></g>

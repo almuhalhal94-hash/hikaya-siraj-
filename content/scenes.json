@@ -4312,5 +4312,167 @@
         "crew": "on"
       }
     }
+  },
+  "bilal-alnalan": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sandals": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            900
+          ],
+          "to": [
+            600,
+            760,
+            520
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "chain": "broken",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            700,
+            620
+          ],
+          "to": [
+            610,
+            710,
+            460
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "roof",
+          "call": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            860
+          ],
+          "to": [
+            620,
+            380,
+            620
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "pray"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            760
+          ],
+          "to": [
+            620,
+            720,
+            520
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "sandals": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            600,
+            720,
+            720
+          ],
+          "to": [
+            600,
+            780,
+            560
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "sandals": "on",
+          "light": "on",
+          "pair": "on",
+          "peep": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            800,
+            520
+          ],
+          "to": [
+            600,
+            600,
+            900
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
