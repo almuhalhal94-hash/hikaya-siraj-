@@ -5781,5 +5781,168 @@
         "glow": "full"
       }
     }
+  },
+  "ummsalama-alkhayma": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "tent": "lit"
+        },
+        "camera": {
+          "from": [
+            800,
+            520,
+            1000
+          ],
+          "to": [
+            930,
+            640,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "pair": "warm"
+        },
+        "camera": {
+          "from": [
+            600,
+            580,
+            1000
+          ],
+          "to": [
+            620,
+            670,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "lamp": "on",
+          "light": "on",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            680,
+            620
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "tent": "on",
+          "flock": "on",
+          "pair": "white"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            1000
+          ],
+          "to": [
+            700,
+            640,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "tent": "lit",
+          "light": "far",
+          "pair": "white"
+        },
+        "camera": {
+          "from": [
+            760,
+            600,
+            1000
+          ],
+          "to": [
+            960,
+            650,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "tent": "on",
+          "flock": "on",
+          "pair": "white",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            900,
+            640,
+            1000
+          ],
+          "to": [
+            700,
+            640,
+            720
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "tent": "lit",
+        "glow": "full"
+      }
+    }
   }
 }

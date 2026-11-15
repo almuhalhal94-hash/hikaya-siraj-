@@ -626,3 +626,8 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .sf-glow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
 .sf-bk { opacity: 0; animation: sf-fly 4s var(--ease-out) infinite; animation-delay: var(--d); }
 @keyframes sf-fly { 0% { transform: translate(0, -30px) scale(.5); opacity: 0; } 15% { opacity: 1; } 75% { opacity: 1; } 100% { transform: translate(var(--tx), var(--ty)) scale(1); opacity: 0; } }
+/* أم سلمة رضي الله عنها في land: tent (on/lit) خيمة في الحديبية، وlit يضيء داخلها؛ pair=white يجعل النور الثاني أبيض (النبي ﷺ) */
+.ld-tent { opacity: 0; transition: opacity 3s ease; } [data-tent] .ld-tent { opacity: 1; }
+.ld-tentdoor { fill: #1a0f0a; transition: fill 3s ease; } [data-tent="lit"] .ld-tentdoor { fill: #ffd77a; }
+.ld-tentglow { opacity: 0; transition: opacity 3s ease; transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } [data-tent="lit"] .ld-tentglow { opacity: .8; }
+[data-set="land"][data-pair="white"] .ld-b { opacity: 1; filter: saturate(0) brightness(1.35); }

@@ -672,6 +672,10 @@ function land() {
       <g>${Array.from({ length: 22 }, (_, i) => { const a = i / 22 * Math.PI * 2; return `<circle cx="${(Math.cos(a) * 96).toFixed(1)}" cy="${(Math.sin(a) * 70).toFixed(1)}" r="${i % 2 ? 8 : 10}" fill="${i % 2 ? '#fff4cf' : '#e2482a'}"/>`; }).join('')}</g>
       <path d="M0 70l-16 26 16 26 16-26z" fill="#ffd77a" stroke="#8a6234" stroke-width="3"/></g></g>
     <g class="ld-flock" fill="url(#g-warm)">${flock}</g>
+    <g class="ld-tent" transform="translate(930 700)"><ellipse class="ld-tentglow" cy="-70" rx="220" ry="150" fill="url(#g-warm)"/>
+      <path d="M-170 0L-20-150h40L170 0z" fill="#8a5a3a" stroke="#3a2412" stroke-width="4" stroke-linejoin="round"/><path d="M-20-150l-60 150M20-150l60 150" stroke="#6b3f24" stroke-width="5"/>
+      <path class="ld-tentdoor" d="M-44 0L0-112 44 0z"/><path d="M0-150v-26" stroke="#4a2d10" stroke-width="6"/><path d="M-170 0h-24M170 0h24" stroke="#4a2d10" stroke-width="4"/>
+      <path d="M-120-46h60M60-46h60" stroke="#e8c48a" stroke-width="6" opacity=".55"/></g>
     <g class="ld-lights">
       <g class="ld-b"><circle cx="722" cy="664" r="80" fill="url(#g-warm)"/><circle cx="722" cy="664" r="6" fill="#fff"/></g>
       <g class="ld-a"><circle cx="640" cy="650" r="115" fill="url(#g-warm)"/><circle cx="640" cy="650" r="8" fill="#fff"/></g>
