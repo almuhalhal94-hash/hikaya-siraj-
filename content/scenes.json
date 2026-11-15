@@ -4799,5 +4799,169 @@
         "glow": "full"
       }
     }
+  },
+  "anas-albab": {
+    "thumb": 5,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "out"
+        },
+        "camera": {
+          "from": [
+            900,
+            560,
+            1000
+          ],
+          "to": [
+            1120,
+            600,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            820
+          ],
+          "to": [
+            620,
+            700,
+            520
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "out",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            600,
+            900
+          ],
+          "to": [
+            1000,
+            620,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "time": "dawn",
+          "light": "mid",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            420,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            640,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "time": "dawn",
+          "light": "mid",
+          "flock": "on",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            560
+          ],
+          "to": [
+            640,
+            620,
+            820
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "out",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            1100,
+            620,
+            560
+          ],
+          "to": [
+            800,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "pair": "on",
+        "glow": "full"
+      }
+    }
   }
 }
