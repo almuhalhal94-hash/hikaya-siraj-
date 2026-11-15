@@ -3639,5 +3639,166 @@
         "glow": "full"
       }
     }
+  },
+  "talha-uhud": {
+    "thumb": 2,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            640,
+            420,
+            860
+          ],
+          "to": [
+            640,
+            500,
+            680
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "arrows": "on",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            560,
+            760
+          ],
+          "to": [
+            680,
+            620,
+            600
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "dust",
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "arrows": "on",
+          "light": "mid",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            680,
+            620,
+            600
+          ],
+          "to": [
+            680,
+            650,
+            440
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            660,
+            640,
+            460
+          ],
+          "to": [
+            640,
+            560,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "dawn",
+          "cave": "warm",
+          "shake": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            760
+          ],
+          "to": [
+            612,
+            300,
+            520
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "pair": "on",
+          "flock": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            520
+          ],
+          "to": [
+            640,
+            480,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }

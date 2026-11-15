@@ -561,3 +561,9 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-flag { transform-box: fill-box; transform-origin: 0 50%; animation: ld-wave 2.6s ease-in-out infinite; } @keyframes ld-wave { 50% { transform: skewY(-4deg) scaleX(.94); } }
 .ms-a, .ms-b { opacity: 0; transition: opacity 3s ease; transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
 [data-ms="one"] .ms-a, [data-ms="pair"] .ms-a, [data-ms="pair"] .ms-b { opacity: 1; }
+
+/* سهام (يوم أحد) في land، واهتزاز عام للمسرح */
+.ld-arrows { opacity: 0; transition: opacity 2s ease; } [data-arrows="on"] .ld-arrows { opacity: 1; }
+.ld-arrow { transform: translate(0, var(--y)); animation: ld-fly 3.2s linear infinite; animation-delay: var(--d); opacity: 0; }
+@keyframes ld-fly { 0% { transform: translate(0, var(--y)); opacity: 0; } 10% { opacity: 1; } 70% { opacity: 1; } 85%, 100% { transform: translate(-560px, calc(var(--y) + 40px)); opacity: 0; } }
+.stage[data-shake="on"] .stage__svg { animation: hj-quake .22s linear infinite; }
