@@ -610,3 +610,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-cup="pass"] .ms-cup { animation: ms-pass 12s ease-in-out infinite; }
 @keyframes ms-pass { 0%, 8% { translate: 0 0; } 18%, 26% { translate: 90px -14px; } 36%, 44% { translate: 300px 6px; } 54%, 62% { translate: 380px -4px; } 72%, 80% { translate: 460px 12px; } 92%, 100% { translate: 0 0; } }
 [data-set="dar"][data-pair="warm"] .dr-b { opacity: 1; filter: sepia(1) saturate(2.6) hue-rotate(-12deg); }
+/* خالد بن الوليد رضي الله عنه في land: sword=on السيف اليماني العريض يلمع، armor=on درع وترس (أدراعه وعتاده) */
+.ld-sword, .ld-armor { opacity: 0; transition: opacity 3s ease; } [data-sword="on"] .ld-sword, [data-armor="on"] .ld-armor { opacity: 1; }
+.ld-swglow, .ld-arglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.ld-swshine { animation: ld-shine 4s ease-in-out infinite; } @keyframes ld-shine { 0%, 60%, 100% { opacity: 0; transform: translateY(0); } 75% { opacity: .7; } 90% { opacity: 0; transform: translateY(240px); } }

@@ -5127,5 +5127,168 @@
         "cup": "pass"
       }
     }
+  },
+  "khalid-alsayf": {
+    "thumb": 5,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "sword": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            480,
+            1000
+          ],
+          "to": [
+            620,
+            480,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "banner": "on",
+          "light": "road",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            820,
+            600,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "trunk": "off",
+          "minbar": "on",
+          "ms": "one",
+          "jidh": "lonely"
+        },
+        "camera": {
+          "from": [
+            760,
+            440,
+            860
+          ],
+          "to": [
+            780,
+            520,
+            600
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "banner": "on",
+          "arrows": "on",
+          "shake": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            520,
+            900
+          ],
+          "to": [
+            560,
+            500,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "sword": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            440,
+            560
+          ],
+          "to": [
+            620,
+            500,
+            820
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "armor": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1000
+          ],
+          "to": [
+            640,
+            520,
+            680
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
