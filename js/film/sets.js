@@ -576,6 +576,14 @@ function house(x, w, h, dome) {
     ${dome ? `<path d="M${x + w * 0.2} ${-h - 10}q${w * 0.3}-${w * 0.5} ${w * 0.6} 0z" fill="#6b5340"/>` : ''}${wins.join('')}
     <path class="ld-win" d="M${x + w / 2 - 13} 0v-40q13-16 26 0V0z"/>`;
 }
+// قِربة أم عطية رضي الله عنها: قربة ماء من جلد معلّقة على حامل خشبي، تقطر منها قطرة (qirba=on)
+function qirba(x, y, k = 1) {
+  return `<g class="qb" transform="translate(${x} ${y}) scale(${k})"><ellipse class="qb-glow" cy="-100" rx="130" ry="130" fill="url(#g-warm)"/>
+    <path d="M-48 0L0-176 48 0M0-176l-8 176" fill="none" stroke="#6b441d" stroke-width="8" stroke-linecap="round"/><path d="M0-176v24" stroke="#e2d2a8" stroke-width="3"/>
+    <path d="M-10-152h20l4 14q30 10 30 50 0 40-34 50-30 8-46-14-14-22 0-56 10-24 22-30z" fill="#8a5a32" stroke="#3a2412" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-8-138q-24 24-18 64M8-132q22 22 18 60" fill="none" stroke="#c9995a" stroke-width="3" opacity=".55"/><path d="M-10-152h20" stroke="#f0e2c0" stroke-width="6" stroke-linecap="round"/>
+    <circle class="qb-drop" cx="-6" cy="-36" r="5" fill="#bfeee8"/></g>`;
+}
 function land() {
   const r = rng(57); let dream = '', rub = '', dates = '', flock = '';
   for (let i = 0; i < 11; i++) { const a = Math.PI * (0.08 + 0.84 * i / 10); dream += `<path transform="translate(${(600 - Math.cos(a) * 250).toFixed(0)} ${(210 - Math.sin(a) * 150).toFixed(0)})" d="M0-15l4 10 11 1-8 7 2 11-9-6-9 6 2-11-8-7 11-1z"/>`; }
@@ -671,6 +679,12 @@ function land() {
       <ellipse rx="96" ry="70" fill="none" stroke="#c9a24a" stroke-width="3"/>
       <g>${Array.from({ length: 22 }, (_, i) => { const a = i / 22 * Math.PI * 2; return `<circle cx="${(Math.cos(a) * 96).toFixed(1)}" cy="${(Math.sin(a) * 70).toFixed(1)}" r="${i % 2 ? 8 : 10}" fill="${i % 2 ? '#fff4cf' : '#e2482a'}"/>`; }).join('')}</g>
       <path d="M0 70l-16 26 16 26 16-26z" fill="#ffd77a" stroke="#8a6234" stroke-width="3"/></g></g>
+    <g class="ld-pot" transform="translate(370 712)"><circle class="ld-potglow" cy="-20" r="110" fill="url(#g-warm)"/>
+      <path d="M-26 0q-6-20 6-30M0 0q-8-24 0-36M26 0q6-20-6-30" fill="none" stroke="#ff9a3c" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="-40" cy="2" rx="16" ry="9" fill="#5a5262"/><ellipse cx="40" cy="2" rx="16" ry="9" fill="#5a5262"/><ellipse cy="8" rx="16" ry="9" fill="#4a4250"/>
+      <path d="M-44-32h88q-4 36-44 40-40-4-44-40z" fill="#3a3340" stroke="#17131c" stroke-width="3"/><ellipse cy="-32" rx="44" ry="9" fill="#5a5262"/>
+      <g class="ld-steam" fill="none" stroke="#fff4cf" stroke-width="4" stroke-linecap="round"><path d="M-14-46q-8-16 2-30"/><path d="M10-46q-8-16 2-30"/></g></g>
+    ${qirba(480, 712, .9)}
     <g class="ld-flock" fill="url(#g-warm)">${flock}</g>
     <g class="ld-tent" transform="translate(930 700)"><ellipse class="ld-tentglow" cy="-70" rx="220" ry="150" fill="url(#g-warm)"/>
       <path d="M-170 0L-20-150h40L170 0z" fill="#8a5a3a" stroke="#3a2412" stroke-width="4" stroke-linejoin="round"/><path d="M-20-150l-60 150M20-150l60 150" stroke="#6b3f24" stroke-width="5"/>
@@ -806,6 +820,7 @@ function dar() {
       <path d="M-96-14v18q96 30 192 0v-18z" fill="#7d7771"/><ellipse cy="-14" rx="96" ry="24" fill="#a39d96"/><path d="M-60-20q60-18 120 0M-70-8q70-20 140 0" fill="none" stroke="#6f6a66" stroke-width="3" opacity=".6"/>
       <ellipse cy="-16" rx="16" ry="6" fill="#3a3330"/><circle cx="-6" cy="-24" r="3" fill="#e8c48a"/><circle cx="6" cy="-22" r="3" fill="#e8c48a"/>
       <g class="dr-handle"><path d="M0-14v-70" stroke="#6b441d" stroke-width="12" stroke-linecap="round"/><path d="M0-84v-4" stroke="#9a6a3a" stroke-width="14" stroke-linecap="round"/></g></g>
+    ${qirba(880, 780, .95)}
     <g class="dr-lights">
       <g class="dr-b"><circle cx="680" cy="680" r="90" fill="url(#g-white)"/><circle cx="680" cy="680" r="7" fill="#fff"/></g>
       <g class="dr-a"><circle cx="560" cy="700" r="110" fill="url(#g-warm)"/><circle cx="560" cy="700" r="8" fill="#fff"/></g>

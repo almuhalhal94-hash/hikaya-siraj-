@@ -645,3 +645,10 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 /* أم سُليم رضي الله عنها في dar: bread=on أقراص شعير ملفوفة في خمار تتوهّج */
 .dr-bread { opacity: 0; transition: opacity 3s ease; } [data-bread="on"] .dr-bread { opacity: 1; }
 .dr-brglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+/* أم عطية رضي الله عنها: qirba=on قربة ماء على حامل تقطر (في land وdar)؛ وفي land: pot=on قِدر على نار صغيرة يتصاعد منها البخار */
+.qb, .ld-pot { opacity: 0; transition: opacity 3s ease; } [data-qirba="on"] .qb, [data-pot="on"] .ld-pot { opacity: 1; }
+.qb-glow, .ld-potglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.qb-drop { animation: qb-drip 2.6s ease-in infinite; }
+@keyframes qb-drip { 0% { translate: 0 0; opacity: 0; } 15% { opacity: 1; } 80% { opacity: 1; } 100% { translate: 0 34px; opacity: 0; } }
+.ld-steam path { animation: ld-steam 3s ease-in-out infinite; } .ld-steam path + path { animation-delay: -1.5s; }
+@keyframes ld-steam { 0% { translate: 0 6px; opacity: 0; } 40% { opacity: .8; } 100% { translate: 0 -26px; opacity: 0; } }

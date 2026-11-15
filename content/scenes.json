@@ -6451,5 +6451,180 @@
         "glow": "full"
       }
     }
+  },
+  "ummatiyya-alqirba": {
+    "thumb": 1,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "qirba": "on",
+          "tent": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            1000
+          ],
+          "to": [
+            560,
+            640,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "tent": "lit",
+          "pot": "on",
+          "qirba": "on",
+          "flock": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            760,
+            560,
+            1000
+          ],
+          "to": [
+            470,
+            660,
+            680
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on",
+          "peep": "on",
+          "qirba": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            640,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "vessel": "on",
+          "qirba": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            600,
+            1000
+          ],
+          "to": [
+            560,
+            700,
+            680
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "leaves"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "flock": "on",
+          "qirba": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            640,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "flock": "on",
+          "qirba": "on",
+          "pair": "white",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            720
+          ],
+          "to": [
+            640,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "flock": "on",
+        "qirba": "on",
+        "light": "mid",
+        "glow": "full"
+      }
+    }
   }
 }
