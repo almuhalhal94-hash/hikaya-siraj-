@@ -6111,5 +6111,179 @@
         "glow": "full"
       }
     }
+  },
+  "asma-alnitaq": {
+    "thumb": 2,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            680,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "sufra": "on",
+          "belt": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1000
+          ],
+          "to": [
+            600,
+            800,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "sufra": "tied",
+          "belt": "split",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            820,
+            600
+          ],
+          "to": [
+            600,
+            620,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "lamp": "on",
+          "vessel": "on",
+          "light": "on",
+          "pair": "warm"
+        },
+        "camera": {
+          "from": [
+            560,
+            560,
+            1000
+          ],
+          "to": [
+            560,
+            680,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "palm": "on",
+          "road": "on",
+          "light": "road",
+          "nawa": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1100
+          ],
+          "to": [
+            780,
+            640,
+            700
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust",
+          "wind"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "palm": "on",
+          "road": "on",
+          "light": "road",
+          "nawa": "on",
+          "pair": "white",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            780,
+            660,
+            700
+          ],
+          "to": [
+            640,
+            560,
+            1100
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "sufra": "tied",
+        "belt": "split",
+        "glow": "full"
+      }
+    }
   }
 }

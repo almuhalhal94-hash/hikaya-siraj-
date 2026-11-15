@@ -636,3 +636,9 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .dr-mlglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
 .dr-handle { animation: dr-turn 3.2s linear infinite; }
 @keyframes dr-turn { 0% { translate: 70px 0; } 25% { translate: 0 18px; } 50% { translate: -70px 0; } 75% { translate: 0 -18px; } 100% { translate: 70px 0; } }
+/* أسماء بنت أبي بكر رضي الله عنهما في dar: sufra (on/tied) سفرة في جراب، وtied يربط فمها بقطعة من النطاق؛ belt (on/split) نطاق من قماش، وsplit يشقّه نصفين. وفي land: nawa=on حِمل نوى فوق النور الرئيس */
+.dr-sufra, .dr-belt, .ld-nawa { opacity: 0; transition: opacity 3s ease; } [data-sufra] .dr-sufra, [data-belt] .dr-belt, [data-nawa="on"] .ld-nawa { opacity: 1; }
+.dr-tie { opacity: 0; transition: opacity 2.4s ease; } [data-sufra="tied"] .dr-tie { opacity: 1; }
+.dr-sfglow, .dr-btglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.dr-bt1, .dr-bt2 { transition: translate 2.6s var(--ease-out), rotate 2.6s var(--ease-out); transform-box: fill-box; transform-origin: center; }
+[data-belt="split"] .dr-bt1 { translate: -70px -10px; rotate: -6deg; } [data-belt="split"] .dr-bt2 { translate: 70px -10px; rotate: 6deg; }

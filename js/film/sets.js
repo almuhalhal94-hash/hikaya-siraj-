@@ -679,6 +679,8 @@ function land() {
     <g class="ld-lights">
       <g class="ld-b"><circle cx="722" cy="664" r="80" fill="url(#g-warm)"/><circle cx="722" cy="664" r="6" fill="#fff"/></g>
       <g class="ld-a"><circle cx="640" cy="650" r="115" fill="url(#g-warm)"/><circle cx="640" cy="650" r="8" fill="#fff"/></g>
+      <g class="ld-nawa" transform="translate(640 572)"><ellipse rx="44" ry="16" fill="#6b441d" stroke="#3a2412" stroke-width="3"/><path d="M-44 0q44-44 88 0" fill="#8a5a32" stroke="#3a2412" stroke-width="3"/>
+        <g fill="#c9995a" stroke="#4a2d10" stroke-width="1.5"><ellipse cx="-20" cy="-14" rx="7" ry="4"/><ellipse cx="-4" cy="-20" rx="7" ry="4"/><ellipse cx="14" cy="-15" rx="7" ry="4"/><ellipse cx="4" cy="-8" rx="7" ry="4"/><ellipse cx="-12" cy="-4" rx="7" ry="4"/><ellipse cx="22" cy="-4" rx="7" ry="4"/></g></g>
     </g>
     <ellipse class="ld-glow" cx="640" cy="620" rx="900" ry="620" fill="url(#g-warm)"/>
   </g>
@@ -784,6 +786,14 @@ function dar() {
     <g class="dr-vessel" transform="translate(420 700)"><circle class="dr-vsglow" cy="-20" r="110" fill="url(#g-warm)"/>
       <path d="M-46-30h92q-6 50-46 54-40-4-46-54z" fill="#b98548" stroke="#4a2d10" stroke-width="3"/><ellipse cy="-30" rx="46" ry="11" fill="#e8a658"/><path d="M-30 24h60" stroke="#6b441d" stroke-width="6" stroke-linecap="round"/>
       <path d="M-12-52q-6-14 4-26M8-52q-6-14 4-26" fill="none" stroke="#fff4cf" stroke-width="3" stroke-linecap="round" opacity=".7"/></g>
+    <g class="dr-sufra" transform="translate(720 790) scale(.85)"><ellipse class="dr-sfglow" cy="-40" rx="200" ry="150" fill="url(#g-warm)"/>
+      <path d="M-70 40q-20-60 0-110h140q20 50 0 110q-70 22-140 0z" fill="#8a5a32" stroke="#3a2412" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M-50-70q-14-30 10-44h80q24 14 10 44z" fill="#a06a3c" stroke="#3a2412" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M-60 0q60 18 120 0M-56 24q56 16 112 0" fill="none" stroke="#c9995a" stroke-width="3" opacity=".6"/>
+      <g class="dr-tie"><path d="M-62-70q62 18 124 0" fill="none" stroke="#f0e2c0" stroke-width="12" stroke-linecap="round"/><path d="M0-66q-30 30-40 60M0-66q26 34 30 64" fill="none" stroke="#f0e2c0" stroke-width="9" stroke-linecap="round"/><circle cy="-66" r="10" fill="#fffaf0"/></g></g>
+    <g class="dr-belt" transform="translate(600 900)"><ellipse class="dr-btglow" rx="260" ry="90" fill="url(#g-warm)"/>
+      <g class="dr-bt1"><path d="M-220 0q110-34 220 0" fill="none" stroke="#f0e2c0" stroke-width="22" stroke-linecap="round"/><path d="M-200-4q100-28 200 0" fill="none" stroke="#c9792a" stroke-width="4" stroke-dasharray="10 12"/></g>
+      <g class="dr-bt2"><path d="M0 0q110 34 220 0" fill="none" stroke="#f0e2c0" stroke-width="22" stroke-linecap="round"/><path d="M0 4q100 28 200 0" fill="none" stroke="#c9792a" stroke-width="4" stroke-dasharray="10 12"/></g></g>
     ${suhuf(600, 810)}
     <g class="dr-mill" transform="translate(600 800)"><ellipse class="dr-mlglow" cy="-30" rx="230" ry="150" fill="url(#g-warm)"/>
       <ellipse cy="30" rx="150" ry="36" fill="#efe3c6" opacity=".85"/><path d="M-110 4v26q110 34 220 0V4z" fill="#6f6a66"/><ellipse cy="4" rx="110" ry="28" fill="#8d8781"/>
