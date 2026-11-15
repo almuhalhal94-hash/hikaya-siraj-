@@ -670,4 +670,53 @@ function mihrab() {
   <g data-d="1.3"><path d="M-700-500h380v1900h-380zM1520-500h380v1900h-380z" fill="#06061a"/><path d="M-320-500h40v1900h-40zM1480-500h40v1900h-40z" fill="#12123a"/></g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land, mihrab };
+// ——— فناء دار في مكة ومسجد صغير من حجارة (أبو بكر الصدّيق رضي الله عنه): لا يُرسم أحد؛ النبي ﷺ والصحابة أنوار فقط ———
+function dar() {
+  const r = rng(71); let stones = '', wall = '', peep = '';
+  for (let i = 0; i < 26; i++) { const a = i / 26 * Math.PI * 2, x = 600 + Math.cos(a) * 250, y = 760 + Math.sin(a) * 60; stones += `<ellipse cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" rx="${(16 + r() * 8).toFixed(0)}" ry="${(9 + r() * 4).toFixed(0)}"/>`; }
+  for (let y = 430; y < 690; y += 30) wall += `M-700 ${y}H1900`;
+  for (const x of [120, 200, 300, 900, 1000, 1080]) peep += `<circle cx="${x}" cy="${416 + (x % 3) * 4}" r="26"/>`;
+  return `${DEFS}
+  <defs><linearGradient id="g-court" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a4434"/><stop offset="1" stop-color="#2a1e18"/></linearGradient></defs>
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    <rect class="dr-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    ${stars(90, 37, [-400, 1600], [-300, 400])}
+    <path class="dr-moon" d="M930 70a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
+  </g>
+  <g data-d=".3">
+    <path class="dr-hills" d="M-700 470-480 330-330 400-170 280 0 380 150 300 330 410 500 330 700 420 860 300 1040 390 1220 290 1400 400 1900 330V1400H-700z"/>
+    <g transform="translate(600 438)"><path class="dr-kaaba" d="M-26 0v-46h52V0z"/><path d="M-26-34h52" stroke="#c9995a" stroke-width="3" opacity=".7"/></g>
+  </g>
+  <g data-d=".75">
+    <rect x="-700" y="420" width="2600" height="280" fill="url(#g-court)"/><path d="${wall}" stroke="#1a120e" stroke-width="3" opacity=".35"/>
+    <rect x="-700" y="412" width="2600" height="14" fill="#6b5340"/>
+    <g class="dr-peep" fill="url(#g-warm)">${peep}</g>
+    <g transform="translate(1180 700)"><rect x="-90" y="-250" width="180" height="250" fill="#3a2a20"/><path class="dr-door" d="M-40 0v-150q40-46 80 0V0z"/></g>
+  </g>
+  <g data-d="1">
+    <path d="M-700 1400V690h2600v710z" fill="#3a2c22"/><path d="M-700 690h2600v18H-700z" fill="#6b5340" opacity=".6"/>
+    <ellipse cx="600" cy="770" rx="270" ry="74" fill="#5a4434"/>
+    <g fill="#8a7458" stroke="#2a1e18" stroke-width="2">${stones}</g>
+    <g transform="translate(600 700)"><path d="M-60 0v-80q60-70 120 0V0z" fill="#6b5340"/><path d="M-40 0v-66q40-46 80 0V0z" fill="#2a1e18"/></g>
+    <g class="dr-lamp" transform="translate(760 560)"><path d="M0-60v52" stroke="#b98548" stroke-width="3"/><path d="M-16-8h32l6 30q-22 16-44 0z" fill="#b98548"/><circle cy="10" r="80" fill="url(#g-warm)"/><path d="M0 0q-8 10 0 20 8-10 0-20z" fill="#fff4cf"/></g>
+    <g class="dr-chain" transform="translate(600 720)">
+      <circle class="dr-chainglow" r="150" fill="url(#g-warm)"/>
+      <g fill="none" stroke="#9aa0b0" stroke-width="9"><ellipse cx="-120" cy="0" rx="26" ry="16"/><ellipse cx="-74" cy="0" rx="26" ry="16"/><ellipse class="dr-l" cx="-28" cy="0" rx="26" ry="16"/><ellipse class="dr-r" cx="28" cy="0" rx="26" ry="16"/><ellipse cx="74" cy="0" rx="26" ry="16"/><ellipse cx="120" cy="0" rx="26" ry="16"/></g>
+    </g>
+    <g class="dr-deeds">
+      <g transform="translate(330 640)"><circle r="70" fill="url(#g-warm)"/><path d="M-30 4q30 30 60 0z" fill="#c9995a"/><circle cx="-8" cy="-2" r="9" fill="#c9792a"/><circle cx="10" cy="-4" r="8" fill="#e8a658"/></g>
+      <g transform="translate(470 590)"><circle r="70" fill="url(#g-warm)"/><path d="M14-30a26 26 0 1 0 22 40 22 22 0 0 1-22-40z" fill="#fff4cf"/></g>
+      <g transform="translate(730 590)"><circle r="70" fill="url(#g-warm)"/><path d="M-22-24h44l-6 50h-32z" fill="#bfeee8"/><path d="M-16-8h32" stroke="#2f8f9a" stroke-width="4"/></g>
+      <g transform="translate(870 640)"><circle r="70" fill="url(#g-warm)"/><path d="M0 20l-26-24q-12-14 0-26t26 6q14-18 26-6t0 26z" fill="#f6a5c0"/></g>
+    </g>
+    <g class="dr-lights">
+      <g class="dr-b"><circle cx="680" cy="680" r="90" fill="url(#g-white)"/><circle cx="680" cy="680" r="7" fill="#fff"/></g>
+      <g class="dr-a"><circle cx="560" cy="700" r="110" fill="url(#g-warm)"/><circle cx="560" cy="700" r="8" fill="#fff"/></g>
+    </g>
+    <ellipse class="dr-glow" cx="600" cy="660" rx="900" ry="600" fill="url(#g-warm)"/>
+  </g>
+  <g data-d="1.3"><path d="M-700 1400V900l210-50 120 60 80 490zM1900 1400V880l-230-40-120 70-70 490z" fill="#0c0806"/></g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land, mihrab, dar };

@@ -509,3 +509,24 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-set="mihrab"][data-glow="full"] .mh-glow { opacity: .45; } [data-set="mihrab"][data-glow="full"] .mh-nicheglow { opacity: .9; }
 .stage[data-set="mihrab"] .stage__tint { background: radial-gradient(circle at 50% 50%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
 .stage[data-set="mihrab"][data-glow="full"] .stage__tint { opacity: 1; }
+
+/* ——— فناء دار أبي بكر بمكة ومسجده الصغير ——— */
+.dr-a, .dr-b, .dr-glow, .dr-chainglow, .dr-lamp circle, .dr-l, .dr-r, .dr-peep circle { transform-box: fill-box; transform-origin: center; }
+.dr-dawn, .dr-peep, .dr-chain, .dr-deeds, .dr-a, .dr-b, .dr-glow, .dr-lamp { opacity: 0; transition: opacity 4s ease; }
+.dr-moon { transition: opacity 5s ease; }
+.dr-hills { fill: #121a40; transition: fill 6s ease; } .dr-kaaba { fill: #0a0a14; } .dr-door { fill: #120a06; transition: fill 3s ease; }
+[data-set="dar"][data-time="dawn"] .dr-dawn { opacity: 1; } [data-set="dar"][data-time="dawn"] .dr-moon { opacity: .1; }
+.stage[data-set="dar"][data-time="dawn"] .stars { opacity: .08; } [data-set="dar"][data-time="dawn"] .dr-hills { fill: #5b4480; }
+[data-lamp="on"] .dr-lamp { opacity: 1; } .dr-lamp circle { animation: st-breathe 2.8s ease-in-out infinite; } [data-lamp="on"] .dr-door { fill: #ffd77a; }
+[data-peep="on"] .dr-peep { opacity: .7; } .dr-peep circle { animation: st-breathe 3s ease-in-out infinite; } .dr-peep circle:nth-child(even) { animation-delay: -1.3s; }
+[data-chain] .dr-chain { opacity: 1; } .dr-chainglow { opacity: .3; transition: opacity 3s ease; }
+.dr-l, .dr-r { transition: transform 2.4s var(--ease-out) .6s; }
+[data-chain="broken"] .dr-l { transform: translate(-40px, 24px) rotate(-40deg); } [data-chain="broken"] .dr-r { transform: translate(40px, 24px) rotate(40deg); } [data-chain="broken"] .dr-chainglow { opacity: 1; }
+[data-deeds="on"] .dr-deeds { opacity: 1; } .dr-deeds circle { animation: st-breathe 3.4s ease-in-out infinite; }
+.dr-a, .dr-b { animation: st-breathe 3.6s ease-in-out infinite; } .dr-b { animation-delay: -1.5s; }
+[data-set="dar"][data-light] .dr-a { opacity: 1; } [data-set="dar"][data-pair="on"] .dr-b { opacity: 1; }
+.dr-lights { transition: translate 8s ease-in-out; } [data-set="dar"][data-light="out"] .dr-lights { translate: 520px -10px; }
+[data-set="dar"][data-light="pray"] .dr-lights { translate: 40px 40px; }
+[data-set="dar"][data-glow="full"] .dr-glow { opacity: .4; }
+.stage[data-set="dar"] .stage__tint { background: radial-gradient(circle at 50% 62%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="dar"][data-glow="full"] .stage__tint { opacity: 1; }

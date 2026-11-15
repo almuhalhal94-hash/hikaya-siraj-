@@ -2999,5 +2999,164 @@
         "glow": "full"
       }
     }
+  },
+  "abubakr-almasjid": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            820
+          ],
+          "to": [
+            600,
+            640,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            560
+          ],
+          "to": [
+            620,
+            660,
+            440
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "chain": "broken",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            680,
+            520
+          ],
+          "to": [
+            600,
+            700,
+            420
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "pray",
+          "peep": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            640
+          ],
+          "to": [
+            600,
+            540,
+            860
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "pair": "on",
+          "deeds": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            760
+          ],
+          "to": [
+            600,
+            640,
+            640
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "out",
+          "pair": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            700,
+            600,
+            640
+          ],
+          "to": [
+            900,
+            580,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
