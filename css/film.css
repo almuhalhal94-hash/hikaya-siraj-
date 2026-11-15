@@ -614,3 +614,6 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-sword, .ld-armor { opacity: 0; transition: opacity 3s ease; } [data-sword="on"] .ld-sword, [data-armor="on"] .ld-armor { opacity: 1; }
 .ld-swglow, .ld-arglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
 .ld-swshine { animation: ld-shine 4s ease-in-out infinite; } @keyframes ld-shine { 0%, 60%, 100% { opacity: 0; transform: translateY(0); } 75% { opacity: .7; } 90% { opacity: 0; transform: translateY(240px); } }
+/* خديجة رضي الله عنها في dar: blanket=on غطاء مخطط (زمّلوني)، vessel=on إناء طعام يتوهّج */
+.dr-blanket, .dr-vessel { opacity: 0; transition: opacity 3s ease; } [data-blanket="on"] .dr-blanket, [data-vessel="on"] .dr-vessel { opacity: 1; }
+.dr-blglow, .dr-vsglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }

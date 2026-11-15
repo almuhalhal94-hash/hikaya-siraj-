@@ -756,6 +756,13 @@ function dar() {
       <g transform="translate(730 590)"><circle r="70" fill="url(#g-warm)"/><path d="M-22-24h44l-6 50h-32z" fill="#bfeee8"/><path d="M-16-8h32" stroke="#2f8f9a" stroke-width="4"/></g>
       <g transform="translate(870 640)"><circle r="70" fill="url(#g-warm)"/><path d="M0 20l-26-24q-12-14 0-26t26 6q14-18 26-6t0 26z" fill="#f6a5c0"/></g>
     </g>
+    <g class="dr-blanket" transform="translate(610 770)"><ellipse class="dr-blglow" cy="-30" rx="260" ry="150" fill="url(#g-warm)"/>
+      <path d="M-170-40q85-26 170-8t170-10l16 76q-90 22-186 10t-186 12z" fill="#7a4a3a" stroke="#3a1e18" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M-166-20q85-22 170-6t166-10M-162 4q85-22 170-6t164-10" fill="none" stroke="#e8c48a" stroke-width="7" opacity=".75"/>
+      <path d="M-172 46l-6 14M-154 46l-2 14M-136 46l-4 14M150 44l4 14M168 42l2 14M186 40l6 14" stroke="#3a1e18" stroke-width="3"/></g>
+    <g class="dr-vessel" transform="translate(420 700)"><circle class="dr-vsglow" cy="-20" r="110" fill="url(#g-warm)"/>
+      <path d="M-46-30h92q-6 50-46 54-40-4-46-54z" fill="#b98548" stroke="#4a2d10" stroke-width="3"/><ellipse cy="-30" rx="46" ry="11" fill="#e8a658"/><path d="M-30 24h60" stroke="#6b441d" stroke-width="6" stroke-linecap="round"/>
+      <path d="M-12-52q-6-14 4-26M8-52q-6-14 4-26" fill="none" stroke="#fff4cf" stroke-width="3" stroke-linecap="round" opacity=".7"/></g>
     <g class="dr-lights">
       <g class="dr-b"><circle cx="680" cy="680" r="90" fill="url(#g-white)"/><circle cx="680" cy="680" r="7" fill="#fff"/></g>
       <g class="dr-a"><circle cx="560" cy="700" r="110" fill="url(#g-warm)"/><circle cx="560" cy="700" r="8" fill="#fff"/></g>

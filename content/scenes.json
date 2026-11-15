@@ -5290,5 +5290,170 @@
         "glow": "full"
       }
     }
+  },
+  "khadija-alghita": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "blanket": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            660,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "cave": "bright"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1000
+          ],
+          "to": [
+            612,
+            300,
+            520
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "blanket": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            760
+          ],
+          "to": [
+            620,
+            700,
+            520
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "deeds": "on",
+          "light": "on",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            640
+          ],
+          "to": [
+            600,
+            620,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "vessel": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            600,
+            900
+          ],
+          "to": [
+            480,
+            660,
+            600
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "blanket": "on",
+          "light": "on",
+          "pair": "on",
+          "peep": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            680,
+            560
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "deeds": "on",
+        "glow": "full"
+      }
+    }
   }
 }
