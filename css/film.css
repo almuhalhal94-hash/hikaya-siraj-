@@ -554,3 +554,10 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 
 .mh-book { opacity: 0; transition: opacity 3s ease; } [data-book="on"] .mh-book { opacity: 1; }
 .mh-book circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
+
+/* راية (علي رضي الله عنه) في land، وأنوار في المسجد */
+.ld-banner { opacity: 0; transition: opacity 3s ease; } [data-banner="on"] .ld-banner { opacity: 1; }
+.ld-banner circle:first-child { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.ld-flag { transform-box: fill-box; transform-origin: 0 50%; animation: ld-wave 2.6s ease-in-out infinite; } @keyframes ld-wave { 50% { transform: skewY(-4deg) scaleX(.94); } }
+.ms-a, .ms-b { opacity: 0; transition: opacity 3s ease; transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+[data-ms="one"] .ms-a, [data-ms="pair"] .ms-a, [data-ms="pair"] .ms-b { opacity: 1; }

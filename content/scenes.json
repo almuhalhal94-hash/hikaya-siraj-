@@ -3479,5 +3479,165 @@
         "glow": "full"
       }
     }
+  },
+  "ali-alraya": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "banner": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            820
+          ],
+          "to": [
+            560,
+            520,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "ms": "pair"
+        },
+        "camera": {
+          "from": [
+            700,
+            450,
+            760
+          ],
+          "to": [
+            900,
+            560,
+            520
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            480,
+            760
+          ],
+          "to": [
+            560,
+            600,
+            480
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "banner": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            420,
+            560,
+            760
+          ],
+          "to": [
+            480,
+            560,
+            600
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "banner": "on",
+          "light": "low",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            480,
+            560,
+            600
+          ],
+          "to": [
+            580,
+            560,
+            460
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "banner": "on",
+          "light": "low",
+          "flock": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            580,
+            560,
+            480
+          ],
+          "to": [
+            600,
+            480,
+            800
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }

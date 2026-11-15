@@ -164,6 +164,7 @@ function mosque() {
         <ellipse cx="0" cy="-185" rx="150" ry="260" fill="url(#g-white)"/>
       </g>
     </g>
+    <g class="ms-lights"><g class="ms-b"><circle cx="1000" cy="660" r="80" fill="url(#g-white)"/><circle cx="1000" cy="660" r="7" fill="#fff"/></g><g class="ms-a"><circle cx="880" cy="700" r="100" fill="url(#g-warm)"/><circle cx="880" cy="700" r="8" fill="#fff"/></g></g>
     <g class="ms-rays" fill="url(#g-ray)">
       <path d="M560 90h70L500 720H300z"/><path d="M800 90h56L760 740H560z"/><path d="M1010 90h64L1000 700H810z"/>
     </g>
@@ -626,6 +627,8 @@ function land() {
       <circle r="150" fill="url(#g-warm)"/>
       <path d="M-34-70q34 22 68 0l62 30-22 44-30-14l12 140h-112l12-140-30 14-22-44z" fill="#f1e4c3" stroke="#b99a48" stroke-width="3" stroke-linejoin="round"/><path d="M-34-70q34 40 68 0" fill="none" stroke="#b99a48" stroke-width="3"/>
     </g>
+    <g class="ld-banner" transform="translate(540 720)"><circle cy="-200" r="170" fill="url(#g-warm)"/><path d="M0 0v-330" stroke="#6b441d" stroke-width="10" stroke-linecap="round"/><circle cy="-336" r="10" fill="#ffd77a"/>
+      <path class="ld-flag" d="M5-322q60-16 120 4t110-6v120q-50 14-110-4T5-202z" fill="#f1e4c3" stroke="#c9a24a" stroke-width="4"/></g>
     <g class="ld-flock" fill="url(#g-warm)">${flock}</g>
     <g class="ld-lights">
       <g class="ld-b"><circle cx="722" cy="664" r="80" fill="url(#g-warm)"/><circle cx="722" cy="664" r="6" fill="#fff"/></g>
