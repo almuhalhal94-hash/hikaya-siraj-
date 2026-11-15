@@ -631,3 +631,8 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-tentdoor { fill: #1a0f0a; transition: fill 3s ease; } [data-tent="lit"] .ld-tentdoor { fill: #ffd77a; }
 .ld-tentglow { opacity: 0; transition: opacity 3s ease; transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } [data-tent="lit"] .ld-tentglow { opacity: .8; }
 [data-set="land"][data-pair="white"] .ld-b { opacity: 1; filter: saturate(0) brightness(1.35); }
+/* فاطمة رضي الله عنها في dar: mill=on رحى من حجرين يدور مقبضها ويتوهّج حولها الدقيق */
+.dr-mill { opacity: 0; transition: opacity 3s ease; } [data-mill="on"] .dr-mill { opacity: 1; }
+.dr-mlglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.dr-handle { animation: dr-turn 3.2s linear infinite; }
+@keyframes dr-turn { 0% { translate: 70px 0; } 25% { translate: 0 18px; } 50% { translate: -70px 0; } 75% { translate: 0 -18px; } 100% { translate: 70px 0; } }
