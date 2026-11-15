@@ -652,3 +652,14 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 @keyframes qb-drip { 0% { translate: 0 0; opacity: 0; } 15% { opacity: 1; } 80% { opacity: 1; } 100% { translate: 0 34px; opacity: 0; } }
 .ld-steam path { animation: ld-steam 3s ease-in-out infinite; } .ld-steam path + path { animation-delay: -1.5s; }
 @keyframes ld-steam { 0% { translate: 0 6px; opacity: 0; } 40% { opacity: .8; } 100% { translate: 0 -26px; opacity: 0; } }
+/* سعيد بن المسيّب في mosque: era=stone المسجد بعد بناء عثمان رضي الله عنه (جدار وأعمدة من حجارة منقوشة وسقف من ساج، البخاري 446)؛ pillar=on سارية حجرية منقوشة تتوهّج (الشاهد)؛ call=on موجات الأذان */
+.ms-stonewall, .ms-teak, .ms-pillar, .ms-call { opacity: 0; transition: opacity 3s ease; }
+[data-era="stone"] .ms-stonewall { opacity: .9; } [data-era="stone"] .ms-teak { opacity: 1; }
+[data-era="stone"] .ms-col rect { fill: #9a9184; } [data-era="stone"] .ms-col path { stroke: #5a544a; }
+[data-pillar="on"] .ms-pillar { opacity: 1; } .ms-plglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+[data-set="mosque"][data-call="on"] .ms-call { opacity: 1; }
+.ms-call path { transform-box: fill-box; transform-origin: center; animation: dr-call 3s ease-out infinite; animation-delay: var(--d); opacity: 0; }
+/* سعيد بن المسيّب في land: samura (on/lost) شجرة بيعة الرضوان، وlost تخفت حتى تكاد تختفي (نُسي مكانها)؛ hazn=on أرض حَزْن صخرية يسارًا وأرض سهلة لينة يمينًا */
+.ld-samura, .ld-sahl { opacity: 0; transition: opacity 4s ease; } [data-samura="on"] .ld-samura { opacity: 1; } [data-samura="lost"] .ld-samura { opacity: .12; filter: blur(3px); }
+.ld-smglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } [data-samura="lost"] .ld-smglow { opacity: 0; }
+[data-hazn="on"] .ld-rubble { opacity: 1; } [data-hazn="on"] .ld-sahl { opacity: 1; }

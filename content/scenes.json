@@ -6626,5 +6626,171 @@
         "glow": "full"
       }
     }
+  },
+  "said-alsariya": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "pillar": "on",
+          "ms": "one"
+        },
+        "camera": {
+          "from": [
+            640,
+            380,
+            1000
+          ],
+          "to": [
+            780,
+            470,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "pillar": "on",
+          "ms": "one",
+          "call": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            470,
+            640
+          ],
+          "to": [
+            640,
+            330,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "hazn": "on",
+          "light": "mid",
+          "pair": "white"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            1000
+          ],
+          "to": [
+            660,
+            640,
+            720
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "samura": "on",
+          "flock": "on",
+          "light": "mid",
+          "pair": "white"
+        },
+        "camera": {
+          "from": [
+            560,
+            520,
+            1000
+          ],
+          "to": [
+            580,
+            600,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "samura": "lost",
+          "flock": "on",
+          "light": "far"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            760
+          ],
+          "to": [
+            700,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "pillar": "on",
+          "ms": "one"
+        },
+        "camera": {
+          "from": [
+            780,
+            470,
+            640
+          ],
+          "to": [
+            640,
+            400,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "era": "stone",
+        "pillar": "on",
+        "ms": "one"
+      }
+    }
   }
 }

@@ -112,7 +112,7 @@ function cave() {
 function column(x, w, y0 = 110) {
   let rings = '';
   for (let y = y0 + 40; y < 600; y += 46) rings += `M${x - w / 2} ${y}q${w / 2} 12 ${w} 0`;
-  return `<rect x="${x - w / 2}" y="${y0}" width="${w}" height="${620 - y0}" fill="url(#g-bark)"/><path d="${rings}" fill="none" stroke="#2c1a0b" stroke-width="3" opacity=".6"/>`;
+  return `<g class="ms-col"><rect x="${x - w / 2}" y="${y0}" width="${w}" height="${620 - y0}" fill="url(#g-bark)"/><path d="${rings}" fill="none" stroke="#2c1a0b" stroke-width="3" opacity=".6"/></g>`;
 }
 function thatch(seed, base, amp, fill) {
   const r = rng(seed); let d = `M-700-500H1900V${base}`;
@@ -129,6 +129,8 @@ function mosque() {
     <rect ${BIG} fill="#3d2a1a"/>
     <rect x="-700" y="60" width="2600" height="560" fill="url(#g-wall)"/>
     <path d="${bricks}" stroke="#3a2412" stroke-width="2" opacity=".28"/>
+    <g class="ms-stonewall"><rect x="-700" y="60" width="2600" height="560" fill="#7d7468"/><path d="${bricks}" stroke="#4a443c" stroke-width="3" opacity=".5"/>
+      <path d="${Array.from({ length: 40 }, (_, i) => `M${-700 + i * 66} 60v560`).join('')}" stroke="#4a443c" stroke-width="2" opacity=".25"/></g>
     <ellipse class="ms-wallglow" cx="700" cy="380" rx="420" ry="300" fill="url(#g-warm)"/>
   </g>
   <g data-d=".8">
@@ -173,12 +175,19 @@ function mosque() {
       <path d="M-148-12q75-14 150-2t148-8M-146 12q75-14 150-2t146-8" fill="none" stroke="#e2d2a8" stroke-width="7" opacity=".7"/></g>
       <g class="ms-scoop" fill="#fff4cf">${[[-60, -220], [-10, -260], [40, -230], [80, -270], [-90, -280], [10, -300]].map(([x, y], i) => `<circle style="--d:${-i * 0.5}s" cx="${x}" cy="${y}" r="7"/>`).join('')}</g></g>
     <g class="ms-cupwrap" transform="translate(830 640)"><g class="ms-cup"><circle cy="-10" r="70" fill="url(#g-warm)"/><path d="M-26-22h52q-4 34-26 36-22-2-26-36z" fill="#b98548"/><ellipse cy="-22" rx="26" ry="7" fill="#fdf6e6"/><path d="M-16 14h32" stroke="#6b441d" stroke-width="5" stroke-linecap="round"/></g></g>
+    <g class="ms-pillar" transform="translate(720 620)"><ellipse class="ms-plglow" cy="-260" rx="190" ry="340" fill="url(#g-warm)"/>
+      <ellipse cy="2" rx="70" ry="12" fill="#000" opacity=".3"/><rect x="-56" y="-26" width="112" height="26" fill="#9a9184"/><rect x="-46" y="-500" width="92" height="474" fill="#b3aa9c"/><rect x="-60" y="-530" width="120" height="30" fill="#9a9184"/>
+      <path d="M-46-440h92M-46-120h92" stroke="#6f675c" stroke-width="5"/>
+      <g fill="none" stroke="#6f675c" stroke-width="3">${[-400, -340, -280, -220, -160].map(y => `<path d="M-30 ${y}l30-26 30 26-30 26z"/><circle cy="${y}" r="7"/>`).join('')}</g>
+      <path d="M-34-490v460" stroke="#e8e0d0" stroke-width="6" opacity=".35"/></g>
+    <g class="ms-call" transform="translate(640 230)" fill="none" stroke="#fff4cf" stroke-width="6" stroke-linecap="round">
+      <path style="--d:0s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/><path style="--d:1s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/><path style="--d:2s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/></g>
     <g class="ms-lights"><g class="ms-b"><circle cx="1000" cy="660" r="80" fill="url(#g-white)"/><circle cx="1000" cy="660" r="7" fill="#fff"/></g><g class="ms-a"><circle cx="880" cy="700" r="100" fill="url(#g-warm)"/><circle cx="880" cy="700" r="8" fill="#fff"/></g></g>
     <g class="ms-rays" fill="url(#g-ray)">
       <path d="M560 90h70L500 720H300z"/><path d="M800 90h56L760 740H560z"/><path d="M1010 90h64L1000 700H810z"/>
     </g>
   </g>
-  <g data-d="1.12">${thatch(5, 96, 44, '#4d3b1c')}${thatch(9, 62, 50, '#2c2010')}</g>
+  <g data-d="1.12" class="ms-roof">${thatch(5, 96, 44, '#4d3b1c')}${thatch(9, 62, 50, '#2c2010')}<rect class="ms-teak" x="-700" y="-500" width="2600" height="620" fill="#4a2d14"/><path class="ms-teak" d="M-700 120H1900" stroke="#2a180a" stroke-width="10"/></g>
   <g data-d="1.35">${column(-420, 110, -500)}${column(1640, 110, -500)}</g>`;
 }
 
@@ -685,6 +694,12 @@ function land() {
       <path d="M-44-32h88q-4 36-44 40-40-4-44-40z" fill="#3a3340" stroke="#17131c" stroke-width="3"/><ellipse cy="-32" rx="44" ry="9" fill="#5a5262"/>
       <g class="ld-steam" fill="none" stroke="#fff4cf" stroke-width="4" stroke-linecap="round"><path d="M-14-46q-8-16 2-30"/><path d="M10-46q-8-16 2-30"/></g></g>
     ${qirba(480, 712, .9)}
+    <g class="ld-sahl" transform="translate(930 700)"><ellipse rx="260" ry="34" fill="#e8c48a" opacity=".55"/><ellipse cy="-4" rx="170" ry="18" fill="#fff0c8" opacity=".6"/></g>
+    <g class="ld-samura" transform="translate(500 690)"><ellipse class="ld-smglow" cy="-200" rx="300" ry="220" fill="url(#g-warm)"/>
+      <path d="M-12 0q-4-80 6-130q-50-40-110-60M-6-130q30-50 100-70M0-120q4-60-10-110" fill="none" stroke="#4a2d14" stroke-width="16" stroke-linecap="round"/>
+      <path d="M-16 0q-6-60 2-120" stroke="#4a2d14" stroke-width="24" stroke-linecap="round"/>
+      <path d="M-230-200q60-70 230-74t230 70q-90 30-230 26t-230-22z" fill="#3f6a3a"/><path d="M-200-214q70-50 200-52t200 50" fill="none" stroke="#6f9a52" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+      <g fill="#7fae5c">${[[-150, -226], [-80, -250], [10, -258], [90, -246], [160, -224], [-40, -232], [60, -228]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="34" ry="10"/>`).join('')}</g></g>
     <g class="ld-flock" fill="url(#g-warm)">${flock}</g>
     <g class="ld-tent" transform="translate(930 700)"><ellipse class="ld-tentglow" cy="-70" rx="220" ry="150" fill="url(#g-warm)"/>
       <path d="M-170 0L-20-150h40L170 0z" fill="#8a5a3a" stroke="#3a2412" stroke-width="4" stroke-linejoin="round"/><path d="M-20-150l-60 150M20-150l60 150" stroke="#6b3f24" stroke-width="5"/>
