@@ -419,6 +419,14 @@ function dunes() {
     <path d="M-700 720q300-90 620-40t560-30 520 40 500-50 400 60v24q-200-50-400-40t-500 50-520-40-560 30-620 20z" fill="#ffe2a4" opacity=".4"/>
     <path d="${ripples}" fill="none" stroke="#5a3a1c" stroke-width="3" opacity=".22"/>
     <rect class="du-veil" ${BIG} fill="#070d26"/>
+    <g class="du-birdwrap"><g class="du-bird" transform="translate(600 500)">
+      <path d="M-58 8l-44 20 46-2z" fill="#3a2a1c"/>
+      <path class="du-wing" d="M-30-4q-10-70 40-96-6 60 24 92z" fill="#2a2018"/><path class="du-wing" d="M-22-30l44-34M-16-12l52-30" stroke="#fff4cf" stroke-width="6" fill="none"/>
+      <ellipse cx="0" cy="6" rx="62" ry="30" fill="#e39a4a"/><circle cx="56" cy="-10" r="24" fill="#e8a658"/>
+      <path d="M76-12l64 14-64 2z" fill="#3a2a1c"/><circle cx="62" cy="-16" r="4" fill="#1a1024"/>
+      <path d="M44-28l-26-44M52-32l-12-50M60-34l2-52M68-32l16-48M74-26l28-38" stroke="#e8a658" stroke-width="7" stroke-linecap="round"/>
+      <g fill="#1a1024"><circle cx="18" cy="-72" r="5"/><circle cx="40" cy="-82" r="5"/><circle cx="62" cy="-86" r="5"/><circle cx="84" cy="-80" r="5"/><circle cx="102" cy="-64" r="5"/></g>
+    </g></g>
     <g class="du-staff" fill="none" stroke-linecap="round"><path d="M500 716V560q0-26 24-26" stroke="#6b441d" stroke-width="11"/><path d="M500 716V560q0-26 24-26" stroke="#c9995a" stroke-width="3"/></g>
     <g class="du-ropes" fill="none" stroke="#3a2a1c" stroke-width="8" stroke-linecap="round"><path d="M610 716q14-14 28 0t28 0 28 0"/><path d="M640 746q14-14 28 0t28 0 28 0"/><path d="M720 720q14-14 28 0t28 0"/><path d="M600 770q14-14 28 0t28 0"/></g>
     <g class="du-snake" fill="none" stroke-linecap="round"><path d="M430 740q70 20 90-30t-30-80 20-90 70-40" stroke="#2f6a3a" stroke-width="26"/><path d="M430 740q70 20 90-30t-30-80 20-90 70-40" stroke="#6fbf6a" stroke-width="6" stroke-dasharray="14 18"/><circle cx="584" cy="498" r="20" fill="#2f6a3a" stroke="none"/></g>

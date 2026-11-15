@@ -489,3 +489,10 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .mt-birds { opacity: 0; transition: opacity 3s ease; animation: mt-fly 9s ease-in-out infinite alternate; }
 [data-birds="on"] .mt-birds { opacity: .9; }
 @keyframes mt-fly { from { transform: translate(-40px, 10px); } to { transform: translate(50px, -18px); } }
+
+/* الهدهد (سليمان عليه السلام) في ديكور dunes */
+.du-birdwrap { opacity: 0; transition: transform 9s ease-in, opacity 3s ease; transform-box: fill-box; transform-origin: center; }
+[data-bird="here"] .du-birdwrap { opacity: 1; transition: transform 5s var(--ease-out), opacity 2s ease; }
+[data-bird="away"] .du-birdwrap { opacity: 0; transform: translate(520px, -300px) scale(.3); transition: transform 9s ease-in, opacity 3s ease 6s; }
+.du-bird { animation: du-hover 2.6s ease-in-out infinite; } @keyframes du-hover { 50% { translate: 0 -14px; } }
+.du-wing { transform-box: fill-box; transform-origin: 30% 100%; animation: du-flap .5s ease-in-out infinite alternate; } @keyframes du-flap { to { transform: scaleY(.35); } }

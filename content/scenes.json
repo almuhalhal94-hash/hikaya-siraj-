@@ -2538,5 +2538,157 @@
         "fire": "huge"
       }
     }
+  },
+  "sulayman-alhudhud": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "dunes",
+        "state": {
+          "light": "call",
+          "bird": "here"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            800
+          ],
+          "to": [
+            560,
+            500,
+            520
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "call",
+          "bird": "away"
+        },
+        "camera": {
+          "from": [
+            560,
+            500,
+            520
+          ],
+          "to": [
+            640,
+            400,
+            760
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            560,
+            480,
+            700
+          ],
+          "to": [
+            760,
+            440,
+            700
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "call",
+          "bird": "here"
+        },
+        "camera": {
+          "from": [
+            640,
+            420,
+            760
+          ],
+          "to": [
+            540,
+            520,
+            500
+          ],
+          "dur": 12
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "flip"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "safe",
+          "bird": "here"
+        },
+        "camera": {
+          "from": [
+            540,
+            520,
+            500
+          ],
+          "to": [
+            460,
+            560,
+            520
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "dunes",
+        "state": {
+          "light": "safe",
+          "bird": "here"
+        },
+        "camera": {
+          "from": [
+            460,
+            560,
+            520
+          ],
+          "to": [
+            580,
+            440,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {}
+    }
   }
 }
