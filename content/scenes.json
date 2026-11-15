@@ -4474,5 +4474,170 @@
         "glow": "full"
       }
     }
+  },
+  "musab-alburda": {
+    "thumb": 1,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "cloak": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            900
+          ],
+          "to": [
+            600,
+            640,
+            540
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "road": "on",
+          "light": "mid",
+          "pair": "on",
+          "book": "on"
+        },
+        "camera": {
+          "from": [
+            420,
+            560,
+            900
+          ],
+          "to": [
+            600,
+            600,
+            620
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "book": "on",
+          "light": "mid",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            720
+          ],
+          "to": [
+            640,
+            580,
+            500
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "time": "dawn",
+          "road": "on",
+          "light": "road",
+          "pair": "on",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            500,
+            560,
+            900
+          ],
+          "to": [
+            700,
+            620,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "cloak": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1000
+          ],
+          "to": [
+            600,
+            640,
+            520
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "cloak": "on",
+          "idhkhir": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            680,
+            520
+          ],
+          "to": [
+            600,
+            600,
+            900
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "flock": "on",
+        "glow": "full"
+      }
+    }
   }
 }

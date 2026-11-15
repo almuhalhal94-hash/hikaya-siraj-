@@ -590,3 +590,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .dr-call path { transform-box: fill-box; transform-origin: center; animation: dr-call 3s ease-out infinite; animation-delay: var(--d); opacity: 0; }
 @keyframes dr-call { 0% { transform: scale(.6); opacity: 0; } 20% { opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
 [data-set="dar"][data-light="roof"] .dr-lights { translate: 40px -400px; }
+/* مصعب بن عمير: البردة (النمرة) المخططة، ونبات الإذخر، ومصحف مفتوح في ديكور land */
+.ld-cloak, .ld-idhkhir, .ld-book { opacity: 0; transition: opacity 3s ease; } [data-cloak="on"] .ld-cloak, [data-idhkhir="on"] .ld-idhkhir, [data-book="on"] .ld-book { opacity: 1; }
+.ld-cloakglow, .ld-bookglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.ld-idhkhir path { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 6s ease-in-out infinite; }
