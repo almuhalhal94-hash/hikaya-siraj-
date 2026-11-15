@@ -642,3 +642,6 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .dr-sfglow, .dr-btglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
 .dr-bt1, .dr-bt2 { transition: translate 2.6s var(--ease-out), rotate 2.6s var(--ease-out); transform-box: fill-box; transform-origin: center; }
 [data-belt="split"] .dr-bt1 { translate: -70px -10px; rotate: -6deg; } [data-belt="split"] .dr-bt2 { translate: 70px -10px; rotate: 6deg; }
+/* أم سُليم رضي الله عنها في dar: bread=on أقراص شعير ملفوفة في خمار تتوهّج */
+.dr-bread { opacity: 0; transition: opacity 3s ease; } [data-bread="on"] .dr-bread { opacity: 1; }
+.dr-brglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }

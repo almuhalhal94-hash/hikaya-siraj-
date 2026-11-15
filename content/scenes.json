@@ -6285,5 +6285,171 @@
         "glow": "full"
       }
     }
+  },
+  "ummsulaym-alkhimar": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            680,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "bread": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1000
+          ],
+          "to": [
+            600,
+            800,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "bread": "on",
+          "light": "on",
+          "peep": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            760,
+            600
+          ],
+          "to": [
+            600,
+            520,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "bread": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            760,
+            620
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "bread": "on",
+          "light": "on",
+          "pair": "on",
+          "peep": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            780,
+            600
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "lamp": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            640,
+            700,
+            640
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "bread": "on",
+        "glow": "full"
+      }
+    }
   }
 }
