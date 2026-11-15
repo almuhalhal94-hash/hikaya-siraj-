@@ -484,3 +484,8 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .se-cross { transform-box: fill-box; transform-origin: 50% 0; transform: translateY(240px); transition: transform 14s ease-out; }
 [data-split="on"] .se-cross { transform: translateY(-230px) scale(.5); }
 [data-yaqtin="off"] .se-yaqtin { display: none; }
+
+/* طيور تسبّح مع داود عليه السلام (ديكور الجبل) */
+.mt-birds { opacity: 0; transition: opacity 3s ease; animation: mt-fly 9s ease-in-out infinite alternate; }
+[data-birds="on"] .mt-birds { opacity: .9; }
+@keyframes mt-fly { from { transform: translate(-40px, 10px); } to { transform: translate(50px, -18px); } }

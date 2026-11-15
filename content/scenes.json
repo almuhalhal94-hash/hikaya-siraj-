@@ -2381,5 +2381,162 @@
     "choice": {
       "state": {}
     }
+  },
+  "dawud-alhadid": {
+    "thumb": 2,
+    "scenes": [
+      {
+        "set": "ur",
+        "state": {
+          "fire": "small"
+        },
+        "camera": {
+          "from": [
+            880,
+            540,
+            560
+          ],
+          "to": [
+            880,
+            590,
+            320
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "flock": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            640,
+            460,
+            820
+          ],
+          "to": [
+            640,
+            560,
+            560
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust",
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "dawn",
+          "birds": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            780
+          ],
+          "to": [
+            600,
+            300,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "ur",
+        "state": {
+          "fire": "small",
+          "light": "fire"
+        },
+        "camera": {
+          "from": [
+            880,
+            560,
+            520
+          ],
+          "to": [
+            880,
+            560,
+            400
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "light": "town",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            420,
+            500,
+            760
+          ],
+          "to": [
+            320,
+            540,
+            560
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "dawn",
+          "birds": "on",
+          "cave": "warm"
+        },
+        "camera": {
+          "from": [
+            600,
+            330,
+            520
+          ],
+          "to": [
+            600,
+            420,
+            800
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "fire": "huge"
+      }
+    }
   }
 }
