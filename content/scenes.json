@@ -4137,5 +4137,180 @@
         "glow": "full"
       }
     }
+  },
+  "abuubayda-alsahil": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "crew": "on"
+        },
+        "camera": {
+          "from": [
+            520,
+            520,
+            900
+          ],
+          "to": [
+            300,
+            640,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "crew": "on"
+        },
+        "camera": {
+          "from": [
+            200,
+            700,
+            620
+          ],
+          "to": [
+            60,
+            760,
+            480
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "waves": "high",
+          "fish": "on",
+          "crew": "on"
+        },
+        "camera": {
+          "from": [
+            300,
+            600,
+            860
+          ],
+          "to": [
+            120,
+            680,
+            600
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wave"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "rib": "on",
+          "crew": "on"
+        },
+        "camera": {
+          "from": [
+            460,
+            620,
+            760
+          ],
+          "to": [
+            420,
+            600,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            520,
+            560,
+            820
+          ],
+          "to": [
+            620,
+            620,
+            560
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "crew": "on",
+          "light": "shore"
+        },
+        "camera": {
+          "from": [
+            200,
+            680,
+            520
+          ],
+          "to": [
+            440,
+            520,
+            900
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "crew": "on"
+      }
+    }
   }
 }

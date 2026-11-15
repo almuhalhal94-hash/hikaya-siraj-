@@ -227,6 +227,10 @@ function sea() {
         <g fill="#4fae66" stroke="#2f7a44" stroke-width="3"><path d="M150 700q-56-50-20-104 60 4 76 60-14 40-56 44z"/><path d="M250 624q-20-70 36-104 54 36 36 100-34 26-72 4z"/><path d="M380 640q14-70 80-80 34 54-6 106-44 12-74-26z"/><path d="M330 520q-6-56 44-78 40 34 22 86-34 16-66-8z"/></g>
         <ellipse cx="300" cy="690" rx="34" ry="24" fill="#e9d48a" stroke="#b99a48" stroke-width="3"/>
       </g>
+      <g class="se-fish" transform="translate(40 700)"><path d="M-230 0q40-96 230-100t260 70q34-34 80-54-12 44 0 96-44-20-80-42-80 50-260 52T-230 0z" fill="#3c3a58"/><path d="M-200 4q190 40 450 2-200 30-450-2z" fill="#8a86a8" opacity=".6"/><circle cx="-150" cy="-26" r="7" fill="#151226"/></g>
+      <g class="se-rib" transform="translate(430 730)"><ellipse rx="190" ry="26" fill="#000" opacity=".22"/><path d="M-120 0q0-270 120-310 120 40 120 310" fill="none" stroke="#f1e4c3" stroke-width="24" stroke-linecap="round"/><path d="M-120 0q0-270 120-310 120 40 120 310" fill="none" stroke="#fffaf0" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+        <g class="se-rider"><g transform="scale(.6)" fill="#2a2030">${CAMEL}</g><circle cx="-10" cy="-140" r="60" fill="url(#g-warm)"/><circle cx="-10" cy="-140" r="6" fill="#fff"/></g></g>
+      <g class="se-crew" fill="url(#g-warm)"><circle cx="-120" cy="760" r="40"/><circle cx="-40" cy="790" r="34"/><circle cx="40" cy="770" r="36"/><circle cx="130" cy="800" r="32"/><circle cx="220" cy="780" r="34"/><circle cx="-200" cy="800" r="30"/></g>
     </g>
     <g class="se-split">
       <path d="M-700 1400V430Q-100 400 460 290V530L220 1400z" fill="#0f2c60"/><path d="M1900 1400V430Q1300 400 740 290V530l240 870z" fill="#0f2c60"/>
