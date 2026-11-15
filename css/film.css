@@ -598,3 +598,15 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-pleiades { opacity: 0; transition: opacity 4s ease; } [data-pleiades="on"] .ld-pleiades { opacity: 1; }
 .ld-plglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 4s ease-in-out infinite; opacity: .55; }
 .ld-pl { animation: ld-twinkle 2.4s ease-in-out infinite; animation-delay: var(--d); } @keyframes ld-twinkle { 50% { opacity: .45; } }
+/* أبو هريرة رضي الله عنه في mosque: suffa=on صُفّة المسجد وأنوار أهلها، trunk=off إخفاء الجذع، cup (on/pass) قدح اللبن يدور عليهم، cloak (open/fold) الرداء المبسوط ثم المضموم. وفي dar: pair=warm نور ثانٍ دافئ */
+.ms-suffa, .ms-cloak, .ms-cupwrap { opacity: 0; transition: opacity 3s ease; }
+[data-suffa="on"] .ms-suffa, [data-cloak] .ms-cloak, [data-cup] .ms-cupwrap { opacity: 1; }
+[data-trunk="off"] .jd-wrap { opacity: 0; }
+.ms-flock circle, .ms-cloakglow, .ms-cup > circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } .ms-flock circle:nth-child(2n) { animation-delay: -1.7s; }
+.ms-cloth { transform-box: fill-box; transform-origin: center; transition: transform 2.4s var(--ease-out); }
+[data-cloak="fold"] .ms-cloth { transform: scale(.42, .7); } [data-cloak="fold"] .ms-scoop { opacity: 0; } .ms-scoop { transition: opacity 2s ease; }
+.ms-scoop circle { animation: ms-scoop 3s ease-in infinite; animation-delay: var(--d); opacity: 0; }
+@keyframes ms-scoop { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: 1; } 90% { opacity: .9; } 100% { transform: translateY(240px); opacity: 0; } }
+[data-cup="pass"] .ms-cup { animation: ms-pass 12s ease-in-out infinite; }
+@keyframes ms-pass { 0%, 8% { translate: 0 0; } 18%, 26% { translate: 90px -14px; } 36%, 44% { translate: 300px 6px; } 54%, 62% { translate: 380px -4px; } 72%, 80% { translate: 460px 12px; } 92%, 100% { translate: 0 0; } }
+[data-set="dar"][data-pair="warm"] .dr-b { opacity: 1; filter: sepia(1) saturate(2.6) hue-rotate(-12deg); }

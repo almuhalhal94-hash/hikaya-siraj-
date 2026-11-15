@@ -4963,5 +4963,169 @@
         "glow": "full"
       }
     }
+  },
+  "abuhurayra-alsuffa": {
+    "thumb": 6,
+    "scenes": [
+      {
+        "set": "mosque",
+        "state": {
+          "trunk": "off",
+          "suffa": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            420,
+            900
+          ],
+          "to": [
+            1050,
+            520,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "trunk": "off",
+          "ms": "pair",
+          "jidh": "lonely"
+        },
+        "camera": {
+          "from": [
+            800,
+            520,
+            760
+          ],
+          "to": [
+            940,
+            640,
+            480
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "lamp": "on",
+          "light": "out",
+          "pair": "warm",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            1100,
+            620,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "trunk": "off",
+          "cloak": "open",
+          "ms": "pair"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            760
+          ],
+          "to": [
+            620,
+            640,
+            520
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "trunk": "off",
+          "suffa": "on",
+          "cup": "on",
+          "ms": "pair"
+        },
+        "camera": {
+          "from": [
+            900,
+            560,
+            820
+          ],
+          "to": [
+            860,
+            640,
+            520
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "trunk": "off",
+          "suffa": "on",
+          "cup": "pass",
+          "ms": "pair",
+          "jidh": "calm"
+        },
+        "camera": {
+          "from": [
+            1040,
+            600,
+            640
+          ],
+          "to": [
+            900,
+            500,
+            960
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "cup": "pass"
+      }
+    }
   }
 }

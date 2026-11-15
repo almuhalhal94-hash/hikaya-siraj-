@@ -164,6 +164,15 @@ function mosque() {
         <ellipse cx="0" cy="-185" rx="150" ry="260" fill="url(#g-white)"/>
       </g>
     </g>
+    <g class="ms-suffa"><path d="M760 690V318M1060 690V318M1340 690V318" stroke="url(#g-bark)" stroke-width="22" stroke-linecap="round"/>
+      <path d="M720 300h680l-20 40H740z" fill="#4d3b1c"/><path d="M720 300q40-26 80 0t80 0 80 0 80 0 80 0 80 0 80 0 80 0 80 0" fill="#6b5320"/><path d="M740 340q30 22 60 0t60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0 60 0" fill="none" stroke="#2c2010" stroke-width="6"/>
+      <path d="M740 690h640v-26H740z" fill="#5c4424"/><path d="M740 664h640" stroke="#c9995a" stroke-width="3" opacity=".6"/>
+      <g class="ms-flock" fill="url(#g-warm)">${[[830, 654, 34], [920, 640, 30], [1130, 646, 32], [1210, 636, 28], [1290, 652, 30], [870, 628, 24], [1180, 622, 24]].map(([x, y, q]) => `<circle cx="${x}" cy="${y}" r="${q}"/>`).join('')}</g></g>
+    <g class="ms-cloak" transform="translate(600 720)"><circle class="ms-cloakglow" cy="-30" r="210" fill="url(#g-warm)"/>
+      <g class="ms-cloth"><path d="M-150-30q75-18 150-4t150-6l14 80q-82 16-164 6t-164 8z" fill="#8a6a4a" stroke="#3a2412" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M-148-12q75-14 150-2t148-8M-146 12q75-14 150-2t146-8" fill="none" stroke="#e2d2a8" stroke-width="7" opacity=".7"/></g>
+      <g class="ms-scoop" fill="#fff4cf">${[[-60, -220], [-10, -260], [40, -230], [80, -270], [-90, -280], [10, -300]].map(([x, y], i) => `<circle style="--d:${-i * 0.5}s" cx="${x}" cy="${y}" r="7"/>`).join('')}</g></g>
+    <g class="ms-cupwrap" transform="translate(830 640)"><g class="ms-cup"><circle cy="-10" r="70" fill="url(#g-warm)"/><path d="M-26-22h52q-4 34-26 36-22-2-26-36z" fill="#b98548"/><ellipse cy="-22" rx="26" ry="7" fill="#fdf6e6"/><path d="M-16 14h32" stroke="#6b441d" stroke-width="5" stroke-linecap="round"/></g></g>
     <g class="ms-lights"><g class="ms-b"><circle cx="1000" cy="660" r="80" fill="url(#g-white)"/><circle cx="1000" cy="660" r="7" fill="#fff"/></g><g class="ms-a"><circle cx="880" cy="700" r="100" fill="url(#g-warm)"/><circle cx="880" cy="700" r="8" fill="#fff"/></g></g>
     <g class="ms-rays" fill="url(#g-ray)">
       <path d="M560 90h70L500 720H300z"/><path d="M800 90h56L760 740H560z"/><path d="M1010 90h64L1000 700H810z"/>
