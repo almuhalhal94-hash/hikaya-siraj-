@@ -530,3 +530,24 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-set="dar"][data-glow="full"] .dr-glow { opacity: .4; }
 .stage[data-set="dar"] .stage__tint { background: radial-gradient(circle at 50% 62%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
 .stage[data-set="dar"][data-glow="full"] .stage__tint { opacity: 1; }
+
+/* ——— المسجد الحرام والكعبة ——— */
+.hr-a, .hr-glow, .hr-stone circle, .hr-maqam circle, .hr-cup, .hr-t { transform-box: fill-box; transform-origin: center; }
+.hr-dawn, .hr-cup, .hr-a, .hr-glow { opacity: 0; transition: opacity 4s ease; }
+.hr-moon { transition: opacity 5s ease; } .hr-hills { fill: #121a40; transition: fill 6s ease; }
+.hr-houses { fill: #1c1a34; transition: fill 6s ease; } .hr-win { fill: #ffd77a; opacity: .6; }
+.hr-floor { fill: #141838; opacity: .78; transition: opacity 6s ease; }
+[data-set="haram"][data-time="dawn"] .hr-dawn { opacity: 1; } [data-set="haram"][data-time="dawn"] .hr-moon { opacity: .1; }
+.stage[data-set="haram"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="haram"][data-time="dawn"] .hr-hills { fill: #5b4480; } [data-set="haram"][data-time="dawn"] .hr-houses { fill: #6a4a50; } [data-set="haram"][data-time="dawn"] .hr-floor { opacity: .25; }
+.hr-tawaf { opacity: .55; transition: opacity 3s ease; } [data-tawaf="off"] .hr-tawaf { opacity: 0; }
+.hr-t { animation: st-breathe 3s ease-in-out infinite; } .hr-t:nth-child(3n) { animation-delay: -1s; } .hr-t:nth-child(3n+1) { animation-delay: -2s; }
+.hr-stone circle { opacity: .35; transition: opacity 3s ease; animation: st-breathe 3.4s ease-in-out infinite; } [data-stone="glow"] .hr-stone circle { opacity: 1; }
+.hr-maqam circle { opacity: .2; transition: opacity 3s ease; } [data-maqam="glow"] .hr-maqam circle { opacity: 1; animation: st-breathe 3.4s ease-in-out infinite; }
+[data-cup="on"] .hr-cup { opacity: 1; animation: lt-breathe 4s ease-in-out infinite; }
+[data-set="haram"][data-light] .hr-a { opacity: 1; } .hr-a { animation: st-breathe 3.6s ease-in-out infinite; }
+.hr-lights { transition: translate 8s ease-in-out; }
+[data-set="haram"][data-light="stone"] .hr-lights { translate: 180px -60px; } [data-set="haram"][data-light="maqam"] .hr-lights { translate: 400px -10px; }
+[data-set="haram"][data-glow="full"] .hr-glow { opacity: .4; }
+.stage[data-set="haram"] .stage__tint { background: radial-gradient(circle at 50% 62%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="haram"][data-glow="full"] .stage__tint { opacity: 1; }

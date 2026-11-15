@@ -719,4 +719,45 @@ function dar() {
   <g data-d="1.3"><path d="M-700 1400V900l210-50 120 60 80 490zM1900 1400V880l-230-40-120 70-70 490z" fill="#0c0806"/></g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land, mihrab, dar };
+// ——— المسجد الحرام والكعبة (عمر بن الخطاب رضي الله عنه): لا يُرسم أحد؛ الطائفون والصحابة أنوار فقط ———
+function haram() {
+  const r = rng(53); let tawaf = '', houses = '', tiles = '';
+  for (let i = 0; i < 18; i++) { const a = i / 18 * Math.PI * 2; tawaf += `<circle class="hr-t" cx="${(600 + Math.cos(a) * 330).toFixed(0)}" cy="${(700 + Math.sin(a) * 90).toFixed(0)}" r="${(18 + r() * 10).toFixed(0)}"/>`; }
+  for (let x = -700; x < 1900; x += 150 + r() * 60) { const h = 90 + r() * 120, w = 110 + r() * 60; houses += `<rect x="${x.toFixed(0)}" y="${(520 - h).toFixed(0)}" width="${w.toFixed(0)}" height="${h.toFixed(0)}"/><rect class="hr-win" x="${(x + w / 2 - 9).toFixed(0)}" y="${(520 - h + 24).toFixed(0)}" width="18" height="24" rx="9"/>`; }
+  for (let i = 0; i < 9; i++) tiles += `M${-700 + i * 330} 1400L${280 + i * 80} 620`;
+  return `${DEFS}
+  <defs><linearGradient id="g-kiswa" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0a0a10"/><stop offset=".55" stop-color="#1c1c26"/><stop offset="1" stop-color="#050508"/></linearGradient></defs>
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    <rect class="hr-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    ${stars(100, 61, [-400, 1600], [-300, 380])}
+    <path class="hr-moon" d="M260 80a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
+    <g class="hr-cup" transform="translate(600 150)"><circle r="170" fill="url(#g-warm)"/><path d="M-50-40h100l-14 90q-36 16-72 0z" fill="#e2d2a8" opacity=".9"/><ellipse cy="-40" rx="50" ry="12" fill="#fffaf0"/><path d="M-36-24h72" stroke="#fffaf0" stroke-width="10" stroke-linecap="round"/></g>
+  </g>
+  <g data-d=".3">
+    <path class="hr-hills" d="M-700 470-480 330-330 400-170 300 0 380 150 310 330 400 500 330 700 410 860 310 1040 390 1220 300 1400 400 1900 330V1400H-700z"/>
+    <g class="hr-houses">${houses}</g>
+  </g>
+  <g data-d="1">
+    <path d="M-700 1400V560h2600v840z" fill="#cfc6b4"/><path class="hr-floor" d="M-700 1400V560h2600v840z"/>
+    <path d="${tiles}" stroke="#9a9080" stroke-width="2" opacity=".35"/>
+    <ellipse cx="600" cy="700" rx="420" ry="120" fill="#000" opacity=".08"/>
+    <g class="hr-tawaf" fill="url(#g-warm)">${tawaf}</g>
+    <g transform="translate(600 690)">
+      <ellipse cy="6" rx="190" ry="26" fill="#000" opacity=".3"/>
+      <path d="M-150 0V-300h170V-6z" fill="url(#g-kiswa)"/><path d="M20-6V-300l140 26V-20z" fill="#14141c"/>
+      <path d="M-150-236h170v22h-170zM20-236l140 22v20L20-214z" fill="#c9a24a"/>
+      <path d="M-150-236h170M20-236l140 22" stroke="#ffe9a8" stroke-width="2" opacity=".6"/>
+      <path d="M-60-90v-120h50v120z" fill="#c9a24a" opacity=".85"/><path d="M-66-90h62v8h-62z" fill="#8a6a2a"/>
+      <g class="hr-stone" transform="translate(12 -64)"><circle r="70" fill="url(#g-warm)"/><ellipse rx="20" ry="24" fill="#c0c4cc"/><ellipse rx="13" ry="16" fill="#120c10"/></g>
+    </g>
+    <g class="hr-maqam" transform="translate(890 740)"><circle cy="-30" r="110" fill="url(#g-warm)"/><path d="M-30 0v-44h60V0z" fill="#b8a888"/><path d="M-36-44h72l-8-20h-56z" fill="#d8c8a0"/></g>
+    <g class="hr-lights">
+      <g class="hr-a"><circle cx="420" cy="760" r="110" fill="url(#g-warm)"/><circle cx="420" cy="760" r="8" fill="#fff"/></g>
+    </g>
+    <ellipse class="hr-glow" cx="600" cy="640" rx="900" ry="600" fill="url(#g-warm)"/>
+  </g>
+  <g data-d="1.3"><path d="M-700 1400V940l220-50 110 60 80 450zM1900 1400V920l-220-40-120 70-70 450z" fill="#0c0a08"/></g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land, mihrab, dar, haram };

@@ -3158,5 +3158,160 @@
         "glow": "full"
       }
     }
+  },
+  "umar-alhajar": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "haram",
+        "state": {
+          "stone": "glow"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            860
+          ],
+          "to": [
+            610,
+            600,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            640
+          ],
+          "to": [
+            560,
+            620,
+            760
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "road": "on",
+          "light": "road",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            500,
+            560,
+            760
+          ],
+          "to": [
+            760,
+            600,
+            560
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "maqam": "glow",
+          "light": "maqam"
+        },
+        "camera": {
+          "from": [
+            700,
+            620,
+            700
+          ],
+          "to": [
+            860,
+            680,
+            480
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "stone": "glow",
+          "light": "stone",
+          "tawaf": "off"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            560
+          ],
+          "to": [
+            612,
+            620,
+            360
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "cup": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            780
+          ],
+          "to": [
+            600,
+            380,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }
