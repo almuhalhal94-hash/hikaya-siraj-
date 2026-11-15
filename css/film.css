@@ -496,3 +496,16 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-bird="away"] .du-birdwrap { opacity: 0; transform: translate(520px, -300px) scale(.3); transition: transform 9s ease-in, opacity 3s ease 6s; }
 .du-bird { animation: du-hover 2.6s ease-in-out infinite; } @keyframes du-hover { 50% { translate: 0 -14px; } }
 .du-wing { transform-box: fill-box; transform-origin: 30% 100%; animation: du-flap .5s ease-in-out infinite alternate; } @keyframes du-flap { to { transform: scaleY(.35); } }
+
+/* ——— المحراب (زكريا ويحيى عليهما السلام) ——— */
+.mh-a, .mh-b, .mh-glow, .mh-nicheglow, .mh-lamp circle { transform-box: fill-box; transform-origin: center; }
+.mh-sky, .mh-fruit, .mh-a, .mh-b, .mh-glow { opacity: 0; transition: opacity 4s ease; }
+[data-set="mihrab"][data-time="dawn"] .mh-sky { opacity: 1; }
+.mh-nicheglow { opacity: .25; transition: opacity 4s ease; animation: st-breathe 4.4s ease-in-out infinite; }
+.mh-lamp circle { animation: st-breathe 2.8s ease-in-out infinite; }
+[data-fruit="on"] .mh-fruit { opacity: 1; }
+.mh-a, .mh-b { animation: st-breathe 3.6s ease-in-out infinite; } .mh-b { animation-delay: -1.4s; }
+[data-set="mihrab"][data-light] .mh-a { opacity: 1; } [data-set="mihrab"][data-pair="on"] .mh-b { opacity: 1; }
+[data-set="mihrab"][data-glow="full"] .mh-glow { opacity: .45; } [data-set="mihrab"][data-glow="full"] .mh-nicheglow { opacity: .9; }
+.stage[data-set="mihrab"] .stage__tint { background: radial-gradient(circle at 50% 50%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="mihrab"][data-glow="full"] .stage__tint { opacity: 1; }

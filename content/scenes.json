@@ -2690,5 +2690,158 @@
     "choice": {
       "state": {}
     }
+  },
+  "zakariya-almihrab": {
+    "thumb": 1,
+    "scenes": [
+      {
+        "set": "mihrab",
+        "state": {},
+        "camera": {
+          "from": [
+            700,
+            380,
+            820
+          ],
+          "to": [
+            600,
+            440,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "fruit": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            440,
+            600
+          ],
+          "to": [
+            480,
+            560,
+            480
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            480,
+            560,
+            480
+          ],
+          "to": [
+            600,
+            480,
+            520
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            480,
+            520
+          ],
+          "to": [
+            600,
+            400,
+            680
+          ],
+          "dur": 14
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            680
+          ],
+          "to": [
+            780,
+            440,
+            600
+          ],
+          "dur": 13
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "time": "dawn",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            780,
+            440,
+            600
+          ],
+          "to": [
+            600,
+            460,
+            780
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "glow": "full"
+      }
+    }
   }
 }

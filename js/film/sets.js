@@ -638,4 +638,36 @@ function land() {
   </g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land };
+// ——— المحراب (زكريا ويحيى عليهما السلام): لا يُرسم أحد ولا تُرسم الملائكة؛ أنوار فقط ———
+function mihrab() {
+  let bricks = '';
+  for (let y = -60; y < 640; y += 46) bricks += `M-700 ${y}H1900`;
+  return `${DEFS}
+  <defs><linearGradient id="g-stonewall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c1e44"/><stop offset="1" stop-color="#2e2a52"/></linearGradient>
+    <linearGradient id="g-rug" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a2f3a"/><stop offset="1" stop-color="#4a1a26"/></linearGradient></defs>
+  <g data-d=".5">
+    <rect ${BIG} fill="url(#g-stonewall)"/><path d="${bricks}" stroke="#0c0d24" stroke-width="3" opacity=".4"/>
+    <g transform="translate(960 300)">
+      <path d="M-70 150v-170q70-110 140 0v170z" fill="#040918"/><path class="mh-sky" d="M-70 150v-170q70-110 140 0v170z" fill="url(#g-dawn)"/>
+      <g fill="#fff4cf" class="stars"><circle class="st" cx="-30" cy="20" r="3"/><circle class="st st--1" cx="20" cy="-30" r="2.5"/><circle class="st st--2" cx="36" cy="60" r="2"/><circle class="st st--3" cx="-10" cy="90" r="2.5"/><circle class="st" cx="0" cy="-64" r="2"/></g>
+      <path d="M-70 150v-170q70-110 140 0v170" fill="none" stroke="#4a4478" stroke-width="12"/><path d="M-84 150h168v16H-84z" fill="#4a4478"/>
+    </g>
+  </g>
+  <g data-d=".8">
+    <path d="M430 640V300q170-250 340 0v340z" fill="#0c0d24"/>
+    <path d="M430 640V300q170-250 340 0v340" fill="none" stroke="#5a5290" stroke-width="18"/><path d="M400 640V290q200-290 400 0v350" fill="none" stroke="#3a3468" stroke-width="10"/>
+    <ellipse class="mh-nicheglow" cx="600" cy="470" rx="170" ry="230" fill="url(#g-warm)"/>
+    <g class="mh-lamp"><path d="M600 96v110" stroke="#b98548" stroke-width="4"/><path d="M576 206h48l12 46q-36 26-72 0z" fill="#b98548"/><circle cx="600" cy="236" r="70" fill="url(#g-warm)"/><path d="M600 222q-10 12 0 26 10-14 0-26z" fill="#fff4cf"/></g>
+  </g>
+  <g data-d="1">
+    <path d="M-700 640h2600v800H-700z" fill="#17153a"/><path d="M-700 640h2600v16H-700z" fill="#3a3468"/>
+    <path d="M400 700h400l70 220H330z" fill="url(#g-rug)"/><path d="M420 716h360l52 180H368z" fill="none" stroke="#ffd77a" stroke-width="4" opacity=".6"/>
+    <g class="mh-fruit" transform="translate(330 664)"><ellipse cx="0" cy="-30" rx="110" ry="90" fill="url(#g-warm)" opacity=".6"/><path d="M-56-14q56 44 112 0l-14 22h-84z" fill="#b98548"/><circle cx="-26" cy="-22" r="14" fill="#e2482a"/><circle cx="2" cy="-28" r="15" fill="#ffb03a"/><circle cx="28" cy="-22" r="13" fill="#7fbf5a"/><circle cx="-10" cy="-40" r="11" fill="#c9792a"/><circle cx="16" cy="-42" r="10" fill="#e2482a"/></g>
+    <g class="mh-b"><circle cx="500" cy="640" r="74" fill="url(#g-warm)"/><circle cx="500" cy="640" r="6" fill="#fff"/></g>
+    <g class="mh-a"><circle cx="600" cy="620" r="120" fill="url(#g-warm)"/><circle cx="600" cy="620" r="8" fill="#fff"/></g>
+    <ellipse class="mh-glow" cx="600" cy="500" rx="900" ry="640" fill="url(#g-warm)"/>
+  </g>
+  <g data-d="1.3"><path d="M-700-500h380v1900h-380zM1520-500h380v1900h-380z" fill="#06061a"/><path d="M-320-500h40v1900h-40zM1480-500h40v1900h-40z" fill="#12123a"/></g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land, mihrab };
