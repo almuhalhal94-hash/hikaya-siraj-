@@ -6635,7 +6635,8 @@
         "state": {
           "era": "stone",
           "pillar": "on",
-          "ms": "one"
+          "ms": "one",
+          "trunk": "off"
         },
         "camera": {
           "from": [
@@ -6661,7 +6662,8 @@
           "era": "stone",
           "pillar": "on",
           "ms": "one",
-          "call": "on"
+          "call": "on",
+          "trunk": "off"
         },
         "camera": {
           "from": [
@@ -6764,7 +6766,8 @@
         "state": {
           "era": "stone",
           "pillar": "on",
-          "ms": "one"
+          "ms": "one",
+          "trunk": "off"
         },
         "camera": {
           "from": [
@@ -6789,7 +6792,169 @@
       "state": {
         "era": "stone",
         "pillar": "on",
-        "ms": "one"
+        "ms": "one",
+        "trunk": "off"
+      }
+    }
+  },
+  "urwa-alhilal": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "moon": "glow",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            760,
+            300,
+            1000
+          ],
+          "to": [
+            640,
+            560,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "moon": "glow",
+          "sword": "on",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            500,
+            1000
+          ],
+          "to": [
+            640,
+            620,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "moon": "glow",
+          "qirba": "on",
+          "light": "on",
+          "pair": "warm"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            760
+          ],
+          "to": [
+            780,
+            330,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1000
+          ],
+          "to": [
+            640,
+            600,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "moon": "glow",
+          "light": "on",
+          "pair": "warm"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            680,
+            660
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "pillar": "on",
+          "ms": "one"
+        },
+        "camera": {
+          "from": [
+            880,
+            560,
+            640
+          ],
+          "to": [
+            700,
+            420,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "on",
+        "glow": "full"
       }
     }
   }

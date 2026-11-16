@@ -61,20 +61,172 @@
   "scenes": {
     "thumb": 0,
     "scenes": [
-      {"set": "mosque", "state": {"era": "stone", "pillar": "on", "ms": "one"},
-       "camera": {"from": [640, 380, 1000], "to": [780, 470, 640], "dur": 15}, "fx": ["motes"], "sfx": "glow"},
-      {"set": "mosque", "state": {"era": "stone", "pillar": "on", "ms": "one", "call": "on"},
-       "camera": {"from": [700, 470, 640], "to": [640, 330, 1000], "dur": 15}, "fx": ["dust"], "sfx": "wind"},
-      {"set": "land", "state": {"time": "dawn", "hazn": "on", "light": "mid", "pair": "white"},
-       "camera": {"from": [640, 560, 1000], "to": [660, 640, 720], "dur": 16}, "fx": ["dust"], "sfx": "steps"},
-      {"set": "land", "state": {"samura": "on", "flock": "on", "light": "mid", "pair": "white"},
-       "camera": {"from": [560, 520, 1000], "to": [580, 600, 760], "dur": 16}, "fx": ["motes"], "sfx": "star"},
-      {"set": "land", "state": {"time": "dawn", "samura": "lost", "flock": "on", "light": "far"},
-       "camera": {"from": [600, 560, 760], "to": [700, 560, 1000], "dur": 15}, "fx": ["wind"], "sfx": "wind"},
-      {"set": "mosque", "state": {"era": "stone", "pillar": "on", "ms": "one"},
-       "camera": {"from": [780, 470, 640], "to": [640, 400, 1000], "dur": 16}, "fx": ["motes"], "sfx": "glow"}
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "pillar": "on",
+          "ms": "one",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            640,
+            380,
+            1000
+          ],
+          "to": [
+            780,
+            470,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "pillar": "on",
+          "ms": "one",
+          "call": "on",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            700,
+            470,
+            640
+          ],
+          "to": [
+            640,
+            330,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "hazn": "on",
+          "light": "mid",
+          "pair": "white"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            1000
+          ],
+          "to": [
+            660,
+            640,
+            720
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "samura": "on",
+          "flock": "on",
+          "light": "mid",
+          "pair": "white"
+        },
+        "camera": {
+          "from": [
+            560,
+            520,
+            1000
+          ],
+          "to": [
+            580,
+            600,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "samura": "lost",
+          "flock": "on",
+          "light": "far"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            760
+          ],
+          "to": [
+            700,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "pillar": "on",
+          "ms": "one",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            780,
+            470,
+            640
+          ],
+          "to": [
+            640,
+            400,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
     ],
-    "choice": {"state": {"era": "stone", "pillar": "on", "ms": "one"}}
+    "choice": {
+      "state": {
+        "era": "stone",
+        "pillar": "on",
+        "ms": "one",
+        "trunk": "off"
+      }
+    }
   },
   "games": {
     "order_events": [
@@ -86,13 +238,44 @@
     "witness": {
       "witness": "سارية في المسجد النبوي",
       "answer": "قصة سعيد بن المسيّب رحمه الله",
-      "wrong": ["قصة عمر بن الخطاب رضي الله عنه", "قصة أبي هريرة رضي الله عنه"]
+      "wrong": [
+        "قصة عمر بن الخطاب رضي الله عنه",
+        "قصة أبي هريرة رضي الله عنه"
+      ]
     },
     "fill_blank": [
-      {"text": "سعيد بن المسيّب من كبار ___.", "answer": "التابعين", "wrong": ["الأنبياء", "الملوك"]},
-      {"text": "كان سعيد يحب ___ ويسبق إليه قبل الأذان.", "answer": "المسجد", "wrong": ["السوق", "النوم"]},
-      {"text": "الحَزْن هو الأرض ___ الوعرة.", "answer": "الصلبة", "wrong": ["الليّنة", "الخضراء"]},
-      {"text": "شاهد الحكاية ___ من حجارة منقوشة في المسجد النبوي.", "answer": "سارية", "wrong": ["نخلة", "خيمة"]}
+      {
+        "text": "سعيد بن المسيّب من كبار ___.",
+        "answer": "التابعين",
+        "wrong": [
+          "الأنبياء",
+          "الملوك"
+        ]
+      },
+      {
+        "text": "كان سعيد يحب ___ ويسبق إليه قبل الأذان.",
+        "answer": "المسجد",
+        "wrong": [
+          "السوق",
+          "النوم"
+        ]
+      },
+      {
+        "text": "الحَزْن هو الأرض ___ الوعرة.",
+        "answer": "الصلبة",
+        "wrong": [
+          "الليّنة",
+          "الخضراء"
+        ]
+      },
+      {
+        "text": "شاهد الحكاية ___ من حجارة منقوشة في المسجد النبوي.",
+        "answer": "سارية",
+        "wrong": [
+          "نخلة",
+          "خيمة"
+        ]
+      }
     ]
   }
 }

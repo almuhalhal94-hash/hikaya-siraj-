@@ -663,3 +663,6 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-samura, .ld-sahl { opacity: 0; transition: opacity 4s ease; } [data-samura="on"] .ld-samura { opacity: 1; } [data-samura="lost"] .ld-samura { opacity: .12; filter: blur(3px); }
 .ld-smglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } [data-samura="lost"] .ld-smglow { opacity: 0; }
 [data-hazn="on"] .ld-rubble { opacity: 1; } [data-hazn="on"] .ld-sahl { opacity: 1; }
+/* عروة بن الزبير: moon=glow هلال كبير متوهّج (الشاهد) في dar وland */
+.dr-moon, .ld-moon { transform-box: fill-box; transform-origin: center; transition: scale 3s ease, filter 3s ease; }
+[data-moon="glow"] .dr-moon, [data-moon="glow"] .ld-moon { scale: 1.7; filter: drop-shadow(0 0 26px #ffe9a8) drop-shadow(0 0 60px rgba(255, 233, 168, .6)); }
