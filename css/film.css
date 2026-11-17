@@ -666,3 +666,6 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 /* عروة بن الزبير: moon=glow هلال كبير متوهّج (الشاهد) في dar وland */
 .dr-moon, .ld-moon { transform-box: fill-box; transform-origin: center; transition: scale 3s ease, filter 3s ease; }
 [data-moon="glow"] .dr-moon, [data-moon="glow"] .ld-moon { scale: 1.7; filter: drop-shadow(0 0 26px #ffe9a8) drop-shadow(0 0 60px rgba(255, 233, 168, .6)); }
+/* الحسن البصري في mosque: hasa=glow حصى المسجد يتوهّج (الشاهد) تحت النور */
+.ms-hasa { opacity: 0; transition: opacity 3s ease; } [data-hasa="glow"] .ms-hasa { opacity: 1; }
+.ms-hsglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }

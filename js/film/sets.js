@@ -175,6 +175,8 @@ function mosque() {
       <path d="M-148-12q75-14 150-2t148-8M-146 12q75-14 150-2t146-8" fill="none" stroke="#e2d2a8" stroke-width="7" opacity=".7"/></g>
       <g class="ms-scoop" fill="#fff4cf">${[[-60, -220], [-10, -260], [40, -230], [80, -270], [-90, -280], [10, -300]].map(([x, y], i) => `<circle style="--d:${-i * 0.5}s" cx="${x}" cy="${y}" r="7"/>`).join('')}</g></g>
     <g class="ms-cupwrap" transform="translate(830 640)"><g class="ms-cup"><circle cy="-10" r="70" fill="url(#g-warm)"/><path d="M-26-22h52q-4 34-26 36-22-2-26-36z" fill="#b98548"/><ellipse cy="-22" rx="26" ry="7" fill="#fdf6e6"/><path d="M-16 14h32" stroke="#6b441d" stroke-width="5" stroke-linecap="round"/></g></g>
+    <g class="ms-hasa" transform="translate(860 712)"><ellipse class="ms-hsglow" rx="230" ry="60" fill="url(#g-warm)"/>
+      <g fill="#c9b48e" stroke="#6b5340" stroke-width="2">${Array.from({ length: 34 }, (_, i) => { const a = i * 2.39, d = 18 + (i % 9) * 18; return `<ellipse cx="${(Math.cos(a) * d * 1.9).toFixed(0)}" cy="${(Math.sin(a) * d * 0.32).toFixed(0)}" rx="${8 + (i % 4) * 2}" ry="${4 + (i % 3)}"/>`; }).join('')}</g></g>
     <g class="ms-pillar" transform="translate(720 620)"><ellipse class="ms-plglow" cy="-260" rx="190" ry="340" fill="url(#g-warm)"/>
       <ellipse cy="2" rx="70" ry="12" fill="#000" opacity=".3"/><rect x="-56" y="-26" width="112" height="26" fill="#9a9184"/><rect x="-46" y="-500" width="92" height="474" fill="#b3aa9c"/><rect x="-60" y="-530" width="120" height="30" fill="#9a9184"/>
       <path d="M-46-440h92M-46-120h92" stroke="#6f675c" stroke-width="5"/>

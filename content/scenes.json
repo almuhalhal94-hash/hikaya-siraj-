@@ -6957,5 +6957,175 @@
         "glow": "full"
       }
     }
+  },
+  "hasan-alhasa": {
+    "thumb": 1,
+    "scenes": [
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "hasa": "glow",
+          "ms": "one"
+        },
+        "camera": {
+          "from": [
+            640,
+            400,
+            1000
+          ],
+          "to": [
+            860,
+            640,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "hasa": "glow",
+          "ms": "one",
+          "call": "on"
+        },
+        "camera": {
+          "from": [
+            860,
+            680,
+            600
+          ],
+          "to": [
+            700,
+            420,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "minbar": "on",
+          "trunk": "off",
+          "ms": "pair"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1000
+          ],
+          "to": [
+            560,
+            520,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "pillar": "on",
+          "ms": "one"
+        },
+        "camera": {
+          "from": [
+            700,
+            420,
+            1000
+          ],
+          "to": [
+            1000,
+            560,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "cup": "on",
+          "ms": "pair"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            880,
+            640,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "cup": "on",
+          "hasa": "glow",
+          "ms": "pair"
+        },
+        "camera": {
+          "from": [
+            880,
+            640,
+            640
+          ],
+          "to": [
+            700,
+            420,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "era": "stone",
+        "trunk": "off",
+        "cup": "on",
+        "hasa": "glow"
+      }
+    }
   }
 }
