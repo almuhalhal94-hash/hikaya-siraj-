@@ -7293,5 +7293,168 @@
         "glow": "full"
       }
     }
+  },
+  "umar2-alshamaa": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "candle": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            500,
+            680,
+            680
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "pillar": "on",
+          "ms": "one"
+        },
+        "camera": {
+          "from": [
+            700,
+            420,
+            1000
+          ],
+          "to": [
+            860,
+            600,
+            680
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "ms": "one",
+          "call": "on"
+        },
+        "camera": {
+          "from": [
+            860,
+            600,
+            680
+          ],
+          "to": [
+            700,
+            400,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "suhuf": "on",
+          "copies": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            760,
+            700
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "candle": "on",
+          "lamp": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            500,
+            680,
+            700
+          ],
+          "to": [
+            620,
+            600,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "candle": "out",
+          "lamp": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            600,
+            1000
+          ],
+          "to": [
+            700,
+            600,
+            700
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "candle": "on",
+        "lamp": "on",
+        "light": "on"
+      }
+    }
   }
 }

@@ -669,3 +669,9 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 /* الحسن البصري في mosque: hasa=glow حصى المسجد يتوهّج (الشاهد) تحت النور */
 .ms-hasa { opacity: 0; transition: opacity 3s ease; } [data-hasa="glow"] .ms-hasa { opacity: 1; }
 .ms-hsglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+/* عمر بن عبد العزيز في dar: candle (on/out) شمعة من مال المسلمين، وout تُطفأ فيبقى المصباح الصغير (lamp=on) */
+.dr-candle { opacity: 0; transition: opacity 3s ease; } [data-candle] .dr-candle { opacity: 1; }
+.dr-cdglow, .dr-cdflame { transform-box: fill-box; transform-origin: center bottom; transition: opacity 2s ease; }
+.dr-cdglow { animation: st-breathe 3.2s ease-in-out infinite; } .dr-cdflame { animation: cd-flick 1.6s ease-in-out infinite; }
+@keyframes cd-flick { 0%, 100% { scale: 1 1; } 50% { scale: .9 1.08; } }
+[data-candle="out"] .dr-cdglow, [data-candle="out"] .dr-cdflame { opacity: 0; }

@@ -838,6 +838,10 @@ function dar() {
       <ellipse cy="-16" rx="16" ry="6" fill="#3a3330"/><circle cx="-6" cy="-24" r="3" fill="#e8c48a"/><circle cx="6" cy="-22" r="3" fill="#e8c48a"/>
       <g class="dr-handle"><path d="M0-14v-70" stroke="#6b441d" stroke-width="12" stroke-linecap="round"/><path d="M0-84v-4" stroke="#9a6a3a" stroke-width="14" stroke-linecap="round"/></g></g>
     ${qirba(880, 780, .95)}
+    <g class="dr-candle" transform="translate(450 760)"><ellipse class="dr-cdglow" cy="-150" rx="170" ry="170" fill="url(#g-warm)"/>
+      <path d="M-46 0h92l-10-16h-72zM-6-16h12v-70H-6zM-34-86h68l-6-12h-56z" fill="#b98548" stroke="#4a2d10" stroke-width="3"/>
+      <rect x="-18" y="-170" width="36" height="74" rx="6" fill="#f3ead6" stroke="#c9b48e" stroke-width="2"/><path d="M-10-150q4 10 0 26" stroke="#e2d2a8" stroke-width="3" fill="none"/>
+      <path d="M0-170v-10" stroke="#3a2412" stroke-width="3"/><path class="dr-cdflame" d="M0-180q-12-18 0-40 12 22 0 40z" fill="#ffd77a"/><path class="dr-cdflame" d="M0-184q-5-9 0-20 5 11 0 20z" fill="#fff"/></g>
     <g class="dr-lights">
       <g class="dr-b"><circle cx="680" cy="680" r="90" fill="url(#g-white)"/><circle cx="680" cy="680" r="7" fill="#fff"/></g>
       <g class="dr-a"><circle cx="560" cy="700" r="110" fill="url(#g-warm)"/><circle cx="560" cy="700" r="8" fill="#fff"/></g>
