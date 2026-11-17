@@ -1,0 +1,124 @@
+/* القسم 3: أذكاري — صفحة الاختيار، حديقة الأيام، وجلسة الذكر */
+
+@property --p { syntax: '<number>'; inherits: true; initial-value: 0; }
+
+/* ——— الفانوس الصغير (مشترك) ——— */
+.dk-lamp svg { display: block; width: 100%; overflow: visible; }
+.lamp__glass { fill: #16284e; transition: fill .9s ease; }
+.lamp__flame { fill: #2a3f6e; transition: fill .9s ease; transform-origin: 20px 44px; }
+.dk-lamp.is-lit .lamp__glass { fill: #ffcf6b; }
+.dk-lamp.is-lit .lamp__flame { fill: #fff8dc; animation: lamp-flicker 2.4s ease-in-out infinite; }
+.dk-lamp.is-lit svg { filter: drop-shadow(0 0 9px rgba(255, 207, 107, .95)) drop-shadow(0 0 26px rgba(255, 190, 80, .55)); }
+@keyframes lamp-flicker { 0%, 100% { scale: 1; } 40% { scale: .88 1.08; } 70% { scale: 1.06 .94; } }
+
+/* ——— صفحة الاختيار ——— */
+.dk-art { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; }
+.dk-art--morning { background: linear-gradient(180deg, #2c69ad 0%, #79b6e2 52%, #ffdfa6 100%); }
+.dk-art__sun { position: absolute; left: 50%; top: 40%; width: 34%; aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; background: radial-gradient(circle, #fffbe6 0 38%, #ffd77a 62%, #ffb648 100%); box-shadow: 0 0 40px 14px rgba(255, 221, 140, .75), 0 0 110px 50px rgba(255, 200, 110, .4); animation: sun-breathe 5s ease-in-out infinite; }
+@keyframes sun-breathe { 50% { scale: 1.05; } }
+.dk-art .dk-dunes { position: absolute; inset: auto 0 0 0; width: 100%; height: 46%; }
+.dk-art .dk-dunes__lit { opacity: 1; }
+.dk-art--evening { background: radial-gradient(ellipse at 50% 0%, #1e3c6b 0%, #0a1630 70%); display: flex; justify-content: space-evenly; align-items: flex-start; }
+.dk-art--evening .dk-lamp { position: relative; width: 15%; padding-top: 9%; transform-origin: 50% 0; animation: lamp-sway 5s ease-in-out infinite; }
+.dk-art--evening .dk-lamp:nth-child(2) { padding-top: 17%; width: 18%; animation-delay: -1.7s; }
+.dk-art--evening .dk-lamp:nth-child(3) { padding-top: 5%; animation-delay: -3.1s; }
+.dk-art--evening .dk-lamp::before, .dk__scene .dk-lamp::before { content: ''; position: absolute; top: 0; bottom: calc(100% - 1px); left: 50%; width: 1.5px; background: rgba(201, 162, 74, .7); }
+.dk-art--evening .dk-lamp::before { bottom: auto; height: 100%; max-height: calc(100% - 20px); z-index: -1; }
+@keyframes lamp-sway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+.dk-pick .card__body { padding-top: 36px; }
+.dk-pick.is-now { border-color: var(--gold); box-shadow: 0 12px 30px rgba(0, 0, 0, .45), 0 0 44px rgba(255, 215, 122, .4); }
+
+.garden { margin-top: 26px; padding: 18px 16px 20px; border-radius: 28px; text-align: center; background: linear-gradient(180deg, rgba(30, 60, 107, .55), rgba(10, 22, 48, .75)); border: 1.5px solid rgba(255, 215, 122, .3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); animation: door-in .9s var(--ease-out) .55s backwards; }
+.garden h2 { font-size: clamp(1.4rem, 5.6vw, 1.75rem); font-weight: 800; color: var(--gold); }
+.garden__tree { width: min(78%, 300px); margin: 4px auto 0; }
+.garden__tree svg { display: block; width: 100%; overflow: visible; }
+.garden__count { font-size: 1.25rem; font-weight: 800; color: var(--cream); }
+.garden__note { color: var(--teal-soft); font-size: 1.02rem; text-wrap: balance; }
+.lf { animation: leaf-in .7s var(--ease-spring) backwards; animation-delay: calc(var(--i) * 14ms + 700ms); }
+.lf--fruit { transform-box: fill-box; transform-origin: center; filter: drop-shadow(0 0 5px rgba(255, 215, 122, .8)); }
+@keyframes leaf-in { from { scale: 0; opacity: 0; } }
+.tree__glow { animation: sun-breathe 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.dk-hub__src { margin-top: 16px; text-align: center; font-size: .9rem; color: #9fb2d6; }
+
+/* ——— جلسة الذكر ——— */
+.dk { --p: 0; position: fixed; inset: 0; z-index: 20; display: grid; grid-template-rows: 21dvh minmax(0, 1fr) auto; padding: 0 16px calc(12px + var(--safe-b)); transition: --p 1.6s var(--ease-out); overflow: hidden; }
+.dk--evening { grid-template-rows: 25dvh minmax(0, 1fr) auto; }
+.dk__scene { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.dk > :not(.dk__scene) { position: relative; z-index: 1; }
+
+/* الصباح: السماء تصحو والشمس تطلع مع كل ذكر */
+.dk-sky { position: absolute; inset: 0; }
+.dk-sky--dawn { opacity: calc(var(--p) * 2.4); background: linear-gradient(180deg, rgba(20, 44, 88, 0) 0%, rgba(122, 86, 152, .6) 42%, #e8906a 76%, #ffcf8a 100%); }
+.dk-sky--day { opacity: calc((var(--p) - .4) * 1.75); background: linear-gradient(180deg, #2a66ab 0%, #6eb0e0 50%, #ffe3b0 100%); }
+.dk-sun { position: absolute; left: calc(20% + var(--p) * 30%); bottom: calc(4% + var(--p) * 79%); width: clamp(84px, 24vw, 132px); aspect-ratio: 1; translate: -50% 50%; }
+.dk-sun__disc { position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle, #fffbe6 0 38%, #ffd77a 64%, #ffb648 100%); box-shadow: 0 0 50px 16px rgba(255, 221, 140, .7), 0 0 150px 70px rgba(255, 196, 110, calc(.2 + var(--p) * .3)); }
+.dk-sun__rays { position: absolute; inset: -85%; border-radius: 50%; opacity: calc(var(--p) * .8); background: repeating-conic-gradient(rgba(255, 236, 170, .5) 0 4deg, transparent 4deg 18deg); -webkit-mask: radial-gradient(circle, transparent 28%, #000 32%, transparent 68%); mask: radial-gradient(circle, transparent 28%, #000 32%, transparent 68%); animation: rays-spin 70s linear infinite; }
+@keyframes rays-spin { to { rotate: 360deg; } }
+.dk-cloud { position: absolute; width: 150px; height: 40px; border-radius: 40px; background: #fff; filter: blur(9px); opacity: calc((var(--p) - .5) * 1.5); animation: cloud-drift 46s linear infinite alternate; }
+.dk-cloud--a { top: 9%; left: 58%; } .dk-cloud--b { top: 17%; left: -6%; width: 110px; height: 30px; animation-duration: 60s; animation-direction: alternate-reverse; }
+@keyframes cloud-drift { to { translate: 70px 0; } }
+.dk__scene .dk-dunes { position: absolute; inset: auto 0 0 0; width: 100%; height: 21dvh; }
+.dk-dunes__lit { opacity: var(--p); }
+
+/* المساء: فانوس يضيء مع كل ذكر */
+.dk__scene .dk-lamp { position: absolute; top: 0; right: var(--x); width: clamp(26px, 7.4vw, 46px); translate: 50% 0; padding-top: calc(var(--len) * 1dvh); transform-origin: 50% 0; animation: lamp-sway 5.5s ease-in-out infinite; animation-delay: calc(var(--k) * -0.9s); opacity: .7; transition: opacity .9s ease; }
+.dk__scene .dk-lamp::before { bottom: auto; height: calc(var(--len) * 1dvh + 3px); }
+.dk__scene .dk-lamp.is-lit { opacity: 1; }
+.dk__scene .dk-lamp.is-lit::after { content: ''; position: absolute; left: 50%; bottom: 14%; width: 420%; aspect-ratio: 1; translate: -50% 50%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 207, 107, .34), transparent 62%); animation: sun-breathe 3.2s ease-in-out infinite; pointer-events: none; }
+.dk--evening.is-complete .dk__scene .dk-lamp { animation-duration: 3.6s; }
+
+/* أعلى الجلسة */
+.dk__top { display: flex; justify-content: space-between; align-items: flex-start; padding-top: calc(10px + env(safe-area-inset-top, 0px)); pointer-events: none; }
+.dk__top > * { pointer-events: auto; }
+.dk__step { max-width: none; }
+
+/* بطاقة الذكر */
+.dk__card { align-self: center; justify-self: center; width: min(100%, 620px); max-height: 100%; overflow-y: auto; overscroll-behavior: contain; padding: 16px 18px 12px; border-radius: 28px; text-align: center; background: linear-gradient(180deg, rgba(14, 30, 64, .8), rgba(6, 14, 34, .86)); border: 1.5px solid rgba(255, 215, 122, .38); box-shadow: 0 18px 44px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .08); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.dk__card.is-in { animation: door-in .75s var(--ease-out) backwards; }
+.dk__title { font-size: 1.15rem; font-weight: 800; color: var(--gold); line-height: 1.5; }
+.dk__title::after { content: ''; display: block; width: 56px; height: 2px; margin: 6px auto 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.dk__pre, .dk__text { font-family: 'Amiri Quran', 'Traditional Arabic', 'Geeza Pro', 'Noto Naskh Arabic', serif; }
+.dk__pre { color: var(--teal-soft); font-size: clamp(1.1rem, 4.6vw, 1.3rem); line-height: 2; }
+.dk__text { color: var(--cream); font-size: clamp(1.5rem, 6.4vw, 2rem); line-height: 2.05; text-wrap: pretty; }
+.dk__card.is-quran .dk__text { font-size: clamp(1.4rem, 5.8vw, 1.85rem); }
+.dk__card.is-long .dk__text { font-size: clamp(1.14rem, 4.7vw, 1.5rem); line-height: 2; }
+.dk__src { margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, .1); font-size: .86rem; color: #9fb2d6; line-height: 1.6; }
+
+/* العدّاد */
+.dk__foot { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; justify-items: center; gap: 6px 14px; padding-top: 12px; }
+.dk__nav--prev { justify-self: end; } .dk__nav--next { justify-self: start; }
+.dk__nav--next svg { rotate: 180deg; }
+.dk__nav:disabled { opacity: .3; pointer-events: none; }
+.dk__count { position: relative; width: clamp(112px, 31vw, 138px); aspect-ratio: 1; border: 0; border-radius: 50%; cursor: pointer; font: inherit; color: #3a2a05; background: radial-gradient(circle at 50% 34%, #fff0be 0%, #ffd77a 46%, #d9a842 100%); box-shadow: 0 8px 0 #9a7426, 0 16px 34px rgba(0, 0, 0, .45), 0 0 44px rgba(255, 215, 122, .45); touch-action: manipulation; transition: transform .12s ease, box-shadow .12s ease; -webkit-tap-highlight-color: transparent; }
+.dk__count:active { transform: translateY(6px); box-shadow: 0 2px 0 #9a7426, 0 6px 16px rgba(0, 0, 0, .4), 0 0 44px rgba(255, 215, 122, .45); }
+.dk__count.is-tap::after { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 3px solid var(--cream); animation: tap-ring .55s var(--ease-out) forwards; pointer-events: none; }
+@keyframes tap-ring { to { scale: 1.55; opacity: 0; } }
+.dk__ring { position: absolute; inset: -9px; width: calc(100% + 18px); height: calc(100% + 18px); rotate: -90deg; }
+.dk__ring circle { fill: none; stroke: rgba(255, 255, 255, .16); stroke-width: 5; }
+.dk__ring .dk__arc { stroke: var(--teal); stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset .45s var(--ease-out); filter: drop-shadow(0 0 5px var(--teal)); }
+.dk__count b { display: block; font-size: clamp(2.8rem, 13vw, 3.5rem); font-weight: 800; line-height: 1; padding-top: .12em; }
+.dk__check { position: absolute; inset: 24%; width: 52%; display: none; }
+.dk__count.is-done b { display: none; } .dk__count.is-done .dk__check { display: block; animation: star-pop .5s var(--ease-spring); }
+.dk__count.is-done { background: radial-gradient(circle at 50% 34%, #d7fff8 0%, #5fd6c8 50%, #2f9c90 100%); color: #05343a; box-shadow: 0 8px 0 #1f6f66, 0 16px 34px rgba(0, 0, 0, .45), 0 0 44px rgba(95, 214, 200, .5); }
+.dk__hint { grid-column: 1 / -1; min-height: 34px; padding: 3px 16px; border-radius: 18px; font-weight: 800; font-size: 1rem; color: var(--cream); background: rgba(6, 14, 34, .62); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.dk__end { z-index: 5 !important; position: absolute !important; }
+.dk__end[hidden] { display: none; }
+.dk__card, .dk__foot, .dk__top { transition: opacity .5s ease; }
+.dk.has-end .dk__card, .dk.has-end .dk__foot, .dk.has-end .dk__top { opacity: 0; pointer-events: none; }
+.dk .dk__end[data-kind="end"] { background: rgba(3, 6, 15, .38); align-items: center; }
+.dk--evening .dk__end[data-kind="end"] { background: rgba(3, 6, 15, .26); }
+.dk__end .fcard__gain { text-shadow: 0 2px 10px rgba(3, 6, 15, .8); }
+
+@media (min-width: 760px) {
+  .dk-hub .cards { grid-template-columns: 1fr 1fr; }
+  .dk__card { padding: 22px 30px 16px; }
+}
+@media (max-height: 640px) {
+  .dk, .dk--evening { grid-template-rows: 17dvh minmax(0, 1fr) auto; }
+  .dk__count { width: 96px; } .dk__count b { font-size: 2.4rem; }
+  .dk__text { font-size: 1.3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dk { transition: none; }
+  .dk-lamp, .dk-sun__rays, .dk-cloud, .lf, .tree__glow, .dk-art__sun { animation: none !important; }
+}
