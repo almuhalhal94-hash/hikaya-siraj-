@@ -7127,5 +7127,171 @@
         "hasa": "glow"
       }
     }
+  },
+  "sirin-alsilsila": {
+    "thumb": 5,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "chain": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            720,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "creak"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "chain": "on",
+          "light": "on",
+          "pair": "warm",
+          "lamp": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            700,
+            660
+          ],
+          "to": [
+            620,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "chain": "broken",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            720,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "trunk": "off",
+          "pillar": "on",
+          "ms": "one"
+        },
+        "camera": {
+          "from": [
+            700,
+            420,
+            1000
+          ],
+          "to": [
+            860,
+            600,
+            680
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "chain": "on",
+          "peep": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1000
+          ],
+          "to": [
+            600,
+            680,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "chain": "on",
+          "peep": "on",
+          "light": "on",
+          "lamp": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            720,
+            640
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "chain": "on",
+        "light": "on",
+        "glow": "full"
+      }
+    }
   }
 }
