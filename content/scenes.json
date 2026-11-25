@@ -1,7 +1,8 @@
 {
-  "_schema": "الإخراج البصري لكل قصة (المفتاح = id القصة في stories.json). لكل مشهد بنفس ترتيب القصة: set الديكور (mountain جبل، cave داخل الغار، mosque المسجد، sea البحر والسفينة، deep أعماق البحر والحوت)، state حالته، camera حركة الكاميرا من/إلى [x, y, حجم اللقطة] على لوحة 1200×800 ومدتها dur بالثواني، fx الجزيئات (dust غبار، motes ذرات نور، wind ريح، leaves ورق يتساقط، bubbles فقاعات)، sfx المؤثر الصوتي. thumb رقم المشهد المستخدم صورةً للبطاقة. choice.state ما يتغير في اللقطة عند الاختيار الصحيح.",
+  "_schema": "الإخراج البصري لكل قصة (المفتاح = id القصة في stories.json). لكل مشهد بنفس ترتيب القصة: set الديكور (mountain جبل، cave داخل الغار، mosque المسجد، sea البحر والسفينة، deep أعماق البحر والحوت)، state حالته، camera حركة الكاميرا من/إلى [x, y, حجم اللقطة] على لوحة 1200×800 ومدتها dur بالثواني، fx الجزيئات (dust غبار، motes ذرات نور، wind ريح، leaves ورق يتساقط، bubbles فقاعات)، sfx المؤثر الصوتي. thumb رقم المشهد المستخدم صورةً للبطاقة. choice.state ما يتغير في اللقطة عند الاختيار الصحيح. witness رسم الشاهد الكرتوني الراوي (js/film/witness.js، مثل cave)، وmood شعوره في المشهد (calm، curious، worried، wonder، happy).",
   "ghar-thawr": {
     "thumb": 0,
+    "witness": "cave",
     "scenes": [
       {
         "set": "mountain",
@@ -25,7 +26,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "mountain",
@@ -51,7 +53,8 @@
           "wind",
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "cave",
@@ -75,7 +78,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "cave",
@@ -100,7 +104,8 @@
           "dust",
           "wind"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "cave",
@@ -124,7 +129,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       },
       {
         "set": "mountain",
@@ -148,7 +154,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "happy"
       }
     ],
     "choice": {

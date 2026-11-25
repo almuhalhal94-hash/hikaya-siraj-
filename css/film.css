@@ -783,3 +783,51 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-set="sadd"][data-glow="full"] .sd-glow { opacity: .4; }
 .stage[data-set="sadd"] .stage__tint { background: radial-gradient(circle at 50% 70%, rgba(255, 170, 90, .3), rgba(255, 140, 60, .05) 72%); }
 .stage[data-set="sadd"][data-sun] .stage__tint, .stage[data-set="sadd"][data-forge="on"] .stage__tint { opacity: 1; }
+
+/* ——— الراوي الكرتوني والتعليق الصوتي (js/film/witness.js + js/voice.js) ——— */
+.film__text .w.is-voiced { animation-name: word-say; animation-duration: .9s; }
+.film__text .w.is-after { animation-name: ayah-in; animation-duration: 1.4s; }
+@keyframes word-say {
+  0% { opacity: 0; transform: translateY(.35em); filter: blur(4px); }
+  30% { opacity: 1; transform: none; filter: none; color: #fff3c4; text-shadow: 0 0 14px rgba(255, 215, 122, .9); }
+  100% { opacity: 1; }
+}
+@keyframes ayah-in {
+  0% { opacity: 0; transform: scale(.8); filter: blur(6px); }
+  60% { opacity: 1; transform: scale(1.06); text-shadow: 0 0 22px rgba(120, 230, 220, .9); }
+  100% { opacity: 1; transform: none; }
+}
+.witness { position: absolute; z-index: 3; top: -58px; inset-inline-start: max(10px, env(safe-area-inset-right, 0px)); width: clamp(92px, 24vw, 128px); aspect-ratio: 1; border-radius: 50%; padding: 6px; background: radial-gradient(circle at 50% 38%, rgba(255, 233, 168, .22), rgba(10, 18, 40, .78) 70%); border: 2px solid rgba(255, 215, 122, .55); box-shadow: 0 10px 26px rgba(0, 0, 0, .5), 0 0 calc(18px + var(--wt-talk, 0) * 40px) rgba(255, 215, 122, calc(.25 + var(--wt-talk, 0) * .5)); opacity: 0; transform: translateY(30px) scale(.6); transition: opacity .5s ease, transform .7s var(--ease-spring); pointer-events: none; }
+.witness.is-on { opacity: 1; transform: none; }
+.film.has-overlay .witness { opacity: 0; transform: translateY(20px) scale(.8); }
+.witness svg { width: 100%; height: 100%; overflow: visible; }
+.witness .wt-body { transform-box: fill-box; transform-origin: 50% 100%; animation: wt-idle 3.6s ease-in-out infinite; }
+.witness.is-talking .wt-body { animation: wt-talk .42s ease-in-out infinite alternate; }
+@keyframes wt-idle { 50% { transform: scale(1.025, .975) translateY(2px); } }
+@keyframes wt-talk { from { transform: rotate(-1.4deg); } to { transform: rotate(1.4deg) translateY(-2px); } }
+.witness .wt-mouth { transform-box: fill-box; transform-origin: 50% 100%; transform: scale(1, .32); transition: transform .06s linear; }
+.witness .wt-glow { opacity: .35; transition: opacity .3s; }
+.witness.is-talking .wt-glow { opacity: .85; }
+.witness .wt-pupil { transition: transform .5s var(--ease-spring); }
+.witness .wt-lid { transform-box: fill-box; transform-origin: 50% 0; transform: scaleY(0); }
+.witness.is-blink .wt-lid { animation: wt-blink .2s ease-in-out; }
+@keyframes wt-blink { 50% { transform: scaleY(1); } }
+.witness .wt-happy { opacity: 0; transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(.3); transition: opacity .25s, transform .4s var(--ease-spring); }
+.witness .wt-brow { transition: transform .45s var(--ease-spring); transform-box: fill-box; }
+.witness .wt-cheek { transition: opacity .4s; }
+/* المشاعر */
+.witness[data-mood="curious"] .wt-brow--a { transform: translateY(-5px) rotate(-8deg); }
+.witness[data-mood="worried"] .wt-brow--a { transform: rotate(14deg) translateY(3px); }
+.witness[data-mood="worried"] .wt-brow--b { transform: rotate(-14deg) translateY(3px); }
+.witness[data-mood="worried"] .wt-eye { transform: scale(.88); }
+.witness[data-mood="worried"]:not(.is-talking) .wt-body { animation: wt-shiver .18s linear infinite; }
+@keyframes wt-shiver { 25% { transform: translateX(-1px); } 75% { transform: translateX(1px); } }
+.witness[data-mood="wonder"] .wt-eye { transform: scale(1.14); }
+.witness[data-mood="wonder"] .wt-brow { transform: translateY(-6px); }
+.witness[data-mood="happy"]:not(.is-talking) .wt-happy { opacity: 1; transform: none; }
+.witness[data-mood="happy"]:not(.is-talking) .wt-eye { opacity: 0; transform: scaleY(.2); }
+.witness[data-mood="happy"] .wt-brow { transform: translateY(-3px); }
+.witness[data-mood="happy"] .wt-cheek, .witness[data-mood="wonder"] .wt-cheek { opacity: .7; }
+.witness .wt-eye { transform-box: fill-box; transform-origin: center; transition: transform .45s var(--ease-spring), opacity .2s; }
+@media (prefers-reduced-motion: reduce) { .witness .wt-body, .witness.is-talking .wt-body { animation: none; } }
+@media (max-height: 600px) { .witness { width: 84px; top: -46px; } }
