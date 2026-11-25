@@ -104,6 +104,7 @@ function renderText(p, text, times, endMs = 0) {
       s.textContent = word + ' '; s.className = `w ${cls}`; s.setAttribute('aria-hidden', 'true');
       const at = times ? times[n] : n * WORD_MS;
       if (times && at == null) { s.classList.add('is-after'); s.style.animationDelay = `${endMs + 500 + (n - times.indexOf(null)) * 220}ms`; }
+      else if (times && cls === 'ayah') { s.classList.add('is-after'); s.style.animationDelay = `${at}ms`; } // الآية تظهر في الوقفة الصامتة
       else { s.style.animationDelay = `${Math.max(0, at - 60)}ms`; if (times) s.classList.add('is-voiced'); }
       n++;
       p.append(s);
@@ -154,7 +155,7 @@ function player(el, { ui, lines, go }, story, dir, voice) {
   const stage = new Stage($('.film__stage'));
   // الراوي والشاهد الكرتوني (إن كان للحكاية تعليق صوتي ورسم للشاهد)
   const narrator = voice ? new Narrator() : null;
-  const witness = voice ? createWitness(dir.witness) : null;
+  const witness = createWitness(dir.witness);
   if (witness) { $('.film__panel').prepend(witness.el); witness.setMood('calm'); }
   let lipRaf = 0;
   const lip = () => { if (!witness || !narrator) return; witness.setLevel(narrator.level()); lipRaf = requestAnimationFrame(lip); };
@@ -168,7 +169,21 @@ function player(el, { ui, lines, go }, story, dir, voice) {
       return ok;
     });
   };
-  const hush = () => { narrator?.stop(); witness?.talking(false); cancelAnimationFrame(lipRaf); };
+  // بلا تسجيل: يحرّك الشاهد فمه مع ظهور الكلمات فقط
+  const mime = ms => {
+    if (!witness || parent) return;
+    const end = performance.now() + ms - 250;
+    witness.talking(true);
+    const f = now => {
+      if (now > end) { witness.talking(false); return; }
+      const w = Math.sin(now / 70) * 0.5 + 0.5, v = Math.sin(now / 190) * 0.5 + 0.5;
+      witness.setLevel(0.18 + 0.55 * w * (0.4 + 0.6 * v));
+      lipRaf = requestAnimationFrame(f);
+    };
+    lipRaf = requestAnimationFrame(f);
+  };
+  let cues = [];
+  const hush = () => { narrator?.stop(); witness?.talking(false); cancelAnimationFrame(lipRaf); cues.forEach(clearTimeout); cues = []; };
   let i = 0, busy = true, choiceDone = !story.choice, revealTimer, alive = true;
 
   function setDots() {
@@ -181,6 +196,7 @@ function player(el, { ui, lines, go }, story, dir, voice) {
     clearTimeout(revealTimer);
     nextBtn.classList.remove('is-ready');
     const ms = clip ? renderText(text, content, clip.words, clip.ms) : renderText(text, content);
+    if (!clip) mime(ms);
     revealTimer = setTimeout(() => { text.classList.add('is-all'); nextBtn.classList.add('is-ready'); }, ms);
   }
   const revealed = () => text.classList.contains('is-all');
@@ -200,6 +216,7 @@ function player(el, { ui, lines, go }, story, dir, voice) {
       if (clip.words.includes(null)) { sfx.glow(); witness?.setMood('wonder'); }
     });
     if (!alive || i !== n) return;
+    if (voiced) clip.ayah?.forEach(ms => cues.push(setTimeout(() => { sfx.glow(); witness?.setMood('wonder'); }, ms)));
     if (parent) { renderText(text, story.scenes[n].text); revealAll(); }
     else reveal(story.scenes[n].text, voiced ? clip : null);
     busy = false;

@@ -188,7 +188,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -212,7 +213,8 @@
           "dust",
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -236,7 +238,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -260,7 +263,8 @@
         "fx": [
           "leaves"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -284,7 +288,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "mosque",
@@ -309,14 +314,16 @@
           "dust",
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "jidh": "embrace"
       }
-    }
+    },
+    "witness": "trunk"
   },
   "hut-yunus": {
     "thumb": 0,
@@ -342,7 +349,8 @@
         "fx": [
           "bubbles"
         ],
-        "sfx": "bubble"
+        "sfx": "bubble",
+        "mood": "wonder"
       },
       {
         "set": "sea",
@@ -366,7 +374,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -392,7 +401,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "curious"
       },
       {
         "set": "deep",
@@ -416,7 +426,8 @@
         "fx": [
           "bubbles"
         ],
-        "sfx": "bubble"
+        "sfx": "bubble",
+        "mood": "worried"
       },
       {
         "set": "deep",
@@ -441,7 +452,8 @@
           "bubbles",
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "sea",
@@ -467,14 +479,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "whale"
   },
   "safinat-nuh": {
     "thumb": 3,
@@ -502,7 +516,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -529,7 +544,8 @@
           "dust",
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -556,7 +572,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -583,7 +600,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -607,7 +625,8 @@
           "dur": 14
         },
         "fx": [],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -633,14 +652,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "light": "ship"
       }
-    }
+    },
+    "witness": "ark"
   },
   "ashab-alkahf": {
     "thumb": 3,
@@ -667,7 +688,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "mountain",
@@ -692,7 +714,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "cave",
@@ -717,7 +740,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "cave",
@@ -745,7 +769,8 @@
           "dust",
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "cave",
@@ -771,7 +796,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "curious"
       },
       {
         "set": "mountain",
@@ -795,14 +821,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "sun": "set"
       }
-    }
+    },
+    "witness": "kahf"
   },
   "adam-alard": {
     "thumb": 2,
@@ -829,7 +857,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "garden",
@@ -852,7 +881,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "garden",
@@ -876,7 +906,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "garden",
@@ -902,7 +933,8 @@
         "fx": [
           "leaves"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "garden",
@@ -927,7 +959,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "garden",
@@ -953,7 +986,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -961,7 +995,8 @@
         "mood": "calm",
         "glow": "full"
       }
-    }
+    },
+    "witness": "earth"
   },
   "hud-alrih": {
     "thumb": 1,
@@ -985,7 +1020,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "dunes",
@@ -1006,7 +1042,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "dunes",
@@ -1029,7 +1066,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "dunes",
@@ -1053,7 +1091,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "dunes",
@@ -1078,7 +1117,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "dunes",
@@ -1103,14 +1143,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "light": "call"
       }
-    }
+    },
+    "witness": "wind"
   },
   "salih-alhijr": {
     "thumb": 2,
@@ -1136,7 +1178,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "hijr",
@@ -1160,7 +1203,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "hijr",
@@ -1186,7 +1230,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "wonder"
       },
       {
         "set": "hijr",
@@ -1211,7 +1256,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "hijr",
@@ -1238,7 +1284,8 @@
           "dust",
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "worried"
       },
       {
         "set": "hijr",
@@ -1264,12 +1311,14 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {}
-    }
+    },
+    "witness": "hijr"
   },
   "ibrahim-alnar": {
     "thumb": 4,
@@ -1295,7 +1344,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "ur",
@@ -1318,7 +1368,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "ur",
@@ -1342,7 +1393,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "worried"
       },
       {
         "set": "ur",
@@ -1366,7 +1418,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "ur",
@@ -1391,7 +1444,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "ur",
@@ -1417,14 +1471,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "light": "fire"
       }
-    }
+    },
+    "witness": "fire"
   },
   "lut-alfajr": {
     "thumb": 4,
@@ -1450,7 +1506,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1474,7 +1531,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1498,7 +1556,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -1523,7 +1582,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1549,7 +1609,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -1576,14 +1637,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "dawn"
   },
   "ismail-alwadi": {
     "thumb": 5,
@@ -1607,7 +1670,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -1631,7 +1695,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -1655,7 +1720,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1681,7 +1747,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -1708,7 +1775,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -1735,14 +1803,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "valley"
   },
   "yusuf-alqamis": {
     "thumb": 0,
@@ -1768,7 +1838,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1793,7 +1864,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1819,7 +1891,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "wonder"
       },
       {
         "set": "land",
@@ -1845,7 +1918,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1871,7 +1945,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1901,14 +1976,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "shirt"
   },
   "ayyub-alayn": {
     "thumb": 4,
@@ -1932,7 +2009,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -1955,7 +2033,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -1978,7 +2057,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -2001,7 +2081,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -2028,7 +2109,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "bubble"
+        "sfx": "bubble",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -2056,14 +2138,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "spring"
   },
   "shuayb-almizan": {
     "thumb": 0,
@@ -2091,7 +2175,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -2116,7 +2201,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -2142,7 +2228,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -2167,7 +2254,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -2194,7 +2282,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -2222,7 +2311,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -2230,7 +2320,8 @@
         "scale": "even",
         "glow": "full"
       }
-    }
+    },
+    "witness": "scale"
   },
   "musa-alasa": {
     "thumb": 5,
@@ -2257,7 +2348,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "mountain",
@@ -2282,7 +2374,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "dunes",
@@ -2306,7 +2399,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "dunes",
@@ -2330,7 +2424,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "worried"
       },
       {
         "set": "sea",
@@ -2356,7 +2451,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -2382,12 +2478,14 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {}
-    }
+    },
+    "witness": "staff"
   },
   "dawud-alhadid": {
     "thumb": 2,
@@ -2413,7 +2511,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -2439,7 +2538,8 @@
           "dust",
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "mountain",
@@ -2463,7 +2563,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "ur",
@@ -2487,7 +2588,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -2512,7 +2614,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mountain",
@@ -2537,14 +2640,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "fire": "huge"
       }
-    }
+    },
+    "witness": "iron"
   },
   "sulayman-alhudhud": {
     "thumb": 0,
@@ -2571,7 +2676,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "dunes",
@@ -2595,7 +2701,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -2619,7 +2726,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "dunes",
@@ -2643,7 +2751,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "flip"
+        "sfx": "flip",
+        "mood": "calm"
       },
       {
         "set": "dunes",
@@ -2667,7 +2776,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "dunes",
@@ -2691,12 +2801,14 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {}
-    }
+    },
+    "witness": "hoopoe"
   },
   "zakariya-almihrab": {
     "thumb": 1,
@@ -2720,7 +2832,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mihrab",
@@ -2745,7 +2858,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "curious"
       },
       {
         "set": "mihrab",
@@ -2768,7 +2882,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mihrab",
@@ -2792,7 +2907,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "wonder"
       },
       {
         "set": "mihrab",
@@ -2816,7 +2932,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "wonder"
       },
       {
         "set": "mihrab",
@@ -2842,14 +2959,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "mihrab"
   },
   "isa-almahd": {
     "thumb": 4,
@@ -2875,7 +2994,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -2898,7 +3018,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "wonder"
       },
       {
         "set": "land",
@@ -2923,7 +3044,8 @@
         "fx": [
           "leaves"
         ],
-        "sfx": "bubble"
+        "sfx": "bubble",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -2947,7 +3069,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -2972,7 +3095,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -2998,14 +3122,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "cradle"
   },
   "abubakr-almasjid": {
     "thumb": 3,
@@ -3031,7 +3157,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "curious"
       },
       {
         "set": "dar",
@@ -3056,7 +3183,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -3081,7 +3209,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -3106,7 +3235,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -3132,7 +3262,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "curious"
       },
       {
         "set": "dar",
@@ -3157,14 +3288,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "mosque"
   },
   "umar-alhajar": {
     "thumb": 0,
@@ -3190,7 +3323,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "haram",
@@ -3214,7 +3348,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -3239,7 +3374,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "haram",
@@ -3263,7 +3399,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "haram",
@@ -3288,7 +3425,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "haram",
@@ -3312,14 +3450,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "blackstone"
   },
   "uthman-rumah": {
     "thumb": 1,
@@ -3347,7 +3487,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -3375,7 +3516,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "bubble"
+        "sfx": "bubble",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3402,7 +3544,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "mihrab",
@@ -3426,7 +3569,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -3453,7 +3597,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "mihrab",
@@ -3478,14 +3623,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "well"
   },
   "ali-alraya": {
     "thumb": 0,
@@ -3512,7 +3659,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "mosque",
@@ -3535,7 +3683,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mihrab",
@@ -3559,7 +3708,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3584,7 +3734,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3611,7 +3762,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -3638,14 +3790,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "banner"
   },
   "talha-uhud": {
     "thumb": 2,
@@ -3671,7 +3825,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -3698,7 +3853,8 @@
           "dust",
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3724,7 +3880,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3747,7 +3904,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mountain",
@@ -3772,7 +3930,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3799,14 +3958,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "uhud"
   },
   "zubayr-alkhandaq": {
     "thumb": 3,
@@ -3833,7 +3994,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3860,7 +4022,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -3887,7 +4050,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3914,7 +4078,8 @@
           "dust",
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3942,7 +4107,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -3970,14 +4136,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "trench"
   },
   "saad-alqaws": {
     "thumb": 3,
@@ -4004,7 +4172,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4028,7 +4197,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4054,7 +4224,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "land",
@@ -4082,7 +4253,8 @@
           "dust",
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4108,7 +4280,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -4136,14 +4309,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "bow"
   },
   "abuubayda-alsahil": {
     "thumb": 3,
@@ -4173,7 +4348,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -4199,7 +4375,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "worried"
       },
       {
         "set": "sea",
@@ -4228,7 +4405,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "worried"
       },
       {
         "set": "sea",
@@ -4256,7 +4434,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4283,7 +4462,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "sea",
@@ -4311,14 +4491,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "crew": "on"
       }
-    }
+    },
+    "witness": "shore"
   },
   "bilal-alnalan": {
     "thumb": 4,
@@ -4345,7 +4527,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -4370,7 +4553,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -4395,7 +4579,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "dar",
@@ -4419,7 +4604,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -4445,7 +4631,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -4473,14 +4660,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "sandals"
   },
   "musab-alburda": {
     "thumb": 1,
@@ -4506,7 +4695,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4533,7 +4723,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4559,7 +4750,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4588,7 +4780,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4611,7 +4804,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4637,7 +4831,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -4645,7 +4840,8 @@
         "flock": "on",
         "glow": "full"
       }
-    }
+    },
+    "witness": "burda"
   },
   "salman-althurayya": {
     "thumb": 3,
@@ -4671,7 +4867,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4696,7 +4893,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4723,7 +4921,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "land",
@@ -4748,7 +4947,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "mihrab",
@@ -4772,7 +4972,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mihrab",
@@ -4798,14 +4999,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "pleiades"
   },
   "anas-albab": {
     "thumb": 5,
@@ -4832,7 +5035,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -4857,7 +5061,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -4882,7 +5087,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -4908,7 +5114,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -4936,7 +5143,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -4961,7 +5169,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -4969,7 +5178,8 @@
         "pair": "on",
         "glow": "full"
       }
-    }
+    },
+    "witness": "door"
   },
   "abuhurayra-alsuffa": {
     "thumb": 6,
@@ -4996,7 +5206,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -5021,7 +5232,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -5048,7 +5260,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -5073,7 +5286,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -5099,7 +5313,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "mosque",
@@ -5126,14 +5341,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "cup": "pass"
       }
-    }
+    },
+    "witness": "suffa"
   },
   "khalid-alsayf": {
     "thumb": 5,
@@ -5159,7 +5376,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -5187,7 +5405,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "mosque",
@@ -5213,7 +5432,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -5240,7 +5460,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -5264,7 +5485,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -5289,14 +5511,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "sword"
   },
   "khadija-alghita": {
     "thumb": 3,
@@ -5324,7 +5548,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mountain",
@@ -5347,7 +5572,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "wonder"
       },
       {
         "set": "dar",
@@ -5373,7 +5599,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -5400,7 +5627,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -5425,7 +5653,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "wonder"
       },
       {
         "set": "dar",
@@ -5453,7 +5682,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -5461,7 +5691,8 @@
         "deeds": "on",
         "glow": "full"
       }
-    }
+    },
+    "witness": "blanket"
   },
   "aisha-aliqd": {
     "thumb": 5,
@@ -5487,7 +5718,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -5513,7 +5745,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -5539,7 +5772,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -5566,7 +5800,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "land",
@@ -5591,7 +5826,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -5618,7 +5854,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -5626,7 +5863,8 @@
         "time": "dawn",
         "glow": "full"
       }
-    }
+    },
+    "witness": "necklace"
   },
   "hafsa-alsuhuf": {
     "thumb": 0,
@@ -5653,7 +5891,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -5678,7 +5917,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -5703,7 +5943,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "mihrab",
@@ -5728,7 +5969,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "mihrab",
@@ -5753,7 +5995,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -5780,14 +6023,16 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
       "state": {
         "glow": "full"
       }
-    }
+    },
+    "witness": "suhuf"
   },
   "ummsalama-alkhayma": {
     "thumb": 4,
@@ -5813,7 +6058,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -5838,7 +6084,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -5865,7 +6112,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -5890,7 +6138,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -5915,7 +6164,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -5942,7 +6192,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -5950,7 +6201,8 @@
         "tent": "lit",
         "glow": "full"
       }
-    }
+    },
+    "witness": "tent"
   },
   "fatima-alraha": {
     "thumb": 0,
@@ -5977,7 +6229,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6003,7 +6256,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6028,7 +6282,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6055,7 +6310,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6081,7 +6337,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6109,7 +6366,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -6117,7 +6375,8 @@
         "mill": "on",
         "glow": "full"
       }
-    }
+    },
+    "witness": "millstone"
   },
   "asma-alnitaq": {
     "thumb": 2,
@@ -6145,7 +6404,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6171,7 +6431,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6198,7 +6459,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6225,7 +6487,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -6253,7 +6516,8 @@
           "dust",
           "wind"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -6282,7 +6546,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -6291,7 +6556,8 @@
         "belt": "split",
         "glow": "full"
       }
-    }
+    },
+    "witness": "nitaq"
   },
   "ummsulaym-alkhimar": {
     "thumb": 3,
@@ -6319,7 +6585,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6344,7 +6611,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -6370,7 +6638,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "curious"
       },
       {
         "set": "dar",
@@ -6396,7 +6665,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6423,7 +6693,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6449,7 +6720,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -6457,7 +6729,8 @@
         "bread": "on",
         "glow": "full"
       }
-    }
+    },
+    "witness": "khimar"
   },
   "ummatiyya-alqirba": {
     "thumb": 1,
@@ -6486,7 +6759,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -6513,7 +6787,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -6540,7 +6815,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6567,7 +6843,8 @@
         "fx": [
           "leaves"
         ],
-        "sfx": "wave"
+        "sfx": "wave",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -6594,7 +6871,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "curious"
       },
       {
         "set": "land",
@@ -6621,7 +6899,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -6632,7 +6911,8 @@
         "light": "mid",
         "glow": "full"
       }
-    }
+    },
+    "witness": "qirba"
   },
   "said-alsariya": {
     "thumb": 0,
@@ -6661,7 +6941,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -6688,7 +6969,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -6714,7 +6996,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -6740,7 +7023,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "wonder"
       },
       {
         "set": "land",
@@ -6766,7 +7050,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "mosque",
@@ -6792,7 +7077,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -6802,7 +7088,8 @@
         "ms": "one",
         "trunk": "off"
       }
-    }
+    },
+    "witness": "pillar"
   },
   "urwa-alhilal": {
     "thumb": 0,
@@ -6829,7 +7116,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -6855,7 +7143,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -6881,7 +7170,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "curious"
       },
       {
         "set": "haram",
@@ -6904,7 +7194,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -6929,7 +7220,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "mosque",
@@ -6955,7 +7247,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -6963,7 +7256,8 @@
         "light": "on",
         "glow": "full"
       }
-    }
+    },
+    "witness": "crescent"
   },
   "hasan-alhasa": {
     "thumb": 1,
@@ -6992,7 +7286,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -7019,7 +7314,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -7044,7 +7340,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -7070,7 +7367,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -7096,7 +7394,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -7123,7 +7422,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -7133,7 +7433,8 @@
         "cup": "on",
         "hasa": "glow"
       }
-    }
+    },
+    "witness": "pebble"
   },
   "sirin-alsilsila": {
     "thumb": 5,
@@ -7160,7 +7461,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7186,7 +7488,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -7211,7 +7514,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -7237,7 +7541,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7262,7 +7567,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -7289,7 +7595,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -7299,7 +7606,8 @@
         "light": "on",
         "glow": "full"
       }
-    }
+    },
+    "witness": "chain"
   },
   "umar2-alshamaa": {
     "thumb": 4,
@@ -7326,7 +7634,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -7352,7 +7661,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "mosque",
@@ -7378,7 +7688,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "wonder"
       },
       {
         "set": "dar",
@@ -7403,7 +7714,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "dar",
@@ -7428,7 +7740,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "creak"
+        "sfx": "creak",
+        "mood": "wonder"
       },
       {
         "set": "dar",
@@ -7453,7 +7766,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -7462,7 +7776,8 @@
         "lamp": "on",
         "light": "on"
       }
-    }
+    },
+    "witness": "candle"
   },
   "ata-alsitr": {
     "thumb": 4,
@@ -7489,7 +7804,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "haram",
@@ -7513,7 +7829,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "curious"
       },
       {
         "set": "haram",
@@ -7537,7 +7854,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "haram",
@@ -7562,7 +7880,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -7588,7 +7907,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "haram",
@@ -7613,7 +7933,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -7622,7 +7943,8 @@
         "kiswa": "glow",
         "tawaf": "off"
       }
-    }
+    },
+    "witness": "kiswa"
   },
   "amra-aljidar": {
     "thumb": 3,
@@ -7650,7 +7972,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7676,7 +7999,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7702,7 +8026,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7726,7 +8051,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7752,7 +8078,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7779,7 +8106,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -7788,7 +8116,8 @@
         "glow": "full",
         "far": "none"
       }
-    }
+    },
+    "witness": "wall"
   },
   "muadha-aldoha": {
     "thumb": 3,
@@ -7817,7 +8146,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7844,7 +8174,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "curious"
       },
       {
         "set": "dar",
@@ -7871,7 +8202,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "curious"
       },
       {
         "set": "dar",
@@ -7899,7 +8231,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -7925,7 +8258,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "dar",
@@ -7953,7 +8287,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -7964,7 +8299,8 @@
         "glow": "full",
         "far": "none"
       }
-    }
+    },
+    "witness": "sun"
   },
   "hafsasirin-almushaf": {
     "thumb": 0,
@@ -7991,7 +8327,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "dar",
@@ -8017,7 +8354,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "wonder"
       },
       {
         "set": "dar",
@@ -8043,7 +8381,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "curious"
       },
       {
         "set": "dar",
@@ -8070,7 +8409,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -8095,7 +8435,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "mihrab",
@@ -8121,7 +8462,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -8130,7 +8472,8 @@
         "pair": "warm",
         "far": "none"
       }
-    }
+    },
+    "witness": "mushaf"
   },
   "luqman-alsakhra": {
     "thumb": 3,
@@ -8160,7 +8503,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -8185,7 +8529,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -8210,7 +8555,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "wonder"
       },
       {
         "set": "land",
@@ -8233,7 +8579,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -8260,7 +8607,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -8287,7 +8635,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -8298,7 +8647,8 @@
         "pair": "on",
         "road": "on"
       }
-    }
+    },
+    "witness": "rock"
   },
   "mumin-alqasr": {
     "thumb": 1,
@@ -8326,7 +8676,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "qasr",
@@ -8351,7 +8702,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "qasr",
@@ -8375,7 +8727,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "qasr",
@@ -8400,7 +8753,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "qasr",
@@ -8425,7 +8779,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "qasr",
@@ -8451,7 +8806,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -8460,7 +8816,8 @@
         "court": "on",
         "light": "speak"
       }
-    }
+    },
+    "witness": "palace"
   },
   "dhulqarnayn-alradm": {
     "thumb": 5,
@@ -8487,7 +8844,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "sadd",
@@ -8513,7 +8871,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "sadd",
@@ -8538,7 +8897,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "sadd",
@@ -8564,7 +8924,8 @@
         "fx": [
           "wind"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "sadd",
@@ -8590,7 +8951,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "calm"
       },
       {
         "set": "sadd",
@@ -8618,7 +8980,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -8628,7 +8991,8 @@
         "flock": "on",
         "light": "gap"
       }
-    }
+    },
+    "witness": "radm"
   },
   "ghulam-aljabal": {
     "thumb": 4,
@@ -8656,7 +9020,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -8682,7 +9047,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "steps"
+        "sfx": "steps",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -8707,7 +9073,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "worried"
       },
       {
         "set": "mountain",
@@ -8733,7 +9100,8 @@
         "fx": [
           "dust"
         ],
-        "sfx": "wind"
+        "sfx": "wind",
+        "mood": "worried"
       },
       {
         "set": "land",
@@ -8760,7 +9128,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "star"
+        "sfx": "star",
+        "mood": "calm"
       },
       {
         "set": "land",
@@ -8786,7 +9155,8 @@
         "fx": [
           "motes"
         ],
-        "sfx": "glow"
+        "sfx": "glow",
+        "mood": "happy"
       }
     ],
     "choice": {
@@ -8796,6 +9166,7 @@
         "time": "dawn",
         "glow": "full"
       }
-    }
+    },
+    "witness": "peak"
   }
 }
