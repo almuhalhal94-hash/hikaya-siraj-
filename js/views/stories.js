@@ -104,7 +104,7 @@ function renderText(p, text, times, endMs = 0) {
       s.textContent = word + ' '; s.className = `w ${cls}`; s.setAttribute('aria-hidden', 'true');
       const at = times ? times[n] : n * WORD_MS;
       if (times && at == null) { s.classList.add('is-after'); s.style.animationDelay = `${endMs + 500 + (n - times.indexOf(null)) * 220}ms`; }
-      else if (times && cls === 'ayah') { s.classList.add('is-after'); s.style.animationDelay = `${at}ms`; } // الآية تظهر في الوقفة الصامتة
+      else if (times && cls === 'ayah') { s.classList.add('is-after'); s.style.animationDelay = `${Math.max(0, at - 60)}ms`; } // تضيء الكلمة مع تلاوة الشيخ (أو في الوقفة)
       else { s.style.animationDelay = `${Math.max(0, at - 60)}ms`; if (times) s.classList.add('is-voiced'); }
       n++;
       p.append(s);
@@ -216,7 +216,8 @@ function player(el, { ui, lines, go }, story, dir, voice) {
       if (clip.words.includes(null)) { sfx.glow(); witness?.setMood('wonder'); }
     });
     if (!alive || i !== n) return;
-    if (voiced) clip.ayah?.forEach(ms => cues.push(setTimeout(() => { sfx.glow(); witness?.setMood('wonder'); }, ms)));
+    // مع تلاوة العفاسي (clip.recite) لا يُضاف مؤثر فوق القرآن
+    if (voiced) clip.ayah?.forEach(ms => cues.push(setTimeout(() => { if (!clip.recite) sfx.glow(); witness?.setMood('wonder'); }, ms)));
     if (parent) { renderText(text, story.scenes[n].text); revealAll(); }
     else reveal(story.scenes[n].text, voiced ? clip : null);
     busy = false;
