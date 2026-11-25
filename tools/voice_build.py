@@ -43,6 +43,8 @@ def waqf(text):
     """الوقف بالسكون على آخر كلمة قبل علامات الوقف (. ! ؟ : …) وآخر النص، وتنوين الفتح يُقرأ ألفًا."""
     def fix(m):
         w, tail = m.group(1), m.group(2)
+        if re.search('ة[ًٌٍَُِ]$', w):
+            return w[:-1] + 'ْ' + tail
         if w.endswith('ً') or w.endswith('ًّ'):
             return w.rstrip('ًّ') + ('ّ' if 'ّ' in w[-2:] else '') + 'َ' + tail
         core = w.rstrip('ٌٍَُِّ')
@@ -57,6 +59,7 @@ def synth_text(script, keys):
 
 
 WARN = []
+HEARD = {}
 
 
 def near(a, b):
@@ -81,6 +84,8 @@ def match(display, spoken, label):
             if not need[0]:
                 row.append(None); continue
             k = next((x for x in range(j, min(j + 4, len(spoken))) if spoken[x] == need[0]), None)
+            if k is None and need[0] in HEARD:  # خطأ تفريغ تحقّقتُ منه بقياس الصوت (tools/voice/<id>.heard.json)
+                k = next((x for x in range(j, min(j + 2, len(spoken))) if spoken[x] == HEARD[need[0]]), None)
             if k is None:  # قرب في الكتابة (حرف زائد أو ناقص): يُقبل ويُسجَّل للسماع
                 k = next((x for x in range(j, min(j + 2, len(spoken))) if near(spoken[x], need[0])), None)
                 if k is not None:
@@ -166,6 +171,9 @@ def build(sid, raw, desc):
     keep = [i for i, s in enumerate(spoken) if s]
     words = [words[i] for i in keep]; spoken = [spoken[i] for i in keep]
     display = clips_of(story)
+    hp = ROOT / f'tools/voice/{sid}.heard.json'
+    if hp.exists():
+        HEARD.update(json.load(open(hp)))
     m = match(display, spoken, sid)
     x = read_wav(raw)
 
