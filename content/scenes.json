@@ -7958,5 +7958,171 @@
         "far": "none"
       }
     }
+  },
+  "hafsasirin-almushaf": {
+    "thumb": 0,
+    "scenes": [
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "book": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1000
+          ],
+          "to": [
+            600,
+            640,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "peep": "on",
+          "light": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1000
+          ],
+          "to": [
+            540,
+            600,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "vessel": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            540,
+            640,
+            720
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "warm",
+          "lamp": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            700,
+            620,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "flock": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            600,
+            500,
+            1000
+          ],
+          "to": [
+            700,
+            600,
+            720
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "light": "on",
+          "book": "on",
+          "glow": "full",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            600,
+            680,
+            700
+          ],
+          "to": [
+            600,
+            480,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "on",
+        "pair": "warm",
+        "far": "none"
+      }
+    }
   }
 }
