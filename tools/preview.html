@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../css/main.css"><link rel="stylesheet" href="../css/film.css">
+<style>html,body{margin:0;background:#222;overflow:auto}body::after{display:none}#g{display:grid;grid-template-columns:repeat(3,390px);gap:6px;direction:ltr}
+#g>div{width:390px;height:580px}.fast *{transition-duration:.01s!important;transition-delay:0s!important}</style></head>
+<body><div id="g" class="fast"></div>
+<script type="module">
+import { Stage } from '../js/film/engine.js';
+const q=new URLSearchParams(location.search), id=q.get('story');
+const sc=await (await fetch('../content/scenes.json?'+Date.now())).json();
+const list=q.get('spec')?JSON.parse(q.get('spec')):sc[id].scenes;
+const pre=q.get('choice');
+for(const [i,spec] of list.entries()){const d=document.createElement('div');document.getElementById('g').append(d);const s=new Stage(d);s.still=true;await s.show(spec);
+ if(pre!==null && +pre===i) s.setState(sc[id].choice.state||{});}
+document.title='ready';
+</script></body></html>

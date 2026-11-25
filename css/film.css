@@ -1,0 +1,693 @@
+/* حكايا السِّراج — الحكايات: المسرح، حالات الديكورات، ومشغّل الفيلم */
+
+@font-face { font-family: 'Amiri Quran'; font-weight: 400; font-display: swap; src: url(../assets/fonts/amiri-quran-arabic-400-normal.woff2) format('woff2'); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ——— المسرح ——— */
+.stage { position: relative; overflow: hidden; background: #040918; }
+.stage__svg, .stage__fx, .stage__tint, .stage__vignette, .stage__flash, .stage__cut { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+.stage__vignette { background: radial-gradient(ellipse at 50% 45%, transparent 52%, rgba(2, 4, 12, .72) 100%); }
+.stage__tint { opacity: 0; transition: opacity 2.6s ease; }
+.stage__cut { background: #03060f; opacity: 0; transition: opacity .4s ease; }
+.stage__cut.is-on { opacity: 1; }
+.stage__svg.is-settle { animation: st-settle 2.2s var(--ease-out); }
+@keyframes st-settle { from { transform: scale(1.07); } }
+.stage__flash { opacity: 0; background: radial-gradient(circle at 50% 55%, #fff 0, #ffe9a8 35%, rgba(255, 215, 122, 0) 78%); }
+.stage__flash.is-on { animation: st-flash 1.6s ease-out; }
+@keyframes st-flash { 0% { opacity: 0; } 12% { opacity: 1; } 100% { opacity: 0; } }
+.st, .mt-caveglow, .cv-glow, .cv-shadows, .jd, .jd-halo, .jd-embrace, .jd-waves circle { transform-box: fill-box; transform-origin: center; }
+
+.stars { transition: opacity 6s ease; }
+.st { animation: st-tw 3.4s ease-in-out infinite; }
+.st--1 { animation-delay: -.9s; } .st--2 { animation-delay: -1.7s; animation-duration: 4.2s; } .st--3 { animation-delay: -2.6s; animation-duration: 2.7s; }
+@keyframes st-tw { 50% { opacity: .2; } }
+@keyframes st-breathe { 50% { transform: scale(1.1); } }
+
+/* ——— جبل ثور ——— */
+.mt-dawn { opacity: 0; transition: opacity 7s ease; }
+.mt-moon { transition: opacity 5s ease; }
+.mt-sun { opacity: 0; transform: translateY(240px); transition: transform 13s cubic-bezier(.2, .6, .3, 1), opacity 5s ease; }
+.mt-far { fill: #0c1a40; transition: fill 7s ease; }
+.mt-main { fill: #0f1c46; transition: fill 7s ease; }
+.mt-lit { fill: #1a2f66; opacity: .55; transition: fill 7s ease; }
+.mt-shade { fill: #091232; opacity: .7; transition: fill 7s ease; }
+.mt-path { stroke: #4466b4; opacity: .6; transition: stroke 7s ease; }
+.mt-front { fill: #03060f; transition: fill 7s ease; }
+.mt-caveglow { opacity: .28; transition: opacity 3s ease; animation: st-breathe 3.6s ease-in-out infinite; }
+.mt-cavelight { opacity: .3; transition: opacity 3s ease; }
+.mt-trail { opacity: 0; transition: opacity 1.6s ease; }
+[data-cave="warm"] .mt-caveglow { opacity: .7; } [data-cave="warm"] .mt-cavelight { opacity: .8; }
+[data-cave="bright"] .mt-caveglow, [data-cave="bright"] .mt-cavelight { opacity: 1; }
+[data-trail="on"] .mt-trail { opacity: 1; }
+[data-time="dawn"] .mt-dawn { opacity: 1; }
+[data-time="dawn"] .stars { opacity: .1; }
+[data-time="dawn"] .mt-moon { opacity: .12; }
+[data-time="dawn"] .mt-sun { opacity: 1; transform: none; }
+[data-time="dawn"] .mt-far { fill: #5b4480; }
+[data-time="dawn"] .mt-main { fill: #2e2350; }
+[data-time="dawn"] .mt-lit { fill: #f0a070; }
+[data-time="dawn"] .mt-shade { fill: #1e1638; }
+[data-time="dawn"] .mt-path { stroke: #ffe0a8; }
+[data-time="dawn"] .mt-front { fill: #140e26; }
+
+/* ——— داخل الغار ——— */
+.cv-feet { opacity: 0; transform: translateX(780px); transition: transform 3.4s cubic-bezier(.2, .7, .3, 1), opacity 1.4s ease; }
+[data-feet="present"] .cv-feet { opacity: 1; transform: none; }
+[data-feet="leaving"] .cv-feet { opacity: 0; transform: translateX(-640px); transition: transform 8s ease-in, opacity 6.5s ease-in; }
+.cv-step { animation: cv-step 2.8s ease-in-out infinite; }
+.cv-feet > g:nth-child(2) .cv-step { animation-delay: -.9s; animation-duration: 3.3s; }
+.cv-feet > g:nth-child(3) .cv-step { animation-delay: -1.8s; }
+@keyframes cv-step { 0%, 100% { transform: none; } 25% { transform: translate(9px, -6px); } 50% { transform: translate(16px, 0); } 75% { transform: translate(6px, -5px); } }
+.cv-shadows { opacity: 0; transform-origin: 50% 0; transition: opacity 2.6s ease; animation: cv-sway 5.5s ease-in-out infinite; }
+[data-feet="present"] .cv-shadows { opacity: .62; }
+@keyframes cv-sway { 0%, 100% { transform: skewX(-3deg); } 50% { transform: skewX(4deg); } }
+.cv-rim { stroke: #4a70c4; opacity: .38; transition: stroke 3s ease; }
+.cv-rim--soft { opacity: .13; }
+.cv-facet { fill: #151d38; opacity: .65; transition: fill 3s ease; }
+.cv-glow { opacity: .07; transition: opacity 3s ease; animation: st-breathe 4.5s ease-in-out infinite; }
+[data-light="warm"] .cv-glow { opacity: .45; }
+[data-light="full"] .cv-glow { opacity: 1; }
+[data-light="full"] .cv-rim { stroke: #ffd77a; }
+[data-light="full"] .cv-facet { fill: #3d2e14; }
+.stage[data-set="cave"] .stage__tint { background: radial-gradient(circle at 50% 72%, rgba(255, 215, 122, .42), rgba(255, 176, 90, .12) 72%); }
+.stage[data-set="cave"][data-light="full"] .stage__tint { opacity: 1; }
+
+/* ——— المسجد والجذع ——— */
+.ms-wallglow { opacity: .22; transition: opacity 3s ease; }
+.ms-rays { transition: opacity 3s ease; }
+.ms-rays path { animation: ms-ray 6s ease-in-out infinite; }
+.ms-rays path:nth-child(2) { animation-delay: -2s; } .ms-rays path:nth-child(3) { animation-delay: -4s; }
+@keyframes ms-ray { 0%, 100% { opacity: .4; } 50% { opacity: .85; } }
+.ms-pools { opacity: .42; transition: opacity 3s ease; }
+.ms-minbar { opacity: 0; transform: translateY(-30px); transition: opacity 1.6s ease .7s, transform 1.6s cubic-bezier(.3, 1.4, .5, 1) .7s; }
+[data-minbar="on"] .ms-minbar { opacity: 1; transform: none; }
+.jd { transform-origin: 50% 100%; }
+.jd-halo { opacity: 0; transition: opacity 2.6s ease; }
+.jd-embrace { opacity: 0; transition: opacity 2.6s ease; }
+.jd-waves circle { opacity: 0; }
+[data-jidh="normal"] .jd-halo { opacity: .32; }
+[data-jidh="happy"] .jd-halo { opacity: .85; animation: st-breathe 3s ease-in-out infinite; }
+[data-jidh="happy"] .jd { animation: jd-happy 3s ease-in-out infinite; }
+@keyframes jd-happy { 50% { transform: scale(1.012, 1.02); } }
+[data-jidh="cry"] .jd { animation: jd-cry .46s ease-in-out infinite; }
+@keyframes jd-cry { 0%, 100% { transform: rotate(-1.4deg); } 50% { transform: rotate(1.4deg); } }
+[data-jidh="cry"] .jd-waves circle { animation: jd-wave 2.4s ease-out infinite; }
+.jd-waves circle:nth-child(2) { animation-delay: .8s !important; } .jd-waves circle:nth-child(3) { animation-delay: 1.6s !important; }
+@keyframes jd-wave { 0% { transform: scale(.35); opacity: 0; } 15% { opacity: .8; } 100% { transform: scale(2); opacity: 0; } }
+[data-jidh="embrace"] .jd { animation: jd-settle 7s ease-out forwards; }
+@keyframes jd-settle { 0% { transform: rotate(-1.4deg); } 8% { transform: rotate(1.2deg); } 17% { transform: rotate(-1deg); } 27% { transform: rotate(.8deg); } 39% { transform: rotate(-.6deg); } 53% { transform: rotate(.4deg); } 69% { transform: rotate(-.2deg); } 85% { transform: rotate(.1deg); } 100% { transform: none; } }
+[data-jidh="embrace"] .jd-halo { opacity: .95; }
+[data-jidh="embrace"] .jd-embrace { opacity: 1; animation: st-breathe 3.6s ease-in-out infinite; }
+[data-jidh="calm"] .jd-halo { opacity: .75; animation: st-breathe 4.5s ease-in-out infinite; }
+[data-jidh="calm"] .ms-wallglow, [data-jidh="embrace"] .ms-wallglow { opacity: .7; }
+[data-jidh="lonely"] .ms-rays, [data-jidh="cry"] .ms-rays { opacity: .22; }
+[data-jidh="lonely"] .ms-pools, [data-jidh="cry"] .ms-pools { opacity: .12; }
+.stage[data-set="mosque"][data-jidh="lonely"] .stage__tint { opacity: 1; background: rgba(16, 34, 84, .36); }
+.stage[data-set="mosque"][data-jidh="cry"] .stage__tint { opacity: 1; background: rgba(12, 26, 72, .48); }
+.stage[data-set="mosque"][data-jidh="embrace"] .stage__tint, .stage[data-set="mosque"][data-jidh="calm"] .stage__tint { opacity: 1; background: radial-gradient(circle at 55% 45%, rgba(255, 232, 170, .3), rgba(255, 215, 122, .06) 75%); }
+
+/* ——— صفحات الأقسام العامة ——— */
+.page { max-width: 900px; margin-inline: auto; padding: 6px 16px 0; }
+.page__head { display: grid; justify-items: center; text-align: center; gap: 2px; margin-bottom: 18px; position: relative; }
+.page__head h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); font-weight: 800; color: var(--gold); text-shadow: 0 0 22px rgba(255, 215, 122, .4); line-height: 1.3; }
+.page__head p { color: var(--teal-soft); font-size: 1.1rem; }
+.backlink { justify-self: start; display: inline-flex; align-items: center; gap: 4px; min-height: 48px; padding: 0 16px 0 18px; border-radius: 24px; font-weight: 800; color: var(--gold); background: linear-gradient(180deg, rgba(60, 96, 160, .38), rgba(20, 40, 84, .46)); border: 1px solid rgba(255, 233, 168, .34); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .16), 0 6px 18px rgba(0, 0, 0, .28); -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5); }
+.backlink svg { width: 20px; height: 20px; }
+.backlink:active { transform: scale(.94); }
+
+.cards { display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .cards { grid-template-columns: 1fr 1fr; } }
+.card { position: relative; display: block; border-radius: 26px; overflow: hidden; border: 2px solid var(--gold-deep); box-shadow: 0 12px 30px rgba(0, 0, 0, .45), 0 0 26px rgba(255, 215, 122, .15); animation: door-in .9s var(--ease-out) backwards; animation-delay: calc(var(--i) * 130ms + 150ms); transition: transform .3s var(--ease-spring), box-shadow .3s; }
+.card .stage--thumb { aspect-ratio: 16 / 11; }
+.card__body { position: absolute; inset: auto 0 0 0; padding: 44px 18px 14px; background: linear-gradient(180deg, transparent, rgba(3, 6, 15, .92) 62%); display: grid; }
+.card__body b { font-size: clamp(1.4rem, 5.6vw, 1.7rem); font-weight: 800; color: var(--gold); line-height: 1.3; }
+.card__body small { font-size: 1rem; color: #cfe0ff; }
+.card__tag { position: absolute; z-index: 2; top: 12px; inset-inline-start: 12px; padding: 3px 14px; border-radius: 16px; font-weight: 800; font-size: .95rem; color: #06343a; background: var(--teal); box-shadow: 0 4px 12px rgba(0, 0, 0, .35); }
+.card__tag.is-done { background: var(--gold); color: #3a2a05; }
+.card:active { transform: scale(.97); }
+@media (hover: hover) { .card:hover { transform: translateY(-5px); box-shadow: 0 18px 36px rgba(0, 0, 0, .5), 0 0 40px rgba(255, 215, 122, .35); } }
+
+/* ——— مشغّل الفيلم ——— */
+body.in-film { overflow: hidden; }
+body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; }
+.film { position: fixed; inset: 0; z-index: 20; display: grid; grid-template-rows: minmax(0, 1fr) auto; background: #03060f; }
+.film__stage { min-height: 0; }
+.film__top { position: absolute; z-index: 3; inset: 0 0 auto 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: calc(10px + env(safe-area-inset-top, 0px)) 12px 0; }
+.film__top .iconbtn { background: rgba(5, 11, 28, .42); }
+.film__dots { display: flex; gap: 7px; padding: 8px 12px; border-radius: 16px; background: rgba(5, 11, 28, .42); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255, 233, 168, .18); }
+.film__dots i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, .25); transition: background .4s, transform .4s var(--ease-spring), box-shadow .4s; }
+.film__dots i.is-on { background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+.film__dots i.is-now { transform: scale(1.45); }
+.film.has-overlay .film__panel { opacity: .1; }
+.film__panel { transition: opacity .4s ease; position: relative; z-index: 2; margin-top: -70px; padding: 70px 18px calc(14px + var(--safe-b)); display: grid; justify-items: center; gap: 12px; background: linear-gradient(180deg, rgba(3, 6, 15, 0), #03060f 70px); }
+.film__text { max-width: 44ch; min-height: calc(1.85em * 5); text-align: center; font-size: clamp(1.14rem, 4.7vw, 1.42rem); line-height: 1.85; color: var(--cream); text-shadow: 0 2px 10px #000; cursor: pointer; }
+.film__text .w { display: inline-block; white-space: pre; opacity: 0; animation: word-in .5s ease forwards; }
+.film__text.is-all .w { animation: none; opacity: 1; }
+.film__text .q { color: var(--gold); font-weight: 800; }
+.film__text .ayah { font-family: 'Amiri Quran', 'Traditional Arabic', 'Geeza Pro', 'Noto Naskh Arabic', serif; color: var(--teal-soft); font-size: 1.12em; line-height: 1.5; }
+.film__text.is-echo { padding-top: .8em; font-size: clamp(1.7rem, 7.5vw, 2.4rem); font-weight: 800; color: var(--gold); text-shadow: 0 0 26px rgba(255, 215, 122, .7); animation: bubble-pop .6s var(--ease-spring); }
+.film__nav { display: flex; align-items: center; gap: 14px; }
+.film__next { display: inline-flex; align-items: center; gap: 6px; padding: 0 22px 0 16px; }
+.film__next svg { width: 24px; height: 24px; }
+.film__next.is-ready { animation: nudge 1.5s ease-in-out infinite; }
+@keyframes nudge { 50% { transform: translateX(-6px); box-shadow: 0 5px 0 #a47b2a, 0 0 30px rgba(255, 215, 122, .6); } }
+.film__prev:disabled { opacity: .3; pointer-events: none; }
+@media (min-width: 760px) and (min-aspect-ratio: 1/1) {
+  .film__text { min-height: calc(1.85em * 3); max-width: 62ch; }
+}
+@media (max-height: 600px) { .film__text { min-height: calc(1.85em * 3); font-size: 1.05rem; } }
+
+/* بطاقات فوق الفيلم: العنوان، الاختيار، النهاية */
+.film__overlay { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 20px 16px; overflow-y: auto; background: rgba(3, 6, 15, .66); animation: fade-in .5s ease; }
+.film__overlay[data-kind="choice"] { background: rgba(3, 6, 15, .5); }
+.film__overlay[data-kind="end"] { background: rgba(3, 6, 15, .82); align-items: start; }
+@keyframes fade-in { from { opacity: 0; } }
+.film__overlay[data-kind="title"] { background: radial-gradient(ellipse at 50% 45%, rgba(3, 6, 15, .35), rgba(3, 6, 15, .82)); }
+.film__overlay[data-kind="title"]::before, .film__overlay[data-kind="title"]::after { content: ''; position: absolute; inset-inline: 0; height: 11dvh; background: #000; animation: bar-in 1.1s var(--ease-out) backwards; }
+.film__overlay[data-kind="title"]::before { top: 0; --from: -100%; } .film__overlay[data-kind="title"]::after { bottom: 0; --from: 100%; }
+@keyframes bar-in { from { transform: translateY(var(--from)); } }
+.fcard--title { animation: none; }
+.fcard--title > * { animation: door-in 1.1s var(--ease-out) backwards; }
+.fcard--title > small { animation-delay: .5s; letter-spacing: .02em; } .fcard--title > h1 { animation-delay: .7s; } .fcard--title > .btn { animation-delay: 1.15s; }
+.fcard--title h1::after { content: ''; display: block; width: 72px; height: 2px; margin: 14px auto 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.fcard { width: min(100%, 460px); display: grid; justify-items: center; gap: 14px; text-align: center; animation: bubble-pop .6s var(--ease-spring) .1s backwards; }
+.fcard small { font-weight: 800; color: var(--teal); font-size: 1.05rem; letter-spacing: 0; }
+.fcard h1 { font-size: clamp(2.2rem, 10vw, 3.4rem); font-weight: 800; color: var(--gold); line-height: 1.25; text-shadow: 0 0 34px rgba(255, 215, 122, .6); margin-bottom: 10px; }
+.fcard h2 { font-size: clamp(1.35rem, 5.6vw, 1.7rem); font-weight: 800; color: var(--cream); line-height: 1.5; text-wrap: balance; }
+.fcard__opts { display: grid; gap: 12px; width: 100%; }
+.opt { min-height: 64px; padding: 10px 18px; border-radius: 22px; font-weight: 800; font-size: 1.25rem; color: #2b2208; background: linear-gradient(180deg, #fffaf0, var(--cream)); border: 3px solid var(--gold); box-shadow: 0 5px 0 #a47b2a; transition: transform .15s ease, box-shadow .15s ease, opacity .3s; }
+.opt:active { transform: translateY(4px); box-shadow: 0 1px 0 #a47b2a; }
+.opt.is-wrong { animation: shake .4s ease; opacity: .45; }
+.opt.is-right { background: linear-gradient(180deg, #ffe9a8, var(--gold)); box-shadow: 0 5px 0 #a47b2a, 0 0 40px rgba(255, 215, 122, .8); transform: scale(1.04); }
+.fcard__hint { min-height: 1.7em; font-weight: 800; color: var(--teal-soft); font-size: 1.1rem; }
+.fcard--end { padding-block: 10px 20px; gap: 12px; }
+.fcard--end .siraj { width: 76px; }
+.fcard--end .bubble { font-size: 1.05rem; padding: 8px 16px; }
+.fcard__stars { display: flex; gap: 6px; }
+.fcard__stars svg { width: 54px; animation: star-pop .6s var(--ease-spring) backwards; }
+.fcard__stars svg:nth-child(1) { animation-delay: .35s; } .fcard__stars svg:nth-child(2) { animation-delay: .6s; width: 68px; margin-top: -8px; } .fcard__stars svg:nth-child(3) { animation-delay: .85s; }
+@keyframes star-pop { from { transform: scale(0) rotate(-140deg); opacity: 0; } }
+.fcard__gain { font-weight: 800; color: var(--gold); font-size: 1.1rem; }
+.fcard__gain:empty { display: none; }
+.lesson { width: 100%; padding: 14px 18px 16px; border-radius: 22px; background: linear-gradient(180deg, #1e3c6b, #132652); border: 2px solid var(--gold); box-shadow: 0 0 30px rgba(255, 215, 122, .2); }
+.lesson p { font-size: clamp(1.25rem, 5.2vw, 1.5rem); font-weight: 800; color: var(--cream); line-height: 1.6; text-wrap: balance; }
+.sources { width: 100%; text-align: start; font-size: .92rem; color: #b9c8e6; background: rgba(10, 22, 48, .7); border-radius: 16px; padding: 8px 16px; }
+.sources summary { font-weight: 800; color: var(--teal-soft); cursor: pointer; min-height: 32px; display: flex; align-items: center; }
+.sources ul { padding-inline-start: 18px; display: grid; gap: 4px; padding-bottom: 6px; line-height: 1.7; }
+.fcard__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 4px; }
+.btn--ghost { background: rgba(30, 60, 107, .7); color: var(--gold); border: 2px solid var(--gold-deep); box-shadow: 0 5px 0 #0a1630; }
+.btn--ghost:active { box-shadow: 0 1px 0 #0a1630; }
+
+
+/* ——— داخل الغار: إضافات كهف الفتية (النهار، ميل الشمس، الكلب بالوصيد) ——— */
+.cv-day { opacity: 0; transition: opacity 5s ease; }
+[data-sky="day"] .cv-day { opacity: 1; }
+.stage[data-set="cave"][data-sky="day"] .stars { opacity: .05; }
+.cv-sun { opacity: 0; transition: opacity 5s ease; }
+[data-sun="rise"] .cv-sun--rise, [data-sun="set"] .cv-sun--set { opacity: .55; }
+.cv-dog { opacity: 0; transition: opacity 2.4s ease; }
+[data-dog="on"] .cv-dog { opacity: 1; }
+
+/* ——— البحر والسفينة ——— */
+.se-ship, .se-rock, .se-light, .se-whale, .se-yaqtin, .se-sun, .dp-whale, .dp-bob, .dp-glow, .dp-weed path { transform-box: fill-box; transform-origin: center; }
+.se-dawn, .se-storm, .se-clouds { opacity: 0; transition: opacity 6s ease; }
+.se-moon { transition: opacity 5s ease; }
+.se-sun { opacity: 0; transform: translateY(200px); transition: transform 13s cubic-bezier(.2, .6, .3, 1), opacity 5s ease; }
+[data-set="sea"][data-time="dawn"] .se-dawn { opacity: 1; }
+[data-set="sea"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="sea"][data-time="dawn"] .se-moon { opacity: .1; }
+[data-set="sea"][data-time="dawn"] .se-sun { opacity: 1; transform: none; }
+[data-sky="storm"] .se-storm { opacity: .82; } [data-sky="storm"] .se-clouds { opacity: 1; }
+[data-set="sea"][data-sky="storm"] .stars, [data-sky="storm"] .se-moon { opacity: 0; }
+.se-clouds ellipse { animation: se-drift 16s ease-in-out infinite alternate; } .se-clouds ellipse:nth-child(even) { animation-duration: 22s; animation-direction: alternate-reverse; }
+@keyframes se-drift { from { transform: translateX(-60px); } to { transform: translateX(60px); } }
+.se-wave { animation: se-wave 9s linear infinite; transition: transform 4s ease; }
+.se-wave--far { animation-duration: 16s; } .se-wave--near { animation-duration: 7s; animation-direction: reverse; } .se-wave--front { animation-duration: 11s; }
+@keyframes se-wave { to { translate: var(--len) 0; } }
+.se-water { transition: opacity 3s ease, transform 4s ease; transform-origin: 600px 900px; }
+[data-waves="high"] .se-water { transform: translateY(-14px); }
+[data-waves="high"] .se-wave { animation-duration: 3.4s; }
+.se-rock { transform-origin: 50% 92%; animation: se-rock 5s ease-in-out infinite; }
+[data-waves="high"] .se-rock { animation: se-rock-high 2.2s ease-in-out infinite; }
+@keyframes se-rock { 0%, 100% { transform: rotate(-2deg) translateY(0); } 50% { transform: rotate(2.4deg) translateY(-6px); } }
+@keyframes se-rock-high { 0%, 100% { transform: rotate(-8deg) translateY(8px); } 50% { transform: rotate(9deg) translateY(-22px); } }
+.se-ship { transition: transform 9s ease-in, opacity 6s ease; }
+[data-ship="gone"] .se-ship { transform: translateX(900px) scale(.6); opacity: 0; }
+[data-ship="none"] .se-ship { opacity: 0; transition: none; }
+.se-sail { transition: opacity 2s ease; } [data-sail="off"] .se-sail { opacity: 0; }
+.se-hills, .se-ground, .se-judi, .se-shore, .se-whale, .se-rain { opacity: 0; transition: opacity 3s ease; }
+[data-land="dry"] .se-hills, [data-land="dry"] .se-ground { opacity: 1; } [data-land="dry"] .se-ground--lit { opacity: .5; }
+[data-land="dry"] .se-water { opacity: 0; }
+[data-land="dry"] .se-rock { animation: none; }
+[data-land="judi"] .se-judi { opacity: 1; } [data-land="judi"] .se-rock { animation: none; transform: rotate(-2deg); }
+[data-shore="on"] .se-shore { opacity: 1; }
+.se-wave--front { transition: opacity 3s ease; } [data-shore="on"] .se-wave--front { opacity: 0; }
+.se-yaqtin { transform-origin: 30% 100%; transform: scale(.2); opacity: 0; transition: transform 5s var(--ease-out) 1.5s, opacity 2s ease 1.5s; }
+[data-shore="on"] .se-yaqtin { transform: none; opacity: 1; }
+.se-whale { transform: translateY(70px); transition: transform 3s var(--ease-out), opacity 2s ease; }
+[data-whale="on"] .se-whale { opacity: 1; transform: none; animation: se-rock 4s ease-in-out infinite; }
+.se-light { opacity: 0; transition: transform 5s ease-in-out, opacity 3s ease; animation: st-breathe 3.6s ease-in-out infinite; }
+[data-light="ship"] .se-light { opacity: 1; }
+[data-light="water"] .se-light { opacity: .75; transform: translate(300px, 120px) scale(.55); animation: none; }
+[data-light="shore"] .se-light { opacity: 1; transform: translate(-300px, 200px) scale(1.5); animation: none; }
+[data-rain="on"] .se-rain { opacity: .6; animation: se-rain .5s linear infinite; }
+@keyframes se-rain { from { transform: translate(40px, -130px); } to { transform: translate(0, 0); } }
+.stage[data-set="sea"] .stage__tint { background: linear-gradient(180deg, rgba(255, 176, 90, .0) 40%, rgba(255, 190, 110, .3)); }
+.stage[data-set="sea"][data-time="dawn"] .stage__tint { opacity: 1; }
+
+/* ——— الأعماق والحوت ——— */
+.dp-rays { opacity: .5; transition: opacity 4s ease; animation: ms-ray 7s ease-in-out infinite; }
+.dp-fish { animation: dp-swim 26s linear infinite; }
+@keyframes dp-swim { from { transform: translateX(500px); } to { transform: translateX(-900px); } }
+.dp-bob { animation: dp-bob 6s ease-in-out infinite; }
+@keyframes dp-bob { 0%, 100% { transform: translateY(0) rotate(-1.5deg); } 50% { transform: translateY(-22px) rotate(1.5deg); } }
+.dp-whale { transition: transform 11s ease-in-out; }
+[data-whale="far"] .dp-whale { transform: translate(240px, 60px) scale(.62); }
+[data-whale="rise"] .dp-whale { transform: translate(-80px, -150px) rotate(-10deg); }
+.dp-glow { opacity: 0; transition: opacity 3s ease; animation: st-breathe 3.4s ease-in-out infinite; }
+[data-glow="faint"] .dp-glow { opacity: .3; } [data-glow="full"] .dp-glow { opacity: 1; }
+.dp-dark { opacity: 0; transition: opacity 4s ease; }
+[data-dark="on"] .dp-dark { opacity: .5; } [data-dark="on"] .dp-rays { opacity: .06; }
+[data-glow="full"] .dp-dark { opacity: .12; }
+.dp-weed path { transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; } .dp-weed path:nth-child(even) { animation-delay: -3s; animation-duration: 9s; }
+.stage[data-set="deep"] .stage__tint { background: radial-gradient(circle at 50% 52%, rgba(255, 215, 122, .34), transparent 62%); }
+.stage[data-set="deep"][data-glow="full"] .stage__tint { opacity: 1; }
+
+/* ——— مكتبة الحكايات: الرفوف وطريق الدروس ——— */
+.lib { max-width: 640px; }
+.lib__shelves { display: flex; gap: 8px; overflow-x: auto; padding: 4px 16px 12px; margin-inline: -16px; scrollbar-width: none; scroll-snap-type: x proximity; animation: door-in .8s var(--ease-out) .1s backwards; }
+.lib__shelves::-webkit-scrollbar { display: none; }
+.lib__shelf { flex: none; scroll-snap-align: center; display: grid; justify-items: center; min-height: 58px; padding: 6px 16px; border-radius: 20px; line-height: 1.3; color: var(--gold); background: linear-gradient(180deg, rgba(60, 96, 160, .38), rgba(20, 40, 84, .46)); border: 1px solid rgba(255, 233, 168, .34); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .16), 0 6px 18px rgba(0, 0, 0, .28); -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5); transition: transform .2s var(--ease-spring), background .3s, color .3s; }
+.lib__shelf b { font-weight: 800; font-size: 1.05rem; white-space: nowrap; }
+.lib__shelf small { font-size: .8rem; color: var(--teal-soft); }
+.lib__shelf[aria-pressed="true"] { color: #3a2a05; background: linear-gradient(180deg, #ffe9a8, var(--gold) 55%, #e9b94f); border-color: #fff4cf; box-shadow: 0 0 24px rgba(255, 215, 122, .5); }
+.lib__shelf[aria-pressed="true"] small { color: #6b4d0c; }
+.lib__shelf:active { transform: scale(.94); }
+.lib__head { text-align: center; margin: 6px 0 16px; }
+.lib__head h2 { font-size: clamp(1.4rem, 6vw, 1.8rem); font-weight: 800; color: var(--gold); }
+.lib__head p { color: var(--teal-soft); }
+.lib__path { list-style: none; padding: 0; display: grid; gap: 14px; position: relative; }
+.lib__path::before { content: ''; position: absolute; inset-block: 20px; inset-inline-start: 20px; width: 3px; border-radius: 2px; background: linear-gradient(180deg, var(--gold), rgba(255, 215, 122, .12)); }
+.lib__step { position: relative; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 12px; animation: door-in .8s var(--ease-out) backwards; animation-delay: calc(var(--i) * 70ms + 150ms); }
+.lib__num { position: relative; z-index: 1; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 1.1rem; color: #8fa1c4; background: #0f2148; border: 2px solid rgba(143, 161, 196, .45); }
+.lib__step:not(.is-soon) .lib__num { color: #3a2a05; background: radial-gradient(circle at 50% 35%, #fff4cf, var(--gold) 70%); border-color: #fff4cf; box-shadow: 0 0 16px rgba(255, 215, 122, .55); }
+.lib__step.is-done .lib__num { background: radial-gradient(circle at 50% 35%, #d7fff8, var(--teal) 70%); box-shadow: 0 0 16px rgba(95, 214, 200, .6); }
+.lib__step.is-next .lib__num { animation: pulse 2.2s ease-in-out infinite; }
+.lib__step .card { animation: none; }
+.lib__step .card .stage--thumb { aspect-ratio: 16 / 8.5; }
+.lib__step .card__body small { color: var(--teal-soft); font-weight: 800; }
+.lib__soon { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 52px; padding: 8px 16px; border-radius: 18px; background: rgba(10, 22, 48, .55); border: 1.5px dashed rgba(143, 161, 196, .4); color: #b6c4e2; font-weight: 800; }
+.lib__soon small { flex: none; padding: 2px 12px; border-radius: 12px; font-size: .82rem; color: #8fa1c4; background: rgba(143, 161, 196, .16); }
+
+
+/* ——— الجنة والأرض (آدم عليه السلام) ——— */
+.gd-light, .gd-mark, .gd-glow, .gd-sway, .gd-sun, .gd-sprouts path { transform-box: fill-box; transform-origin: center; }
+.gd-eden, .gd-earth, .gd-dawn { transition: opacity 5s ease; }
+.gd-earth, .gd-dawn { opacity: 0; }
+.stage[data-set="garden"] .stars { opacity: .12; }
+[data-place="earth"] .gd-eden { opacity: 0; } [data-place="earth"] .gd-earth { opacity: 1; }
+.stage[data-set="garden"][data-place="earth"] .stars { opacity: 1; }
+[data-place="earth"][data-time="dawn"] .gd-dawn { opacity: 1; }
+.stage[data-set="garden"][data-place="earth"][data-time="dawn"] .stars { opacity: .08; }
+.gd-ridge { fill: #1a1c3c; transition: fill 6s ease, opacity 5s ease; } [data-place="earth"][data-time="dawn"] .gd-ridge { fill: #4a3460; }
+.gd-sun { opacity: .5; transition: opacity 5s ease, transform 12s cubic-bezier(.2, .6, .3, 1); animation: st-breathe 7s ease-in-out infinite; }
+[data-place="earth"] .gd-sun { opacity: 0; transform: translateY(160px); } [data-place="earth"][data-time="dawn"] .gd-sun { opacity: .9; transform: none; }
+.gd-sway { transform-origin: 50% 100%; animation: sway 8s ease-in-out infinite; } .gd-sway--slow { animation-duration: 11s; }
+.gd-ripple { stroke-dasharray: 60 40; animation: gd-flow 5s linear infinite; }
+@keyframes gd-flow { to { stroke-dashoffset: -200; } }
+.gd-mark { opacity: 0; transition: opacity 3s ease; animation: st-breathe 3.2s ease-in-out infinite; }
+[data-tree="mark"] .gd-mark { opacity: .8; }
+.gd-fruit { transition: opacity 3s ease; }
+.gd-light { opacity: 0; transition: opacity 3s ease; animation: st-breathe 3.6s ease-in-out infinite; } .gd-light--b { animation-delay: -1.6s; }
+[data-light="one"] .gd-light--a, [data-light="pair"] .gd-light { opacity: 1; }
+.gd-lights { transition: transform 7s ease-in-out, opacity 3s ease; }
+[data-near="tree"] .gd-lights { transform: translate(150px, 34px); }
+[data-near="low"] .gd-lights { transform: translate(60px, 70px); }
+[data-near="land"] .gd-lights { transform: translate(140px, 50px); }
+.gd-dusk { opacity: 0; transition: opacity 4s ease; } [data-mood="dark"] .gd-dusk { opacity: .58; }
+.gd-glow { opacity: 0; transition: opacity 3.5s ease; animation: st-breathe 4.4s ease-in-out infinite; } [data-glow="full"] .gd-glow { opacity: .38; }
+.gd-sprouts path { transform-origin: 50% 100%; transform: scale(0); transition: transform 4s var(--ease-out) 2s; }
+[data-place="earth"][data-time="dawn"] .gd-sprouts path { transform: none; }
+.stage[data-set="garden"] .stage__tint { background: radial-gradient(circle at 50% 60%, rgba(255, 232, 170, .34), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="garden"][data-glow="full"] .stage__tint { opacity: 1; }
+
+
+/* ——— كثبان الأحقاف ومساكن عاد (هود عليه السلام) ——— */
+.du-light, .du-flock, .du-sun, .du-cloud { transform-box: fill-box; transform-origin: center; }
+.du-day { transition: opacity 6s ease; } [data-set="dunes"][data-time="night"] .du-day { opacity: 0; }
+.stage[data-set="dunes"] .stars { opacity: 0; } .stage[data-set="dunes"][data-time="night"] .stars { opacity: 1; }
+.du-sun { transition: opacity 5s ease, transform 12s ease; } [data-set="dunes"][data-time="night"] .du-sun { opacity: 0; transform: translateY(200px); }
+.du-far { fill: #c9905a; transition: fill 5s ease; } .du-hill { fill: #a8743e; transition: fill 5s ease; }
+[data-set="dunes"][data-time="night"] .du-far { fill: #1c2452; } [data-set="dunes"][data-time="night"] .du-hill { fill: #2a2a50; }
+.du-cloud { opacity: 0; transform: translate(520px, 200px) scale(.45); transition: transform 11s ease-out, opacity 4s ease; }
+[data-cloud="come"] .du-cloud { opacity: 1; transform: translateY(-90px) scale(1.05); }
+[data-cloud="come"] .du-sun { opacity: .25; }
+.du-stormsky, .du-haze, .du-sand { opacity: 0; transition: opacity 4s ease; }
+[data-storm="on"] .du-stormsky { opacity: .8; } [data-storm="on"] .du-haze { opacity: .42; }
+[data-storm="on"] .du-sand { opacity: .7; animation: du-blow .7s linear infinite; }
+@keyframes du-blow { from { transform: translateX(-420px); } to { transform: translateX(420px); } }
+[data-storm="on"] .du-far { fill: #6b4a2a; } [data-storm="on"] .du-hill { fill: #5a3c20; }
+.stage[data-set="dunes"][data-storm="on"] .stage__svg { animation: du-shake .5s linear infinite; }
+@keyframes du-shake { 0%, 100% { translate: 0 0; } 25% { translate: 3px -2px; } 50% { translate: -3px 1px; } 75% { translate: 2px 2px; } }
+.du-green { transition: opacity 4s ease; } .du-door { transition: fill 4s ease; }
+.du-green .palm { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 6s ease-in-out infinite; }
+[data-storm="on"] .du-green .palm { animation-duration: .9s; }
+.du-drift { transform: translateY(210px); transition: transform 9s ease-out; }
+[data-city="after"] .du-drift { transform: translateY(52px); } [data-city="after"] .du-green { opacity: 0; } [data-city="after"] .du-door { fill: #120a06; }
+[data-storm="on"] .du-drift { transform: translateY(120px); }
+.du-light, .du-flock { opacity: 0; transition: transform 8s ease-in-out, opacity 3s ease; }
+.du-light { animation: lt-breathe 3.6s ease-in-out infinite; }
+[data-light="call"] .du-light, [data-light="away"] .du-light, [data-light="safe"] .du-light { opacity: 1; }
+[data-light="away"] .du-light, [data-light="away"] .du-flock { transform: translate(-150px, 60px); }
+[data-light="safe"] .du-light, [data-light="safe"] .du-flock { transform: translate(-60px, 40px); }
+[data-light="away"] .du-flock { opacity: .55; } [data-light="safe"] .du-flock { opacity: .7; }
+.stage[data-set="dunes"] .stage__tint { background: linear-gradient(180deg, rgba(255, 176, 90, 0) 45%, rgba(255, 190, 110, .28)); opacity: 1; }
+.stage[data-set="dunes"][data-storm="on"] .stage__tint, .stage[data-set="dunes"][data-time="night"] .stage__tint { opacity: 0; }
+.du-veil { opacity: 0; transition: opacity 6s ease; } [data-set="dunes"][data-time="night"] .du-veil { opacity: .5; }
+
+
+/* ——— جبال الحِجر وبيوت ثمود (صالح عليه السلام) ——— */
+.hj-light, .hj-flock, .hj-sun, .hj-camelwrap, .hj-camelbody, .hj-shine { transform-box: fill-box; transform-origin: center; }
+.hj-dawn { opacity: 0; transition: opacity 6s ease; } .hj-moon { transition: opacity 5s ease; }
+.hj-sun { opacity: 0; transform: translateY(220px); transition: transform 13s cubic-bezier(.2, .6, .3, 1), opacity 5s ease; }
+.hj-far { fill: #121a40; transition: fill 6s ease; } .hj-rock { fill: #252050; transition: fill 6s ease; } .hj-lit { fill: #3a3478; opacity: .28; transition: fill 6s ease; }
+.hj-ground { fill: #1a1838; transition: fill 6s ease; } .hj-groundlit { fill: #4a4488; opacity: .4; transition: fill 6s ease; } .hj-front { fill: #05060f; transition: fill 6s ease; }
+.hj-recess { fill: #000; opacity: .28; } .hj-trim { fill: #fff; opacity: .1; }
+.hj-win { fill: #080612; transition: fill 3s ease; } [data-homes="lit"] .hj-win { fill: #ffd77a; filter: drop-shadow(0 0 14px rgba(255, 215, 122, .7)); }
+.hj-oasis { transition: opacity 4s ease; } .hj-oasis .palm { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; }
+.hj-shine { animation: st-breathe 4s ease-in-out infinite; }
+[data-set="hijr"][data-time="dawn"] .hj-dawn { opacity: 1; } [data-set="hijr"][data-time="dawn"] .hj-moon { opacity: .1; }
+.stage[data-set="hijr"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="hijr"][data-time="dawn"] .hj-sun { opacity: 1; transform: none; }
+[data-set="hijr"][data-time="dawn"] .hj-far { fill: #7a4f78; } [data-set="hijr"][data-time="dawn"] .hj-rock { fill: #9a563e; } [data-set="hijr"][data-time="dawn"] .hj-lit { fill: #e8a06a; }
+[data-set="hijr"][data-time="dawn"] .hj-ground { fill: #a8703e; } [data-set="hijr"][data-time="dawn"] .hj-groundlit { fill: #f3c888; } [data-set="hijr"][data-time="dawn"] .hj-front { fill: #1c0f14; }
+.hj-camelwrap { opacity: 0; transform: translateX(420px); transition: transform 7s var(--ease-out), opacity 3s ease; }
+[data-camel="on"] .hj-camelwrap { opacity: 1; transform: none; }
+[data-camel="gone"] .hj-camelwrap { opacity: 0; transform: none; transition: opacity 5s ease; }
+.hj-camelbody { fill: #1a1024; stroke: #1a1024; transform-origin: 50% 100%; animation: hj-graze 5s ease-in-out infinite; }
+@keyframes hj-graze { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-2.5deg) translateY(1px); } }
+.hj-light, .hj-flock { opacity: 0; transition: transform 9s ease-in-out, opacity 3s ease; } .hj-light { animation: lt-breathe 3.6s ease-in-out infinite; }
+[data-light="on"] .hj-light, [data-light="away"] .hj-light { opacity: 1; } [data-light="away"] .hj-flock { opacity: .65; }
+[data-light="away"] .hj-light, [data-light="away"] .hj-flock { transform: translate(-330px, 70px); }
+.stage[data-set="hijr"][data-quake="on"] .stage__svg { animation: hj-quake .22s linear infinite; }
+@keyframes hj-quake { 0%, 100% { translate: 0 0; } 25% { translate: 5px -3px; } 50% { translate: -5px 2px; } 75% { translate: 3px 4px; } }
+.stage[data-set="hijr"] .stage__tint { background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, .5), rgba(190, 210, 255, .12) 70%); }
+.stage[data-set="hijr"][data-quake="on"] .stage__tint { animation: hj-cry 2.4s ease-in-out infinite; }
+@keyframes hj-cry { 0%, 100% { opacity: 0; } 50% { opacity: .7; } }
+[data-homes="dark"] .hj-oasis { opacity: .35; }
+
+
+/* ——— معبد الأصنام والنار (إبراهيم عليه السلام) ——— */
+.ur-fl, .ur-fire, .ur-fireglow, .ur-light, .ur-light2, .ur-idol, .ur-sun { transform-box: fill-box; }
+.ur-dawn { opacity: 0; transition: opacity 6s ease; } .ur-moon { transition: opacity 5s ease; }
+.ur-sun { opacity: 0; transform: translateY(200px); transition: transform 13s ease-out, opacity 5s ease; }
+.ur-far { fill: #101838; transition: fill 6s ease; } .ur-ground { fill: #15142c; transition: fill 6s ease; }
+[data-set="ur"][data-time="dawn"] .ur-dawn { opacity: 1; } [data-set="ur"][data-time="dawn"] .ur-moon { opacity: .1; }
+.stage[data-set="ur"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="ur"][data-time="dawn"] .ur-sun { opacity: 1; transform: none; }
+[data-set="ur"][data-time="dawn"] .ur-far { fill: #5b4480; } [data-set="ur"][data-time="dawn"] .ur-ground { fill: #7a5a4a; }
+.ur-fl { transform-origin: 50% 100%; animation: ur-flick 1.3s ease-in-out infinite; transition: fill 3.5s ease; }
+@keyframes ur-flick { 0%, 100% { transform: scale(1, 1) skewX(0); } 30% { transform: scale(.92, 1.12) skewX(-5deg); } 65% { transform: scale(1.06, .9) skewX(6deg); } }
+.ur-fl--a { fill: #c8321e; opacity: .85; } .ur-fl--b { fill: #ff8a2a; animation-duration: 1s; } .ur-fl--c { fill: #ffd24a; animation-duration: .8s; } .ur-fl--d { fill: #fff4cf; animation-duration: .7s; }
+.ur-fire { transform-origin: 50% 100%; transform: scale(0); opacity: 0; transition: transform 5s var(--ease-out), opacity 2.5s ease; }
+.ur-fireglow { transform-origin: center; opacity: 0; transition: opacity 4s ease; animation: st-breathe 2.2s ease-in-out infinite; }
+.ur-pit { fill: #3a2c2a; } .ur-pit--front { fill: #241a1c; } .ur-wood { fill: #3a2412; }
+[data-fire="small"] .ur-fire { transform: scale(.3); opacity: 1; } [data-fire="small"] .ur-fireglow { opacity: .35; }
+[data-fire="huge"] .ur-fire { transform: none; opacity: 1; } [data-fire="huge"] .ur-fireglow { opacity: .95; }
+[data-fire="cool"] .ur-fire { transform: scale(.86); opacity: .92; } [data-fire="cool"] .ur-fireglow { opacity: .7; }
+[data-fire="cool"] .ur-fl { animation-duration: 3.2s; }
+[data-fire="cool"] .ur-fl--a { fill: #1f5f8a; } [data-fire="cool"] .ur-fl--b { fill: #3fb7c4; } [data-fire="cool"] .ur-fl--c { fill: #bfeee8; } [data-fire="cool"] .ur-fl--d { fill: #fff; }
+[data-fire="ember"] .ur-fire { transform: scale(.16); opacity: .7; } [data-fire="ember"] .ur-fireglow { opacity: .15; }
+.ur-idol, .ur-big { fill: #6f6a7a; } .ur-big { fill: #7d7888; }
+.ur-idol { transform-origin: 50% 100%; transition: transform 1.4s cubic-bezier(.5, 0, .9, .6); }
+.ur-idol--2, .ur-idol--5 { transition-delay: .5s; } .ur-idol--3 { transition-delay: 1s; } .ur-idol--4, .ur-idol--6 { transition-delay: 1.5s; }
+[data-idols="broken"] .ur-idol--1, [data-idols="broken"] .ur-idol--2, [data-idols="broken"] .ur-idol--5 { transform: rotate(-84deg) translateX(-10px); }
+[data-idols="broken"] .ur-idol--3, [data-idols="broken"] .ur-idol--4, [data-idols="broken"] .ur-idol--6 { transform: rotate(82deg) translateX(10px); }
+.ur-rubble { fill: #5a5666; opacity: 0; transition: opacity 1.5s ease 1.6s; } [data-idols="broken"] .ur-rubble { opacity: 1; }
+.ur-niche { opacity: .22; transition: opacity 4s ease; } .ur-temple { transition: opacity 4s ease; }
+.ur-torch .ur-fl { animation-duration: .9s; }
+.ur-light, .ur-light2 { transform-origin: center; opacity: 0; transition: transform 7s ease-in-out, opacity 3s ease; animation: lt-breathe 3.6s ease-in-out infinite; }
+[data-light="temple"] .ur-light, [data-light="fire"] .ur-light, [data-light="free"] .ur-light { opacity: 1; }
+[data-light="fire"] .ur-light { transform: translate(580px, -150px) scale(1.15); }
+[data-light="free"] .ur-light { transform: translate(640px, 20px); } [data-light="free"] .ur-light2 { opacity: .9; }
+.stage[data-set="ur"] .stage__tint { background: radial-gradient(circle at 55% 62%, rgba(255, 140, 50, .4), rgba(200, 50, 30, .12) 70%); }
+.stage[data-set="ur"][data-fire="huge"] .stage__tint { opacity: 1; }
+.stage[data-set="ur"][data-fire="cool"] .stage__tint { opacity: 1; background: radial-gradient(circle at 55% 60%, rgba(190, 238, 232, .34), rgba(63, 183, 196, .08) 70%); }
+/* نبض النور بخاصية scale المستقلة حتى لا يُلغي الإزاحة بـtransform */
+@keyframes lt-breathe { 50% { scale: 1.1; } }
+
+
+/* ——— أرض وبلدة (ديكور عام: لوط، إسماعيل، يوسف، أيوب، شعيب، عيسى عليهم السلام) ——— */
+.ld-sun, .ld-kaaba, .ld-gush, .ld-a, .ld-b, .ld-glow, .ld-shirt, .ld-cradle, .ld-palm .palm { transform-box: fill-box; transform-origin: center; }
+.ld-dawn, .ld-dream, .ld-town, .ld-rubble, .ld-silos, .ld-scale, .ld-well, .ld-spring, .ld-palm, .ld-caravan, .ld-cradle, .ld-shirt, .ld-flock, .ld-a, .ld-b, .ld-glow, .ld-road, .ld-kaabawrap { opacity: 0; transition: opacity 4s ease; }
+.ld-moon { transition: opacity 5s ease; }
+.ld-sun { opacity: 0; transform: translateY(220px); transition: transform 13s cubic-bezier(.2, .6, .3, 1), opacity 5s ease; }
+.ld-ridge { fill: #121a40; transition: fill 6s ease; } .ld-ground { fill: #191734; transition: fill 6s ease; } .ld-groundlit { fill: #3a3a78; opacity: .4; transition: fill 6s ease; } .ld-front { fill: #04050c; transition: fill 6s ease; }
+.ld-road { stroke: #5a66a8; } [data-road="on"] .ld-road { opacity: .7; }
+[data-set="land"][data-time="dawn"] .ld-dawn { opacity: 1; } [data-set="land"][data-time="dawn"] .ld-moon { opacity: .1; }
+.stage[data-set="land"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="land"][data-time="dawn"] .ld-sun { opacity: 1; transform: none; }
+[data-set="land"][data-time="dawn"] .ld-ridge { fill: #5b4480; } [data-set="land"][data-time="dawn"] .ld-ground { fill: #9a6e48; } [data-set="land"][data-time="dawn"] .ld-groundlit { fill: #f3c888; } [data-set="land"][data-time="dawn"] .ld-front { fill: #1c0f14; } [data-set="land"][data-time="dawn"] .ld-road { stroke: #ffe0a8; }
+[data-dream="on"] .ld-dream { opacity: 1; }
+[data-town="on"] .ld-town, [data-town="dark"] .ld-town { opacity: 1; } [data-town="gone"] .ld-rubble { opacity: 1; } [data-town="gone"] .ld-town { transition-duration: 2s; }
+.ld-win { fill: #0c0914; transition: fill 3s ease; } [data-town="on"] .ld-win { fill: #ffd77a; }
+[data-silos="on"] .ld-silos { opacity: 1; }
+[data-scale] .ld-scale { opacity: 1; } .ld-beam { transform-box: fill-box; transform-origin: 50% 4%; transition: transform 2.4s var(--ease-spring, ease); }
+[data-scale="tilt"] .ld-beam { transform: rotate(-13deg); }
+[data-kaaba] .ld-kaabawrap { opacity: 1; } .ld-kaaba { transform-origin: 50% 100%; transform: scaleY(.22); transition: transform 9s ease-out; } [data-kaaba="built"] .ld-kaaba { transform: none; }
+[data-well="on"] .ld-well { opacity: 1; } [data-spring="on"] .ld-spring { opacity: 1; } [data-palm="on"] .ld-palm { opacity: 1; }
+.ld-gush { transform-origin: 50% 100%; animation: ld-gush 1.6s ease-in-out infinite; } @keyframes ld-gush { 50% { transform: scaleY(1.35); } }
+.ld-palm .palm { transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; }
+.ld-caravan { transform: translateX(460px); transition: transform 9s var(--ease-out), opacity 3s ease; } [data-caravan="on"] .ld-caravan { opacity: 1; transform: none; }
+[data-caravan="gone"] .ld-caravan { opacity: 0; transform: translateX(-500px); transition: transform 10s ease-in, opacity 8s ease-in; }
+[data-cradle="on"] .ld-cradle { opacity: 1; } [data-shirt="on"] .ld-shirt { opacity: 1; animation: lt-breathe 4s ease-in-out infinite; }
+.ld-lights, .ld-flock { translate: var(--lx, 0) var(--ly, 0); transition: translate 8s ease-in-out, opacity 4s ease; }
+.ld-a, .ld-b { animation: st-breathe 3.6s ease-in-out infinite; } .ld-b { animation-delay: -1.5s; }
+[data-light] .ld-a { opacity: 1; } [data-pair="on"] .ld-b { opacity: 1; } [data-flock="on"] .ld-flock { opacity: .75; }
+[data-light="town"] { --lx: -330px; } [data-light="well"] { --lx: 40px; --ly: 30px; } [data-light="far"] { --lx: 330px; --ly: 20px; } [data-light="road"] { --lx: 150px; --ly: 60px; }
+[data-light="inwell"] { --lx: 160px; --ly: 0px; } [data-light="inwell"] .ld-a { opacity: .45; scale: .5; }
+[data-light="low"] { --ly: 50px; } [data-light="low"] .ld-a { opacity: .6; }
+[data-glow="full"] .ld-glow { opacity: .4; }
+.stage[data-set="land"] .stage__tint { background: radial-gradient(circle at 50% 60%, rgba(255, 232, 170, .3), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="land"][data-glow="full"] .stage__tint { opacity: 1; }
+
+
+/* ——— إضافات حكاية موسى عليه السلام: العصا والحية في dunes، وانفلاق البحر في sea ——— */
+.du-staff, .du-snake, .du-ropes { opacity: 0; transition: opacity 1.6s ease; }
+[data-staff="on"] .du-staff { opacity: 1; } [data-staff="snake"] .du-snake { opacity: 1; }
+[data-staff="snake"] .du-ropes { animation: du-eaten 9s ease forwards; }
+@keyframes du-eaten { 0% { opacity: 0; } 12%, 55% { opacity: 1; } 100% { opacity: 0; } }
+.du-snake { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 2.4s ease-in-out infinite; }
+.se-split { opacity: 0; transition: opacity 2.5s ease; } [data-split="on"] .se-split { opacity: 1; }
+[data-split="on"] .se-wave--front { opacity: 0; }
+.se-cross { transform-box: fill-box; transform-origin: 50% 0; transform: translateY(240px); transition: transform 14s ease-out; }
+[data-split="on"] .se-cross { transform: translateY(-230px) scale(.5); }
+[data-yaqtin="off"] .se-yaqtin { display: none; }
+
+/* طيور تسبّح مع داود عليه السلام (ديكور الجبل) */
+.mt-birds { opacity: 0; transition: opacity 3s ease; animation: mt-fly 9s ease-in-out infinite alternate; }
+[data-birds="on"] .mt-birds { opacity: .9; }
+@keyframes mt-fly { from { transform: translate(-40px, 10px); } to { transform: translate(50px, -18px); } }
+
+/* الهدهد (سليمان عليه السلام) في ديكور dunes */
+.du-birdwrap { opacity: 0; transition: transform 9s ease-in, opacity 3s ease; transform-box: fill-box; transform-origin: center; }
+[data-bird="here"] .du-birdwrap { opacity: 1; transition: transform 5s var(--ease-out), opacity 2s ease; }
+[data-bird="away"] .du-birdwrap { opacity: 0; transform: translate(520px, -300px) scale(.3); transition: transform 9s ease-in, opacity 3s ease 6s; }
+.du-bird { animation: du-hover 2.6s ease-in-out infinite; } @keyframes du-hover { 50% { translate: 0 -14px; } }
+.du-wing { transform-box: fill-box; transform-origin: 30% 100%; animation: du-flap .5s ease-in-out infinite alternate; } @keyframes du-flap { to { transform: scaleY(.35); } }
+
+/* ——— المحراب (زكريا ويحيى عليهما السلام) ——— */
+.mh-a, .mh-b, .mh-glow, .mh-nicheglow, .mh-lamp circle { transform-box: fill-box; transform-origin: center; }
+.mh-sky, .mh-fruit, .mh-a, .mh-b, .mh-glow { opacity: 0; transition: opacity 4s ease; }
+[data-set="mihrab"][data-time="dawn"] .mh-sky { opacity: 1; }
+.mh-nicheglow { opacity: .25; transition: opacity 4s ease; animation: st-breathe 4.4s ease-in-out infinite; }
+.mh-lamp circle { animation: st-breathe 2.8s ease-in-out infinite; }
+[data-fruit="on"] .mh-fruit { opacity: 1; }
+.mh-a, .mh-b { animation: st-breathe 3.6s ease-in-out infinite; } .mh-b { animation-delay: -1.4s; }
+[data-set="mihrab"][data-light] .mh-a { opacity: 1; } [data-set="mihrab"][data-pair="on"] .mh-b { opacity: 1; }
+[data-set="mihrab"][data-glow="full"] .mh-glow { opacity: .45; } [data-set="mihrab"][data-glow="full"] .mh-nicheglow { opacity: .9; }
+.stage[data-set="mihrab"] .stage__tint { background: radial-gradient(circle at 50% 50%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="mihrab"][data-glow="full"] .stage__tint { opacity: 1; }
+
+/* ——— فناء دار أبي بكر بمكة ومسجده الصغير ——— */
+.dr-a, .dr-b, .dr-glow, .dr-chainglow, .dr-lamp circle, .dr-l, .dr-r, .dr-peep circle { transform-box: fill-box; transform-origin: center; }
+.dr-dawn, .dr-peep, .dr-chain, .dr-deeds, .dr-a, .dr-b, .dr-glow, .dr-lamp { opacity: 0; transition: opacity 4s ease; }
+.dr-moon { transition: opacity 5s ease; }
+.dr-hills { fill: #121a40; transition: fill 6s ease; } .dr-kaaba { fill: #0a0a14; } .dr-door { fill: #120a06; transition: fill 3s ease; }
+[data-set="dar"][data-time="dawn"] .dr-dawn { opacity: 1; } [data-set="dar"][data-time="dawn"] .dr-moon { opacity: .1; }
+.stage[data-set="dar"][data-time="dawn"] .stars { opacity: .08; } [data-set="dar"][data-time="dawn"] .dr-hills { fill: #5b4480; }
+[data-lamp="on"] .dr-lamp { opacity: 1; } .dr-lamp circle { animation: st-breathe 2.8s ease-in-out infinite; } [data-lamp="on"] .dr-door { fill: #ffd77a; }
+[data-peep="on"] .dr-peep { opacity: .7; } .dr-peep circle { animation: st-breathe 3s ease-in-out infinite; } .dr-peep circle:nth-child(even) { animation-delay: -1.3s; }
+[data-chain] .dr-chain { opacity: 1; } .dr-chainglow { opacity: .3; transition: opacity 3s ease; }
+.dr-l, .dr-r { transition: transform 2.4s var(--ease-out) .6s; }
+[data-chain="broken"] .dr-l { transform: translate(-40px, 24px) rotate(-40deg); } [data-chain="broken"] .dr-r { transform: translate(40px, 24px) rotate(40deg); } [data-chain="broken"] .dr-chainglow { opacity: 1; }
+[data-deeds="on"] .dr-deeds { opacity: 1; } .dr-deeds circle { animation: st-breathe 3.4s ease-in-out infinite; }
+.dr-a, .dr-b { animation: st-breathe 3.6s ease-in-out infinite; } .dr-b { animation-delay: -1.5s; }
+[data-set="dar"][data-light] .dr-a { opacity: 1; } [data-set="dar"][data-pair="on"] .dr-b { opacity: 1; }
+.dr-lights { transition: translate 8s ease-in-out; } [data-set="dar"][data-light="out"] .dr-lights { translate: 520px -10px; }
+[data-set="dar"][data-light="pray"] .dr-lights { translate: 40px 40px; }
+[data-set="dar"][data-glow="full"] .dr-glow { opacity: .4; }
+.stage[data-set="dar"] .stage__tint { background: radial-gradient(circle at 50% 62%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="dar"][data-glow="full"] .stage__tint { opacity: 1; }
+
+/* ——— المسجد الحرام والكعبة ——— */
+.hr-a, .hr-glow, .hr-stone circle, .hr-maqam circle, .hr-cup, .hr-t { transform-box: fill-box; transform-origin: center; }
+.hr-dawn, .hr-cup, .hr-a, .hr-glow { opacity: 0; transition: opacity 4s ease; }
+.hr-moon { transition: opacity 5s ease; } .hr-hills { fill: #121a40; transition: fill 6s ease; }
+.hr-houses { fill: #1c1a34; transition: fill 6s ease; } .hr-win { fill: #ffd77a; opacity: .6; }
+.hr-floor { fill: #141838; opacity: .78; transition: opacity 6s ease; }
+[data-set="haram"][data-time="dawn"] .hr-dawn { opacity: 1; } [data-set="haram"][data-time="dawn"] .hr-moon { opacity: .1; }
+.stage[data-set="haram"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="haram"][data-time="dawn"] .hr-hills { fill: #5b4480; } [data-set="haram"][data-time="dawn"] .hr-houses { fill: #6a4a50; } [data-set="haram"][data-time="dawn"] .hr-floor { opacity: .25; }
+.hr-tawaf { opacity: .55; transition: opacity 3s ease; } [data-tawaf="off"] .hr-tawaf { opacity: 0; }
+.hr-t { animation: st-breathe 3s ease-in-out infinite; } .hr-t:nth-child(3n) { animation-delay: -1s; } .hr-t:nth-child(3n+1) { animation-delay: -2s; }
+.hr-stone circle { opacity: .35; transition: opacity 3s ease; animation: st-breathe 3.4s ease-in-out infinite; } [data-stone="glow"] .hr-stone circle { opacity: 1; }
+.hr-maqam circle { opacity: .2; transition: opacity 3s ease; } [data-maqam="glow"] .hr-maqam circle { opacity: 1; animation: st-breathe 3.4s ease-in-out infinite; }
+[data-cup="on"] .hr-cup { opacity: 1; animation: lt-breathe 4s ease-in-out infinite; }
+[data-set="haram"][data-light] .hr-a { opacity: 1; } .hr-a { animation: st-breathe 3.6s ease-in-out infinite; }
+.hr-lights { transition: translate 8s ease-in-out; }
+[data-set="haram"][data-light="stone"] .hr-lights { translate: 180px -60px; } [data-set="haram"][data-light="maqam"] .hr-lights { translate: 400px -10px; }
+[data-set="haram"][data-glow="full"] .hr-glow { opacity: .4; }
+.stage[data-set="haram"] .stage__tint { background: radial-gradient(circle at 50% 62%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
+.stage[data-set="haram"][data-glow="full"] .stage__tint { opacity: 1; }
+
+/* ستر الكعبة (عطاء بن أبي رباح): يتموّج ويتوهّج حزامه، نور عند طرفه، وحلقة علم */
+.hr-band { opacity: 0; transition: opacity 3s ease; } [data-kiswa="glow"] .hr-band { opacity: .55; animation: st-breathe 3.6s ease-in-out infinite; }
+.hr-hem { transform-box: fill-box; transform-origin: center; } [data-kiswa] .hr-hem { animation: hr-sway 4.5s ease-in-out infinite; }
+@keyframes hr-sway { 50% { transform: translateX(10px) skewX(-6deg); } }
+.hr-hold, .hr-halqa { opacity: 0; transition: opacity 3s ease; } .hr-hold circle:first-child, .hr-q { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
+[data-hold="on"] .hr-hold { opacity: 1; } [data-halqa="on"] .hr-halqa { opacity: 1; } [data-halqa="big"] .hr-halqa { opacity: 1; scale: 1.25; }
+.hr-halqa { transition: opacity 3s ease, scale 6s ease; transform-box: fill-box; transform-origin: center; } .hr-q:nth-child(2n) { animation-delay: -1.2s; } .hr-q0 { animation-duration: 2.8s; }
+
+/* شمس الضحى في dar (معاذة العدوية): sun=rise قرب الأفق، sun=up ترتفع وتضيء الفناء */
+.dr-sun { opacity: 0; translate: 0 420px; transition: opacity 3s ease, translate 9s var(--ease-out); }
+.dr-sun circle:first-child { transform-box: fill-box; transform-origin: center; animation: st-breathe 4s ease-in-out infinite; }
+[data-set="dar"][data-sun="rise"] .dr-sun { opacity: 1; translate: 0 260px; } [data-set="dar"][data-sun="up"] .dr-sun { opacity: 1; translate: 0 0; }
+.dr-day { opacity: 0; transition: opacity 5s ease; } [data-set="dar"][data-sun="up"] .dr-day { opacity: 1; } [data-set="dar"][data-sun="up"] .dr-hills { fill: #c9a878; }
+.dr-far { transition: opacity 2s ease; } [data-set="dar"][data-far="none"] .dr-far { opacity: 0; }
+.stage[data-set="dar"][data-sun="up"] .stars { opacity: 0; } [data-set="dar"][data-sun="up"] .dr-moon { opacity: 0; }
+
+.mh-book { opacity: 0; transition: opacity 3s ease; } [data-book="on"] .mh-book { opacity: 1; }
+.mh-book circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
+
+/* راية (علي رضي الله عنه) في land، وأنوار في المسجد */
+.ld-banner { opacity: 0; transition: opacity 3s ease; } [data-banner="on"] .ld-banner { opacity: 1; }
+.ld-banner circle:first-child { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.ld-flag { transform-box: fill-box; transform-origin: 0 50%; animation: ld-wave 2.6s ease-in-out infinite; } @keyframes ld-wave { 50% { transform: skewY(-4deg) scaleX(.94); } }
+.ms-a, .ms-b { opacity: 0; transition: opacity 3s ease; transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+[data-ms="one"] .ms-a, [data-ms="pair"] .ms-a, [data-ms="pair"] .ms-b { opacity: 1; }
+
+/* سهام (يوم أحد) في land، واهتزاز عام للمسرح */
+.ld-arrows { opacity: 0; transition: opacity 2s ease; } [data-arrows="on"] .ld-arrows { opacity: 1; }
+.ld-arrow { transform: translate(0, var(--y)); animation: ld-fly 3.2s linear infinite; animation-delay: var(--d); opacity: 0; }
+@keyframes ld-fly { 0% { transform: translate(0, var(--y)); opacity: 0; } 10% { opacity: 1; } 70% { opacity: 1; } 85%, 100% { transform: translate(-560px, calc(var(--y) + 40px)); opacity: 0; } }
+.stage[data-shake="on"] .stage__svg { animation: hj-quake .22s linear infinite; }
+
+/* خندق (الزبير رضي الله عنه، يوم الأحزاب) في land، ونور يذهب ويعود */
+.ld-trench { opacity: 0; transition: opacity 3s ease; } [data-trench="on"] .ld-trench { opacity: 1; }
+.ld-ditch { fill: #05040a; } .ld-mound { fill: #2a2440; transition: fill 6s ease; } .ld-lip { stroke: #4a4478; transition: stroke 6s ease; }
+[data-set="land"][data-time="dawn"] .ld-mound { fill: #6e4c32; } [data-set="land"][data-time="dawn"] .ld-lip { stroke: #d9a86a; }
+[data-ride="on"] .ld-lights { animation: ld-ride 9s ease-in-out infinite; }
+@keyframes ld-ride { 0%, 100% { translate: 0 0; } 45%, 55% { translate: 380px 24px; } }
+.ld-wall { fill: #1c1834; transition: fill 6s ease; } [data-set="land"][data-time="dawn"] .ld-wall { fill: #5a3a26; }
+/* قوس (سعد بن أبي وقاص رضي الله عنه) في land */
+.ld-bow { opacity: 0; transition: opacity 3s ease; } [data-bow="on"] .ld-bow { opacity: 1; }
+.ld-bowglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+/* شاطئ جيش الخبط (أبو عبيدة رضي الله عنه) في sea: حوت على الرمل، وضلع يمرّ تحته راكب، وأنوار الجيش */
+.se-fish, .se-rib, .se-crew { opacity: 0; transition: opacity 3s ease; }
+[data-fish="on"] .se-fish, [data-rib="on"] .se-rib { opacity: 1; } [data-crew="on"] .se-crew { opacity: .8; }
+.se-crew circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } .se-crew circle:nth-child(2n) { animation-delay: -1.6s; }
+.se-rider { animation: se-ride 10s linear infinite; } @keyframes se-ride { 0% { transform: translateX(-380px); opacity: 0; } 12%, 88% { opacity: 1; } 100% { transform: translateX(380px); opacity: 0; } }
+/* نعلا بلال والأذان (بلال رضي الله عنه) في dar: sandals=on، call=on موجات النداء، light=roof النور فوق الجدار */
+.dr-sandals, .dr-call { opacity: 0; transition: opacity 3s ease; } [data-sandals="on"] .dr-sandals { opacity: 1; } [data-call="on"] .dr-call { opacity: 1; }
+.dr-sglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
+[data-sandals="on"][data-glow="full"] .dr-s1, [data-sandals="on"][data-glow="full"] .dr-s2 { filter: drop-shadow(0 0 14px #ffd77a); }
+.dr-call path { transform-box: fill-box; transform-origin: center; animation: dr-call 3s ease-out infinite; animation-delay: var(--d); opacity: 0; }
+@keyframes dr-call { 0% { transform: scale(.6); opacity: 0; } 20% { opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
+[data-set="dar"][data-light="roof"] .dr-lights { translate: 40px -400px; }
+/* مصعب بن عمير: البردة (النمرة) المخططة، ونبات الإذخر، ومصحف مفتوح في ديكور land */
+.ld-cloak, .ld-idhkhir, .ld-book { opacity: 0; transition: opacity 3s ease; } [data-cloak="on"] .ld-cloak, [data-idhkhir="on"] .ld-idhkhir, [data-book="on"] .ld-book { opacity: 1; }
+.ld-cloakglow, .ld-bookglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.ld-idhkhir path { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 6s ease-in-out infinite; }
+/* سلمان الفارسي: نجوم الثريّا في سماء ديكور land */
+.ld-pleiades { opacity: 0; transition: opacity 4s ease; } [data-pleiades="on"] .ld-pleiades { opacity: 1; }
+.ld-plglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 4s ease-in-out infinite; opacity: .55; }
+.ld-pl { animation: ld-twinkle 2.4s ease-in-out infinite; animation-delay: var(--d); } @keyframes ld-twinkle { 50% { opacity: .45; } }
+/* أبو هريرة رضي الله عنه في mosque: suffa=on صُفّة المسجد وأنوار أهلها، trunk=off إخفاء الجذع، cup (on/pass) قدح اللبن يدور عليهم، cloak (open/fold) الرداء المبسوط ثم المضموم. وفي dar: pair=warm نور ثانٍ دافئ */
+.ms-suffa, .ms-cloak, .ms-cupwrap { opacity: 0; transition: opacity 3s ease; }
+[data-suffa="on"] .ms-suffa, [data-cloak] .ms-cloak, [data-cup] .ms-cupwrap { opacity: 1; }
+[data-trunk="off"] .jd-wrap { opacity: 0; }
+.ms-flock circle, .ms-cloakglow, .ms-cup > circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } .ms-flock circle:nth-child(2n) { animation-delay: -1.7s; }
+.ms-cloth { transform-box: fill-box; transform-origin: center; transition: transform 2.4s var(--ease-out); }
+[data-cloak="fold"] .ms-cloth { transform: scale(.42, .7); } [data-cloak="fold"] .ms-scoop { opacity: 0; } .ms-scoop { transition: opacity 2s ease; }
+.ms-scoop circle { animation: ms-scoop 3s ease-in infinite; animation-delay: var(--d); opacity: 0; }
+@keyframes ms-scoop { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: 1; } 90% { opacity: .9; } 100% { transform: translateY(240px); opacity: 0; } }
+[data-cup="pass"] .ms-cup { animation: ms-pass 12s ease-in-out infinite; }
+@keyframes ms-pass { 0%, 8% { translate: 0 0; } 18%, 26% { translate: 90px -14px; } 36%, 44% { translate: 300px 6px; } 54%, 62% { translate: 380px -4px; } 72%, 80% { translate: 460px 12px; } 92%, 100% { translate: 0 0; } }
+[data-set="dar"][data-pair="warm"] .dr-b { opacity: 1; filter: sepia(1) saturate(2.6) hue-rotate(-12deg); }
+/* خالد بن الوليد رضي الله عنه في land: sword=on السيف اليماني العريض يلمع، armor=on درع وترس (أدراعه وعتاده) */
+.ld-sword, .ld-armor { opacity: 0; transition: opacity 3s ease; } [data-sword="on"] .ld-sword, [data-armor="on"] .ld-armor { opacity: 1; }
+.ld-swglow, .ld-arglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.ld-swshine { animation: ld-shine 4s ease-in-out infinite; } @keyframes ld-shine { 0%, 60%, 100% { opacity: 0; transform: translateY(0); } 75% { opacity: .7; } 90% { opacity: 0; transform: translateY(240px); } }
+/* خديجة رضي الله عنها في dar: blanket=on غطاء مخطط (زمّلوني)، vessel=on إناء طعام يتوهّج */
+.dr-blanket, .dr-vessel { opacity: 0; transition: opacity 3s ease; } [data-blanket="on"] .dr-blanket, [data-vessel="on"] .dr-vessel { opacity: 1; }
+.dr-blglow, .dr-vsglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+/* عائشة رضي الله عنها في land: necklace (on/under) عِقد من خرز يلمع، وunder يضعه صغيرًا تحت الجمل الأوسط */
+.ld-neckwrap { opacity: 0; transition: opacity 3s ease; } [data-necklace] .ld-neckwrap { opacity: 1; }
+.ld-nkglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.ld-neckwrap { transition: opacity 3s ease, translate 3s ease, scale 3s ease; } [data-necklace="under"] .ld-neckwrap { translate: 470px 150px; scale: .45; transform-origin: 640px 600px; }
+/* حفصة رضي الله عنها في dar وmihrab: suhuf=on رزمة صحف القرآن تتوهّج، copies=on مصاحف صغيرة تنطلق منها إلى الآفاق */
+.sf-wrap, .sf-copies { opacity: 0; transition: opacity 3s ease; } [data-suhuf="on"] .sf-wrap, [data-copies="on"] .sf-copies { opacity: 1; }
+.sf-glow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.sf-bk { opacity: 0; animation: sf-fly 4s var(--ease-out) infinite; animation-delay: var(--d); }
+@keyframes sf-fly { 0% { transform: translate(0, -30px) scale(.5); opacity: 0; } 15% { opacity: 1; } 75% { opacity: 1; } 100% { transform: translate(var(--tx), var(--ty)) scale(1); opacity: 0; } }
+/* أم سلمة رضي الله عنها في land: tent (on/lit) خيمة في الحديبية، وlit يضيء داخلها؛ pair=white يجعل النور الثاني أبيض (النبي ﷺ) */
+.ld-tent { opacity: 0; transition: opacity 3s ease; } [data-tent] .ld-tent { opacity: 1; }
+.ld-tentdoor { fill: #1a0f0a; transition: fill 3s ease; } [data-tent="lit"] .ld-tentdoor { fill: #ffd77a; }
+.ld-tentglow { opacity: 0; transition: opacity 3s ease; transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } [data-tent="lit"] .ld-tentglow { opacity: .8; }
+[data-set="land"][data-pair="white"] .ld-b { opacity: 1; filter: saturate(0) brightness(1.35); }
+/* فاطمة رضي الله عنها في dar: mill=on رحى من حجرين يدور مقبضها ويتوهّج حولها الدقيق */
+.dr-mill { opacity: 0; transition: opacity 3s ease; } [data-mill="on"] .dr-mill { opacity: 1; }
+.dr-mlglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.dr-handle { animation: dr-turn 3.2s linear infinite; }
+@keyframes dr-turn { 0% { translate: 70px 0; } 25% { translate: 0 18px; } 50% { translate: -70px 0; } 75% { translate: 0 -18px; } 100% { translate: 70px 0; } }
+/* أسماء بنت أبي بكر رضي الله عنهما في dar: sufra (on/tied) سفرة في جراب، وtied يربط فمها بقطعة من النطاق؛ belt (on/split) نطاق من قماش، وsplit يشقّه نصفين. وفي land: nawa=on حِمل نوى فوق النور الرئيس */
+.dr-sufra, .dr-belt, .ld-nawa { opacity: 0; transition: opacity 3s ease; } [data-sufra] .dr-sufra, [data-belt] .dr-belt, [data-nawa="on"] .ld-nawa { opacity: 1; }
+.dr-tie { opacity: 0; transition: opacity 2.4s ease; } [data-sufra="tied"] .dr-tie { opacity: 1; }
+.dr-sfglow, .dr-btglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.dr-bt1, .dr-bt2 { transition: translate 2.6s var(--ease-out), rotate 2.6s var(--ease-out); transform-box: fill-box; transform-origin: center; }
+[data-belt="split"] .dr-bt1 { translate: -70px -10px; rotate: -6deg; } [data-belt="split"] .dr-bt2 { translate: 70px -10px; rotate: 6deg; }
+/* أم سُليم رضي الله عنها في dar: bread=on أقراص شعير ملفوفة في خمار تتوهّج */
+.dr-bread { opacity: 0; transition: opacity 3s ease; } [data-bread="on"] .dr-bread { opacity: 1; }
+.dr-brglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+/* أم عطية رضي الله عنها: qirba=on قربة ماء على حامل تقطر (في land وdar)؛ وفي land: pot=on قِدر على نار صغيرة يتصاعد منها البخار */
+.qb, .ld-pot { opacity: 0; transition: opacity 3s ease; } [data-qirba="on"] .qb, [data-pot="on"] .ld-pot { opacity: 1; }
+.qb-glow, .ld-potglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.qb-drop { animation: qb-drip 2.6s ease-in infinite; }
+@keyframes qb-drip { 0% { translate: 0 0; opacity: 0; } 15% { opacity: 1; } 80% { opacity: 1; } 100% { translate: 0 34px; opacity: 0; } }
+.ld-steam path { animation: ld-steam 3s ease-in-out infinite; } .ld-steam path + path { animation-delay: -1.5s; }
+@keyframes ld-steam { 0% { translate: 0 6px; opacity: 0; } 40% { opacity: .8; } 100% { translate: 0 -26px; opacity: 0; } }
+/* سعيد بن المسيّب في mosque: era=stone المسجد بعد بناء عثمان رضي الله عنه (جدار وأعمدة من حجارة منقوشة وسقف من ساج، البخاري 446)؛ pillar=on سارية حجرية منقوشة تتوهّج (الشاهد)؛ call=on موجات الأذان */
+.ms-stonewall, .ms-teak, .ms-pillar, .ms-call { opacity: 0; transition: opacity 3s ease; }
+[data-era="stone"] .ms-stonewall { opacity: .9; } [data-era="stone"] .ms-teak { opacity: 1; }
+[data-era="stone"] .ms-col rect { fill: #9a9184; } [data-era="stone"] .ms-col path { stroke: #5a544a; }
+[data-pillar="on"] .ms-pillar { opacity: 1; } .ms-plglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+[data-set="mosque"][data-call="on"] .ms-call { opacity: 1; }
+.ms-call path { transform-box: fill-box; transform-origin: center; animation: dr-call 3s ease-out infinite; animation-delay: var(--d); opacity: 0; }
+/* سعيد بن المسيّب في land: samura (on/lost) شجرة بيعة الرضوان، وlost تخفت حتى تكاد تختفي (نُسي مكانها)؛ hazn=on أرض حَزْن صخرية يسارًا وأرض سهلة لينة يمينًا */
+.ld-samura, .ld-sahl { opacity: 0; transition: opacity 4s ease; } [data-samura="on"] .ld-samura { opacity: 1; } [data-samura="lost"] .ld-samura { opacity: .12; filter: blur(3px); }
+.ld-smglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; } [data-samura="lost"] .ld-smglow { opacity: 0; }
+[data-hazn="on"] .ld-rubble { opacity: 1; } [data-hazn="on"] .ld-sahl { opacity: 1; }
+/* عروة بن الزبير: moon=glow هلال كبير متوهّج (الشاهد) في dar وland */
+.dr-moon, .ld-moon { transform-box: fill-box; transform-origin: center; transition: scale 3s ease, filter 3s ease; }
+[data-moon="glow"] .dr-moon, [data-moon="glow"] .ld-moon { scale: 1.7; filter: drop-shadow(0 0 26px #ffe9a8) drop-shadow(0 0 60px rgba(255, 233, 168, .6)); }
+/* الحسن البصري في mosque: hasa=glow حصى المسجد يتوهّج (الشاهد) تحت النور */
+.ms-hasa { opacity: 0; transition: opacity 3s ease; } [data-hasa="glow"] .ms-hasa { opacity: 1; }
+.ms-hsglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+/* عمر بن عبد العزيز في dar: candle (on/out) شمعة من مال المسلمين، وout تُطفأ فيبقى المصباح الصغير (lamp=on) */
+.dr-candle { opacity: 0; transition: opacity 3s ease; } [data-candle] .dr-candle { opacity: 1; }
+.dr-cdglow, .dr-cdflame { transform-box: fill-box; transform-origin: center bottom; transition: opacity 2s ease; }
+.dr-cdglow { animation: st-breathe 3.2s ease-in-out infinite; } .dr-cdflame { animation: cd-flick 1.6s ease-in-out infinite; }
+@keyframes cd-flick { 0%, 100% { scale: 1 1; } 50% { scale: .9 1.08; } }
+[data-candle="out"] .dr-cdglow, [data-candle="out"] .dr-cdflame { opacity: 0; }

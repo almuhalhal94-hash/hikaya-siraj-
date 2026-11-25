@@ -1,0 +1,84 @@
+/* القسم 7: صفحة الأهالي والإعلان المتحرك (١٥ ثانية) */
+.pa { max-width: 680px; margin: 0 auto; padding: 4px 16px 0; display: grid; gap: 16px; }
+
+.promo {
+  position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 22px;
+  background: radial-gradient(120% 70% at 50% 112%, #2a4580 0%, #0a1630 58%, #050b1c 100%);
+  border: 1px solid rgba(255, 233, 168, .34); box-shadow: 0 18px 44px rgba(0, 0, 0, .5);
+  animation: door-in 1s var(--ease-out) backwards; container-type: inline-size;
+}
+/* شريطا السينما */
+.promo__bar { position: absolute; inset-inline: 0; height: 9%; background: #02040b; z-index: 4; }
+.promo__bar--t { top: 0; } .promo__bar--b { bottom: 0; }
+.promo__stars i { position: absolute; width: var(--s); height: var(--s); border-radius: 50%; background: #fff4cf; }
+.promo__stars { position: absolute; inset: 0; opacity: 0; }
+.promo__siraj { position: absolute; left: 50%; top: 46%; width: 15cqw; translate: -50% -50%; opacity: 0; }
+.promo__siraj .siraj-wrap { animation: none; }
+.promo__siraj .siraj { width: 100%; pointer-events: none; }
+.promo__siraj .bubble { display: none; }
+.promo__cast { position: absolute; inset: 0; }
+.promo__cast figure { position: absolute; top: 47%; width: 19cqw; margin: 0; translate: 0 -50%; text-align: center; opacity: 0; }
+.promo__cast figure:nth-child(1) { right: 6%; }
+.promo__cast figure:nth-child(2) { left: 6%; }
+.promo__cast figure:nth-child(3) { left: 50%; top: 68%; width: 17cqw; translate: -50% -50%; }
+.promo__cast svg { display: block; width: 100%; filter: drop-shadow(0 0 3cqw rgba(255, 215, 122, .35)); }
+.promo__cast figcaption { font-weight: 800; color: var(--gold); font-size: clamp(.7rem, 3cqw, 1.15rem); line-height: 1.4; }
+.promo__line { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: .4cqw; padding: 0 5%; opacity: 0; }
+.promo__line b { font-size: clamp(1.3rem, 8cqw, 3.2rem); font-weight: 800; color: var(--gold); line-height: 1.3; text-shadow: 0 0 34px rgba(255, 215, 122, .6); }
+.promo__line span { font-size: clamp(.9rem, 4.4cqw, 1.7rem); font-weight: 800; color: var(--cream); }
+.promo__time { position: absolute; bottom: 9%; right: 0; height: 3px; width: 0; background: var(--gold); z-index: 5; }
+
+.promo.is-playing .promo__stars { animation: pr-stars 15s ease both; }
+.promo.is-playing .promo__siraj { animation: pr-siraj 15s var(--ease-out) both; }
+.promo.is-playing .promo__cast figure { animation: pr-cast 15s var(--ease-out) both; }
+.promo.is-playing .promo__line { animation: pr-line 15s var(--ease-out) both; }
+.promo.is-playing .promo__time { animation: pr-time 15s linear both; }
+@keyframes pr-stars { 0% { opacity: 0; } 12%, 100% { opacity: 1; } }
+@keyframes pr-siraj {
+  0%, 19% { opacity: 0; scale: .5; filter: brightness(.2) blur(6px); }
+  30% { opacity: 1; scale: 1.15; filter: brightness(1.5) blur(0); }
+  36%, 70% { opacity: 1; scale: 1; filter: none; }
+  78%, 100% { opacity: 0; scale: .6; filter: blur(8px); }
+}
+@keyframes pr-cast { 0%, 39% { opacity: 0; scale: .5; filter: blur(10px); } 45%, 70% { opacity: 1; scale: 1; filter: blur(0); } 77%, 100% { opacity: 0; scale: .8; filter: blur(8px); } }
+.promo.is-playing .promo__cast figure:nth-child(2) { animation-name: pr-cast-b; }
+.promo.is-playing .promo__cast figure:nth-child(3) { animation-name: pr-cast-c; }
+@keyframes pr-cast-b { 0%, 49% { opacity: 0; scale: .5; filter: blur(10px); } 55%, 70% { opacity: 1; scale: 1; filter: blur(0); } 77%, 100% { opacity: 0; scale: .8; filter: blur(8px); } }
+@keyframes pr-cast-c { 0%, 59% { opacity: 0; scale: .5; filter: blur(10px); } 65%, 70% { opacity: 1; scale: 1; filter: blur(0); } 77%, 100% { opacity: 0; scale: .8; filter: blur(8px); } }
+@keyframes pr-line { 0%, 74% { opacity: 0; translate: 0 18px; filter: blur(10px); } 84%, 100% { opacity: 1; translate: 0; filter: blur(0); } }
+@keyframes pr-time { to { width: 100%; } }
+
+.pa__replay { display: grid; justify-items: center; }
+.pa__replay .btn, .pa__acts .btn { min-height: 50px; font-size: 1.05rem; padding: 0 24px; }
+.pa__card {
+  padding: 18px 18px 16px; border-radius: 22px; line-height: 1.9;
+  background: linear-gradient(180deg, rgba(60, 96, 160, .3), rgba(20, 40, 84, .42));
+  border: 1px solid rgba(255, 233, 168, .28); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 10px 26px rgba(0, 0, 0, .3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
+  animation: door-in 1s .15s var(--ease-out) backwards;
+}
+.pa__intro { font-weight: 800; font-size: 1.12rem; color: var(--cream); margin-bottom: 8px; }
+.pa__card ul { padding-inline-start: 20px; color: #d5def2; display: grid; gap: 4px; }
+.pa__acts { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; animation: door-in 1s .3s var(--ease-out) backwards; }
+.pa__note { min-height: 1.6em; text-align: center; color: var(--teal-soft); font-weight: 800; word-break: break-all; }
+.pa__credit { text-align: center; color: #9fb0d6; font-size: .92rem; }
+
+.pa__src { display: grid; gap: 10px; padding: 18px; border-radius: 22px; background: rgba(12, 26, 58, .62); border: 1px solid rgba(255, 233, 168, .18); }
+.pa__src h2 { color: var(--gold); font-size: 1.3rem; }
+.pa__src-intro { color: #d5def2; }
+.pa__src-base { padding-inline-start: 20px; color: #bfeee8; display: grid; gap: 4px; font-size: .95rem; }
+.pa__shelf { border-radius: 16px; background: rgba(20, 40, 84, .5); border: 1px solid rgba(255, 233, 168, .14); }
+.pa__shelf summary { min-height: 48px; padding: 0 16px; display: flex; align-items: center; font-weight: 800; color: var(--cream); cursor: pointer; }
+.pa__story { padding: 4px 16px 12px; }
+.pa__story h3 { font-size: 1rem; color: var(--gold); margin: 6px 0 4px; }
+.pa__story ul { padding-inline-start: 18px; color: #c9d4ee; font-size: .88rem; line-height: 1.7; display: grid; gap: 4px; overflow-wrap: anywhere; }
+
+/* رابط الأهالي أسفل الرئيسية */
+.parents-link { justify-self: center; min-height: 44px; padding: 0 20px; border-radius: 22px; display: inline-grid; place-items: center; font-weight: 800; color: var(--gold); text-decoration: none; border: 1px solid rgba(255, 233, 168, .34); background: rgba(20, 40, 84, .46); }
+.parents-link:active { transform: scale(.94); }
+.home.is-asking .parents-link { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .promo__stars, .promo__line { opacity: 1; }
+  .promo.is-playing * { animation: none !important; }
+}

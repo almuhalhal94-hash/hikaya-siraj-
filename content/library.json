@@ -1,0 +1,259 @@
+{
+  "_schema": "مكتبة الحكايات وخطة الطفل فيها. shelves الرفوف بالترتيب، وitems دروس كل رف بترتيب تعلّمها (الأنبياء زمنيًّا من آدم إلى محمد ﷺ، والصحابة والصحابيات والتابعون بالأفضلية والسبق). name اسم الدرس، وstory رقم الحكاية في stories.json إن كُتبت؛ ما ليس له story يظهر «قريبًا». لإضافة حكاية: اكتبها في stories.json ثم ضع id-ها هنا في مكانها. يجوز أكثر من درس للاسم الواحد.",
+  "shelves": [
+    {
+      "id": "prophets",
+      "title": "قصص الأنبياء",
+      "sub": "من آدم عليه السلام إلى محمد ﷺ",
+      "items": [
+        {
+          "name": "آدم عليه السلام",
+          "story": "adam-alard"
+        },
+        {
+          "name": "نوح عليه السلام",
+          "story": "safinat-nuh"
+        },
+        {
+          "name": "هود عليه السلام",
+          "story": "hud-alrih"
+        },
+        {
+          "name": "صالح عليه السلام",
+          "story": "salih-alhijr"
+        },
+        {
+          "name": "إبراهيم عليه السلام",
+          "story": "ibrahim-alnar"
+        },
+        {
+          "name": "لوط عليه السلام",
+          "story": "lut-alfajr"
+        },
+        {
+          "name": "إسماعيل عليه السلام",
+          "story": "ismail-alwadi"
+        },
+        {
+          "name": "يوسف عليه السلام",
+          "story": "yusuf-alqamis"
+        },
+        {
+          "name": "أيوب عليه السلام",
+          "story": "ayyub-alayn"
+        },
+        {
+          "name": "شعيب عليه السلام",
+          "story": "shuayb-almizan"
+        },
+        {
+          "name": "موسى عليه السلام",
+          "story": "musa-alasa"
+        },
+        {
+          "name": "داود عليه السلام",
+          "story": "dawud-alhadid"
+        },
+        {
+          "name": "سليمان عليه السلام",
+          "story": "sulayman-alhudhud"
+        },
+        {
+          "name": "يونس عليه السلام",
+          "story": "hut-yunus"
+        },
+        {
+          "name": "زكريا ويحيى عليهما السلام",
+          "story": "zakariya-almihrab"
+        },
+        {
+          "name": "عيسى عليه السلام",
+          "story": "isa-almahd"
+        },
+        {
+          "name": "محمد ﷺ: الهجرة",
+          "story": "ghar-thawr"
+        },
+        {
+          "name": "محمد ﷺ: حنين الجذع",
+          "story": "jidh-alnakhla"
+        }
+      ]
+    },
+    {
+      "id": "sahaba",
+      "title": "قصص الصحابة",
+      "sub": "رضي الله عنهم",
+      "items": [
+        {
+          "name": "أبو بكر الصدّيق",
+          "story": "abubakr-almasjid"
+        },
+        {
+          "name": "عمر بن الخطاب",
+          "story": "umar-alhajar"
+        },
+        {
+          "name": "عثمان بن عفان",
+          "story": "uthman-rumah"
+        },
+        {
+          "name": "علي بن أبي طالب",
+          "story": "ali-alraya"
+        },
+        {
+          "name": "طلحة بن عبيد الله",
+          "story": "talha-uhud"
+        },
+        {
+          "name": "الزبير بن العوام",
+          "story": "zubayr-alkhandaq"
+        },
+        {
+          "name": "سعد بن أبي وقاص",
+          "story": "saad-alqaws"
+        },
+        {
+          "name": "أبو عبيدة بن الجراح",
+          "story": "abuubayda-alsahil"
+        },
+        {
+          "name": "بلال بن رباح",
+          "story": "bilal-alnalan"
+        },
+        {
+          "name": "مصعب بن عمير",
+          "story": "musab-alburda"
+        },
+        {
+          "name": "سلمان الفارسي",
+          "story": "salman-althurayya"
+        },
+        {
+          "name": "أنس بن مالك",
+          "story": "anas-albab"
+        },
+        {
+          "name": "أبو هريرة",
+          "story": "abuhurayra-alsuffa"
+        },
+        {
+          "name": "خالد بن الوليد",
+          "story": "khalid-alsayf"
+        }
+      ]
+    },
+    {
+      "id": "sahabiyat",
+      "title": "قصص الصحابيات",
+      "sub": "رضي الله عنهن",
+      "items": [
+        {
+          "name": "خديجة بنت خويلد",
+          "story": "khadija-alghita"
+        },
+        {
+          "name": "عائشة بنت أبي بكر",
+          "story": "aisha-aliqd"
+        },
+        {
+          "name": "حفصة بنت عمر",
+          "story": "hafsa-alsuhuf"
+        },
+        {
+          "name": "أم سلمة",
+          "story": "ummsalama-alkhayma"
+        },
+        {
+          "name": "فاطمة بنت محمد ﷺ",
+          "story": "fatima-alraha"
+        },
+        {
+          "name": "أسماء بنت أبي بكر",
+          "story": "asma-alnitaq"
+        },
+        {
+          "name": "أم سُليم",
+          "story": "ummsulaym-alkhimar"
+        },
+        {
+          "name": "أم عطية الأنصارية",
+          "story": "ummatiyya-alqirba"
+        }
+      ]
+    },
+    {
+      "id": "tabiin",
+      "title": "قصص التابعين",
+      "sub": "رحمهم الله",
+      "items": [
+        {
+          "name": "سعيد بن المسيّب",
+          "story": "said-alsariya"
+        },
+        {
+          "name": "عروة بن الزبير",
+          "story": "urwa-alhilal"
+        },
+        {
+          "name": "الحسن البصري",
+          "story": "hasan-alhasa"
+        },
+        {
+          "name": "محمد بن سيرين",
+          "story": "sirin-alsilsila"
+        },
+        {
+          "name": "عمر بن عبد العزيز",
+          "story": "umar2-alshamaa"
+        },
+        {
+          "name": "عطاء بن أبي رباح",
+          "story": "ata-alsitr"
+        }
+      ]
+    },
+    {
+      "id": "tabiiyat",
+      "title": "قصص التابعيات",
+      "sub": "رحمهن الله",
+      "items": [
+        {
+          "name": "حفصة بنت سيرين",
+          "story": "hafsasirin-almushaf"
+        },
+        {
+          "name": "عمرة بنت عبد الرحمن",
+          "story": "amra-aljidar"
+        },
+        {
+          "name": "معاذة العدوية",
+          "story": "muadha-aldoha"
+        }
+      ]
+    },
+    {
+      "id": "salihin",
+      "title": "قصص الصالحين",
+      "sub": "من قصص القرآن",
+      "items": [
+        {
+          "name": "أصحاب الكهف",
+          "story": "ashab-alkahf"
+        },
+        {
+          "name": "لقمان الحكيم"
+        },
+        {
+          "name": "مؤمن آل فرعون"
+        },
+        {
+          "name": "ذو القرنين"
+        },
+        {
+          "name": "غلام أصحاب الأخدود"
+        }
+      ]
+    }
+  ]
+}
