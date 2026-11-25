@@ -158,8 +158,10 @@ function player(el, { ui, lines, go }, story, dir, voice) {
   if (witness) { $('.film__panel').prepend(witness.el); witness.setMood('calm'); }
   let lipRaf = 0;
   const lip = () => { if (!witness || !narrator) return; witness.setLevel(narrator.level()); lipRaf = requestAnimationFrame(lip); };
+  // وضع «ولي الأمر يقرأ»: نفس الفيلم، بلا راوٍ، والنص كله ظاهر بخط أكبر، والتقدّم بزر «التالي» فقط
+  let parent = false;
   const speak = (clip, onEnd) => {
-    if (!narrator) return Promise.resolve(false);
+    if (!narrator || parent) return Promise.resolve(false);
     cancelAnimationFrame(lipRaf);
     return narrator.play(clip, () => { witness?.talking(false); cancelAnimationFrame(lipRaf); onEnd?.(); }).then(ok => {
       if (ok && alive) { witness?.talking(true); lip(); }
@@ -198,7 +200,8 @@ function player(el, { ui, lines, go }, story, dir, voice) {
       if (clip.words.includes(null)) { sfx.glow(); witness?.setMood('wonder'); }
     });
     if (!alive || i !== n) return;
-    reveal(story.scenes[n].text, voiced ? clip : null);
+    if (parent) { renderText(text, story.scenes[n].text); revealAll(); }
+    else reveal(story.scenes[n].text, voiced ? clip : null);
     busy = false;
   }
 
@@ -220,11 +223,19 @@ function player(el, { ui, lines, go }, story, dir, voice) {
 
   // بطاقة العنوان
   function openTitle() {
-    const card = html(`<div class="fcard fcard--title"><small></small><h1></h1><button class="btn" type="button"></button></div>`);
+    const card = html(`<div class="fcard fcard--title"><small></small><h1></h1><div class="fcard__btns"><button class="btn" type="button" data-act="kid"></button><button class="btn btn--ghost" type="button" data-act="parent"></button></div><p class="fcard__hint"></p></div>`);
     card.querySelector('small').textContent = story.category;
     card.querySelector('h1').textContent = story.title;
-    const b = card.querySelector('button'); b.textContent = t.start;
-    b.addEventListener('click', () => { narrator?.unlock(); witness?.show(true); sfx.success(); closeOverlay(); goto(0); });
+    card.querySelector('.fcard__hint').textContent = t.parent_hint;
+    const start = asParent => {
+      parent = asParent; film.classList.toggle('film--parent', parent);
+      if (!parent) narrator?.unlock();
+      witness?.show(true); sfx.success(); closeOverlay(); goto(0);
+    };
+    const b = card.querySelector('[data-act="kid"]'), pb = card.querySelector('[data-act="parent"]');
+    b.textContent = voice ? t.start_voice : t.start; pb.textContent = t.parent_start;
+    b.addEventListener('click', () => start(false));
+    pb.addEventListener('click', () => start(true));
     openOverlay(card, 'title');
   }
 
@@ -232,7 +243,7 @@ function player(el, { ui, lines, go }, story, dir, voice) {
   function openChoice() {
     busy = true;
     witness?.setMood('curious');
-    if (voice?.choice) setTimeout(() => alive && speak(voice.choice), 350);
+    if (voice?.choice && !parent) setTimeout(() => alive && speak(voice.choice), 350);
     const c = story.choice;
     const card = html(`<div class="fcard fcard--choice"><small></small><h2></h2><div class="fcard__opts"></div><p class="fcard__hint" aria-live="polite"></p></div>`);
     card.querySelector('small').textContent = t.choice_label;
@@ -258,6 +269,7 @@ function player(el, { ui, lines, go }, story, dir, voice) {
         clearTimeout(revealTimer);
         text.classList.add('is-echo'); renderText(text, opt.text); text.classList.add('is-all');
         nextBtn.classList.remove('is-ready');
+        if (parent) { nextBtn.classList.add('is-ready'); busy = false; return; }
         await wait(3000);
         if (alive) goto(i + 1);
       });
