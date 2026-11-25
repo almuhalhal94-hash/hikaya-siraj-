@@ -47,11 +47,15 @@ def waqf(text):
             return w[:-1] + 'ْ' + tail
         if w.endswith('ً') or w.endswith('ًّ'):
             return w.rstrip('ًّ') + ('ّ' if 'ّ' in w[-2:] else '') + 'َ' + tail
+        if re.search('يَّ$|يَّ$', w):  # فِيَّ، إِلَيَّ: بلا ألف يُنطق «فِي/فِيه» (قيس بـ Praat)، وبالألف «فِيَّا» صحيح
+            return w + 'ا' + tail
+        if re.search('ّ[َُِ]$|[َُِ]ّ$', w):  # بقية المشدّد في آخر الكلمة يُقرأ بحركته لئلا يلتبس
+            return w + tail
         core = w.rstrip('ٌٍَُِّ')
         if core != w and not re.search('[اىو]$', core):
             return core + ('ّ' if 'ّ' in w[len(core):] else '') + 'ْ' + tail
         return w + tail
-    return re.sub(r'([^\s.!؟?:…«»]+)((?:\.\.\.|[.!؟?:…»])+|$)', fix, text)
+    return re.sub(r'([^\s.!؟?:…«»،]+)((?:\.\.\.|[.!؟?:…»،])+|$)', fix, text)
 
 
 def synth_text(script, keys):

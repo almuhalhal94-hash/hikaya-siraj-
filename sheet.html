@@ -1,7 +1,0 @@
-<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="css/main.css"><link rel="stylesheet" href="css/film.css">
-<style>body{background:#0b1430;display:flex;flex-wrap:wrap;gap:14px;padding:70px 10px 10px} .cell{position:relative;width:130px;height:150px;color:#fff;font:12px sans-serif;text-align:center} .cell .witness{top:0;position:relative;opacity:1;transform:none;width:120px} </style>
-<script type="module">
-import { ART } from './js/film/witness-art.js';
-import { createWitness } from './js/film/witness.js';
-for (const k of Object.keys(ART)) { const c=document.createElement('div'); c.className='cell'; const w=createWitness(k); w.show(true); w.setMood(new URLSearchParams(location.search).get('m')||'calm'); if(location.search.includes('talk')){w.talking(true); for(let i=0;i<20;i++) w.setLevel(.7);} c.append(w.el); c.append(k); document.body.append(c);}
-</script>
