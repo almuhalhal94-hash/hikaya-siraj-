@@ -95,6 +95,8 @@ def match(display, spoken, label):
             if not need[0]:
                 row.append(None); continue
             k = next((x for x in range(j, min(j + 4, len(spoken))) if spoken[x] == need[0]), None)
+            if k is None and re.search('يَّ?$|يّ$', tok.strip('.!؟?:…«»،')):  # فِيَّ تُنطق «فِيَّا» (yaa)
+                k = next((x for x in range(j, min(j + 2, len(spoken))) if spoken[x] == need[0] + 'ا'), None)
             if k is None and need[0] in HEARD:  # خطأ تفريغ تحقّقتُ منه بقياس الصوت (tools/voice/<id>.heard.json)
                 k = next((x for x in range(j, min(j + 2, len(spoken))) if spoken[x] == HEARD[need[0]]), None)
             if k is None:  # قرب في الكتابة (حرف زائد أو ناقص): يُقبل ويُسجَّل للسماع
