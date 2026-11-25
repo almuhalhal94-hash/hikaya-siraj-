@@ -45,6 +45,8 @@ def waqf(text):
         w, tail = m.group(1), m.group(2)
         if re.search('ة[ًٌٍَُِ]$', w):
             return w[:-1] + 'ْ' + tail
+        if re.search('ًّ?ا$|ًّا$', w):  # تنوين الفتح المكتوب بألفه (عَيْبًا) يُوقف عليه بالألف
+            return w.replace('ً', 'َ') + tail
         if w.endswith('ً') or w.endswith('ًّ'):
             return w.rstrip('ًّ') + ('ّ' if 'ّ' in w[-2:] else '') + 'َ' + tail
         if re.search('يَّ$|يَّ$', w):  # فِيَّ، إِلَيَّ: بلا ألف يُنطق «فِي/فِيه» (قيس بـ Praat)، وبالألف «فِيَّا» صحيح

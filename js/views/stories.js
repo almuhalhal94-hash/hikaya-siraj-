@@ -246,7 +246,7 @@ function player(el, { ui, lines, go }, story, dir, voice) {
     card.querySelector('.fcard__hint').textContent = t.parent_hint;
     const start = asParent => {
       parent = asParent; film.classList.toggle('film--parent', parent);
-      if (!parent) narrator?.unlock();
+      if (!parent) narrator?.unlock(voice?.scenes?.[0]?.src);
       witness?.show(true); sfx.success(); closeOverlay(); goto(0);
     };
     const b = card.querySelector('[data-act="kid"]'), pb = card.querySelector('[data-act="parent"]');
