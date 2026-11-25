@@ -691,3 +691,95 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .dr-cdglow { animation: st-breathe 3.2s ease-in-out infinite; } .dr-cdflame { animation: cd-flick 1.6s ease-in-out infinite; }
 @keyframes cd-flick { 0%, 100% { scale: 1 1; } 50% { scale: .9 1.08; } }
 [data-candle="out"] .dr-cdglow, [data-candle="out"] .dr-cdflame { opacity: 0; }
+/* لقمان في land: rock=on صخرة كبيرة (الشاهد)، وrock=seed تتوهّج فيها حبة خردل داخل شقّ (لقمان 16) */
+.ld-rockwrap { opacity: 0; transition: opacity 3s ease; } [data-rock] .ld-rockwrap { opacity: 1; }
+.ld-rockbody { fill: #2e2a3e; transition: fill 6s ease; } .ld-rocklit { opacity: .45; fill: #4a4462; transition: fill 6s ease; }
+[data-set="land"][data-time="dawn"] .ld-rockbody { fill: #5a4440; } [data-set="land"][data-time="dawn"] .ld-rocklit { fill: #a87a5c; }
+.ld-seed { opacity: 0; transition: opacity 3s ease 1s; } [data-rock="seed"] .ld-seed { opacity: 1; }
+.ld-seed circle:first-child { transform-box: fill-box; transform-origin: center; animation: st-breathe 3s ease-in-out infinite; }
+[data-rock="seed"] .ld-crack { stroke: #ffd77a; transition: stroke 3s ease 1s; }
+/* غلام الأخدود في land: beast (on/down) دابة عظيمة تسدّ الطريق، وdown يطير حجر فتسقط؛ ukhdud=on نار في الخندق (trench=on معه) */
+.ld-beastwrap { opacity: 0; transition: opacity 3s ease; } [data-beast] .ld-beastwrap { opacity: 1; }
+.ld-beast { transform-box: fill-box; transform-origin: 50% 100%; animation: ld-beastbreathe 3s ease-in-out infinite; }
+@keyframes ld-beastbreathe { 50% { scale: 1.015 .985; } }
+[data-beast="down"] .ld-beast { animation: ld-beastbreathe 3s ease-in-out infinite, ld-fall 1.6s ease-in 8.2s forwards; }
+@keyframes ld-fall { to { transform: translateY(40px) rotate(8deg); opacity: 0; } }
+.ld-stone { opacity: 0; } [data-beast="down"] .ld-stone { animation: ld-throw 2.2s ease-in 6s forwards; }
+@keyframes ld-throw { 0% { opacity: 1; translate: 0 0; } 50% { translate: 170px -170px; } 92% { opacity: 1; translate: 330px -60px; } 100% { opacity: 0; translate: 340px -50px; } }
+.ld-ukhdud { opacity: 0; transition: opacity 3s ease; } [data-ukhdud="on"] .ld-ukhdud { opacity: 1; }
+.ld-ukglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 2.4s ease-in-out infinite; opacity: .55; }
+
+/* ——— قصر فرعون على النيل (qasr) ——— */
+.qs-dawn, .qs-ruins, .qs-musa, .qs-court, .qs-a, .qs-voice, .qs-safe, .qs-glow, .qs-throne { opacity: 0; transition: opacity 4s ease; }
+.qs-sun { opacity: 0; transform: translateY(220px); transition: transform 13s cubic-bezier(.2, .6, .3, 1), opacity 5s ease; }
+.qs-moon { transition: opacity 5s ease; }
+.qs-far { fill: #0f1838; transition: fill 6s ease; } .qs-pyr { fill: #121a3c; transition: fill 6s ease; } .qs-pyrlit { fill: #2a3460; transition: fill 6s ease; }
+.qs-floor { fill: #2a2236; transition: fill 6s ease; } .qs-lit { fill: #9a7a54; opacity: .35; transition: opacity 6s ease; }
+.qs-palace { transition: filter 4s ease; }
+[data-set="qasr"][data-time="dawn"] .qs-dawn { opacity: 1; } [data-set="qasr"][data-time="dawn"] .qs-moon { opacity: .1; }
+.stage[data-set="qasr"][data-time="dawn"] .stars { opacity: .08; }
+[data-set="qasr"][data-time="dawn"] .qs-sun { opacity: 1; transform: none; }
+[data-set="qasr"][data-time="dawn"] .qs-far { fill: #6a4a6a; } [data-set="qasr"][data-time="dawn"] .qs-pyr { fill: #8a5a5a; } [data-set="qasr"][data-time="dawn"] .qs-pyrlit { fill: #e0a070; }
+[data-set="qasr"][data-time="dawn"] .qs-floor { fill: #8a6a4a; } [data-set="qasr"][data-time="dawn"] .qs-lit { opacity: .8; }
+.qs-flag { transform-box: fill-box; transform-origin: 0 50%; animation: ld-wave 2.6s ease-in-out infinite; }
+.qs-brazier { transform-box: fill-box; transform-origin: center; animation: st-breathe 2.2s ease-in-out infinite; opacity: .7; }
+.qs-shine { animation: ld-twinkle 3s ease-in-out infinite; }
+[data-throne="on"] .qs-throne { opacity: 1; } .qs-throne ellipse { transform-box: fill-box; transform-origin: center; animation: st-breathe 2.6s ease-in-out infinite; }
+[data-court="on"] .qs-court { opacity: .9; } [data-musa="on"] .qs-musa { opacity: 1; animation: lt-breathe 3.6s ease-in-out infinite; }
+[data-ruins="on"] .qs-ruins { opacity: 1; animation: lt-breathe 5s ease-in-out infinite; }
+.qs-a { animation: lt-breathe 3.6s ease-in-out infinite; } [data-set="qasr"][data-light] .qs-a { opacity: 1; }
+[data-light="speak"] .qs-voice { opacity: 1; }
+.qs-voice path { transform-box: fill-box; transform-origin: center; animation: dr-call 3s ease-out infinite; animation-delay: var(--d); opacity: 0; }
+[data-safe="on"] .qs-safe { opacity: 1; } .qs-ring { transform-box: fill-box; transform-origin: center; animation: qs-spin 18s linear infinite; } @keyframes qs-spin { to { rotate: 360deg; } }
+.qs-sarhwrap { opacity: 0; transition: opacity 2s ease; } [data-sarh] .qs-sarhwrap { opacity: 1; }
+.qs-sarh { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(.12); transition: transform 8s cubic-bezier(.3, .1, .3, 1) .6s; }
+[data-sarh="rise"] .qs-sarh { transform: scaleY(.62); } [data-sarh="high"] .qs-sarh { transform: none; } [data-sarh="high"] .qs-sarh { transition: none; }
+[data-fade="on"] .qs-palace { filter: saturate(.25) brightness(.55); }
+[data-set="qasr"][data-glow="full"] .qs-glow { opacity: .4; }
+.stage[data-set="qasr"] .stage__tint { background: radial-gradient(circle at 50% 70%, rgba(255, 210, 150, .28), rgba(255, 180, 110, .05) 72%); }
+.stage[data-set="qasr"][data-time="dawn"] .stage__tint, .stage[data-set="qasr"][data-glow="full"] .stage__tint { opacity: 1; }
+
+/* ——— الردم بين السدّين (sadd) ——— */
+.sd-dawn, .sd-dusk, .sd-pool, .sd-threat, .sd-mts, .sd-wall, .sd-forge, .sd-flock, .sd-a, .sd-glow, .sd-bare { opacity: 0; transition: opacity 4s ease; }
+.sd-moon { transition: opacity 5s ease; } .stars { transition: opacity 5s ease; }
+.sd-far { fill: #121a40; transition: fill 6s ease; } .sd-ground { fill: #1c1830; transition: fill 6s ease; } .sd-front { fill: #04050c; }
+.sd-mt { fill: #161430; transition: fill 6s ease; } .sd-mt2 { fill: #0f0e24; transition: fill 6s ease; } .sd-mtlit { fill: #2e2c58; opacity: .7; transition: fill 6s ease; } .sd-face { fill: #0a0918; } .sd-ridge { stroke: #3a3870; transition: stroke 6s ease; }
+.sd-sun { opacity: 0; transform: translateY(380px); transition: transform 14s cubic-bezier(.3, .2, .3, 1), opacity 4s ease; }
+[data-set="sadd"][data-time="dawn"] .sd-dawn { opacity: 1; }
+[data-set="sadd"][data-time="dawn"] .sd-moon, [data-set="sadd"][data-sun] .sd-moon { opacity: 0; }
+.stage[data-set="sadd"][data-time="dawn"] .stars, .stage[data-set="sadd"][data-sun] .stars { opacity: .06; }
+[data-set="sadd"][data-time="dawn"] .sd-far, [data-set="sadd"][data-sun="rise"] .sd-far { fill: #7a5070; } [data-set="sadd"][data-time="dawn"] .sd-ground, [data-set="sadd"][data-sun="rise"] .sd-ground { fill: #8a6448; }
+[data-set="sadd"][data-time="dawn"] .sd-mt { fill: #4a3456; } [data-set="sadd"][data-time="dawn"] .sd-mt2 { fill: #2e2034; } [data-set="sadd"][data-time="dawn"] .sd-mtlit { fill: #c08a6a; } [data-set="sadd"][data-time="dawn"] .sd-ridge { stroke: #f0b080; }
+[data-sun="set"] .sd-dusk { opacity: 1; } [data-sun="set"] .sd-far { fill: #3a1e2a; } [data-sun="set"] .sd-ground { fill: #4a2a24; }
+[data-sun="set"] .sd-sun { opacity: 1; transform: translateY(420px); animation: sd-setting 16s cubic-bezier(.4, 0, .6, 1) forwards; }
+@keyframes sd-setting { from { transform: translateY(330px); } to { transform: translateY(610px); } }
+[data-sun="set"] .sd-disc { fill: #ffb070; }
+[data-sun="rise"] .sd-dawn { opacity: 1; } [data-sun="rise"] .sd-sun { opacity: 1; animation: sd-rising 16s cubic-bezier(.2, .6, .3, 1) forwards; }
+@keyframes sd-rising { from { transform: translateY(620px); } to { transform: translateY(300px); } }
+[data-sun="rise"] .sd-bare { opacity: .5; } .sd-bare { stroke: #5a3a22; }
+[data-pool="on"] .sd-pool { opacity: 1; } .sd-poolsun { opacity: 0; } [data-sun="set"] .sd-poolsun { opacity: .85; animation: lt-breathe 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+[data-mts="on"] .sd-mts { opacity: 1; }
+[data-threat="on"] .sd-threat { opacity: .8; } .sd-threat g { filter: blur(14px); } .sd-dust { transform-box: fill-box; transform-origin: center; animation: sd-dust 6s ease-in-out infinite; animation-delay: var(--d); }
+@keyframes sd-dust { 50% { translate: 16px -20px; scale: 1.25; opacity: .5; } }
+[data-iron] .sd-wall { opacity: 1; }
+.sd-blk { opacity: 0; } [data-iron="build"] .sd-blk { animation: sd-place .9s var(--ease-out, ease-out) forwards; animation-delay: calc(var(--i) * .9s + .6s); }
+@keyframes sd-place { from { opacity: 0; translate: 0 -60px; } to { opacity: 1; translate: 0 0; } }
+[data-iron="fire"] .sd-blk, [data-iron="pour"] .sd-blk, [data-iron="done"] .sd-blk { opacity: 1; }
+.sd-heat, .sd-copper, .sd-qitr, .sd-sheen { opacity: 0; transition: opacity 3s ease; }
+[data-iron="fire"] .sd-heat { opacity: .55; animation: sd-glowpulse 1.8s ease-in-out infinite; mix-blend-mode: screen; }
+@keyframes sd-glowpulse { 50% { opacity: .8; } }
+[data-iron="pour"] .sd-heat { opacity: .3; } [data-iron="pour"] .sd-qitr { opacity: 1; } [data-iron="pour"] .sd-copper { opacity: .35; transition-duration: 8s; }
+.sd-drip { stroke-dasharray: 480; stroke-dashoffset: 480; } [data-iron="pour"] .sd-drip { animation: sd-pour 3.6s ease-in infinite; animation-delay: var(--d); }
+@keyframes sd-pour { 0% { stroke-dashoffset: 480; } 60% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -480; } }
+[data-iron="done"] .sd-copper { opacity: .45; } [data-iron="done"] .sd-sheen { animation: sd-shine 6s ease-in-out infinite; }
+@keyframes sd-shine { 0%, 55%, 100% { opacity: 0; translate: -40px 0; } 70% { opacity: .35; } 85% { opacity: 0; translate: 140px 0; } }
+[data-forge="on"] .sd-forge { opacity: 1; } .sd-forge ellipse { transform-box: fill-box; transform-origin: center; animation: st-breathe 1.6s ease-in-out infinite; }
+.sd-spark { animation: sd-spark 2s ease-out infinite; animation-delay: var(--d); }
+@keyframes sd-spark { 0% { translate: 0 0; opacity: 1; } 100% { translate: var(--x) -260px; opacity: 0; } }
+[data-flock="on"] .sd-flock { opacity: .8; } .sd-flock circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; } .sd-flock circle:nth-child(2n) { animation-delay: -1.4s; }
+.sd-lights { translate: var(--lx, 0) var(--ly, 0); transition: translate 8s ease-in-out; }
+[data-set="sadd"][data-light] .sd-a { opacity: 1; } .sd-a { animation: lt-breathe 3.6s ease-in-out infinite; }
+[data-set="sadd"][data-light="gap"] { --lx: -100px; --ly: 10px; } [data-set="sadd"][data-light="west"] { --lx: -150px; --ly: 20px; }
+[data-set="sadd"][data-glow="full"] .sd-glow { opacity: .4; }
+.stage[data-set="sadd"] .stage__tint { background: radial-gradient(circle at 50% 70%, rgba(255, 170, 90, .3), rgba(255, 140, 60, .05) 72%); }
+.stage[data-set="sadd"][data-sun] .stage__tint, .stage[data-set="sadd"][data-forge="on"] .stage__tint { opacity: 1; }

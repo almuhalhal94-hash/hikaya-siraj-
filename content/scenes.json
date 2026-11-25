@@ -8124,5 +8124,671 @@
         "far": "none"
       }
     }
+  },
+  "luqman-alsakhra": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "rock": "on",
+          "palm": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            420,
+            1100
+          ],
+          "to": [
+            560,
+            600,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "rock": "on",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            700
+          ],
+          "to": [
+            600,
+            300,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "cradle": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            600,
+            1000
+          ],
+          "to": [
+            640,
+            660,
+            620
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "rock": "seed"
+        },
+        "camera": {
+          "from": [
+            500,
+            600,
+            900
+          ],
+          "to": [
+            394,
+            628,
+            420
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "rock": "on",
+          "light": "on",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            560,
+            640,
+            760
+          ],
+          "to": [
+            620,
+            460,
+            1080
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "light": "road",
+          "pair": "on",
+          "palm": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            820
+          ],
+          "to": [
+            820,
+            620,
+            900
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "steps"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "rock": "on",
+        "light": "road",
+        "pair": "on",
+        "road": "on"
+      }
+    }
+  },
+  "mumin-alqasr": {
+    "thumb": 1,
+    "scenes": [
+      {
+        "set": "qasr",
+        "state": {
+          "throne": "on",
+          "court": "on",
+          "musa": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            380,
+            1150
+          ],
+          "to": [
+            600,
+            520,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "throne": "on",
+          "court": "on",
+          "light": "speak"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            640,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "ruins": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1000
+          ],
+          "to": [
+            600,
+            330,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "sarh": "rise",
+          "court": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            900
+          ],
+          "to": [
+            700,
+            300,
+            1100
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "fade": "on",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            460,
+            1100
+          ],
+          "to": [
+            600,
+            620,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "safe": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            640
+          ],
+          "to": [
+            600,
+            460,
+            1100
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "throne": "on",
+        "court": "on",
+        "light": "speak"
+      }
+    }
+  },
+  "dhulqarnayn-alradm": {
+    "thumb": 5,
+    "scenes": [
+      {
+        "set": "sadd",
+        "state": {
+          "mts": "on",
+          "iron": "done"
+        },
+        "camera": {
+          "from": [
+            600,
+            300,
+            1150
+          ],
+          "to": [
+            600,
+            440,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "sadd",
+        "state": {
+          "sun": "set",
+          "pool": "on",
+          "flock": "on",
+          "light": "west"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1100
+          ],
+          "to": [
+            600,
+            560,
+            800
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "sadd",
+        "state": {
+          "sun": "rise",
+          "flock": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            760
+          ],
+          "to": [
+            600,
+            440,
+            1100
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "sadd",
+        "state": {
+          "mts": "on",
+          "threat": "on",
+          "flock": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1100
+          ],
+          "to": [
+            600,
+            440,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "sadd",
+        "state": {
+          "mts": "on",
+          "iron": "pour",
+          "forge": "on",
+          "light": "gap"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            700
+          ],
+          "to": [
+            600,
+            420,
+            960
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "sadd",
+        "state": {
+          "mts": "on",
+          "iron": "done",
+          "time": "dawn",
+          "flock": "on",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            460,
+            760
+          ],
+          "to": [
+            600,
+            400,
+            1150
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "mts": "on",
+        "iron": "build",
+        "flock": "on",
+        "light": "gap"
+      }
+    }
+  },
+  "ghulam-aljabal": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "tent": "lit",
+          "light": "far"
+        },
+        "camera": {
+          "from": [
+            600,
+            360,
+            1150
+          ],
+          "to": [
+            760,
+            600,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "beast": "down",
+          "flock": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            820,
+            640,
+            1000
+          ],
+          "to": [
+            800,
+            640,
+            880
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            680,
+            660,
+            640
+          ],
+          "to": [
+            660,
+            600,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "night",
+          "cave": "none",
+          "trail": "on",
+          "shake": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1100
+          ],
+          "to": [
+            600,
+            360,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "flock": "on",
+          "bow": "on",
+          "town": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            560,
+            620,
+            760
+          ],
+          "to": [
+            600,
+            540,
+            1100
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "trench": "on",
+          "ukhdud": "on",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            700,
+            760
+          ],
+          "to": [
+            600,
+            460,
+            1150
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "on",
+        "pair": "on",
+        "time": "dawn",
+        "glow": "full"
+      }
+    }
   }
 }
