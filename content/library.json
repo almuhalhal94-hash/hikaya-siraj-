@@ -242,16 +242,20 @@
           "story": "ashab-alkahf"
         },
         {
-          "name": "لقمان الحكيم"
+          "name": "لقمان الحكيم",
+          "story": "luqman-alsakhra"
         },
         {
-          "name": "مؤمن آل فرعون"
+          "name": "مؤمن آل فرعون",
+          "story": "mumin-alqasr"
         },
         {
-          "name": "ذو القرنين"
+          "name": "ذو القرنين",
+          "story": "dhulqarnayn-alradm"
         },
         {
-          "name": "غلام أصحاب الأخدود"
+          "name": "غلام أصحاب الأخدود",
+          "story": "ghulam-aljabal"
         }
       ]
     }
