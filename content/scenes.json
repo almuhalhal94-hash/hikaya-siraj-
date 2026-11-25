@@ -7616,5 +7616,347 @@
         "tawaf": "off"
       }
     }
+  },
+  "amra-aljidar": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "lamp": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1000
+          ],
+          "to": [
+            560,
+            660,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "lamp": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            560,
+            660,
+            700
+          ],
+          "to": [
+            620,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "pair": "on",
+          "light": "pray",
+          "peep": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1000
+          ],
+          "to": [
+            640,
+            560,
+            700
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "peep": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            760
+          ],
+          "to": [
+            600,
+            400,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "vessel": "on",
+          "light": "on",
+          "pair": "warm",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1000
+          ],
+          "to": [
+            480,
+            680,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "suhuf": "on",
+          "copies": "on",
+          "light": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            760,
+            700
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "peep": "on",
+        "glow": "full",
+        "far": "none"
+      }
+    }
+  },
+  "muadha-aldoha": {
+    "thumb": 3,
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "rise",
+          "light": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1000
+          ],
+          "to": [
+            520,
+            600,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "up",
+          "light": "on",
+          "pair": "warm",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            520,
+            640,
+            720
+          ],
+          "to": [
+            620,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "up",
+          "light": "on",
+          "glow": "full",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            380,
+            300,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "up",
+          "light": "on",
+          "pair": "warm",
+          "glow": "full",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            380,
+            300,
+            760
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "moon": "glow",
+          "light": "on",
+          "pair": "warm",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            700,
+            420,
+            1000
+          ],
+          "to": [
+            880,
+            260,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "up",
+          "peep": "on",
+          "suhuf": "on",
+          "light": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            760,
+            700
+          ],
+          "to": [
+            500,
+            460,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "sun": "up",
+        "light": "on",
+        "glow": "full",
+        "far": "none"
+      }
+    }
   }
 }

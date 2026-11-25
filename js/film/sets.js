@@ -777,12 +777,15 @@ function dar() {
   <g data-d=".08">
     <rect ${BIG} fill="url(#g-night)"/>
     <rect class="dr-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    <defs><linearGradient id="g-day" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f9fd8"/><stop offset=".7" stop-color="#9fd4ee"/><stop offset="1" stop-color="#f6e7b8"/></linearGradient></defs>
+    <rect class="dr-day" x="-700" y="-300" width="2600" height="1200" fill="url(#g-day)"/>
     ${stars(90, 37, [-400, 1600], [-300, 400])}
     <path class="dr-moon" d="M930 70a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
+    <g class="dr-sun" transform="translate(300 160)"><circle r="230" fill="url(#g-warm)"/><circle r="64" fill="#ffe08a"/><circle r="50" fill="#fff4cf"/></g>
   </g>
   <g data-d=".3">
     <path class="dr-hills" d="M-700 470-480 330-330 400-170 280 0 380 150 300 330 410 500 330 700 420 860 300 1040 390 1220 290 1400 400 1900 330V1400H-700z"/>
-    <g transform="translate(600 438)"><path class="dr-kaaba" d="M-26 0v-46h52V0z"/><path d="M-26-34h52" stroke="#c9995a" stroke-width="3" opacity=".7"/></g>
+    <g class="dr-far" transform="translate(600 438)"><path class="dr-kaaba" d="M-26 0v-46h52V0z"/><path d="M-26-34h52" stroke="#c9995a" stroke-width="3" opacity=".7"/></g>
   </g>
   <g data-d=".75">
     <rect x="-700" y="420" width="2600" height="280" fill="url(#g-court)"/><path d="${wall}" stroke="#1a120e" stroke-width="3" opacity=".35"/>

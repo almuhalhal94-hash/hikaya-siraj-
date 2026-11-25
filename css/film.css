@@ -560,6 +560,14 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-hold="on"] .hr-hold { opacity: 1; } [data-halqa="on"] .hr-halqa { opacity: 1; } [data-halqa="big"] .hr-halqa { opacity: 1; scale: 1.25; }
 .hr-halqa { transition: opacity 3s ease, scale 6s ease; transform-box: fill-box; transform-origin: center; } .hr-q:nth-child(2n) { animation-delay: -1.2s; } .hr-q0 { animation-duration: 2.8s; }
 
+/* شمس الضحى في dar (معاذة العدوية): sun=rise قرب الأفق، sun=up ترتفع وتضيء الفناء */
+.dr-sun { opacity: 0; translate: 0 420px; transition: opacity 3s ease, translate 9s var(--ease-out); }
+.dr-sun circle:first-child { transform-box: fill-box; transform-origin: center; animation: st-breathe 4s ease-in-out infinite; }
+[data-set="dar"][data-sun="rise"] .dr-sun { opacity: 1; translate: 0 260px; } [data-set="dar"][data-sun="up"] .dr-sun { opacity: 1; translate: 0 0; }
+.dr-day { opacity: 0; transition: opacity 5s ease; } [data-set="dar"][data-sun="up"] .dr-day { opacity: 1; } [data-set="dar"][data-sun="up"] .dr-hills { fill: #c9a878; }
+.dr-far { transition: opacity 2s ease; } [data-set="dar"][data-far="none"] .dr-far { opacity: 0; }
+.stage[data-set="dar"][data-sun="up"] .stars { opacity: 0; } [data-set="dar"][data-sun="up"] .dr-moon { opacity: 0; }
+
 .mh-book { opacity: 0; transition: opacity 3s ease; } [data-book="on"] .mh-book { opacity: 1; }
 .mh-book circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
 
