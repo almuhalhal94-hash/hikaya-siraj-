@@ -55,7 +55,7 @@ def waqf(text):
 
 
 def synth_text(script, keys):
-    return '\n\n'.join(waqf(script[k].replace(AYAH, '').strip()).replace(': ', ':\n') for k in keys)
+    return '\n\n'.join(waqf(script[k].replace(AYAH, '').strip()).replace(': ', ':\n').replace('...', '،').replace('…', '،') for k in keys)
 
 
 WARN = []
