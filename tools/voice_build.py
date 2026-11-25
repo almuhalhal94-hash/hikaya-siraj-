@@ -48,11 +48,11 @@ def waqf(text):
         if re.search('ًّ?ا$|ًّا$', w):  # تنوين الفتح المكتوب بألفه (عَيْبًا) يُوقف عليه بالألف
             return w.replace('ً', 'َ') + tail
         if w.endswith('ً') or w.endswith('ًّ'):
-            return w.rstrip('ًّ') + ('ّ' if 'ّ' in w[-2:] else '') + 'َ' + tail
+            return w.rstrip('ًّ') + ('ّ' if 'ّ' in w[-2:] else '') + 'َا' + tail  # مَسَاءً ← مَسَاءَا
         if re.search('يَّ$|يَّ$', w):  # فِيَّ، إِلَيَّ: بلا ألف يُنطق «فِي/فِيه» (قيس بـ Praat)، وبالألف «فِيَّا» صحيح
             return w + 'ا' + tail
-        if re.search('ّ[َُِ]$|[َُِ]ّ$', w):  # بقية المشدّد في آخر الكلمة يُقرأ بحركته لئلا يلتبس
-            return w + tail
+        if re.search('ّ[َُِ]$|[َُِ]ّ$', w):  # المشدّد في آخر الكلمة (الْجِنَّ، الْحَقِّ) يوقف عليه بالشدة والسكون
+            return w.rstrip('َُِّ') + 'ّْ' + tail
         core = w.rstrip('ٌٍَُِّ')
         if core != w and not re.search('[اىو]$', core):
             return core + ('ّ' if 'ّ' in w[len(core):] else '') + 'ْ' + tail
@@ -66,7 +66,7 @@ def yaa(text):
 
 
 def synth_text(script, keys):
-    return '\n\n'.join(waqf(yaa(script[k].replace(AYAH, '').strip())).replace(': ', ':\n').replace('...', '،').replace('…', '،') for k in keys)
+    return '\n\n'.join(waqf(yaa(script[k].replace(AYAH, '').strip())).replace(': ', ':\n').replace('...', '،').replace('…', '،').replace(':\n ', ':\n\n') for k in keys)  # بعد آية محذوفة: فقرة جديدة (بدونها أسقط المولِّد «مَا أَسْعَدَنِي» في سليمان)
 
 
 WARN = []
@@ -95,6 +95,8 @@ def match(display, spoken, label):
             if not need[0]:
                 row.append(None); continue
             k = next((x for x in range(j, min(j + 4, len(spoken))) if spoken[x] == need[0]), None)
+            if k is None and re.search('يَّ?$|يّ$', tok.strip('.!؟?:…«»،')):  # فِيَّ تُنطق «فِيَّا» (yaa)
+                k = next((x for x in range(j, min(j + 2, len(spoken))) if spoken[x] == need[0] + 'ا'), None)
             if k is None and need[0] in HEARD:  # خطأ تفريغ تحقّقتُ منه بقياس الصوت (tools/voice/<id>.heard.json)
                 k = next((x for x in range(j, min(j + 2, len(spoken))) if spoken[x] == HEARD[need[0]]), None)
             if k is None:  # قرب في الكتابة (حرف زائد أو ناقص): يُقبل ويُسجَّل للسماع
