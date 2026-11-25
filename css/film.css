@@ -552,6 +552,14 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .stage[data-set="haram"] .stage__tint { background: radial-gradient(circle at 50% 62%, rgba(255, 232, 170, .32), rgba(255, 215, 122, .05) 72%); }
 .stage[data-set="haram"][data-glow="full"] .stage__tint { opacity: 1; }
 
+/* ستر الكعبة (عطاء بن أبي رباح): يتموّج ويتوهّج حزامه، نور عند طرفه، وحلقة علم */
+.hr-band { opacity: 0; transition: opacity 3s ease; } [data-kiswa="glow"] .hr-band { opacity: .55; animation: st-breathe 3.6s ease-in-out infinite; }
+.hr-hem { transform-box: fill-box; transform-origin: center; } [data-kiswa] .hr-hem { animation: hr-sway 4.5s ease-in-out infinite; }
+@keyframes hr-sway { 50% { transform: translateX(10px) skewX(-6deg); } }
+.hr-hold, .hr-halqa { opacity: 0; transition: opacity 3s ease; } .hr-hold circle:first-child, .hr-q { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
+[data-hold="on"] .hr-hold { opacity: 1; } [data-halqa="on"] .hr-halqa { opacity: 1; } [data-halqa="big"] .hr-halqa { opacity: 1; scale: 1.25; }
+.hr-halqa { transition: opacity 3s ease, scale 6s ease; transform-box: fill-box; transform-origin: center; } .hr-q:nth-child(2n) { animation-delay: -1.2s; } .hr-q0 { animation-duration: 2.8s; }
+
 .mh-book { opacity: 0; transition: opacity 3s ease; } [data-book="on"] .mh-book { opacity: 1; }
 .mh-book circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
 

@@ -880,10 +880,14 @@ function haram() {
       <path d="M-150 0V-300h170V-6z" fill="url(#g-kiswa)"/><path d="M20-6V-300l140 26V-20z" fill="#14141c"/>
       <path d="M-150-236h170v22h-170zM20-236l140 22v20L20-214z" fill="#c9a24a"/>
       <path d="M-150-236h170M20-236l140 22" stroke="#ffe9a8" stroke-width="2" opacity=".6"/>
+      <path class="hr-band" d="M-150-236h170v22h-170zM20-236l140 22v20L20-214z" fill="#ffe9a8"/>
+      <g class="hr-hem"><path d="M-150-6q42 10 85 0t85 0" fill="none" stroke="#2a2a36" stroke-width="10"/></g>
+      <g class="hr-hold" transform="translate(-170 -70)"><circle r="96" fill="url(#g-warm)"/><circle r="8" fill="#fff"/></g>
       <path d="M-60-90v-120h50v120z" fill="#c9a24a" opacity=".85"/><path d="M-66-90h62v8h-62z" fill="#8a6a2a"/>
       <g class="hr-stone" transform="translate(12 -64)"><circle r="70" fill="url(#g-warm)"/><ellipse rx="20" ry="24" fill="#c0c4cc"/><ellipse rx="13" ry="16" fill="#120c10"/></g>
     </g>
     <g class="hr-maqam" transform="translate(890 740)"><circle cy="-30" r="110" fill="url(#g-warm)"/><path d="M-30 0v-44h60V0z" fill="#b8a888"/><path d="M-36-44h72l-8-20h-56z" fill="#d8c8a0"/></g>
+    <g class="hr-halqa" transform="translate(250 900)">${[...Array(9)].map((_, i) => { const a = Math.PI * (0.08 + i * 0.105); return `<circle class="hr-q" cx="${(Math.cos(a) * 170).toFixed(0)}" cy="${(-Math.sin(a) * 60).toFixed(0)}" r="34" fill="url(#g-warm)"/>`; }).join('')}<circle class="hr-q hr-q0" cy="-20" r="70" fill="url(#g-warm)"/><circle cy="-20" r="7" fill="#fff"/></g>
     <g class="hr-lights">
       <g class="hr-a"><circle cx="420" cy="760" r="110" fill="url(#g-warm)"/><circle cx="420" cy="760" r="8" fill="#fff"/></g>
     </g>

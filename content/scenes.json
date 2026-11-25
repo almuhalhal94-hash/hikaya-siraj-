@@ -7456,5 +7456,165 @@
         "light": "on"
       }
     }
+  },
+  "ata-alsitr": {
+    "thumb": 4,
+    "scenes": [
+      {
+        "set": "haram",
+        "state": {
+          "kiswa": "glow",
+          "halqa": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            360,
+            1000
+          ],
+          "to": [
+            600,
+            560,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "light": "on",
+          "halqa": "on"
+        },
+        "camera": {
+          "from": [
+            500,
+            600,
+            1000
+          ],
+          "to": [
+            420,
+            720,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "hold": "on",
+          "tawaf": "off"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            460,
+            620,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "hold": "on",
+          "kiswa": "glow",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            460,
+            620,
+            720
+          ],
+          "to": [
+            560,
+            520,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star"
+      },
+      {
+        "set": "land",
+        "state": {
+          "tent": "lit",
+          "time": "dawn",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            500,
+            1000
+          ],
+          "to": [
+            900,
+            620,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "wind"
+        ],
+        "sfx": "steps"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "time": "dawn",
+          "halqa": "big",
+          "kiswa": "glow"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            760
+          ],
+          "to": [
+            600,
+            420,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow"
+      }
+    ],
+    "choice": {
+      "state": {
+        "hold": "on",
+        "kiswa": "glow",
+        "tawaf": "off"
+      }
+    }
   }
 }
