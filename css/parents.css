@@ -63,6 +63,16 @@
 .pa__note { min-height: 1.6em; text-align: center; color: var(--teal-soft); font-weight: 800; word-break: break-all; }
 .pa__credit { text-align: center; color: #9fb0d6; font-size: .92rem; }
 
+.pa__src { display: grid; gap: 10px; padding: 18px; border-radius: 22px; background: rgba(12, 26, 58, .62); border: 1px solid rgba(255, 233, 168, .18); }
+.pa__src h2 { color: var(--gold); font-size: 1.3rem; }
+.pa__src-intro { color: #d5def2; }
+.pa__src-base { padding-inline-start: 20px; color: #bfeee8; display: grid; gap: 4px; font-size: .95rem; }
+.pa__shelf { border-radius: 16px; background: rgba(20, 40, 84, .5); border: 1px solid rgba(255, 233, 168, .14); }
+.pa__shelf summary { min-height: 48px; padding: 0 16px; display: flex; align-items: center; font-weight: 800; color: var(--cream); cursor: pointer; }
+.pa__story { padding: 4px 16px 12px; }
+.pa__story h3 { font-size: 1rem; color: var(--gold); margin: 6px 0 4px; }
+.pa__story ul { padding-inline-start: 18px; color: #c9d4ee; font-size: .88rem; line-height: 1.7; display: grid; gap: 4px; overflow-wrap: anywhere; }
+
 /* رابط الأهالي أسفل الرئيسية */
 .parents-link { justify-self: center; min-height: 44px; padding: 0 20px; border-radius: 22px; display: inline-grid; place-items: center; font-weight: 800; color: var(--gold); text-decoration: none; border: 1px solid rgba(255, 233, 168, .34); background: rgba(20, 40, 84, .46); }
 .parents-link:active { transform: scale(.94); }

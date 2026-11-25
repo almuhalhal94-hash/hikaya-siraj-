@@ -1,5 +1,5 @@
 // القسم 7: صفحة الأهالي — إعلان متحرك ١٥ ثانية بالكود، شرح قصير، مشاركة الرابط، و«ابدأ الآن».
-import { html, reducedMotion } from '../core.js';
+import { html, reducedMotion, content, num } from '../core.js';
 import { createSiraj } from '../siraj.js';
 import { sparkle } from '../sky.js';
 import { sfx } from '../audio.js';
@@ -51,6 +51,7 @@ export default async function parents(el, { ui, go }) {
       <article class="pa__card"><p class="pa__intro"></p><ul></ul></article>
       <div class="pa__acts"><a class="btn" href="#/"></a><button class="btn btn--ghost" type="button"></button></div>
       <p class="pa__note" aria-live="polite"></p>
+      <section class="pa__src"><h2></h2><p class="pa__src-intro"></p><ul class="pa__src-base"></ul><div class="pa__shelves"></div></section>
       <p class="pa__credit"></p>
     </section>`);
   const $ = q => page.querySelector(q);
@@ -109,6 +110,29 @@ export default async function parents(el, { ui, go }) {
     } catch (err) {
       if (err && err.name !== 'AbortError') note.textContent = url;
     }
+  });
+
+  // «مصادرنا»: تُقرأ آليًّا من حقل sources في كل حكاية، مرتبة برفوف المكتبة.
+  const src = t.sources;
+  $('.pa__src h2').textContent = src.title;
+  $('.pa__src-intro').textContent = src.intro;
+  src.base.forEach(b => { const li = document.createElement('li'); li.textContent = b; $('.pa__src-base').append(li); });
+  const [lib, { stories }] = await Promise.all([content('library'), content('stories')]);
+  const byId = new Map(stories.map(s => [s.id, s]));
+  lib.shelves.forEach(sh => {
+    const items = sh.items.filter(i => byId.has(i.story));
+    if (!items.length) return;
+    const d = html(`<details class="pa__shelf"><summary></summary></details>`);
+    d.querySelector('summary').textContent = `${sh.title} (${num(items.length)})`;
+    items.forEach(i => {
+      const st = byId.get(i.story);
+      const box = html(`<div class="pa__story"><h3></h3><ul></ul></div>`);
+      box.querySelector('h3').textContent = `${i.name}: «${st.title}»`;
+      st.sources.forEach(x => { const li = document.createElement('li'); li.textContent = x; box.querySelector('ul').append(li); });
+      d.append(box);
+    });
+    d.addEventListener('toggle', () => d.open && sfx.flip());
+    $('.pa__shelves').append(d);
   });
 
   el.append(page);
