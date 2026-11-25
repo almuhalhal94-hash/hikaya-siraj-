@@ -70,7 +70,7 @@ def yaa(text):
 
 
 def synth_text(script, keys):
-    return '\n\n'.join(waqf(yaa(script[k].replace(AYAH, '').strip())).replace(': ', ':\n').replace('...', '،').replace('…', '،').replace(':\n ', ':\n\n') for k in keys)  # بعد آية محذوفة: فقرة جديدة (بدونها أسقط المولِّد «مَا أَسْعَدَنِي» في سليمان)
+    return '\n\n'.join(waqf(yaa(re.sub(r'(?<!:) ' + AYAH + ' ', '،\n\n', script[k]).replace(AYAH, '').strip())).replace(': ', ':\n').replace('...', '،').replace('…', '،').replace(':\n ', ':\n\n') for k in keys)  # بعد آية محذوفة: فقرة جديدة (بدونها أسقط المولِّد «مَا أَسْعَدَنِي» في سليمان)
 
 
 WARN = []

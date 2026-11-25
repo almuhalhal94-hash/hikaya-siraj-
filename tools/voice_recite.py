@@ -44,9 +44,10 @@ def mushaf():
     out = []
     for s in d:
         for a in s['ayahs']:
-            t = a['text']
-            if s['number'] not in (1, 9) and a['numberInSurah'] == 1 and t.startswith(BISM):
-                t = t[len(BISM):].strip()  # البسملة ليست من الآية في تلاوة quran.com
+            t = unicodedata.normalize('NFC', a['text'])
+            b = unicodedata.normalize('NFC', BISM)  # ترتيب الشدة والحركة يختلف بين السور
+            if s['number'] not in (1, 9) and a['numberInSurah'] == 1 and t.startswith(b):
+                t = t[len(b):].strip()  # البسملة ليست من الآية في تلاوة quran.com
             out.append((s['number'], a['numberInSurah'], unicodedata.normalize('NFC', t).split(' ')))
     return out
 
