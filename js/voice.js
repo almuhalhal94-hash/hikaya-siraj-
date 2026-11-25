@@ -1,6 +1,7 @@
 // التعليق الصوتي للحكايات: ملف صوت لكل مشهد (content/voice.json) يُشغَّل بعنصر audio واحد عاديّ.
 // لا يمر الصوت عبر Web Audio (في iPhone يُكتم مع زر الصامت أو يبقى معلّقًا داخل الإطارات)؛
-// حركة فم الشاهد تأتي من غلاف ارتفاع الصوت يُحسب بفك الملف نفسه مرة واحدة. لا موسيقى: كلام الراوي فقط.
+// حركة فم الشاهد تأتي من غلاف ارتفاع الصوت يُحسب بفك الملف نفسه مرة واحدة. لا موسيقى: كلام الراوي، والآيات بتلاوة
+// الشيخ مشاري العفاسي (recite) يصمت فيها فم الشاهد.
 import { store } from './core.js';
 
 const STEP = 20; // ms لكل نقطة في غلاف الارتفاع
@@ -58,6 +59,7 @@ export class Narrator {
     if (!clip || !this.on) return Promise.resolve(false);
     this.onEnd = onEnd || null;
     this.env = null;
+    this.recite = clip.recite || null;
     const e = envelope(clip.src);
     if (e instanceof Float32Array) this.env = e; else e?.then(v => { if (this.audio.src.endsWith(clip.src)) this.env = v; });
     if (!this.audio.src.endsWith(clip.src)) this.audio.src = clip.src;
@@ -74,6 +76,7 @@ export class Narrator {
   level() {
     if (!this.playing) return 0;
     const t = this.audio.currentTime * 1000;
+    if (this.recite?.some(([a, b]) => t >= a && t <= b)) return 0; // الشاهد يصمت أثناء تلاوة الشيخ
     if (this.env) return this.env[Math.floor(t / STEP)] || 0;
     return 0.35 + 0.3 * Math.sin(t / 70);
   }
