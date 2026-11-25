@@ -219,8 +219,9 @@ def build(sid, raw, desc):
         disp = tokens(dict(display)[key])
         # عدد كلمات كل آية بالترتيب
         counts, run = [], 0
-        for _, kind in disp:
+        for tk, kind in disp:
             if kind == 'ayah': run += 1
+            elif run and not norm(tk): continue  # علامة بين آيتين متتاليتين (﴿…﴾، ﴿…﴾) لا تفصلهما
             elif run: counts.append(run); run = 0
         if run: counts.append(run)
         ai = 0
@@ -243,6 +244,8 @@ def build(sid, raw, desc):
                 t0, step = ayah_words[ai]
                 last = t0 + inayah * step; times.append(last); inayah += 1
                 continue
+            if inayah and not norm(tok):
+                times.append(last); continue
             if inayah:
                 ai += 1; inayah = 0
             if r is None:
@@ -271,7 +274,8 @@ def build(sid, raw, desc):
         print('  للسماع:', w)
     rev = ROOT / 'tools/voice/review.json'
     r = json.load(open(rev)) if rev.exists() else {}
-    r[sid] = WARN
+    notes = ROOT / f'tools/voice/{sid}.notes.json'  # ملاحظات يدوية للسماع (قياس Praat غير قاطع)
+    r[sid] = WARN + (json.load(open(notes)) if notes.exists() else [])
     rev.write_text(json.dumps(r, ensure_ascii=False, indent=1) + '\n')
 
 
