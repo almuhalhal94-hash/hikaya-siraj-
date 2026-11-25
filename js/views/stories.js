@@ -96,10 +96,13 @@ function list(el, { ui, go }, all, scenes, lib) {
 function renderText(p, text, times, endMs = 0) {
   p.textContent = ''; p.classList.remove('is-all');
   const sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = text; p.append(sr);
-  let n = 0;
-  for (const part of text.split(/(«[^»]*»|﴿[^﴾]*﴾)/)) {
-    const cls = part[0] === '«' ? 'q' : part[0] === '﴿' ? 'ayah' : '';
+  let n = 0, inQ = false;
+  for (const part of text.split(/(﴿[^﴾]*﴾|«[^»﴿]*»)/)) { // قول فيه آية لا يُعدّ جزءًا واحدًا (نفس tools/voice_align.py)
+    const ay = part[0] === '﴿';
     for (const word of part.split(/\s+/).filter(Boolean)) {
+      if (!ay && word.includes('«')) inQ = true;
+      const cls = ay ? 'ayah' : inQ ? 'q' : '';
+      if (!ay && word.includes('»')) inQ = false;
       const s = document.createElement('span');
       s.textContent = word + ' '; s.className = `w ${cls}`; s.setAttribute('aria-hidden', 'true');
       const at = times ? times[n] : n * WORD_MS;

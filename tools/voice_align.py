@@ -30,7 +30,7 @@ def norm(w):
 def tokens(text):
     """نفس تقسيم renderText: أجزاء «» و﴿﴾ ثم المسافات."""
     out = []
-    for part in re.split(r'(«[^»]*»|﴿[^﴾]*﴾)', text):
+    for part in re.split(r'(﴿[^﴾]*﴾|«[^»﴿]*»)', text):  # قول فيه آية لا يُعدّ جزءًا واحدًا: الآية تنفصل
         kind = 'ayah' if part.startswith('﴿') else ''
         out += [(w, kind) for w in part.split() if w]
     return out
