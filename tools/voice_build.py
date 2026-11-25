@@ -48,11 +48,11 @@ def waqf(text):
         if re.search('ًّ?ا$|ًّا$', w):  # تنوين الفتح المكتوب بألفه (عَيْبًا) يُوقف عليه بالألف
             return w.replace('ً', 'َ') + tail
         if w.endswith('ً') or w.endswith('ًّ'):
-            return w.rstrip('ًّ') + ('ّ' if 'ّ' in w[-2:] else '') + 'َ' + tail
+            return w.rstrip('ًّ') + ('ّ' if 'ّ' in w[-2:] else '') + 'َا' + tail  # مَسَاءً ← مَسَاءَا
         if re.search('يَّ$|يَّ$', w):  # فِيَّ، إِلَيَّ: بلا ألف يُنطق «فِي/فِيه» (قيس بـ Praat)، وبالألف «فِيَّا» صحيح
             return w + 'ا' + tail
-        if re.search('ّ[َُِ]$|[َُِ]ّ$', w):  # بقية المشدّد في آخر الكلمة يُقرأ بحركته لئلا يلتبس
-            return w + tail
+        if re.search('ّ[َُِ]$|[َُِ]ّ$', w):  # المشدّد في آخر الكلمة (الْجِنَّ، الْحَقِّ) يوقف عليه بالشدة والسكون
+            return w.rstrip('َُِّ') + 'ّْ' + tail
         core = w.rstrip('ٌٍَُِّ')
         if core != w and not re.search('[اىو]$', core):
             return core + ('ّ' if 'ّ' in w[len(core):] else '') + 'ْ' + tail
@@ -66,7 +66,7 @@ def yaa(text):
 
 
 def synth_text(script, keys):
-    return '\n\n'.join(waqf(yaa(script[k].replace(AYAH, '').strip())).replace(': ', ':\n').replace('...', '،').replace('…', '،') for k in keys)
+    return '\n\n'.join(waqf(yaa(script[k].replace(AYAH, '').strip())).replace(': ', ':\n').replace('...', '،').replace('…', '،').replace(':\n ', ':\n\n') for k in keys)  # بعد آية محذوفة: فقرة جديدة (بدونها أسقط المولِّد «مَا أَسْعَدَنِي» في سليمان)
 
 
 WARN = []
