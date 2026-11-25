@@ -58,8 +58,13 @@ def waqf(text):
     return re.sub(r'([^\s.!؟?:…«»،]+)((?:\.\.\.|[.!؟?:…»،])+|$)', fix, text)
 
 
+def yaa(text):
+    """فِيَّ، إِلَيَّ: بلا ألف ينطقها المولِّد «فِي/إِلَيْه» حتى وسط الجملة فيتغير المعنى (قيس بـ Praat)، وبالألف «فِيَّا» صحيح."""
+    return re.sub(r'(يَّ|يَّ)(?=[\s.!؟?:…«»،]|$)', 'يَّا', text)
+
+
 def synth_text(script, keys):
-    return '\n\n'.join(waqf(script[k].replace(AYAH, '').strip()).replace(': ', ':\n').replace('...', '،').replace('…', '،') for k in keys)
+    return '\n\n'.join(waqf(yaa(script[k].replace(AYAH, '').strip())).replace(': ', ':\n').replace('...', '،').replace('…', '،') for k in keys)
 
 
 WARN = []
