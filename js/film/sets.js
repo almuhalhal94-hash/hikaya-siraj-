@@ -623,7 +623,8 @@ function land() {
     <g class="ld-trench"><path class="ld-mound" d="M-700 742q180-34 360-18t360-14 360 16 360-12 360 14 360-18 360 16v18H-700z"/>
       <path class="ld-ditch" d="M-700 760q400-22 800-8t800-2 800-10v50q-400 16-800 10t-800 0-800 6z"/>
       <path class="ld-wall" d="M-700 760q400-22 800-8t800-2 800-10v22q-400 8-800 10t-800 0-800 10z"/>
-      <path class="ld-lip" d="M-700 760q400-22 800-8t800-2 800-10" fill="none" stroke-width="5"/></g>
+      <path class="ld-lip" d="M-700 760q400-22 800-8t800-2 800-10" fill="none" stroke-width="5"/>
+      <g class="ld-ukhdud"><ellipse cx="600" cy="770" rx="1100" ry="90" fill="url(#g-warm)" class="ld-ukglow"/>${Array.from({ length: 16 }, (_, i) => `<g transform="translate(${-500 + i * 150} 786)">${tongue(0, .42 + (i % 3) * .08, 'ur-fl--a', -i * .37)}${tongue(30, .3, 'ur-fl--c', -i * .21)}</g>`).join('')}</g></g>
     <g class="ld-rubble" fill="#2a2028">${rub}</g>
     <g class="ld-town" transform="translate(0 646)">
       ${house(90, 120, 150, true)}${house(214, 100, 210, false)}${house(320, 130, 130, false)}${house(452, 90, 180, true)}
@@ -702,6 +703,19 @@ function land() {
       <path d="M-16 0q-6-60 2-120" stroke="#4a2d14" stroke-width="24" stroke-linecap="round"/>
       <path d="M-230-200q60-70 230-74t230 70q-90 30-230 26t-230-22z" fill="#3f6a3a"/><path d="M-200-214q70-50 200-52t200 50" fill="none" stroke="#6f9a52" stroke-width="10" stroke-linecap="round" opacity=".7"/>
       <g fill="#7fae5c">${[[-150, -226], [-80, -250], [10, -258], [90, -246], [160, -224], [-40, -232], [60, -228]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="34" ry="10"/>`).join('')}</g></g>
+    <g class="ld-rockwrap" transform="translate(420 716)"><g class="ld-rock">
+      <ellipse cx="0" cy="4" rx="230" ry="20" fill="#000" opacity=".3"/>
+      <path class="ld-rockbody" d="M-210 0q-26-96 40-160 56-56 150-50 66-30 130 6 86 40 96 130 6 50-16 74z"/>
+      <path class="ld-rocklit" d="M60-200q80 20 110 80 26 56 12 110l-16 10q10-60-14-110-26-50-92-90z"/>
+      <path d="M-170-150q40 10 70 60M40-200q-10 50 20 90M140-120q-40 20-50 70" fill="none" stroke="#1c1828" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+      <path class="ld-crack" d="M-30 0l14-50-20-36 26-40-6-34" fill="none" stroke="#120e18" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <g class="ld-seed" transform="translate(-26 -88)"><circle r="120" fill="url(#g-warm)"/><circle r="34" fill="url(#g-white)"/><ellipse rx="7" ry="6" fill="#ffe08a" stroke="#b98548" stroke-width="2"/></g>
+    </g></g>
+    <g class="ld-beastwrap" transform="translate(980 712)"><g class="ld-beast">
+      <ellipse cy="6" rx="240" ry="20" fill="#000" opacity=".35"/>
+      <path d="M-200-40q-10-90 70-120 60-24 150-18 80 4 120 40 30-14 56-6l30-40q6 40-14 70 24 30 16 76-8 20-40 18l-20 20v40h-34l-6-56q-40 14-90 14l-8 42h-34l-4-48q-60-4-100-20l-10 68h-34l-4-70q-30-10-40-30l-20 100h-34z" fill="#0c0a14"/>
+      <circle cx="198" cy="-104" r="5" fill="#c84a2a"/>
+    </g><path class="ld-stone" d="M-330-40l10-12 14 4 2 14-12 8-14-4z" fill="#8a8494" stroke="#3a3448" stroke-width="2"/></g>
     <g class="ld-flock" fill="url(#g-warm)">${flock}</g>
     <g class="ld-tent" transform="translate(930 700)"><ellipse class="ld-tentglow" cy="-70" rx="220" ry="150" fill="url(#g-warm)"/>
       <path d="M-170 0L-20-150h40L170 0z" fill="#8a5a3a" stroke="#3a2412" stroke-width="4" stroke-linejoin="round"/><path d="M-20-150l-60 150M20-150l60 150" stroke="#6b3f24" stroke-width="5"/>
@@ -899,4 +913,151 @@ function haram() {
   <g data-d="1.3"><path d="M-700 1400V940l220-50 110 60 80 450zM1900 1400V920l-220-40-120 70-70 450z" fill="#0c0a08"/></g>`;
 }
 
-export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land, mihrab, dar, haram };
+// ——— قصر فرعون على النيل (مؤمن آل فرعون): لا يُرسم أحد. المؤمن نور دافئ، وموسى عليه السلام نور أبيض بعيد،
+// وفرعون لا يُرسم: عرشه في عمق البوابة فقط. لا رموز آلهة على الجدران (أشرطة ونجوم فقط) ———
+function papyrus(x, y, h, w) { // عمود بتاج زهرة البردي
+  return `<g transform="translate(${x} ${y})"><path d="M${-w / 2} 0V${-h}h${w}V0z" fill="url(#g-qcol)"/>
+    <path d="M${-w / 2} ${-h}Q${-w * 1.15} ${-h - w * 0.5} ${-w * 0.95} ${-h - w * 1.1}H${w * 0.95}Q${w * 1.15} ${-h - w * 0.5} ${w / 2} ${-h}z" fill="#b98548"/>
+    <path d="M${-w * 0.95} ${-h - w * 1.1}h${w * 1.9}v${-w * 0.22}h${-w * 1.9}z" fill="#8a6234"/>
+    <path d="M${-w * 0.6} ${-h - w * 0.2}q${w * 0.1}-${w * 0.5} ${-w * 0.2}-${w * 0.85}M0 ${-h - w * 0.1}v${-w * 0.95}M${w * 0.6} ${-h - w * 0.2}q${-w * 0.1}-${w * 0.5} ${w * 0.2}-${w * 0.85}" fill="none" stroke="#6b441d" stroke-width="${(w * 0.06).toFixed(1)}" opacity=".6"/>
+    <path d="M${-w / 2} ${-h + w * 0.25}h${w}M${-w / 2} ${-h + w * 0.45}h${w}M${-w / 2} ${-h + w * 0.65}h${w}" stroke="#2f8f9a" stroke-width="${(w * 0.08).toFixed(1)}"/>
+    <path d="M${-w / 2} ${-h + w * 0.35}h${w}M${-w / 2} ${-h + w * 0.55}h${w}" stroke="#c9a24a" stroke-width="${(w * 0.06).toFixed(1)}"/></g>`;
+}
+function pylon(x0, x1) { // برج بوابة مائل الجانبين
+  const t0 = x0 + 34, t1 = x1 - 34; let rows = '';
+  for (let y = 300; y < 620; y += 46) { const k = (y - 230) / 410 * 34; for (let x = x0 + 60 - k; x < x1 - 60 + k; x += 30) rows += `<rect x="${x.toFixed(0)}" y="${y}" width="12" height="${(y / 46) % 2 < 1 ? 18 : 10}" rx="2"/>`; }
+  return `<path d="M${x0} 640L${t0} 230H${t1}L${x1} 640z" fill="url(#g-pylon)"/><path class="qs-lit" d="M${t1 - 40} 230H${t1}L${x1} 640h-60z"/>
+    <path d="M${t0 - 18} 230q${(t1 - t0) / 2 + 18}-30 ${t1 - t0 + 36} 0v-26H${t0 - 18}z" fill="#8a6234"/><path d="M${t0 - 18} 204h${t1 - t0 + 36}v-8H${t0 - 18}z" fill="#c9a24a"/>
+    <path d="M${x0 + 28} 600h${x1 - x0 - 56}M${t0 + 6} 270h${t1 - t0 - 12}" stroke="#c9a24a" stroke-width="6" opacity=".55"/>
+    <g class="qs-glyph" fill="#2a1c14" opacity=".35">${rows}</g>`;
+}
+function qasr() {
+  const r = rng(73); let bricks = '', tiles = '', court = '', reeds = '';
+  for (let y = 0; y < 900; y += 30) bricks += `M-100 ${-y}h200`;
+  for (let i = 0; i < 11; i++) tiles += `M${-700 + i * 260} 1400L${330 + i * 54} 650`;
+  for (const [x, y, q] of [[250, 700, 34], [330, 728, 30], [180, 742, 28], [900, 700, 34], [980, 726, 30], [1060, 744, 28], [430, 750, 26], [800, 752, 26]]) court += `<circle cx="${x}" cy="${y}" r="${q}"/>`;
+  for (let i = 0; i < 40; i++) { const x = -600 + r() * 2400; reeds += `M${x.toFixed(0)} 604q${(r() * 8 - 4).toFixed(0)}-24 ${(r() * 10 - 5).toFixed(0)}-${(20 + r() * 26).toFixed(0)}`; }
+  return `${DEFS}
+  <defs><linearGradient id="g-pylon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a5a3a"/><stop offset="1" stop-color="#4a3424"/></linearGradient>
+    <linearGradient id="g-qcol" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5a4030"/><stop offset=".45" stop-color="#a07850"/><stop offset="1" stop-color="#4a3424"/></linearGradient>
+    <radialGradient id="g-ember"><stop offset="0" stop-color="#ffb070" stop-opacity=".9"/><stop offset=".4" stop-color="#c8402a" stop-opacity=".5"/><stop offset="1" stop-color="#6a1010" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g-cold"><stop offset="0" stop-color="#cfd8ff" stop-opacity=".6"/><stop offset=".5" stop-color="#7f8cc0" stop-opacity=".25"/><stop offset="1" stop-color="#3a4478" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-nile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c3a6a"/><stop offset="1" stop-color="#0c1c3c"/></linearGradient></defs>
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    <rect class="qs-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    ${stars(100, 97, [-400, 1600], [-300, 420])}
+    <path class="qs-moon" d="M1010 70a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
+    <g class="qs-sun"><circle cx="300" cy="520" r="360" fill="url(#g-warm)"/><circle cx="300" cy="520" r="62" fill="#fff4cf"/></g>
+  </g>
+  <g data-d=".3">
+    <path class="qs-far" d="M-700 580h2600v900H-700z"/>
+    <g class="qs-pyr"><path d="M1180 580l120-130 120 130zM1370 580l80-90 80 90z"/><path class="qs-pyrlit" d="M1300 450l120 130h-40zM1450 490l80 90h-26z"/></g>
+    <g class="qs-ruins" transform="translate(560 -290)">
+      <ellipse cx="80" cy="520" rx="460" ry="150" fill="url(#g-cold)"/>
+      <g fill="#8a96c8" opacity=".55"><path d="M-180 580v-110h26v110zM-120 580v-64h26v64zM-60 580v-150h26v150zM-70 430h46v-14h-46zM20 580l60-36 80 10 30 26zM120 580v-90h24v90zM190 580v-40h70v40zM300 580v-120l30-12v132zM360 580l40-60 60 60zM-260 580h720v8h-720z"/></g>
+    </g>
+    <rect x="-700" y="592" width="2600" height="44" fill="url(#g-nile)"/>
+    <path class="qs-shine" d="M-500 606h180M-80 614h240M380 604h200M820 616h220M1240 606h180" stroke="#9fc4ff" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+    <path d="${reeds}" stroke="#16302a" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <g stroke="#0f241e">${palm(-260, 600, 0.55, -8)}${palm(1300, 600, 0.6, 10)}${palm(1430, 604, 0.45, -6)}</g>
+  </g>
+  <g data-d=".5">
+    <g class="qs-sarhwrap" transform="translate(940 640)"><g class="qs-sarh">
+      <path d="M-110 0L-70-940H70L110 0z" fill="#6a4a30"/><path d="M30-940h40L110 0H70z" fill="#8a6440"/>
+      <path d="${bricks}" stroke="#3a2618" stroke-width="3" opacity=".45"/>
+      <path d="M-130 0v-420M130 0v-420M-130-140h260M-130-280h260M-130-420h260M-130-140l260-140M130-140l-260-140" stroke="#c9995a" stroke-width="4" fill="none" opacity=".55"/>
+    </g></g>
+  </g>
+  <g data-d=".75">
+    <g class="qs-palace">
+      ${pylon(130, 450)}${pylon(750, 1070)}
+      <path d="M450 640V340h300v300z" fill="#5a4030"/>
+      <path d="M440 340h320v-30H440z" fill="#8a6234"/><path d="M440 312h320v-8H440z" fill="#c9a24a"/>
+      <path d="M520 640V400h160v240z" fill="#0c0610"/>
+      <g class="qs-throne"><ellipse cx="600" cy="560" rx="130" ry="150" fill="url(#g-ember)"/>
+        <path d="M562 640v-60h-12v-24h12v-60q38-26 76 0v60h12v24h-12v60z" fill="#1a0c0c"/><path d="M570 500q30-20 60 0" fill="none" stroke="#c9a24a" stroke-width="4"/></g>
+      <path d="M520 400h160v-14H520z" fill="#c9a24a" opacity=".7"/>
+      <g class="qs-flags">${[200, 380, 820, 1000].map((x, i) => `<path d="M${x} 640V150" stroke="#3a2418" stroke-width="7"/><path class="qs-flag" style="animation-delay:${-i * .7}s" d="M${x + 3} 156q34 6 66 -4t60 4v34q-30-8-60 2t-66 2z" fill="${i % 2 ? '#c9a24a' : '#a8322a'}"/>`).join('')}</g>
+      ${[470, 730].map((x, i) => `<g transform="translate(${x} 600)"><path d="M-22 40h44l-8-40h-28z" fill="#6b441d"/><circle class="qs-brazier" cy="-30" r="90" fill="url(#g-warm)"/><g transform="translate(0 2) scale(.32)">${tongue(-10, 1, 'ur-fl--a', -i * .4)}${tongue(14, .8, 'ur-fl--b', -i * .4 - .3)}${tongue(0, .6, 'ur-fl--c', -.2)}</g></g>`).join('')}
+    </g>
+  </g>
+  <g data-d="1">
+    <path class="qs-floor" d="M-700 1400V640h2600v760z"/>
+    <path d="${tiles}" stroke="#000" stroke-width="2" opacity=".18"/>
+    <path d="M430 640h340l26 22H404zM404 662h392l26 22H378z" fill="#8a6a4a"/>
+    <g class="qs-court" fill="url(#g-cold)">${court}</g>
+    <g class="qs-musa"><circle cx="1000" cy="690" r="90" fill="url(#g-white)"/><circle cx="1000" cy="690" r="7" fill="#fff"/></g>
+    <g class="qs-lights">
+      <g class="qs-voice" transform="translate(600 690)" fill="none" stroke="#fff4cf" stroke-width="5" stroke-linecap="round">
+        <path style="--d:0s" d="M60-40q30 40 0 80M-60-40q-30 40 0 80"/><path style="--d:1s" d="M60-40q30 40 0 80M-60-40q-30 40 0 80"/><path style="--d:2s" d="M60-40q30 40 0 80M-60-40q-30 40 0 80"/></g>
+      <g class="qs-safe" transform="translate(600 690)"><circle r="150" fill="url(#g-warm)" opacity=".5"/><circle class="qs-ring" r="124" fill="none" stroke="#ffd77a" stroke-width="5" stroke-dasharray="20 16"/></g>
+      <g class="qs-a"><circle cx="600" cy="690" r="110" fill="url(#g-warm)"/><circle cx="600" cy="690" r="8" fill="#fff"/></g>
+    </g>
+    <ellipse class="qs-glow" cx="600" cy="640" rx="900" ry="620" fill="url(#g-warm)"/>
+  </g>
+  <g data-d="1.3">
+    ${papyrus(-40, 1400, 1000, 130)}${papyrus(1240, 1400, 1000, 130)}
+  </g>`;
+}
+
+// ——— الردم بين السدّين (ذو القرنين): لا يُرسم أحد؛ ذو القرنين نور دافئ، والقوم أنوار صغيرة، ويأجوج ومأجوج لا يُرسمون (غبار أحمر خلف الفتحة) ———
+function sadd() {
+  const r = rng(19); let blocks = '', sparks = '', cracks = '', drips = '';
+  for (let row = 0; row < 12; row++) { const y = 660 - (row + 1) * 40, off = row % 2 ? 32 : 0;
+    for (let x = 440 - off; x < 760; x += 64) { const x0 = Math.max(440, x), x1 = Math.min(760, x + 64);
+      blocks += `<rect class="sd-blk" style="--i:${row}" x="${x0 + 2}" y="${y + 2}" width="${x1 - x0 - 4}" height="36" rx="3"/>`; } }
+  for (let i = 0; i < 16; i++) sparks += `<circle class="sd-spark" style="--d:${(-r() * 2).toFixed(2)}s;--x:${(r() * 160 - 80).toFixed(0)}px" cx="${(480 + r() * 240).toFixed(0)}" cy="650" r="${(2 + r() * 3).toFixed(1)}"/>`;
+  for (let i = 0; i < 18; i++) { const x = -500 + r() * 2200, y = 650 + r() * 300; cracks += `M${x.toFixed(0)} ${y.toFixed(0)}l${(20 + r() * 40).toFixed(0)} ${(r() * 14 - 7).toFixed(0)}l${(14 + r() * 30).toFixed(0)} ${(r() * 20 - 10).toFixed(0)}`; }
+  for (const [x, d] of [[470, 0], [530, .7], [590, 1.3], [650, .4], [710, 1]]) drips += `<path class="sd-drip" style="--d:${d}s" d="M${x} 180V660"/>`;
+  return `${DEFS}
+  <defs><linearGradient id="g-dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1a4a"/><stop offset=".45" stop-color="#9a3a3a"/><stop offset=".7" stop-color="#f07a3a"/><stop offset="1" stop-color="#ffc070"/></linearGradient>
+    <linearGradient id="g-iron" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a6270"/><stop offset="1" stop-color="#2a2e38"/></linearGradient>
+    <linearGradient id="g-copper" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a4a22"/><stop offset=".5" stop-color="#e8955a"/><stop offset="1" stop-color="#7a3a1a"/></linearGradient>
+    <radialGradient id="g-forge"><stop offset="0" stop-color="#fff0b0" stop-opacity=".95"/><stop offset=".35" stop-color="#ff8a30" stop-opacity=".6"/><stop offset="1" stop-color="#c83a10" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g-red"><stop offset="0" stop-color="#c84a2a" stop-opacity=".55"/><stop offset="1" stop-color="#6a1a10" stop-opacity="0"/></radialGradient></defs>
+  <g data-d=".08">
+    <rect ${BIG} fill="url(#g-night)"/>
+    <rect class="sd-dawn" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dawn)"/>
+    <rect class="sd-dusk" x="-700" y="-300" width="2600" height="1200" fill="url(#g-dusk)"/>
+    ${stars(100, 23, [-400, 1600], [-300, 460])}
+    <path class="sd-moon" d="M250 80a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
+    <g class="sd-sun"><circle cx="600" cy="0" r="380" fill="url(#g-warm)"/><circle class="sd-disc" cx="600" cy="0" r="74" fill="#fff4cf"/></g>
+  </g>
+  <g data-d=".3">
+    <path class="sd-far" d="M-700 600q300-12 640-4t620 2 640-6 700 8v800H-700z"/>
+    <g class="sd-pool"><ellipse cx="600" cy="606" rx="300" ry="26" fill="#1a120c"/><ellipse cx="600" cy="604" rx="230" ry="14" fill="#3a2414"/>
+      <ellipse class="sd-poolsun" cx="600" cy="604" rx="120" ry="9" fill="#ff9a50"/><path d="M340 610q60-8 120 2M700 612q70-10 150 0" stroke="#5a3a1e" stroke-width="4" fill="none"/></g>
+    <g class="sd-threat"><ellipse cx="600" cy="400" rx="260" ry="320" fill="url(#g-red)"/><g fill="#a84a2a" opacity=".55">${[[560, 520, 40], [640, 460, 54], [590, 380, 46], [650, 300, 36], [570, 250, 30]].map(([x, y, q], i) => `<circle class="sd-dust" style="--d:${-i * 1.3}s" cx="${x}" cy="${y}" r="${q}"/>`).join('')}</g></g>
+  </g>
+  <g data-d=".6">
+    <g class="sd-mts">
+      <path class="sd-mt" d="M-700 1400V560Q-520 430-360 400T-90 250Q60 150 210 100T400 120L440 168V660z"/>
+      <path class="sd-mt" d="M1900 1400V540Q1720 420 1560 390T1280 240Q1130 130 980 84T800 112L760 160V660z"/>
+      <path class="sd-mt2" d="M-700 1400V700Q-480 600-300 590T40 470Q200 400 340 420T440 470V660z"/>
+      <path class="sd-mt2" d="M1900 1400V690Q1680 590 1500 580T1160 460Q1000 390 860 410T760 460V660z"/>
+      <path class="sd-mtlit" d="M210 100Q330 64 400 120L440 168V320Q400 210 350 175T210 100zM980 84Q870 56 800 112L760 160V300Q800 200 850 160T980 84z"/>
+      <path class="sd-ridge" d="M-700 560Q-520 430-360 400T-90 250Q60 150 210 100T400 120L440 168M1900 540Q1720 420 1560 390T1280 240Q1130 130 980 84T800 112L760 160" fill="none" stroke-width="4" stroke-linecap="round"/>
+      <path class="sd-face" d="M440 168l-22 60 10 90-16 110 12 110-10 122h26zM760 160l20 70-12 100 16 110-14 110 12 110h-22z"/>
+      <path d="M-300 520q120-30 240-90M60 330q90-50 200-60M1500 500q-120-30-240-90M1140 320q-90-50-200-60M300 300q60 0 120 40M900 290q-60 0-120 40" fill="none" stroke="#000" stroke-width="5" opacity=".18" stroke-linecap="round"/>
+    </g>
+    <g class="sd-wall">
+      <g class="sd-blocks" fill="url(#g-iron)" stroke="#1a1c22" stroke-width="2">${blocks}</g>
+      <rect class="sd-heat" x="440" y="180" width="320" height="480" fill="#ff6a20"/>
+      <g class="sd-qitr" stroke="url(#g-copper)" stroke-width="16" stroke-linecap="round" fill="none">${drips}</g>
+      <rect class="sd-copper" x="440" y="180" width="320" height="480" fill="url(#g-copper)"/>
+      <path class="sd-sheen" d="M450 640l70-460h40l-70 460z" fill="#fff4cf"/>
+    </g>
+  </g>
+  <g data-d="1">
+    <path class="sd-ground" d="M-700 1400V650q320-20 660-6t640-4 660 6 640-10v764z"/>
+    <path class="sd-bare" d="${cracks}" fill="none" stroke-width="3" stroke-linecap="round"/>
+    <g class="sd-forge"><ellipse cx="600" cy="660" rx="260" ry="120" fill="url(#g-forge)"/><g fill="#ffd77a">${sparks}</g></g>
+    <g class="sd-flock" fill="url(#g-warm)">${[[260, 690, 30], [320, 712, 26], [210, 716, 24], [370, 694, 24], [150, 700, 22], [300, 740, 22]].map(([x, y, q]) => `<circle cx="${x}" cy="${y}" r="${q}"/>`).join('')}</g>
+    <g class="sd-lights"><g class="sd-a"><circle cx="800" cy="700" r="115" fill="url(#g-warm)"/><circle cx="800" cy="700" r="8" fill="#fff"/></g></g>
+    <ellipse class="sd-glow" cx="600" cy="600" rx="900" ry="620" fill="url(#g-warm)"/>
+  </g>
+  <g data-d="1.3"><path class="sd-front" d="M-700 1400V920l230-60 120 50 100 490zM1900 1400V900l-220-40-140 60-80 480z"/></g>`;
+}
+
+export const SETS = { mountain, cave, mosque, sea, deep, garden, dunes, hijr, ur, land, mihrab, dar, haram, qasr, sadd };
