@@ -169,7 +169,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 @keyframes bar-in { from { transform: translateY(var(--from)); } }
 .fcard--title { animation: none; }
 .fcard--title > * { animation: door-in 1.1s var(--ease-out) backwards; }
-.fcard--title > small { animation-delay: .5s; letter-spacing: .02em; } .fcard--title > h1 { animation-delay: .7s; } .fcard--title > .btn { animation-delay: 1.15s; }
+.fcard--title > small { animation-delay: .5s; letter-spacing: .02em; } .fcard--title > h1 { animation-delay: .7s; } .fcard--title > .btn, .fcard--title > .fcard__btns { animation-delay: 1.15s; } .fcard--title > .fcard__hint { animation-delay: 1.4s; min-height: 0; max-width: 34ch; font-size: .92rem; font-weight: 600; opacity: .8; }
 .fcard--title h1::after { content: ''; display: block; width: 72px; height: 2px; margin: 14px auto 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 .fcard { width: min(100%, 460px); display: grid; justify-items: center; gap: 14px; text-align: center; animation: bubble-pop .6s var(--ease-spring) .1s backwards; }
 .fcard small { font-weight: 800; color: var(--teal); font-size: 1.05rem; letter-spacing: 0; }
@@ -831,3 +831,10 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .witness .wt-eye { transform-box: fill-box; transform-origin: center; transition: transform .45s var(--ease-spring), opacity .2s; }
 @media (prefers-reduced-motion: reduce) { .witness .wt-body, .witness.is-talking .wt-body { animation: none; } }
 @media (max-height: 600px) { .witness { width: 84px; top: -46px; } }
+
+/* وضع «ولي الأمر يقرأ»: النص كله دفعة واحدة بخط أكبر وخلفية تريح العين، بلا راوٍ */
+.film--parent .film__text { font-size: clamp(1.3rem, 5.6vw, 1.75rem); line-height: 1.95; max-width: 40ch; padding: .5em .8em; border-radius: 18px; background: rgba(8, 12, 24, .42); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); }
+.film--parent .film__text.is-all .w { animation: word-in .6s ease backwards !important; animation-delay: 0s !important; }
+.film--parent .film__text .ayah { font-size: 1.15em; }
+.film--parent .film__text.is-echo { background: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+@media (max-height: 600px) { .film--parent .film__text { font-size: 1.2rem; } }
