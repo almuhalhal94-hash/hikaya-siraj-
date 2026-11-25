@@ -5,15 +5,17 @@ import { Stage, thumbnail } from '../film/engine.js';
 import { createSiraj } from '../siraj.js';
 import { sparkle } from '../sky.js';
 import { sfx } from '../audio.js';
+import { Narrator } from '../voice.js';
+import { createWitness } from '../film/witness.js';
 
 const FALLBACK = { set: 'mountain', state: { time: 'night', cave: 'dim' }, camera: { from: [600, 430, 760], to: [610, 340, 520], dur: 16 }, fx: ['dust'] };
 const WORD_MS = 150;
 const STAR = '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3l6.2 13.400 14.600 1.700-10.800 10 2.900 14.400L24 35.300 11.100 42.500 14 28.100 3.200 18.100l14.600-1.700z" fill="#ffd77a" stroke="#fff4cf" stroke-width="2" stroke-linejoin="round"/></svg>';
 
 export default async function stories(el, ctx) {
-  const [data, scenes, lib] = await Promise.all([content('stories'), content('scenes'), content('library')]);
+  const [data, scenes, lib, voice] = await Promise.all([content('stories'), content('scenes'), content('library'), content('voice').catch(() => ({}))]);
   const story = data.stories.find(s => s.id === ctx.args[0]);
-  return story ? player(el, ctx, story, scenes[story.id] || {}) : list(el, ctx, data.stories, scenes, lib);
+  return story ? player(el, ctx, story, scenes[story.id] || {}, voice[story.id]) : list(el, ctx, data.stories, scenes, lib);
 }
 
 // ——— مكتبة الحكايات: رفوف، وفي كل رف دروس مرتّبة (content/library.json) ———
@@ -90,7 +92,8 @@ function list(el, { ui, go }, all, scenes, lib) {
 }
 
 // ——— مشغّل الفيلم ———
-function renderText(p, text) {
+// times: بداية كل كلمة بالملّي ثانية من التعليق الصوتي (null لكلمات الآيات فتظهر بعد انتهائه)
+function renderText(p, text, times, endMs = 0) {
   p.textContent = ''; p.classList.remove('is-all');
   const sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = text; p.append(sr);
   let n = 0;
@@ -99,14 +102,19 @@ function renderText(p, text) {
     for (const word of part.split(/\s+/).filter(Boolean)) {
       const s = document.createElement('span');
       s.textContent = word + ' '; s.className = `w ${cls}`; s.setAttribute('aria-hidden', 'true');
-      s.style.animationDelay = `${n++ * WORD_MS}ms`;
+      const at = times ? times[n] : n * WORD_MS;
+      if (times && at == null) { s.classList.add('is-after'); s.style.animationDelay = `${endMs + 500 + (n - times.indexOf(null)) * 220}ms`; }
+      else { s.style.animationDelay = `${Math.max(0, at - 60)}ms`; if (times) s.classList.add('is-voiced'); }
+      n++;
       p.append(s);
     }
   }
-  return n * WORD_MS + 350;
+  if (!times) return n * WORD_MS + 350;
+  const ayahs = times.filter(x => x == null).length;
+  return Math.max(endMs, 0) + (ayahs ? 900 + ayahs * 220 : 150);
 }
 
-function player(el, { ui, lines, go }, story, dir) {
+function player(el, { ui, lines, go }, story, dir, voice) {
   const t = ui.stories;
   const total = story.scenes.length;
   const specOf = n => dir.scenes?.[n] || FALLBACK;
@@ -140,10 +148,25 @@ function player(el, { ui, lines, go }, story, dir) {
   // زر الصوت داخل الفيلم يعكس الزر العام
   const mainSound = document.getElementById('soundBtn'), sound = $('.film__sound');
   const syncSound = () => { sound.innerHTML = mainSound.innerHTML; sound.setAttribute('aria-pressed', mainSound.getAttribute('aria-pressed')); sound.setAttribute('aria-label', mainSound.getAttribute('aria-label')); };
-  sound.addEventListener('click', () => { mainSound.click(); syncSound(); });
+  sound.addEventListener('click', () => { mainSound.click(); syncSound(); if (!store.state.sound) hush(); });
   syncSound();
 
   const stage = new Stage($('.film__stage'));
+  // الراوي والشاهد الكرتوني (إن كان للحكاية تعليق صوتي ورسم للشاهد)
+  const narrator = voice ? new Narrator() : null;
+  const witness = voice ? createWitness(dir.witness) : null;
+  if (witness) { $('.film__panel').prepend(witness.el); witness.setMood('calm'); }
+  let lipRaf = 0;
+  const lip = () => { if (!witness || !narrator) return; witness.setLevel(narrator.level()); lipRaf = requestAnimationFrame(lip); };
+  const speak = (clip, onEnd) => {
+    if (!narrator) return Promise.resolve(false);
+    cancelAnimationFrame(lipRaf);
+    return narrator.play(clip, () => { witness?.talking(false); cancelAnimationFrame(lipRaf); onEnd?.(); }).then(ok => {
+      if (ok && alive) { witness?.talking(true); lip(); }
+      return ok;
+    });
+  };
+  const hush = () => { narrator?.stop(); witness?.talking(false); cancelAnimationFrame(lipRaf); };
   let i = 0, busy = true, choiceDone = !story.choice, revealTimer, alive = true;
 
   function setDots() {
@@ -152,10 +175,10 @@ function player(el, { ui, lines, go }, story, dir) {
     prevBtn.disabled = i === 0;
   }
 
-  function reveal(content) {
+  function reveal(content, clip) {
     clearTimeout(revealTimer);
     nextBtn.classList.remove('is-ready');
-    const ms = renderText(text, content);
+    const ms = clip ? renderText(text, content, clip.words, clip.ms) : renderText(text, content);
     revealTimer = setTimeout(() => { text.classList.add('is-all'); nextBtn.classList.add('is-ready'); }, ms);
   }
   const revealed = () => text.classList.contains('is-all');
@@ -164,11 +187,18 @@ function player(el, { ui, lines, go }, story, dir) {
   async function goto(n) {
     busy = true; i = n; setDots();
     text.classList.remove('is-echo'); text.textContent = ''; nextBtn.classList.remove('is-ready');
+    hush();
     const spec = specOf(n);
     await stage.show(spec);
-    if (!alive) return;
+    if (!alive || i !== n) return;
     sfx[spec.sfx]?.();
-    reveal(story.scenes[n].text);
+    witness?.setMood(spec.mood);
+    const clip = voice?.scenes?.[n];
+    const voiced = clip && await speak(clip, () => {
+      if (clip.words.includes(null)) { sfx.glow(); witness?.setMood('wonder'); }
+    });
+    if (!alive || i !== n) return;
+    reveal(story.scenes[n].text, voiced ? clip : null);
     busy = false;
   }
 
@@ -194,13 +224,15 @@ function player(el, { ui, lines, go }, story, dir) {
     card.querySelector('small').textContent = story.category;
     card.querySelector('h1').textContent = story.title;
     const b = card.querySelector('button'); b.textContent = t.start;
-    b.addEventListener('click', () => { sfx.success(); closeOverlay(); goto(0); });
+    b.addEventListener('click', () => { narrator?.unlock(); witness?.show(true); sfx.success(); closeOverlay(); goto(0); });
     openOverlay(card, 'title');
   }
 
   // الاختيار التفاعلي في منتصف القصة
   function openChoice() {
     busy = true;
+    witness?.setMood('curious');
+    if (voice?.choice) setTimeout(() => alive && speak(voice.choice), 350);
     const c = story.choice;
     const card = html(`<div class="fcard fcard--choice"><small></small><h2></h2><div class="fcard__opts"></div><p class="fcard__hint" aria-live="polite"></p></div>`);
     card.querySelector('small').textContent = t.choice_label;
@@ -216,6 +248,7 @@ function player(el, { ui, lines, go }, story, dir) {
           return;
         }
         choiceDone = true;
+        hush(); witness?.setMood('happy');
         sfx.success(); b.classList.add('is-right'); sparkle(b, { count: 30, power: 6 });
         await wait(650);
         if (!alive) return;
@@ -260,10 +293,12 @@ function player(el, { ui, lines, go }, story, dir) {
     story.sources.forEach(src => { const li = document.createElement('li'); li.textContent = src; card.querySelector('ul').append(li); });
     const again = card.querySelector('[data-act="again"]'), more = card.querySelector('[data-act="more"]');
     again.textContent = t.again; more.textContent = t.more;
-    again.addEventListener('click', () => { sfx.tap(); closeOverlay(); choiceDone = !story.choice; goto(0); });
+    again.addEventListener('click', () => { sfx.tap(); closeOverlay(); witness?.show(true); choiceDone = !story.choice; goto(0); });
     more.addEventListener('click', () => { sfx.tap(); go('#/stories'); });
     siraj.lantern.addEventListener('click', () => { sfx.star(); siraj.react('joy'); sparkle(siraj.lantern, { count: 10, power: 3 }); });
     openOverlay(card, 'end');
+    hush(); witness?.show(false);
+    if (voice?.lesson) setTimeout(() => alive && speak(voice.lesson), 1100);
     sfx.success(); siraj.react('joy');
     siraj.say(fill(pick(lines.celebrate), { name: store.state.name }));
     setTimeout(() => alive && sparkle(card.querySelector('.fcard__stars'), { count: 36, power: 7 }), 500);
@@ -285,6 +320,7 @@ function player(el, { ui, lines, go }, story, dir) {
 
   return () => {
     alive = false; clearTimeout(revealTimer); stage.destroy();
+    hush(); witness?.destroy();
     document.removeEventListener('keydown', onKey);
     document.body.classList.remove('in-film');
   };
