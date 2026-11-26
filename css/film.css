@@ -840,3 +840,77 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 @media (max-height: 600px) { .film--parent .film__text { font-size: 1.2rem; } }
 .witness .wt-mouth.wt-c { transform-origin: 50% 40%; }
 .witness .wt-mouth.wt-halo { transform-origin: 50% 50%; transform: scale(.8); opacity: .45; transition: transform .08s linear, opacity .15s; }
+
+/* ——— دفعة الأنبياء الجديدة (زمزم، الفداء، ضيوف إبراهيم، موسى والخضر، وادي النمل) ——— */
+/* land: الصفا والمروة، وأم إسماعيل تسعى بينهما، والنور الأبيض يمضي */
+.ld-hills, .ld-zam, .ld-birds, .ld-olive, .ld-dish, .ld-ram, .ld-jidarwrap, .ld-anthill, .ld-ants, .ld-grain { opacity: 0; transition: opacity 3s ease; }
+.ld-hill { fill: #2a2450; transition: fill 6s ease; } .ld-hilllit { stroke: #4a4488; transition: stroke 6s ease; } .ld-hillrocks { fill: #1c1838; transition: fill 6s ease; }
+[data-set="land"][data-time="dawn"] .ld-hill { fill: #8a5e3e; } [data-set="land"][data-time="dawn"] .ld-hilllit { stroke: #f0b87a; } [data-set="land"][data-time="dawn"] .ld-hillrocks { fill: #6a4630; }
+[data-hills="on"] .ld-hills { opacity: 1; }
+[data-light="safa"] { --lx: 470px; --ly: -150px; }
+[data-sai="on"] .ld-lights { animation: ld-sai 7s ease-in-out infinite; }
+@keyframes ld-sai { 0%, 8% { translate: 470px -150px; } 22% { translate: 120px 10px; } 32% { translate: -120px 10px; } 46%, 54% { translate: -480px -130px; } 68% { translate: -120px 10px; } 78% { translate: 120px 10px; } 92%, 100% { translate: 470px -150px; } }
+[data-leave="on"] .ld-b { translate: 640px -60px; opacity: 0 !important; transition: translate 11s ease-in 1.5s, opacity 6s ease-in 6s; }
+/* زمزم */
+[data-zam="on"] .ld-zam { opacity: 1; }
+.ld-zamgush { transform-box: fill-box; transform-origin: 50% 100%; animation: ld-gush 1.3s ease-in-out infinite; }
+.ld-zamglow, .ld-oliveglow, .ld-dishglow, .ld-ramglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.8s ease-in-out infinite; }
+.ld-drop { animation: ld-drop 1.6s ease-in infinite; animation-delay: var(--d); }
+@keyframes ld-drop { 0% { transform: translateY(10px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(-40px); opacity: 0; } }
+/* الطير */
+[data-birds="on"] .ld-birds { opacity: .9; }
+.ld-bird { animation: ld-circle 10s linear infinite; animation-delay: var(--d); transform-box: view-box; transform-origin: 640px 260px; }
+@keyframes ld-circle { from { transform: rotate(0deg) translateX(60px) rotate(0deg); } to { transform: rotate(360deg) translateX(60px) rotate(-360deg); } }
+/* زيتونة إبراهيم وصحن الضيافة */
+[data-olive] .ld-olive { opacity: 1; } .ld-olives { opacity: 0; transition: opacity 4s ease; } [data-olive="fruit"] .ld-olives { opacity: 1; }
+[data-dish="on"] .ld-dish { opacity: 1; }
+.ld-dish .ld-steam path, .ld-pot .ld-steam path { animation: ld-steam 2.4s ease-in-out infinite; } .ld-dish .ld-steam path:nth-child(2) { animation-delay: -.8s; } .ld-dish .ld-steam path:nth-child(3) { animation-delay: -1.6s; }
+@keyframes ld-steam { 0% { transform: translateY(6px); opacity: 0; } 40% { opacity: .9; } 100% { transform: translateY(-16px); opacity: 0; } }
+/* الكبش */
+.ld-ram { translate: 0 -40px; transition: opacity 3s ease, translate 4s var(--ease-out); }
+[data-ram="on"] .ld-ram { opacity: 1; translate: 0 0; }
+/* جدار القرية: مائل ثم يستقيم، وتحته الكنز */
+[data-jidar] .ld-jidarwrap { opacity: 1; }
+.ld-jidar { transform-box: fill-box; transform-origin: 50% 100%; transition: transform 3.2s var(--ease-spring, ease) 1s; }
+[data-jidar="lean"] .ld-jidar { transform: skewX(14deg); }
+.ld-crackj { transition: opacity 3s ease 2s; } [data-jidar="fixed"] .ld-crackj { opacity: 0; }
+.ld-kanz, .ld-kanzbox { opacity: 0; transition: opacity 4s ease 1s; } [data-kanz="on"] .ld-kanz { opacity: 1; animation: lt-breathe 3.6s ease-in-out infinite; } [data-kanz="on"] .ld-kanzbox { opacity: .9; }
+/* وادي النمل */
+[data-ants] .ld-anthill, [data-ants] .ld-ants, [data-ants] .ld-grain { opacity: 1; }
+.ld-ant { transform: translate(1000px, 744px); animation: ld-antwalk 14s linear infinite; animation-delay: var(--d); }
+@keyframes ld-antwalk { from { transform: translate(1000px, calc(744px + var(--y))) scaleX(-1); } to { transform: translate(300px, calc(744px + var(--y))) scaleX(-1); } }
+[data-ants="home"] .ld-ant { animation: ld-anthome 2.6s ease-in forwards; animation-delay: calc(var(--d) / -6); }
+@keyframes ld-anthome { from { transform: translate(var(--hx, 640px), calc(744px + var(--y))) scaleX(-1); opacity: 1; } to { transform: translate(470px, 700px) scale(-.4, .4); opacity: 0; } }
+.ld-ant:nth-child(odd) { --hx: 560px; } .ld-ant:nth-child(3n) { --hx: 820px; }
+.ld-army { opacity: 0; translate: 420px 0; transition: opacity 3s ease, translate 16s cubic-bezier(.2,.6,.3,1); }
+[data-army="on"] .ld-army { opacity: 1; translate: 0 0; } [data-army="stop"] .ld-army { opacity: 1; translate: -60px 0; }
+.ld-soldier { animation: st-breathe 3.6s ease-in-out infinite; animation-delay: var(--d); transform-box: fill-box; transform-origin: center; }
+[data-banner="far"] .ld-banner { opacity: 1; translate: 560px -20px; }
+/* sea: صخرة مجمع البحرين، والحوت يقفز، والعصفور ينقر، وعيب السفينة، ونور ثانٍ */
+.se-boulder, .se-hut, .se-sparrow, .se-hole, .se-pair { opacity: 0; transition: opacity 3s ease; }
+[data-boulder="on"] .se-boulder, [data-sparrow="on"] .se-sparrow, [data-hole="on"] .se-hole { opacity: 1; }
+[data-set="sea"][data-pair="on"] .se-pair { opacity: 1; animation: lt-breathe 3.6s ease-in-out infinite; }
+[data-hut="jump"] .se-hut { opacity: 1; }
+.se-jump { animation: se-jump 4.5s ease-in-out infinite; }
+@keyframes se-jump { 0% { transform: translate(380px, 640px) rotate(-30deg); opacity: 0; } 10% { opacity: 1; } 45% { transform: translate(470px, 470px) rotate(10deg); } 80% { transform: translate(570px, 560px) rotate(60deg); opacity: 1; } 86%, 100% { transform: translate(580px, 590px) rotate(70deg); opacity: 0; } }
+.se-splash { opacity: 0; animation: se-splash 4.5s ease-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+@keyframes se-splash { 0%, 78% { opacity: 0; transform: scale(.4); } 84% { opacity: 1; } 100% { opacity: 0; transform: scale(1.3); } }
+.se-peck { transform-box: fill-box; transform-origin: 30% 90%; animation: se-peck 2.2s ease-in-out infinite; }
+@keyframes se-peck { 0%, 40%, 100% { transform: none; } 55%, 65% { transform: rotate(38deg); } }
+.se-ripple { transform-box: fill-box; transform-origin: center; animation: se-ripple 2.2s ease-out infinite; }
+@keyframes se-ripple { 0%, 55% { opacity: 0; transform: scale(.3); } 65% { opacity: 1; } 100% { opacity: 0; transform: scale(1.6); } }
+/* دفعة الصحابة: عُفير (معاذ)، بستان نخل (بيرحاء)، سراج أبي طلحة */
+.ld-grove, .ld-donkey, .ld-riders { opacity: 0; transition: opacity 3s ease; }
+[data-grove="on"] .ld-grove, [data-donkey] .ld-donkey, [data-donkey="ride"] .ld-riders { opacity: 1; }
+.ld-grove .palm { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite; }
+[data-donkey="ride"] .ld-dkbob { animation: ld-dkbob .9s ease-in-out infinite; }
+@keyframes ld-dkbob { 50% { transform: translateY(-4px); } }
+.ld-rd1, .ld-rd2 { animation: lt-breathe 3.6s ease-in-out infinite; } .ld-rd2 { animation-delay: -1.5s; }
+.dr-siraj { opacity: 0; transition: opacity 3s ease; } [data-siraj] .dr-siraj { opacity: 1; }
+.dr-sjglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3s ease-in-out infinite; transition: opacity 1.2s ease 2s; }
+.dr-sjflame { transform-box: fill-box; transform-origin: 50% 100%; animation: dr-flick 1.4s ease-in-out infinite; transition: opacity .6s ease 2s; }
+@keyframes dr-flick { 50% { transform: scale(.9, 1.08) skewX(-4deg); } }
+.dr-sjsmoke { opacity: 0; transition: opacity 2s ease 2.6s; }
+[data-siraj="out"] .dr-sjglow, [data-siraj="out"] .dr-sjflame { opacity: 0; } [data-siraj="out"] .dr-sjsmoke { opacity: .6; animation: ld-steam 3s ease-in-out 3s infinite; }
+.stage[data-siraj="out"] .stage__tint { opacity: 0 !important; }
+.stage[data-siraj="out"] .stage__svg { filter: brightness(.55); transition: filter 2s ease 2s; }

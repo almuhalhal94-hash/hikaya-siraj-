@@ -504,6 +504,106 @@ export const ART = {
     svg: `<g class="wt-body">${mountain('#a9b892', '#7a8a6a', '#5e6c50', '#3a4430')}
       <path d="M102 24 L90 52 L100 50 L94 70" fill="none" stroke="#fff" stroke-width="5" opacity=".6"/>
       ${cheeks(60, 144, 146)}${eyes(82, 120, 118, 14)}${mouth(101, 154, 26, 18)}</g>`
+  },
+  zamzam: {
+    skin: '#9a8e7e', ink: '#3a3026',
+    svg: `<defs>${lg('wtZm', '#c9bca6', '#7e715e')}${lg('wtZw', '#c8f4ff', '#3a9ccf')}</defs><g class="wt-body">
+      <path d="M100 18 C92 40 84 52 84 64 a16 16 0 0 0 32 0 C116 52 108 40 100 18Z" fill="url(#wtZw)"/>
+      <path d="M58 70 q-8-18 6-26 M142 70 q8-18-6-26" stroke="#bfeee8" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <path d="M22 96 Q100 70 178 96 L170 184 Q100 200 30 184 Z" fill="url(#wtZm)" stroke="#5a4e40" stroke-width="3"/>
+      <ellipse cx="100" cy="94" rx="78" ry="16" fill="url(#wtZw)" stroke="#5a4e40" stroke-width="3"/>
+      <path d="M32 124 Q100 140 168 124 M34 156 Q100 172 166 156 M66 96 V132 M134 96 V132 M100 136 V166" stroke="#5a4e40" stroke-width="2" opacity=".45" fill="none"/>
+      ${cheeks(56, 144, 160)}${eyes(78, 122, 138, 13)}${mouth(100, 170, 22, 13)}</g>`
+  },
+  ram: {
+    skin: '#efe6d6', ink: '#6b5236',
+    svg: `<g class="wt-body">
+      <path d="M44 70 C10 60 8 110 36 116 C52 118 56 100 48 92" fill="none" stroke="#b98548" stroke-width="14" stroke-linecap="round"/>
+      <path d="M156 70 C190 60 192 110 164 116 C148 118 144 100 152 92" fill="none" stroke="#b98548" stroke-width="14" stroke-linecap="round"/>
+      <g fill="#fffaf0" stroke="#d8cfc0" stroke-width="3">${[[60, 52], [84, 40], [116, 40], [140, 52], [100, 34]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="20"/>`).join('')}</g>
+      <path d="M56 70 C56 50 144 50 144 70 L136 150 C128 186 72 186 64 150 Z" fill="#f4ecdc" stroke="#c9bca0" stroke-width="3"/>
+      <ellipse cx="100" cy="164" rx="26" ry="14" fill="#e8c8b8"/><path d="M92 160 q8 6 16 0" stroke="#6b5236" stroke-width="3" fill="none"/>
+      ${cheeks(70, 130, 136, '#f0a090')}${eyes(80, 120, 108, 13)}${mouth(100, 172, 18, 11)}</g>`
+  },
+  olive: {
+    skin: '#5e7a4a', ink: '#24341a',
+    svg: `<g class="wt-body">
+      <path d="M86 196 C90 170 84 150 92 132 L108 132 C116 150 110 170 114 196 Z" fill="#6b5034"/>
+      <path d="M100 12 C150 12 190 44 186 86 C184 124 150 146 100 146 C50 146 16 124 14 86 C10 44 50 12 100 12 Z" fill="#4e6e3e"/>
+      <g fill="#7ea062">${[[40, 50], [70, 30], [130, 30], [160, 50], [30, 100], [170, 100], [60, 130], [140, 130]].map(([x, y], i) => `<ellipse cx="${x}" cy="${y}" rx="15" ry="6" transform="rotate(${i * 37} ${x} ${y})"/>`).join('')}</g>
+      <g fill="#2e2a48">${[[50, 74], [150, 76], [78, 132], [126, 130], [100, 26]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="6" ry="8"/>`).join('')}</g>
+      ${cheeks(62, 138, 106)}${eyes(80, 120, 84, 14)}${mouth(100, 116, 24, 14)}</g>`
+  },
+  oldwall: {
+    skin: '#8a7462', ink: '#3a2c22',
+    svg: `<defs>${lg('wtOw', '#b49a80', '#7a6250')}</defs><g class="wt-body">
+      <path d="M22 186 V40 H178 V186 Z" fill="url(#wtOw)" stroke="#5a4636" stroke-width="3"/><path d="M16 40 H184 V28 H16 Z" fill="#6b5340"/>
+      <path d="M22 72 H178 M22 104 H178 M22 136 H178 M22 168 H178 M60 40 V72 M120 40 V72 M90 72 V104 M150 72 V104 M50 136 V168 M110 136 V168 M160 136 V168 M80 168 V186 M140 168 V186" stroke="#5a4636" stroke-width="2.5" opacity=".5"/>
+      <path d="M150 40 L142 62 L152 76" fill="none" stroke="#3a2c22" stroke-width="3" stroke-linecap="round"/>
+      ${cheeks(58, 142, 126)}${eyes(78, 122, 100, 14)}${mouth(100, 140, 24, 14)}</g>`
+  },
+  ant: {
+    skin: '#5a2e22', ink: '#1a0c08',
+    svg: `<g class="wt-body">
+      <path d="M74 44 C66 22 52 14 40 14 M126 44 C134 22 148 14 160 14" fill="none" stroke="#2a1410" stroke-width="5" stroke-linecap="round"/><circle cx="40" cy="14" r="6" fill="#2a1410"/><circle cx="160" cy="14" r="6" fill="#2a1410"/>
+      <path d="M58 150 l-30 34 M142 150 l30 34 M54 132 l-36 6 M146 132 l36 6" stroke="#2a1410" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="100" cy="158" rx="44" ry="34" fill="#4a2018"/><ellipse cx="100" cy="132" rx="22" ry="16" fill="#5a2a1e"/>
+      <circle cx="100" cy="86" r="56" fill="#6a3426"/><ellipse cx="86" cy="58" rx="20" ry="10" fill="#9a5a44" opacity=".6"/>
+      ${cheeks(62, 138, 106, '#ff9f8a')}${eyes(80, 120, 84, 15)}${mouth(100, 116, 22, 13)}</g>`
+  },
+  donkey: {
+    skin: '#9a8a80', ink: '#3a2e2a',
+    svg: `<g class="wt-body">
+      <path d="M62 52 L48 6 L80 44 Z M138 52 L152 6 L120 44 Z" fill="#8a7a70" stroke="#5a4a44" stroke-width="3" stroke-linejoin="round"/><path d="M60 40 L52 16 L72 40Z M140 40 L148 16 L128 40Z" fill="#e8b8a8"/>
+      <path d="M52 60 C52 36 148 36 148 60 L150 120 C150 150 50 150 50 120 Z" fill="#a8988c" stroke="#6e5e56" stroke-width="3"/>
+      <path d="M86 40 q14-14 28 0 q-6 10-14 6 q-8 4-14-6z" fill="#4a3e3a"/>
+      <ellipse cx="100" cy="150" rx="46" ry="36" fill="#d8cabc" stroke="#6e5e56" stroke-width="3"/><ellipse cx="84" cy="146" rx="6" ry="8" fill="#5a4a44"/><ellipse cx="116" cy="146" rx="6" ry="8" fill="#5a4a44"/>
+      ${cheeks(62, 138, 116)}${eyes(78, 122, 92, 14)}${mouth(100, 172, 22, 11)}</g>`
+  },
+  lamp: {
+    skin: '#c07a40', ink: '#5a2e12',
+    svg: `<defs>${lg('wtLp', '#e0a060', '#9a5a2a')}</defs><g class="wt-body">
+      <g class="wt-flame"><path d="M160 74 C140 52 152 26 162 10 C176 30 182 54 160 74Z" fill="#ffd77a"/><path d="M161 66 C152 54 156 40 162 30 C170 42 170 56 161 66Z" fill="#fff4cf"/></g>
+      <path d="M20 110 C20 76 60 66 100 66 C134 66 150 72 158 82 L176 78 C184 86 174 100 156 102 C150 132 126 156 92 156 C48 156 20 140 20 110 Z" fill="url(#wtLp)" stroke="#6b3a1c" stroke-width="3"/>
+      <ellipse cx="82" cy="72" rx="26" ry="8" fill="#3a2010"/><path d="M40 166 H140 L128 186 H52 Z" fill="#8a5a2e"/>
+      ${cheeks(46, 120, 128)}${eyes(62, 104, 106, 13)}${mouth(84, 136, 20, 12)}</g>`
+  },
+  palm: {
+    skin: '#8a6a40', ink: '#3a2a14',
+    svg: `<g class="wt-body">
+      <g fill="none" stroke="#3f8f52" stroke-width="12" stroke-linecap="round"><path d="M100 54 Q60 10 14 34"/><path d="M100 54 Q140 10 186 34"/><path d="M100 54 Q50 40 20 84"/><path d="M100 54 Q150 40 180 84"/><path d="M100 54 Q100 20 92 4"/></g>
+      <g fill="#c9792a">${[[86, 64], [100, 70], [114, 64], [92, 78], [108, 78]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="7"/>`).join('')}</g>
+      <path d="M66 196 C70 150 72 110 78 76 L122 76 C128 110 130 150 134 196 Z" fill="#9a7444" stroke="#5a4020" stroke-width="3"/>
+      <path d="M74 96 H126 M72 120 H128 M70 146 H130 M68 172 H132" stroke="#5a4020" stroke-width="3" opacity=".5"/>
+      ${cheeks(80, 120, 150)}${eyes(86, 114, 122, 11)}${mouth(100, 160, 18, 11)}</g>`
+  },
+  ewer: {
+    skin: '#a8b4c0', ink: '#2e3a46',
+    svg: `<defs>${lg('wtEw', '#dfe8f0', '#8a9aaa')}</defs><g class="wt-body">
+      <path d="M140 70 C176 64 186 100 160 120" fill="none" stroke="#7a8a9a" stroke-width="10" stroke-linecap="round"/>
+      <path d="M56 104 L18 70 L26 62 L64 88 Z" fill="#9aaaba" stroke="#5a6a7a" stroke-width="3"/>
+      <path d="M72 30 H128 L122 52 C156 66 164 110 150 150 C140 180 60 180 50 150 C36 110 44 66 78 52 Z" fill="url(#wtEw)" stroke="#5a6a7a" stroke-width="3"/>
+      <ellipse cx="100" cy="30" rx="30" ry="7" fill="#5a6a7a"/><circle cx="20" cy="74" r="5" fill="#bfeee8"/>
+      ${cheeks(68, 132, 134)}${eyes(82, 118, 108, 13)}${mouth(100, 146, 20, 12)}</g>`
+  },
+  stall: {
+    skin: '#c9995a', ink: '#4a2d10',
+    svg: `<g class="wt-body">
+      <path d="M14 70 L30 22 H170 L186 70 Z" fill="#c9792a" stroke="#6b3a1c" stroke-width="3"/>
+      <path d="M14 70 q14 14 28 0 q14 14 28 0 q14 14 28 0 q14 14 28 0 q14 14 28 0 q14 14 28 0 q14 14 30 0" fill="#f1e4c3" stroke="#6b3a1c" stroke-width="3"/>
+      <path d="M40 30 L36 66 M80 24 L78 66 M120 24 L122 66 M160 30 L164 66" stroke="#f1e4c3" stroke-width="8"/>
+      <rect x="28" y="84" width="144" height="102" rx="8" fill="#9a6a34" stroke="#5a3a1a" stroke-width="3"/>
+      <g><ellipse cx="56" cy="178" rx="16" ry="8" fill="#f0d68a"/><ellipse cx="144" cy="178" rx="16" ry="8" fill="#e8c06a"/></g>
+      ${cheeks(58, 142, 146)}${eyes(78, 122, 118, 14)}${mouth(100, 156, 22, 12)}</g>`
+  },
+  cloth: {
+    skin: '#c9a87a', ink: '#4a3220',
+    svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
+      <path d="M20 70 C40 40 160 40 180 70 L186 150 C160 190 40 190 14 150 Z" fill="url(#wtCl)" stroke="#7a5a3a" stroke-width="3"/>
+      <path d="M100 36 C90 20 110 10 100 4 M100 36 L80 60 M100 36 L120 60" stroke="#7a5a3a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M26 96 Q100 110 174 96 M24 132 Q100 146 176 132" stroke="#8a2a2a" stroke-width="6" fill="none" opacity=".55"/>
+      <g fill="#f0d68a"><circle cx="40" cy="176" r="8"/><circle cx="160" cy="176" r="8"/><circle cx="148" cy="186" r="6"/></g>
+      ${cheeks(56, 144, 140)}${eyes(78, 122, 112, 14)}${mouth(100, 154, 22, 12)}</g>`
   }
 };
 ART.kahf = ART.cave;
