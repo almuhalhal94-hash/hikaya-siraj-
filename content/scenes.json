@@ -17321,5 +17321,176 @@
         "glow": "full"
       }
     }
+  },
+  "maryam-alrutab": {
+    "thumb": 5,
+    "witness": "palm",
+    "scenes": [
+      {
+        "set": "mihrab",
+        "state": {
+          "time": "dawn",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            1000
+          ],
+          "to": [
+            640,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            820
+          ],
+          "to": [
+            640,
+            640,
+            960
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "palm": "on",
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            1000
+          ],
+          "to": [
+            620,
+            660,
+            840
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "palm": "on",
+          "spring": "on",
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            920
+          ],
+          "to": [
+            640,
+            670,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "palm": "glow",
+          "spring": "on",
+          "light": "low",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            820
+          ],
+          "to": [
+            640,
+            640,
+            940
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            780
+          ],
+          "to": [
+            640,
+            620,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "palm": "glow",
+        "spring": "on",
+        "light": "low"
+      }
+    }
   }
 }
