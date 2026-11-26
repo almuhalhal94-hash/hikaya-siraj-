@@ -4,6 +4,7 @@ import { thumbnail } from '../film/engine.js';
 import { sparkle } from '../sky.js';
 import { sfx } from '../audio.js';
 import { shuffled } from './order.js';
+import { choose as pickFor, mark } from './memory.js';
 
 export default function witness(board, api) {
   return api.level.mode === 'pairs' ? pairs(board, api) : choose(board, api);
@@ -19,8 +20,8 @@ function art(item, scenes) {
 // ——— وضع الاختيار ———
 function choose(board, api) {
   const { level, data, t, scenes } = api;
-  const rounds = shuffled(data.who_is_witness);
-  let r = 0, mistakes = 0, busy = false;
+  const rounds = pickFor('witness', data.who_is_witness, level.count || 5, it => it.story);
+  let r = 0, mistakes = 0, miss = false, busy = false;
 
   const root = html(`
     <div class="wt">
@@ -49,11 +50,12 @@ function choose(board, api) {
   async function answer(btn, ok) {
     if (busy || btn.disabled) return;
     if (!ok) {
-      mistakes++; btn.disabled = true; btn.classList.add('is-wrong');
+      mistakes++; miss = true; btn.disabled = true; btn.classList.add('is-wrong');
       api.oops();
       return;
     }
     busy = true;
+    mark('witness', rounds[r].story, !miss); miss = false;
     btn.classList.add('is-right'); who.classList.add('is-glow');
     sfx.star(); api.cheer(); sparkle(btn, { count: 14, power: 4 });
     await wait(1000);
@@ -69,8 +71,9 @@ function choose(board, api) {
 
 // ——— وضع البطاقات المقلوبة ———
 function pairs(board, api) {
-  const { data, t, scenes } = api;
-  const deck = shuffled(data.who_is_witness.flatMap((item, k) => [{ k, item, side: 'w' }, { k, item, side: 's' }]));
+  const { level, data, t, scenes } = api;
+  const set = pickFor('witness', data.who_is_witness, level.count || 6, it => it.story);
+  const deck = shuffled(set.flatMap((item, k) => [{ k, item, side: 'w' }, { k, item, side: 's' }]));
   let open = [], matched = 0, misses = 0, busy = false;
 
   const root = html(`<div class="wt wt--pairs"><div class="wt__grid${deck.length > 8 ? ' wt__grid--many' : ''}"></div></div>`);
@@ -96,7 +99,8 @@ function pairs(board, api) {
         if (!api.alive()) return;
         [x, y].forEach(o => { o.b.classList.add('is-match'); o.b.disabled = true; sparkle(o.b, { count: 9, power: 3 }); });
         sfx.star(); api.cheer();
-        if (matched === data.who_is_witness.length) api.win(misses <= data.who_is_witness.length ? 3 : misses <= data.who_is_witness.length * 2 ? 2 : 1);
+        mark('witness', x.c.item.story, true);
+        if (matched === set.length) api.win(misses <= set.length ? 3 : misses <= set.length * 2 ? 2 : 1);
       } else {
         busy = true; misses++;
         await wait(1100);

@@ -1,5 +1,5 @@
 {
-  "_schema": "أسئلة الألعاب ومستوياتها. order_levels: كل مستوى قصة (story) و pick أرقام الأحداث المعروضة منها (بلا pick = كل الأحداث). who_is_witness: story يربط الشاهد بصورته في scenes.json. witness_levels: mode إما pick (اختيار القصة، options عدد الخيارات) أو pairs (بطاقات مقلوبة تُطابَق). hijra_maze.levels: cols/rows حجم المتاهة، seed بذرة توليدها، loops فتحات إضافية تسهّلها، dark ظلام يكشفه نور الفانوس. fill_blank: جمل من نص القصص فيها ___ مكان الكلمة الناقصة (لا تُفرَّغ كلمة من آية أو حديث). blank_levels: count عدد الجمل و options عدد الخيارات. catch_levels: secs مدة الجولة، rate عدد ما يسقط في الثانية، speed سرعة السقوط، clouds نسبة الغيوم، goals ما يلزم لنجمة ونجمتين وثلاث.",
+  "_schema": "أسئلة الألعاب ومستوياتها. order_levels: كل مستوى رفّ (shelf من library.json، title اسمه، open=true مفتوح دائمًا)، وتُختار منه حكاية بذاكرة الألعاب (js/games/memory.js)؛ ويجوز story لمستوى حكاية واحدة و pick أرقام أحداثها. who_is_witness: story يربط الشاهد بصورته في scenes.json. witness_levels: mode إما pick (اختيار القصة، options عدد الخيارات، count عدد الجولات) أو pairs (بطاقات مقلوبة تُطابَق، count عدد الأزواج). hijra_maze.levels: cols/rows حجم المتاهة، seed بذرة توليدها، loops فتحات إضافية تسهّلها، dark ظلام يكشفه نور الفانوس. fill_blank: جمل من نص القصص فيها ___ مكان الكلمة الناقصة (لا تُفرَّغ كلمة من آية أو حديث). blank_levels: count عدد الجمل و options عدد الخيارات. catch_levels: secs مدة الجولة، rate عدد ما يسقط في الثانية، speed سرعة السقوط، clouds نسبة الغيوم، goals ما يلزم لنجمة ونجمتين وثلاث.",
   "order_events": [
     {
       "story": "ghar-thawr",
@@ -1841,634 +1841,64 @@
   ],
   "order_levels": [
     {
-      "story": "jidh-alnakhla",
-      "pick": [
-        0,
-        2,
-        3
-      ]
+      "title": "رتّب الأنبياء",
+      "open": true,
+      "count": 5,
+      "timeline": [
+        "آدم عليه السلام",
+        "نوح عليه السلام",
+        "هود عليه السلام",
+        "صالح عليه السلام",
+        "إبراهيم عليه السلام",
+        "يوسف عليه السلام",
+        "موسى عليه السلام",
+        "داود عليه السلام",
+        "سليمان عليه السلام",
+        "زكريا عليه السلام",
+        "عيسى عليه السلام",
+        "محمد ﷺ"
+      ],
+      "_source": "اقتُصر على ما ثبت ترتيبه: هود بعد قوم نوح (الأعراف 69)، ثمود بعد عاد (الأعراف 74)، يوسف قبل موسى (غافر 34)، الملأ من بني إسرائيل من بعد موسى وداود فيهم (البقرة 246–251)، سليمان ورث داود (النمل 16)، زكريا كفل مريم أم عيسى (آل عمران 37)، وعيسى مبشّر بأحمد ﷺ (الصف 6). لم يُدرج لوط وأيوب ويونس وشعيب لعدم الجزم بموضعهم."
     },
     {
-      "story": "ghar-thawr",
-      "pick": [
-        0,
-        1,
-        4
-      ]
+      "shelf": "prophets",
+      "title": "قصص الأنبياء",
+      "open": true
     },
     {
-      "story": "hut-yunus",
-      "pick": [
-        0,
-        2,
-        4
-      ]
+      "shelf": "sahaba",
+      "title": "قصص الصحابة",
+      "open": true
     },
     {
-      "story": "jidh-alnakhla"
+      "shelf": "sahabiyat",
+      "title": "قصص الصحابيات",
+      "open": true
     },
     {
-      "story": "safinat-nuh"
+      "shelf": "tabiin",
+      "title": "قصص التابعين",
+      "open": true
     },
     {
-      "story": "ghar-thawr"
+      "shelf": "tabiiyat",
+      "title": "قصص التابعيات",
+      "open": true
     },
     {
-      "story": "hut-yunus"
+      "shelf": "alimat",
+      "title": "قصص العالمات",
+      "open": true
     },
     {
-      "story": "ashab-alkahf"
+      "shelf": "salihin",
+      "title": "قصص الصالحين",
+      "open": true
     },
     {
-      "story": "adam-alard"
-    },
-    {
-      "story": "hud-alrih"
-    },
-    {
-      "story": "salih-alhijr"
-    },
-    {
-      "story": "ibrahim-alnar"
-    },
-    {
-      "story": "lut-alfajr"
-    },
-    {
-      "story": "ismail-alwadi"
-    },
-    {
-      "story": "yusuf-alqamis"
-    },
-    {
-      "story": "ayyub-alayn"
-    },
-    {
-      "story": "shuayb-almizan"
-    },
-    {
-      "story": "musa-alasa"
-    },
-    {
-      "story": "dawud-alhadid"
-    },
-    {
-      "story": "sulayman-alhudhud"
-    },
-    {
-      "story": "zakariya-almihrab"
-    },
-    {
-      "story": "isa-almahd"
-    },
-    {
-      "story": "abubakr-almasjid"
-    },
-    {
-      "story": "umar-alhajar"
-    },
-    {
-      "story": "uthman-rumah"
-    },
-    {
-      "story": "ali-alraya"
-    },
-    {
-      "story": "talha-uhud"
-    },
-    {
-      "story": "zubayr-alkhandaq"
-    },
-    {
-      "story": "saad-alqaws"
-    },
-    {
-      "story": "abuubayda-alsahil"
-    },
-    {
-      "story": "bilal-alnalan"
-    },
-    {
-      "story": "musab-alburda"
-    },
-    {
-      "story": "salman-althurayya"
-    },
-    {
-      "story": "anas-albab"
-    },
-    {
-      "story": "abuhurayra-alsuffa"
-    },
-    {
-      "story": "khalid-alsayf"
-    },
-    {
-      "story": "khadija-alghita"
-    },
-    {
-      "story": "aisha-aliqd"
-    },
-    {
-      "story": "hafsa-alsuhuf"
-    },
-    {
-      "story": "ummsalama-alkhayma"
-    },
-    {
-      "story": "fatima-alraha"
-    },
-    {
-      "story": "asma-alnitaq"
-    },
-    {
-      "story": "ummsulaym-alkhimar"
-    },
-    {
-      "story": "ummatiyya-alqirba"
-    },
-    {
-      "story": "said-alsariya"
-    },
-    {
-      "story": "urwa-alhilal"
-    },
-    {
-      "story": "hasan-alhasa"
-    },
-    {
-      "story": "sirin-alsilsila"
-    },
-    {
-      "story": "umar2-alshamaa"
-    },
-    {
-      "story": "ata-alsitr"
-    },
-    {
-      "story": "amra-aljidar"
-    },
-    {
-      "story": "muadha-aldoha"
-    },
-    {
-      "story": "hafsasirin-almushaf"
-    },
-    {
-      "story": "luqman-alsakhra"
-    },
-    {
-      "story": "mumin-alqasr"
-    },
-    {
-      "story": "dhulqarnayn-alradm"
-    },
-    {
-      "story": "ghulam-aljabal"
-    },
-    {
-      "story": "zamzam-albir"
-    },
-    {
-      "story": "ismail-alfida"
-    },
-    {
-      "story": "ishaq-alzaytuna"
-    },
-    {
-      "story": "khidr-aljidar"
-    },
-    {
-      "story": "sulayman-alnamla"
-    },
-    {
-      "story": "muadh-ufayr"
-    },
-    {
-      "story": "abutalha-alsiraj"
-    },
-    {
-      "story": "ibnumar-alnakhla"
-    },
-    {
-      "story": "ibnabbas-alibriq"
-    },
-    {
-      "story": "abdurrahman-alsouq"
-    },
-    {
-      "story": "abumusa-althawb"
-    },
-    {
-      "story": "sawda-alshann"
-    },
-    {
-      "story": "zaynab-alqasaba"
-    },
-    {
-      "story": "juwayriya-almusalla"
-    },
-    {
-      "story": "ummharam-albahr"
-    },
-    {
-      "story": "asmaumays-alshira"
-    },
-    {
-      "story": "ummayman-alnakhlat"
-    },
-    {
-      "story": "uways-alqafila"
-    },
-    {
-      "story": "ummdarda-alataba"
-    },
-    {
-      "story": "talut-alnahr"
-    },
-    {
-      "story": "isra-alaqsa"
-    },
-    {
-      "story": "rabi-alkhabis"
-    },
-    {
-      "story": "masruq-alfas"
-    },
-    {
-      "story": "ibnjubayr-alshihab"
-    },
-    {
-      "story": "ghar-alsakhra"
-    },
-    {
-      "story": "khashaba-albahr"
-    },
-    {
-      "story": "shat-alama"
-    },
-    {
-      "story": "khuff-albir"
-    },
-    {
-      "story": "salim-alshamla"
-    },
-    {
-      "story": "nafi-alrahila"
-    },
-    {
-      "story": "qasim-alqindil"
-    },
-    {
-      "story": "tawus-alsahar"
-    },
-    {
-      "story": "alqama-dimashq"
-    },
-    {
-      "story": "aswad-albair"
-    },
-    {
-      "story": "jarra-aldhahab"
-    },
-    {
-      "story": "ashab-aljanna"
-    },
-    {
-      "story": "jannatayn-alnahr"
-    },
-    {
-      "story": "qarun-almafatih"
-    },
-    {
-      "story": "rajul-yasin"
-    },
-    {
-      "story": "qarya-alhimar"
-    },
-    {
-      "story": "asiya-alnil"
-    },
-    {
-      "story": "ummmusa-altabut"
-    },
-    {
-      "story": "madyan-albir"
-    },
-    {
-      "story": "imran-almihrab"
-    },
-    {
-      "story": "umm-albintayn"
-    },
-    {
-      "story": "sara-alqasr"
-    },
-    {
-      "story": "maryam-alrutab"
-    },
-    {
-      "story": "saba-alarsh"
-    },
-    {
-      "story": "qamma-almiknasa"
-    },
-    {
-      "story": "rubayyi-allueba"
-    },
-    {
-      "story": "zaynabmasud-alhuli"
-    },
-    {
-      "story": "ummfadl-alqadah"
-    },
-    {
-      "story": "safiyya-alabaa"
-    },
-    {
-      "story": "ummhani-alaman"
-    },
-    {
-      "story": "khawla-aljidar"
-    },
-    {
-      "story": "hadiqa-alsahaba"
-    },
-    {
-      "story": "ghusn-alshawk"
-    },
-    {
-      "story": "tajir-aldukkan"
-    },
-    {
-      "story": "ibnay-adam"
-    },
-    {
-      "story": "saba-alsadd"
-    },
-    {
-      "story": "hawariyyun-almaida"
-    },
-    {
-      "story": "baqara-alhaql"
-    },
-    {
-      "story": "ubayda-alsiraj"
-    },
-    {
-      "story": "kathir-hims"
-    },
-    {
-      "story": "sulami-almushaf"
-    },
-    {
-      "story": "abuidris-alqibla"
-    },
-    {
-      "story": "ibnabilayla-albab"
-    },
-    {
-      "story": "shabi-alsahifa"
-    },
-    {
-      "story": "ribi-alasa"
-    },
-    {
-      "story": "kurayb-alhilal"
-    },
-    {
-      "story": "zaynalabidin-alsajjada"
-    },
-    {
-      "story": "yahya-ibnyamar"
-    },
-    {
-      "story": "ata-yasar-alsouq"
-    },
-    {
-      "story": "abuburda-alqirba"
-    },
-    {
-      "story": "abusalama-alnujum"
-    },
-    {
-      "story": "ubaydullah-aldalw"
-    },
-    {
-      "story": "ibnmasud-almithara"
-    },
-    {
-      "story": "abudharr-alasa"
-    },
-    {
-      "story": "zayd-alasib"
-    },
-    {
-      "story": "ubayy-alshams"
-    },
-    {
-      "story": "jabir-aljamal"
-    },
-    {
-      "story": "usama-alraya"
-    },
-    {
-      "story": "hudhayfa-alrih"
-    },
-    {
-      "story": "ammar-allabina"
-    },
-    {
-      "story": "jafar-aluka"
-    },
-    {
-      "story": "saadmuadh-alkhayma"
-    },
-    {
-      "story": "ummhabiba-alsiraj"
-    },
-    {
-      "story": "maymuna-alwisada"
-    },
-    {
-      "story": "ummkulthum-altariq"
-    },
-    {
-      "story": "ummhisham-altannur"
-    },
-    {
-      "story": "shifa-allawh"
-    },
-    {
-      "story": "ummwaraqa-albab"
-    },
-    {
-      "story": "ummsinan-alnadih"
-    },
-    {
-      "story": "ummsalit-almirt"
-    },
-    {
-      "story": "khawlahakim-almanzil"
-    },
-    {
-      "story": "fil-alsijjil"
-    },
-    {
-      "story": "sahara-alhibal"
-    },
-    {
-      "story": "mutahabban-alqarya"
-    },
-    {
-      "story": "ghanam-aldhib"
-    },
-    {
-      "story": "najashi-alshira"
-    },
-    {
-      "story": "zaydamr-alkaba"
-    },
-    {
-      "story": "sabt-alhitan"
-    },
-    {
-      "story": "bitaqa-almizan"
-    },
-    {
-      "story": "ibrahim-alkawkab"
-    },
-    {
-      "story": "yusuf-alsanabil"
-    },
-    {
-      "story": "musa-alhajar"
-    },
-    {
-      "story": "muhammad-alqamar"
-    },
-    {
-      "story": "muhammad-alrakwa"
-    },
-    {
-      "story": "ukhtmusa-alqasab"
-    },
-    {
-      "story": "sulayman-alqada"
-    },
-    {
-      "story": "umm-alrahima"
-    },
-    {
-      "story": "burda-almansuja"
-    },
-    {
-      "story": "minbar-alansariyya"
-    },
-    {
-      "story": "jariya-alghanam"
-    },
-    {
-      "story": "ummzufar-alsabr"
-    },
-    {
-      "story": "khathamiyya-alhajj"
-    },
-    {
-      "story": "zakariya-alzawja"
-    },
-    {
-      "story": "ummalala-alayn"
-    },
-    {
-      "story": "ummharitha-alfirdaws"
-    },
-    {
-      "story": "jabir-alburma"
-    },
-    {
-      "story": "yawm-alnisa"
-    },
-    {
-      "story": "ummkhalid-alqamis"
-    },
-    {
-      "story": "hind-alkhiba"
-    },
-    {
-      "story": "barira-alqasa"
-    },
-    {
-      "story": "eid-alqurt"
-    },
-    {
-      "story": "fulana-alsariya"
-    },
-    {
-      "story": "rawha-alsabi"
-    },
-    {
-      "story": "birr-alumm"
-    },
-    {
-      "story": "ummqays-alma"
-    },
-    {
-      "story": "ansar-alnisa"
-    },
-    {
-      "story": "fatima-almundhir"
-    },
-    {
-      "story": "safiyya-almiftah"
-    },
-    {
-      "story": "aishasaad-alfirash"
-    },
-    {
-      "story": "rabia-albab"
-    },
-    {
-      "story": "mahamili-almizan"
-    },
-    {
-      "story": "karima-alqindil"
-    },
-    {
-      "story": "warkaniyya-alamali"
-    },
-    {
-      "story": "daqqaq-alsahar"
-    },
-    {
-      "story": "aqra-alqalam"
-    },
-    {
-      "story": "shuhda-baghdad"
-    },
-    {
-      "story": "tajanni-alhalqa"
-    },
-    {
-      "story": "jawzdaniyya-almujam"
-    },
-    {
-      "story": "baghdadiyya-alsiraj"
-    },
-    {
-      "story": "saadalkhayr-altariq"
-    },
-    {
-      "story": "sittalkataba-alkhizana"
-    },
-    {
-      "story": "afifa-alshama"
-    },
-    {
-      "story": "binmamar-almahd"
-    },
-    {
-      "story": "karimadimashq-albustan"
+      "shelf": "salihat",
+      "title": "قصص الصالحات",
+      "open": true
     }
   ],
   "who_is_witness": [
@@ -4294,14 +3724,26 @@
   "witness_levels": [
     {
       "mode": "pick",
-      "options": 2
+      "options": 2,
+      "count": 5
     },
     {
       "mode": "pick",
-      "options": 3
+      "options": 3,
+      "count": 6
     },
     {
-      "mode": "pairs"
+      "mode": "pairs",
+      "count": 4
+    },
+    {
+      "mode": "pick",
+      "options": 3,
+      "count": 8
+    },
+    {
+      "mode": "pairs",
+      "count": 6
     }
   ],
   "hijra_maze": {
@@ -11608,11 +11050,11 @@
       "options": 3
     },
     {
-      "count": 12,
+      "count": 10,
       "options": 3
     },
     {
-      "count": 807,
+      "count": 12,
       "options": 3
     }
   ],

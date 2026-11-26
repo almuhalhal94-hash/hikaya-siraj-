@@ -61,7 +61,7 @@ const ART = {
 };
 
 const best = id => store.state.games?.[id] || [];
-const unlocked = (id, i) => i === 0 || best(id)[i - 1] > 0;
+const unlocked = (id, i, levels) => i === 0 || levels?.[i]?.open || best(id)[i - 1] > 0;
 
 export default async function games(el, ctx) {
   const data = await content('games');
@@ -108,11 +108,11 @@ function hub(el, { ui, go }, data) {
 async function play(el, ctx, data, id, n) {
   const { ui, lines, go } = ctx, t = ui.games, game = GAMES[id];
   const levels = game.levels(data), meta = t.list.find(g => g.id === id);
-  const [stories, scenes] = await Promise.all([content('stories'), content('scenes')]);
+  const [stories, scenes, library] = await Promise.all([content('stories'), content('scenes'), content('library')]);
 
   let idx = Number.isInteger(+n) && +n >= 1 && +n <= levels.length ? +n - 1 : levels.findIndex((_, i) => !best(id)[i]);
   if (idx < 0) idx = levels.length - 1;
-  while (!unlocked(id, idx)) idx--;
+  while (!unlocked(id, idx, levels)) idx--;
 
   const siraj = createSiraj({ label: ui.common.siraj });
   const root = html(`
@@ -141,7 +141,7 @@ async function play(el, ctx, data, id, n) {
   function paintLevels() {
     nav.textContent = '';
     levels.forEach((_, i) => {
-      const open = unlocked(id, i), s = best(id)[i] || 0;
+      const open = unlocked(id, i, levels), s = best(id)[i] || 0;
       const a = html(`<a class="gm__lvl" href="#/games/${id}/${i + 1}"><b></b><i>${'<u></u>'.repeat(3)}</i></a>`);
       if (open) a.querySelector('b').textContent = num(i + 1); else a.querySelector('b').innerHTML = LOCK;
       a.querySelectorAll('u').forEach((u, k) => u.classList.toggle('is-on', k < s));
@@ -158,7 +158,7 @@ async function play(el, ctx, data, id, n) {
   }
 
   const api = {
-    level: levels[idx], data, stories: stories.stories, scenes, t: t[id], ui, vars,
+    level: levels[idx], data, stories: stories.stories, scenes, library, t: t[id], ui, vars,
     alive: () => alive,
     say: (text, extra = {}) => siraj.say(fill(text, { ...vars, ...extra })),
     cheer() { siraj.react('joy'); },

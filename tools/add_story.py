@@ -37,10 +37,9 @@ lib = load('library'); shelf = next(s for s in lib['shelves'] if s['id'] == src[
 item = next(i for i in shelf['items'] if i['name'] == src['lesson_name']); item['story'] = sid; save('library', lib)
 g = load('games'); gm = src['games']
 upsert(g['order_events'], {'story': sid, 'events': gm['order_events']})
-if not any(l.get('story') == sid for l in g['order_levels']): g['order_levels'].append({'story': sid})
+if not any(l.get('shelf') == shelf['id'] for l in g['order_levels']): g['order_levels'].append({'shelf': shelf['id'], 'title': shelf['title'], 'open': True})
 upsert(g['who_is_witness'], {'story': sid, **gm['witness']})
 g['who_is_witness'] = [{'witness': w['witness'], 'story': w['story'], 'answer': w['answer'], 'wrong': w['wrong']} for w in g['who_is_witness']]
 g['fill_blank'] = [b for b in g['fill_blank'] if b['story'] != sid] + [{'story': sid, **b} for b in gm['fill_blank']]
-g['blank_levels'][-1]['count'] = len(g['fill_blank'])
 save('games', g)
 print('تمت إضافة', sid, '— جمل الكلمة الناقصة:', len(g['fill_blank']))

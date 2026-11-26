@@ -3,11 +3,13 @@ import { fill, html, num, wait } from '../core.js';
 import { sparkle } from '../sky.js';
 import { sfx } from '../audio.js';
 import { shuffled } from './order.js';
+import { choose as pickFor, mark } from './memory.js';
 
 export default function blank(board, api) {
   const { level, data, t, stories } = api;
-  const rounds = shuffled(data.fill_blank).slice(0, level.count || 4);
-  let r = 0, mistakes = 0, streak = 0, busy = false;
+  const key = it => `${it.story}|${it.text}`;
+  const rounds = pickFor('blank', data.fill_blank, level.count || 4, key);
+  let r = 0, mistakes = 0, streak = 0, miss = false, busy = false;
 
   const root = html(`
     <div class="bl">
@@ -39,12 +41,13 @@ export default function blank(board, api) {
   async function answer(btn, ok, gap) {
     if (busy || btn.disabled) return;
     if (!ok) {
-      mistakes++; streak = 0; streakEl.hidden = true;
+      mistakes++; miss = true; streak = 0; streakEl.hidden = true;
       btn.disabled = true; btn.classList.add('is-wrong');
       api.oops();
       return;
     }
     busy = true; streak++;
+    mark('blank', key(rounds[r]), !miss); miss = false;
     gap.textContent = btn.textContent; gap.classList.add('is-full');
     btn.classList.add('is-right');
     sfx.star(); sparkle(gap, { count: 8 + Math.min(streak, 5) * 4, power: 3 + Math.min(streak, 4) });
