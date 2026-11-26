@@ -13600,5 +13600,189 @@
         "boulder": "on"
       }
     }
+  },
+  "khashaba-albahr": {
+    "thumb": 4,
+    "witness": "log",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "pair": "warm",
+          "coins": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            680,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "calm"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "light": "ship"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            900
+          ],
+          "to": [
+            600,
+            440,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wave",
+        "mood": "curious"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "light": "shore",
+          "log": "on"
+        },
+        "camera": {
+          "from": [
+            500,
+            560,
+            1000
+          ],
+          "to": [
+            380,
+            660,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wave",
+        "mood": "worried"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "light": "shore",
+          "log": "sea"
+        },
+        "camera": {
+          "from": [
+            380,
+            660,
+            760
+          ],
+          "to": [
+            640,
+            560,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wave",
+        "mood": "wonder"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "ship": "none",
+          "shore": "on",
+          "yaqtin": "off",
+          "pair": "on",
+          "log": "open"
+        },
+        "camera": {
+          "from": [
+            560,
+            600,
+            1000
+          ],
+          "to": [
+            400,
+            700,
+            680
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      },
+      {
+        "set": "sea",
+        "state": {
+          "time": "dawn",
+          "shore": "on",
+          "yaqtin": "off",
+          "pair": "on",
+          "light": "shore",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            400,
+            660,
+            760
+          ],
+          "to": [
+            560,
+            520,
+            1100
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "ship": "none",
+        "shore": "on",
+        "yaqtin": "off",
+        "light": "shore",
+        "log": "on"
+      }
+    }
   }
 }

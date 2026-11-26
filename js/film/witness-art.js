@@ -679,6 +679,15 @@ export const ART = {
       <path d="M100 20 L118 72 L172 74 L128 106 L144 160 L100 128 L56 160 L72 106 L28 74 L82 72 Z" fill="url(#wtMt)" stroke="#c9a040" stroke-width="3" stroke-linejoin="round"/>
       ${cheeks(76, 124, 112)}${eyes(86, 114, 92, 10)}${mouth(100, 116, 18, 10)}</g>`
   },
+  log: {
+    skin: '#a8743a', ink: '#2a1808',
+    svg: `<defs>${lg('wtLg', '#c9925a', '#7a4a1e')}</defs><g class="wt-body">
+      <rect x="10" y="56" width="180" height="100" rx="50" fill="url(#wtLg)" stroke="#3d2713" stroke-width="4"/>
+      <ellipse cx="180" cy="106" rx="22" ry="48" fill="#e2c48c" stroke="#3d2713" stroke-width="3"/><ellipse cx="180" cy="106" rx="10" ry="24" fill="none" stroke="#a8743a" stroke-width="3"/>
+      <rect x="70" y="48" width="52" height="16" rx="5" fill="#9fc4e8" stroke="#3a6a9a" stroke-width="2"/>
+      <g fill="#e8c048" stroke="#9a7420" stroke-width="2"><ellipse cx="84" cy="40" rx="12" ry="6"/><ellipse cx="106" cy="34" rx="12" ry="6"/></g>
+      ${cheeks(56, 130, 128)}${eyes(70, 118, 104, 12)}${mouth(94, 132, 22, 11)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
