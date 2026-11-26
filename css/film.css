@@ -982,3 +982,8 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-dog="thirst"] .ld-dogbody { animation: ld-pant .7s ease-in-out infinite; } @keyframes ld-pant { 50% { translate: 0 2px; } }
 [data-dog="drink"] .ld-dogwater, [data-khuff="wet"] .ld-khdrip { opacity: 1; } .ld-khdrip ellipse { animation: dr-drip 1.8s ease-in infinite; }
 [data-dog="drink"] .ld-dogtongue { opacity: 0; }
+
+/* أسد في طريق الحج (حكاية طاوس): lion=on */
+.ld-lion { opacity: 0; transition: opacity 3s ease; } [data-lion="on"] .ld-lion { opacity: 1; }
+.ld-lionbody { transform-box: fill-box; transform-origin: 50% 100%; animation: ld-beastbreathe 3.4s ease-in-out infinite; }
+.ld-lioneye { animation: ld-lionblink 5s ease-in-out infinite; } @keyframes ld-lionblink { 0%, 46%, 54%, 100% { opacity: 1; } 50% { opacity: .1; } }
