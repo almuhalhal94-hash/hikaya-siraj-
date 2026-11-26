@@ -20165,5 +20165,183 @@
         "glow": "full"
       }
     }
+  },
+  "ubayda-alsiraj": {
+    "thumb": 4,
+    "witness": "lamp",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "light": "road"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            1050
+          ],
+          "to": [
+            620,
+            660,
+            880
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "two",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            880,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "trench": "on",
+          "white": "on",
+          "light": "mid",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            980
+          ],
+          "to": [
+            620,
+            670,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "siraj": "on",
+          "light": "on",
+          "pair": "warm"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            960
+          ],
+          "to": [
+            580,
+            660,
+            780
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "siraj": "on",
+          "light": "on",
+          "pair": "warm",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            580,
+            660,
+            780
+          ],
+          "to": [
+            600,
+            600,
+            980
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "wonder"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "two",
+          "trunk": "off",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            880,
+            640,
+            760
+          ],
+          "to": [
+            760,
+            560,
+            1050
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "far": "none",
+        "siraj": "on",
+        "light": "on",
+        "pair": "warm",
+        "glow": "full"
+      }
+    }
   }
 }
