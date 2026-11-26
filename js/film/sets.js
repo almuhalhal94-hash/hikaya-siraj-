@@ -859,6 +859,9 @@ function land() {
       <path class="ld-tentdoor" d="M-44 0L0-112 44 0z"/><path d="M0-150v-26" stroke="#4a2d10" stroke-width="6"/><path d="M-170 0h-24M170 0h24" stroke="#4a2d10" stroke-width="4"/>
       <path d="M-120-46h60M60-46h60" stroke="#e8c48a" stroke-width="6" opacity=".55"/></g>
     ${landExtras()}
+    <g class="ld-maida" transform="translate(640 640)"><g class="ld-mdpos"><path class="ld-mdbeam" d="M-90-900L90-900L150 0L-150 0Z" fill="#fff4cf" opacity=".25"/><ellipse cy="-20" rx="200" ry="90" fill="url(#g-white)"/>
+      <ellipse rx="130" ry="26" fill="#e8d8a8" stroke="#a8843a" stroke-width="4"/><ellipse cy="-6" rx="110" ry="18" fill="#f6ecd0"/>
+      <g stroke="#6b441d" stroke-width="2"><ellipse cx="-60" cy="-14" rx="22" ry="10" fill="#c98a3a"/><ellipse cx="0" cy="-20" rx="26" ry="11" fill="#e8b04a"/><ellipse cx="58" cy="-14" rx="22" ry="10" fill="#7aa04a"/><circle cx="-26" cy="-4" r="9" fill="#d8584a"/><circle cx="30" cy="-4" r="9" fill="#d8584a"/></g></g></g>
     <g class="ld-dam"><path d="M-500 690Q-100 560 220 600L240 720L-500 720Z" fill="#4a6a8a" opacity=".85"/><path class="ld-dmlake" d="M-500 640Q-150 600 220 620L230 720L-500 720Z" fill="#3a7ab0"/>
       <g class="ld-dmwall"><path d="M200 500L370 500L400 740L170 740Z" fill="#8a7a62" stroke="#4a3e2e" stroke-width="5"/><path d="M194 550h182M188 610h196M182 670h210" stroke="#5a4e3e" stroke-width="5"/></g>
       <g class="ld-dmgap"><path d="M250 560L320 560L334 740L240 740Z" fill="#2f6f9a"/><path d="M285 580Q330 700 520 770T1100 820" stroke="#4a9ad0" stroke-width="70" fill="none" stroke-linecap="round"/><path class="ld-dmflow" d="M285 580Q330 700 520 770T1100 820" stroke="#bfe6fa" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="30 60" opacity=".8"/></g></g>

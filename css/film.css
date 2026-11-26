@@ -1074,3 +1074,8 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-dam, .ld-dmgap { opacity: 0; transition: opacity 3s ease; } [data-dam] .ld-dam { opacity: 1; } [data-dam="broken"] .ld-dmgap { opacity: 1; }
 [data-dam="broken"] .ld-dmflow { animation: ld-flood 1.2s linear infinite; } @keyframes ld-flood { to { stroke-dashoffset: -90; } }
 [data-dam="broken"] .ld-dmlake { opacity: .3; transition: opacity 8s ease; }
+
+/* land: maida (down/on) مائدة من السماء: down تنزل من أعلى مع شعاع، on مستقرة أمام الأنوار */
+.ld-maida { opacity: 0; transition: opacity 3s ease; } [data-maida] .ld-maida { opacity: 1; }
+.ld-mdpos { translate: 0 -520px; transition: translate 10s var(--ease-out, ease); } [data-maida="on"] .ld-mdpos { translate: 0 60px; transition-duration: 0s; } [data-maida="down"] .ld-mdpos { animation: ld-mddown 10s var(--ease-out, ease) forwards; }
+@keyframes ld-mddown { from { translate: 0 -520px; } to { translate: 0 60px; } }

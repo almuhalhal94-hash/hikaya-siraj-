@@ -19817,5 +19817,178 @@
         "glow": "full"
       }
     }
+  },
+  "hawariyyun-almaida": {
+    "thumb": 5,
+    "witness": "maida",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "flock": "on",
+          "town": "dark"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            1000
+          ],
+          "to": [
+            620,
+            660,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            860
+          ],
+          "to": [
+            640,
+            680,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            940
+          ],
+          "to": [
+            640,
+            660,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            860
+          ],
+          "to": [
+            640,
+            690,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "flock": "on",
+          "maida": "down"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            1000
+          ],
+          "to": [
+            640,
+            640,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "flock": "on",
+          "maida": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            860
+          ],
+          "to": [
+            640,
+            630,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "mid",
+        "flock": "on",
+        "maida": "down",
+        "glow": "full"
+      }
+    }
   }
 }
