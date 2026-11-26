@@ -685,6 +685,15 @@ function landExtras() {
       <circle cx="84" cy="-44" r="3" fill="#fff4cf"/>
       <path class="ld-dogtongue" d="M104-30q4 12-2 16" stroke="#e07a7a" stroke-width="6" fill="none" stroke-linecap="round"/></g>
       <g class="ld-dogwater" fill="#9fd4ff"><ellipse cx="112" cy="16" rx="26" ry="7" opacity=".7"/></g></g>
+    <g class="ld-orchard">${[[420, 706, 1], [520, 714, 1.1], [620, 704, .95], [720, 716, 1.1], [820, 706, 1], [920, 712, 1.05], [470, 744, 1.2], [600, 750, 1.25], [740, 752, 1.2], [870, 746, 1.2]].map(([x, y, k], i) => `<g transform="translate(${x} ${y}) scale(${k})"><path d="M-5 0v-46h10v46z" fill="#4a2e18"/><g class="ld-crown"><circle cy="-70" r="40"/><circle cx="-26" cy="-56" r="26"/><circle cx="26" cy="-56" r="26"/></g><g class="ld-fruit">${[[-18, -74], [14, -88], [22, -60], [-30, -52], [0, -58], [-6, -96]].map(([a, b]) => `<circle cx="${a}" cy="${b}" r="6"/>`).join('')}</g></g>`).join('')}
+      <path class="ld-fence" d="M360 770h640M360 750v40M440 754v40M520 758v40M600 760v40M680 762v40M760 760v40M840 758v40M920 754v40M1000 750v40" stroke="#6b4426" stroke-width="6" stroke-linecap="round" fill="none"/></g>
+    <g class="ld-jar" transform="translate(720 772)"><ellipse class="ld-jarglow" cy="-70" rx="200" ry="150" fill="url(#g-warm)"/>
+      <ellipse cy="6" rx="120" ry="26" fill="#3a2414"/><path d="M-120 6q-6-22 30-26M120 6q6-22-30-26" stroke="#6b4426" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <g class="ld-jarbody"><path d="M-48 2q-34-52-8-98 10-16 14-30h84q4 14 14 30 26 46-8 98z" fill="#a8643a" stroke="#5a2e14" stroke-width="4"/>
+        <path d="M-56-46h112M-44-76h88" stroke="#e0a060" stroke-width="5" opacity=".7"/><path d="M-30-126q-14-4-20 4M30-126q14-4 20 4" stroke="#5a2e14" stroke-width="5" fill="none"/>
+        <ellipse cy="-128" rx="38" ry="9" fill="#4a2410" stroke="#5a2e14" stroke-width="3"/>
+        <g class="ld-jargold" stroke="#a8741a" stroke-width="2" fill="#ffd34a"><ellipse cx="-16" cy="-134" rx="12" ry="5"/><ellipse cx="10" cy="-138" rx="12" ry="5"/><ellipse cx="2" cy="-146" rx="12" ry="5"/><ellipse cx="-4" cy="-130" rx="12" ry="5"/><ellipse cx="22" cy="-130" rx="11" ry="5"/>
+          <ellipse cx="70" cy="-2" rx="12" ry="5"/><ellipse cx="88" cy="2" rx="11" ry="5"/><ellipse cx="78" cy="-8" rx="11" ry="5"/></g></g></g>
     <g class="ld-lion" transform="translate(1010 712)"><g class="ld-lionbody">
       <ellipse cy="6" rx="230" ry="18" fill="#000" opacity=".35"/>
       <path d="M150-118q70-14 84 44 6 34-8 48" fill="none" stroke="#120d0a" stroke-width="11" stroke-linecap="round"/><ellipse cx="226" cy="-24" rx="15" ry="20" fill="#24160c"/>

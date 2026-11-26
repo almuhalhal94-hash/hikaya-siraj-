@@ -374,6 +374,10 @@
           "story": "dhulqarnayn-alradm"
         },
         {
+          "name": "أصحاب الجنة (البستان)",
+          "story": "ashab-aljanna"
+        },
+        {
           "name": "غلام أصحاب الأخدود",
           "story": "ghulam-aljabal"
         },
@@ -392,6 +396,10 @@
         {
           "name": "ساقي الكلب",
           "story": "khuff-albir"
+        },
+        {
+          "name": "صاحب جرّة الذهب",
+          "story": "jarra-aldhahab"
         }
       ]
     }
