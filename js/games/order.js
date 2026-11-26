@@ -2,6 +2,7 @@
 import { fill, html, num, wait } from '../core.js';
 import { sparkle } from '../sky.js';
 import { sfx } from '../audio.js';
+import { choose as pickFor, mark } from './memory.js';
 
 const GRIP = '<svg class="od__grip" viewBox="0 0 16 24" aria-hidden="true"><path d="M5 5h.01M11 5h.01M5 12h.01M11 12h.01M5 19h.01M11 19h.01" stroke="currentColor" stroke-width="3.400" stroke-linecap="round"/></svg>';
 
@@ -12,8 +13,17 @@ export function shuffled(list) {
 }
 
 export default function order(board, api) {
-  const { level, data, t, stories } = api;
-  const set = data.order_events.find(e => e.story === level.story) || data.order_events[0];
+  const { level, data, t, stories, library } = api;
+  let set = data.order_events.find(e => e.story === level.story);
+  if (level.shelf) { // مستوى رفٍّ كامل: حكاية من الرف لم تُرتَّب بعد، ومقدَّم ما قرأه الطفل
+    const ids = new Set((library?.shelves.find(s => s.id === level.shelf)?.items || []).map(it => it.story).filter(Boolean));
+    [set] = pickFor('order', data.order_events.filter(e => ids.has(e.story)), 1, e => e.story);
+  }
+  if (level.timeline) { // ترتيب الأنبياء: أسماء متفرقة من الخط الزمني تُعرض بترتيبها الصحيح
+    const pickIdx = [...level.timeline.keys()].sort(() => Math.random() - 0.5).slice(0, level.count || 5).sort((a, b) => a - b);
+    set = { story: null, events: pickIdx.map(i => level.timeline[i]) };
+  }
+  set ||= data.order_events[0];
   const events = (level.pick || set.events.map((_, i) => i)).map(i => set.events[i]);
   const n = events.length;
   let arr; // arr[الموضع] = رقم الحدث الصحيح
@@ -21,7 +31,7 @@ export default function order(board, api) {
 
   const root = html(`<div class="od is-intro"><p class="od__story"></p><div class="od__list" role="list"></div><button class="btn od__check" type="button"></button></div>`);
   const list = root.querySelector('.od__list'), check = root.querySelector('.od__check');
-  root.querySelector('.od__story').textContent = stories.find(s => s.id === set.story)?.title || '';
+  root.querySelector('.od__story').textContent = [level.title, stories.find(s => s.id === set.story)?.title].filter(Boolean).join(' · ');
   check.textContent = t.check;
 
   const cards = events.map((text, k) => {
@@ -98,6 +108,7 @@ export default function order(board, api) {
         sparkle(cards[arr[p]].querySelector('.od__num'), { count: 6, power: 3 });
         await wait(170);
       }
+      if (set.story) mark('order', set.story, tries === 1);
       api.win(tries === 1 ? 3 : tries === 2 ? 2 : 1);
     } else {
       arr.forEach((k, p) => cards[k].classList.add(k === p ? 'is-right' : 'is-wrong'));
@@ -107,7 +118,7 @@ export default function order(board, api) {
 
   board.append(root);
   setTimeout(() => root.classList.remove('is-intro'), 1400);
-  api.say(t.intro);
+  api.say(level.timeline ? t.intro_timeline : t.intro);
   measure();
   const ro = new ResizeObserver(() => { if (!drag) measure(); });
   ro.observe(list);
