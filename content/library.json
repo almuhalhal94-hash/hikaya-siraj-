@@ -574,12 +574,40 @@
           "story": "aqra-alqalam"
         },
         {
+          "name": "فاطمة الجوزدانية",
+          "story": "jawzdaniyya-almujam"
+        },
+        {
+          "name": "فاطمة بنت البغدادي",
+          "story": "baghdadiyya-alsiraj"
+        },
+        {
           "name": "شهدة الكاتبة",
           "story": "shuhda-baghdad"
         },
         {
           "name": "تجنّي الوهبانية",
           "story": "tajanni-alhalqa"
+        },
+        {
+          "name": "فاطمة بنت سعد الخير",
+          "story": "saadalkhayr-altariq"
+        },
+        {
+          "name": "ست الكتبة نعمة بنت الطراح",
+          "story": "sittalkataba-alkhizana"
+        },
+        {
+          "name": "عفيفة الفارفانية",
+          "story": "afifa-alshama"
+        },
+        {
+          "name": "عائشة بنت معمر",
+          "story": "binmamar-almahd"
+        },
+        {
+          "name": "كريمة بنت عبد الوهاب",
+          "story": "karimadimashq-albustan"
         }
       ]
     },
