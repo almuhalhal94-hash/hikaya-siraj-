@@ -654,6 +654,16 @@ export const ART = {
       <path d="M40 196 v-36 q14-20 28 0 v36 M132 196 v-36 q14-20 28 0 v36" fill="#6b5a3a" opacity=".55"/>
       ${cheeks(70, 136, 130)}${eyes(82, 116, 118, 13)}${mouth(100, 148, 22, 12)}</g>`
   },
+  bowl: {
+    skin: '#c98a4a', ink: '#3a2010',
+    svg: `<defs>${lg('wtBw', '#d89a5a', '#8a5a2a')}</defs><g class="wt-body">
+      <path d="M100 60 Q60 40 70 70 Q50 50 60 80 Q100 70 140 80 Q150 50 130 70 Q140 40 100 60 Z" fill="#7a3a1c" stroke="#4a2010" stroke-width="2"/>
+      <ellipse cx="100" cy="84" rx="80" ry="18" fill="#a85a2a"/>
+      <path d="M20 84 Q30 176 100 180 Q170 176 180 84 Z" fill="url(#wtBw)" stroke="#5a3a1c" stroke-width="3"/>
+      <path d="M70 180 h60 v12 h-60 z" fill="#8a5a2a"/>
+      <path d="M40 112 Q100 130 160 112" stroke="#f0d68a" stroke-width="4" fill="none" opacity=".6"/>
+      ${cheeks(62, 150, 138)}${eyes(80, 134, 120, 12)}${mouth(100, 156, 20, 11)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
