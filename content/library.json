@@ -256,6 +256,10 @@
       "sub": "رحمهم الله",
       "items": [
         {
+          "name": "أويس القرني",
+          "story": "uways-alqafila"
+        },
+        {
           "name": "سعيد بن المسيّب",
           "story": "said-alsariya"
         },
@@ -286,6 +290,10 @@
       "title": "قصص التابعيات",
       "sub": "رحمهن الله",
       "items": [
+        {
+          "name": "أم الدرداء",
+          "story": "ummdarda-alataba"
+        },
         {
           "name": "حفصة بنت سيرين",
           "story": "hafsasirin-almushaf"

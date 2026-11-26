@@ -12190,5 +12190,357 @@
         "pair": "on"
       }
     }
+  },
+  "uways-alqafila": {
+    "thumb": 3,
+    "witness": "caravan",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1150
+          ],
+          "to": [
+            760,
+            600,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "light": "low",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1100
+          ],
+          "to": [
+            600,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "caravan": "on",
+          "flock": "on",
+          "light": "mid",
+          "pair": "white"
+        },
+        "camera": {
+          "from": [
+            760,
+            600,
+            860
+          ],
+          "to": [
+            680,
+            640,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "pair": "white",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            680,
+            640,
+            720
+          ],
+          "to": [
+            640,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "light": "road",
+          "town": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1100
+          ],
+          "to": [
+            800,
+            600,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            800,
+            600,
+            860
+          ],
+          "to": [
+            640,
+            520,
+            1150
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "caravan": "on",
+        "flock": "on",
+        "light": "mid",
+        "pair": "white"
+      }
+    }
+  },
+  "ummdarda-alataba": {
+    "thumb": 4,
+    "witness": "door",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "suhuf": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            700,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "peep": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            700,
+            640
+          ],
+          "to": [
+            620,
+            560,
+            980
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "pair": "warm"
+        },
+        "camera": {
+          "from": [
+            620,
+            560,
+            980
+          ],
+          "to": [
+            640,
+            660,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "door",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "pair": "warm",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            700
+          ],
+          "to": [
+            620,
+            600,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "souq": "on",
+          "town": "on",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1100
+          ],
+          "to": [
+            600,
+            620,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "light": "road",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1100
+          ],
+          "to": [
+            800,
+            600,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "far": "none",
+        "light": "on",
+        "pair": "warm"
+      }
+    }
   }
 }
