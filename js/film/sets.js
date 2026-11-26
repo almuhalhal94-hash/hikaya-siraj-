@@ -230,6 +230,7 @@ function sea() {
       <rect x="560" y="408" width="22" height="22" rx="3" fill="#ffd77a" opacity=".55"/><rect x="618" y="408" width="22" height="22" rx="3" fill="#ffd77a" opacity=".55"/>
       <path d="M416 436q184 44 368 0l-46 92q-138 28-276 0z" fill="url(#g-wood)" stroke="#3d2713" stroke-width="3" stroke-linejoin="round"/>
       <path d="M434 462q166 34 332 0M452 492q148 28 296 0M520 448v74M600 452v80M680 448v74" fill="none" stroke="#3d2713" stroke-width="2.5" opacity=".7"/>
+      <g class="se-crowd" fill="url(#g-warm)">${[470, 520, 560, 640, 690, 735].map((x, i) => `<circle cx="${x}" cy="${414 + (i % 2) * 8}" r="${30 + (i % 3) * 4}"/>`).join('')}</g>
       <g class="se-hole"><path d="M640 470h34l-4 34h-28z" fill="#0b1830" stroke="#3d2713" stroke-width="3"/><path d="M700 420l40-26 8 10-40 26z" fill="url(#g-wood)" stroke="#3d2713" stroke-width="2"/></g>
       <g class="se-sparrow" transform="translate(752 432)"><g class="se-peck"><ellipse cx="0" cy="-12" rx="15" ry="11" fill="#8a6a4a"/><circle cx="12" cy="-22" r="8" fill="#8a6a4a"/><path d="M19-22l9 3-9 3z" fill="#e2b877"/><circle cx="14" cy="-24" r="1.8" fill="#111"/><path d="M-14-12l-14-6 2 10z" fill="#5a4030"/><path d="M-4-14q8-8 16 0" fill="none" stroke="#c9a27a" stroke-width="3"/></g>
         <g class="se-ripple" fill="none" stroke="#e8fffb" stroke-width="3"><ellipse cx="34" cy="40" rx="10" ry="3"/><ellipse cx="34" cy="40" rx="22" ry="6" opacity=".5"/></g></g>
@@ -649,6 +650,16 @@ function landExtras() {
     <g class="ld-anthill">${[[470, 726], [760, 732]].map(([x, y]) => `<path transform="translate(${x} ${y})" d="M-60 0q30-44 60-46 30 2 60 46z" fill="#7a5634"/><ellipse transform="translate(${x} ${y - 30})" rx="10" ry="6" fill="#1c120a"/>`).join('')}</g>
     <g class="ld-grain" fill="#f0d68a" transform="translate(620 744)">${grain}</g>
     <g class="ld-grove">${[[160, 700, 1.1, -6], [290, 690, 0.9, 5], [1010, 696, 1, 4], [1140, 704, 1.15, -5], [870, 690, 0.8, -3]].map(([x, y, k, l]) => `<g stroke="#1c5238">${palm(x, y, k, l)}</g>`).join('')}</g>
+    <g class="ld-jummar" transform="translate(620 736)"><ellipse class="ld-jmglow" cy="-40" rx="170" ry="110" fill="url(#g-white)"/>
+      <ellipse cy="6" rx="90" ry="14" fill="#6b4a2a" opacity=".5"/><path d="M-34 0q-6-54 8-86 26-14 52 0 14 32 8 86z" fill="#f6f0dc" stroke="#d8cba4" stroke-width="3"/>
+      <path d="M-18-76q-4 34 0 70M0-82v76M18-76q4 34 0 70" fill="none" stroke="#e2d6b0" stroke-width="3"/><ellipse cy="-84" rx="26" ry="8" fill="#fffbea" stroke="#d8cba4" stroke-width="2"/></g>
+    <g class="ld-thorns">${[[330, 470, .8], [520, 390, .7], [760, 400, .75], [960, 480, .85], [430, 560, .6], [850, 570, .6]].map(([x, y, k], i) => `<g class="ld-thorn" style="--d:${i * 0.6}s"><g transform="translate(${x} ${y}) scale(${k})"><ellipse rx="110" ry="100" cy="-60" fill="#fff4cf" opacity=".12"/><path d="M0 40v-70M0-10l-40-40M0-20l36-46M-20-30l-30-10M18-42l30-6" stroke="#8a7a62" stroke-width="7" stroke-linecap="round" fill="none"/><ellipse cx="-40" cy="-56" rx="30" ry="12" fill="#7a8a5a"/><ellipse cx="40" cy="-70" rx="34" ry="12" fill="#7a8a5a"/><ellipse cy="-36" rx="22" ry="9" fill="#6a7a4a"/></g></g>`).join('')}</g>
+    <g class="ld-souq">${[[300, '#b8503a'], [470, '#2f6f7a'], [800, '#c9a24a'], [970, '#6a4a8a']].map(([x, c], i) => `<g transform="translate(${x} 716)"><path d="M-70 0v-110M70 0v-110" stroke="#5a3a1c" stroke-width="7"/><path d="M-84-110h168l-14 34h-140z" fill="${c}"/><path d="M-84-110h168" stroke="#fff4cf" stroke-width="3" opacity=".5"/><path d="M-56-76l14 0M-28-76l14 0M0-76l14 0M28-76l14 0" stroke="#fff4cf" stroke-width="10" opacity=".25"/><rect x="-66" y="-40" width="132" height="40" fill="#7a5230"/><g class="ld-goods">${['#e8b04a', '#c9783a', '#7aa04a'].map((g, j) => `<ellipse cx="${-40 + j * 40}" cy="-48" rx="18" ry="11" fill="${g}"/>`).join('')}</g></g>`).join('')}
+      <g class="ld-buyers" fill="url(#g-warm)">${[[380, 690], [640, 700], [720, 680], [880, 696], [560, 676]].map(([x, y], i) => `<circle class="ld-buyer" style="--d:${-i * 1.7}s" cx="${x}" cy="${y}" r="34"/>`).join('')}</g></g>
+    <g class="ld-cloth" transform="translate(640 742)"><ellipse class="ld-clglow" cy="-30" rx="300" ry="120" fill="url(#g-warm)"/>
+      <path d="M-200 0l40-36h320l40 36z" fill="#d8c8a2" stroke="#9a8460" stroke-width="3"/><path d="M-176-14h352M-150-28h300" stroke="#b07a4a" stroke-width="5" opacity=".7"/>
+      <g class="ld-clfood"><g fill="#f0d68a">${Array.from({ length: 22 }, (_, i) => `<ellipse cx="${-110 + (i * 37) % 120}" cy="${-30 - (i % 4) * 8}" rx="6" ry="4"/>`).join('')}</g>
+      <g fill="#7a3a1c">${Array.from({ length: 12 }, (_, i) => `<ellipse cx="${30 + (i * 23) % 90}" cy="${-30 - (i % 3) * 9}" rx="9" ry="6"/>`).join('')}</g></g></g>
     <g class="ld-donkey" transform="translate(640 718)"><g class="ld-dkbob">
       <ellipse cy="4" rx="120" ry="12" fill="#000" opacity=".25"/>
       <path d="M-70-20v24M-46-18v22M44-18v22M68-20v24" stroke="#4a3e3a" stroke-width="10" stroke-linecap="round"/>
@@ -721,7 +732,7 @@ function land() {
       <g class="ld-gush" fill="none" stroke="#e8fffb" stroke-width="6" stroke-linecap="round"><path d="M0-4q-10-50-34-34"/><path d="M0-4q0-66 0-70"/><path d="M0-4q10-50 34-34"/></g>
       <path d="M-170 6q-8-30-22-36M-170 6v-44M-170 6q8-30 22-36M170 8q-8-26-20-32M170 8v-40M170 8q8-26 20-32M-110 22q-6-22-16-26M-110 22q6-22 16-26M110 24q-6-22-16-26M110 24q6-22 16-26" fill="none" stroke="#3f9a62" stroke-width="5" stroke-linecap="round"/>
     </g>
-    <g class="ld-palm"><g stroke="#1c5238">${palm(950, 706, 0.9, -12)}</g><g transform="translate(940 706) scale(.9)" fill="#c9792a">${dates}</g></g>
+    <g class="ld-palm"><ellipse class="ld-palmglow" cx="950" cy="420" rx="260" ry="320" fill="url(#g-warm)"/><g stroke="#1c5238">${palm(950, 706, 0.9, -12)}</g><g transform="translate(940 706) scale(.9)" fill="#c9792a">${dates}</g></g>
     <g class="ld-caravan" fill="#150e1c"><g transform="translate(980 716) scale(.62)">${CAMEL}</g><g transform="translate(1110 724) scale(.7)">${CAMEL}</g><g transform="translate(1250 716) scale(.6)">${CAMEL}</g></g>
     <g class="ld-cradle" transform="translate(640 712)">
       <ellipse cy="-40" rx="170" ry="150" fill="url(#g-warm)"/>
@@ -924,6 +935,12 @@ function dar() {
       <ellipse cy="-16" rx="16" ry="6" fill="#3a3330"/><circle cx="-6" cy="-24" r="3" fill="#e8c48a"/><circle cx="6" cy="-22" r="3" fill="#e8c48a"/>
       <g class="dr-handle"><path d="M0-14v-70" stroke="#6b441d" stroke-width="12" stroke-linecap="round"/><path d="M0-84v-4" stroke="#9a6a3a" stroke-width="14" stroke-linecap="round"/></g></g>
     ${qirba(880, 780, .95)}
+    <g class="dr-ewer" transform="translate(820 790)"><ellipse class="dr-ewglow" cy="-90" rx="190" ry="170" fill="url(#g-warm)"/>
+      <ellipse cy="6" rx="80" ry="12" fill="#000" opacity=".25"/><path d="M-40 0q-30-60 0-110h80q30 50 0 110z" fill="#b87333" stroke="#6b3a1c" stroke-width="4"/>
+      <path d="M-20-110q-4-30 20-34 24 4 20 34" fill="#c98a4a" stroke="#6b3a1c" stroke-width="4"/><path d="M-36-70q-50-10-74-60l14-6q20 40 60 48" fill="#b87333" stroke="#6b3a1c" stroke-width="3"/>
+      <path d="M38-90q40 0 40 34 0 30-34 34" fill="none" stroke="#6b3a1c" stroke-width="8"/><path d="M-30-56h60" stroke="#e8b86a" stroke-width="4" opacity=".7"/>
+      <circle class="dr-ewdrop" cx="-108" cy="-120" r="5" fill="#bfeee8"/></g>
+    <g class="dr-coins">${[[560, 800], [690, 800]].map(([x, y]) => `<g transform="translate(${x} ${y})"><ellipse cy="-30" rx="120" ry="70" fill="url(#g-warm)"/>${Array.from({ length: 10 }, (_, i) => `<ellipse cx="${-36 + (i % 4) * 24 + (i > 3 ? 12 : 0) + (i > 6 ? 12 : 0)}" cy="${-(i > 3 ? 14 : 0) - (i > 6 ? 14 : 0)}" rx="16" ry="7" fill="#e8c048" stroke="#9a7420" stroke-width="2"/>`).join('')}</g>`).join('')}</g>
     <g class="dr-siraj" transform="translate(540 760)"><ellipse class="dr-sjglow" cy="-90" rx="220" ry="200" fill="url(#g-warm)"/>
       <path d="M-40 0h80l-10-60h-60z" fill="#6b441d"/><path d="M-56-60h112v-10H-56z" fill="#8a5a2e"/>
       <path d="M-50-70q-6-28 26-30h48q36 0 40 18l18-8q4 12-12 18-10 4-24 2-4 6-12 8h-60q-24-2-24-8z" fill="#b8703a" stroke="#6b3a1c" stroke-width="3"/>
