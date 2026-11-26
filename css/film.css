@@ -1030,3 +1030,12 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-girls="on"] .dr-girls { opacity: 1; } .dr-girls circle:nth-child(odd) { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
 .dr-dtglow { animation: st-breathe 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 .dr-dtwhole ellipse { transition: opacity 2s ease; } [data-dates="one"] .dr-dtwhole ellipse:not(.dr-dt3), [data-dates="split"] .dr-dtwhole ellipse { opacity: 0; }
+
+/* mosque: broom (on/sweep/rest) مكنسة من سعف؛ sweep تكنس ويتطاير الغبار، rest ملقاة وحدها خافتة */
+.ms-broom { opacity: 0; transition: opacity 3s ease; } [data-broom] .ms-broom { opacity: 1; }
+.ms-brpos { transition: rotate 3s ease, translate 3s ease; } .ms-brbody { transform-origin: 0 -150px; }
+[data-broom="sweep"] .ms-brbody { animation: ms-sweep 2.4s ease-in-out infinite; }
+@keyframes ms-sweep { 0%, 100% { rotate: -14deg; } 50% { rotate: 14deg; } }
+.ms-dust { opacity: 0; } [data-broom="sweep"] .ms-dust { opacity: 1; } [data-broom="sweep"] .ms-dust circle { animation: ms-dust 2.4s ease-out infinite; animation-delay: var(--d); }
+@keyframes ms-dust { 0% { opacity: .8; translate: 0 0; } 100% { opacity: 0; translate: 0 -40px; } }
+[data-broom="rest"] .ms-brpos { rotate: -80deg; translate: -40px 60px; } [data-broom="rest"] .ms-brglow { opacity: .3; } [data-broom="rest"] .ms-broom { filter: brightness(.75); }

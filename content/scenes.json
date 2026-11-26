@@ -17667,5 +17667,184 @@
         "glow": "full"
       }
     }
+  },
+  "qamma-almiknasa": {
+    "thumb": 1,
+    "witness": "broom",
+    "scenes": [
+      {
+        "set": "mosque",
+        "state": {
+          "time": "dawn",
+          "ms": "one",
+          "broom": "sweep",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            820,
+            620,
+            980
+          ],
+          "to": [
+            840,
+            680,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "happy"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "time": "dawn",
+          "ms": "one",
+          "broom": "sweep",
+          "trunk": "off",
+          "suffa": "on"
+        },
+        "camera": {
+          "from": [
+            900,
+            640,
+            920
+          ],
+          "to": [
+            860,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "broom": "rest",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            820,
+            660,
+            820
+          ],
+          "to": [
+            800,
+            690,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "time": "dawn",
+          "broom": "rest",
+          "trunk": "off",
+          "white": "on",
+          "ms": "one"
+        },
+        "camera": {
+          "from": [
+            880,
+            640,
+            920
+          ],
+          "to": [
+            900,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "white": "on",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            940
+          ],
+          "to": [
+            640,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "time": "dawn",
+          "broom": "on",
+          "trunk": "off",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            820,
+            680,
+            760
+          ],
+          "to": [
+            860,
+            640,
+            940
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "broom": "rest",
+        "trunk": "off",
+        "ms": "one",
+        "glow": "full",
+        "white": "on"
+      }
+    }
   }
 }

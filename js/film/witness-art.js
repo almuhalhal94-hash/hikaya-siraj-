@@ -730,6 +730,15 @@ export const ART = {
       <path d="M30 150 H170 V172 H30 Z" fill="#b8282e" stroke="#5a3a10" stroke-width="4"/>
       ${cheeks(64, 136, 116)}${eyes(80, 120, 96, 13)}${mouth(100, 128, 20, 10)}</g>`
   },
+  broom: {
+    skin: '#c9a85a', ink: '#5a3a1a',
+    svg: `<defs>${lg('wtBr', '#e0c070', '#a8843a')}</defs><g class="wt-body">
+      <path d="M100 8 V70" stroke="#8a6a3a" stroke-width="12" stroke-linecap="round"/>
+      <path d="M62 70 H138 L170 196 H30 Z" fill="url(#wtBr)" stroke="#5a3a1a" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M70 150 L56 196M100 150V196M130 150 L144 196M85 150 L78 196M115 150 L122 196" stroke="#8a6a2a" stroke-width="3"/>
+      <path d="M60 82 H140" stroke="#6b4a1d" stroke-width="8"/>
+      ${cheeks(70, 130, 126)}${eyes(84, 116, 108, 12)}${mouth(100, 134, 18, 9)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">

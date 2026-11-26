@@ -188,6 +188,11 @@ function mosque() {
       <path d="M-34-490v460" stroke="#e8e0d0" stroke-width="6" opacity=".35"/></g>
     <g class="ms-call" transform="translate(640 230)" fill="none" stroke="#fff4cf" stroke-width="6" stroke-linecap="round">
       <path style="--d:0s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/><path style="--d:1s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/><path style="--d:2s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/></g>
+    <g class="ms-broom" transform="translate(800 730) scale(1.5)"><ellipse class="ms-brglow" cy="-60" rx="150" ry="110" fill="url(#g-warm)"/><g class="ms-brpos"><g class="ms-brbody">
+      <path d="M0 0V-150" stroke="#8a6a3a" stroke-width="8" stroke-linecap="round"/><path d="M-8-150h16" stroke="#5a3a1a" stroke-width="6"/>
+      <path d="M-4 0l-30 60M-2 0l-16 64M0 0v66M2 0l16 64M4 0l30 60M-3 0l-24 62M3 0l24 62" stroke="#c9a85a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M-10 4h20" stroke="#6b4a1d" stroke-width="7"/></g></g>
+      <g class="ms-dust" fill="#e8d8b0">${[[-60, 64], [-40, 50], [50, 60], [70, 48], [20, 70]].map(([x, y], i) => `<circle style="--d:${-i * .5}s" cx="${x}" cy="${y}" r="5"/>`).join('')}</g></g>
     <g class="ms-lights"><g class="ms-b"><circle cx="1000" cy="660" r="80" fill="url(#g-white)"/><circle cx="1000" cy="660" r="7" fill="#fff"/></g><g class="ms-a"><circle cx="880" cy="700" r="100" fill="url(#g-warm)"/><circle cx="880" cy="700" r="8" fill="#fff"/></g></g>
     <g class="ms-rays" fill="url(#g-ray)">
       <path d="M560 90h70L500 720H300z"/><path d="M800 90h56L760 740H560z"/><path d="M1010 90h64L1000 700H810z"/>
