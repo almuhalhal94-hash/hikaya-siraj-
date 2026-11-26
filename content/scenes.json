@@ -21407,5 +21407,360 @@
         "glow": "full"
       }
     }
+  },
+  "kurayb-alhilal": {
+    "thumb": 4,
+    "witness": "crescent",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "suhuf": "on",
+          "light": "on",
+          "pair": "warm",
+          "moon": "glow"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1000
+          ],
+          "to": [
+            580,
+            650,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "time": "dawn",
+          "light": "on",
+          "pair": "warm",
+          "peep": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            620,
+            980
+          ],
+          "to": [
+            600,
+            660,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "time": "dawn",
+          "light": "on",
+          "pair": "warm",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            840
+          ],
+          "to": [
+            600,
+            620,
+            960
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "on",
+          "moon": "glow",
+          "light": "mid",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            600,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "moon": "glow",
+          "road": "on",
+          "caravan": "on",
+          "light": "road",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            600,
+            980
+          ],
+          "to": [
+            600,
+            640,
+            880
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "suhuf": "on",
+          "light": "on",
+          "moon": "glow",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            580,
+            650,
+            820
+          ],
+          "to": [
+            600,
+            600,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "town": "on",
+        "moon": "glow",
+        "light": "mid",
+        "flock": "on",
+        "glow": "full"
+      }
+    }
+  },
+  "zaynalabidin-alsajjada": {
+    "thumb": 5,
+    "witness": "musalla",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "musalla": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1000
+          ],
+          "to": [
+            580,
+            650,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "two",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            880,
+            640,
+            780
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            620,
+            980
+          ],
+          "to": [
+            600,
+            660,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            840
+          ],
+          "to": [
+            620,
+            640,
+            920
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "musalla": "on",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            920
+          ],
+          "to": [
+            580,
+            660,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "wonder"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "time": "dawn",
+          "musalla": "on",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            580,
+            660,
+            800
+          ],
+          "to": [
+            600,
+            600,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "far": "none",
+        "musalla": "on",
+        "light": "on",
+        "glow": "full"
+      }
+    }
   }
 }
