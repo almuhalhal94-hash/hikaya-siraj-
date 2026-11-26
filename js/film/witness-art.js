@@ -705,6 +705,15 @@ export const ART = {
       <g fill="#9fd4ff"><ellipse cx="36" cy="150" rx="6" ry="10"/><ellipse cx="26" cy="176" rx="5" ry="8"/></g>
       ${cheeks(70, 118, 110)}${eyes(78, 112, 84, 12)}${mouth(96, 112, 20, 11)}</g>`
   },
+  tabut: {
+    skin: '#a06a36', ink: '#3a2010',
+    svg: `<defs>${lg('wtTb', '#b47a42', '#7a4a22')}</defs><g class="wt-body">
+      <path d="M22 190 Q100 206 178 190" stroke="#4aa0c8" stroke-width="8" fill="none" opacity=".7"/>
+      <path d="M36 182 V96 H164 V182 Z" fill="url(#wtTb)" stroke="#3a2010" stroke-width="4"/>
+      <path d="M30 96 Q100 48 170 96 Z" fill="#a06a36" stroke="#3a2010" stroke-width="4"/>
+      <path d="M36 168 H164" stroke="#c9a24a" stroke-width="5"/>
+      ${cheeks(56, 144, 146)}${eyes(78, 122, 126, 13)}${mouth(100, 156, 22, 10)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">

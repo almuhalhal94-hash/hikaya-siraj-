@@ -1010,3 +1010,14 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .qs-tglow { animation: lt-breathe 3.4s ease-in-out infinite; }
 .qs-palace { transition: filter 4s ease, translate 7s cubic-bezier(.55, 0, .75, .35); }
 [data-sink="on"] .qs-palace { translate: 0 560px; filter: brightness(.5); } [data-sink="on"] .qs-treasure { translate: 0 300px; opacity: 0; }
+
+/* التابوت في النيل (أم موسى وآسية): tabut (float/found) */
+.qs-tabut, .qs-found { opacity: 0; transition: opacity 2.5s ease; } [data-tabut="float"] .qs-tabut, [data-tabut="found"] .qs-found { opacity: 1; }
+.qs-tbpos { translate: -520px 616px; } [data-tabut="float"] .qs-tbpos { animation: qs-drift 16s ease-in-out forwards; } @keyframes qs-drift { to { translate: 40px 616px; } }
+.qs-tbbob { animation: se-logbob 2.6s ease-in-out infinite; }
+.qs-found { animation: lt-breathe 3.6s ease-in-out infinite; }
+
+/* تابوت موسى على النهر: land tabut=float */
+.ld-tabut { opacity: 0; transition: opacity 2.5s ease; } [data-tabut="float"] .ld-tabut { opacity: 1; }
+.ld-tbpos { translate: 1250px 800px; } [data-tabut="float"] .ld-tbpos { animation: ld-tbdrift 15s ease-in-out forwards; } @keyframes ld-tbdrift { to { translate: 620px 806px; } }
+.ld-tbbob { animation: se-logbob 2.6s ease-in-out infinite; }

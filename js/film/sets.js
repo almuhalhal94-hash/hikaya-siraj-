@@ -667,6 +667,7 @@ function landExtras() {
       <path class="ld-rvshine" d="M-600 790 Q-200 770 300 785 T1300 775" stroke="#bfeee8" stroke-width="4" fill="none" stroke-dasharray="40 60" opacity=".7"/>
       <path class="ld-rvshine" d="M-650 818 Q-150 800 350 812 T1350 804" stroke="#bfeee8" stroke-width="3" fill="none" stroke-dasharray="30 70" opacity=".5"/>
       <path d="M-700 770 Q-200 740 300 760 T1300 745 L1900 750 M1900 840 Q1300 830 800 845 T-100 840 L-700 855" stroke="#c9b48e" stroke-width="6" fill="none" opacity=".6"/></g>
+    <g class="ld-tabut"><g class="ld-tbpos"><g class="ld-tbbob"><ellipse cy="-14" rx="120" ry="64" fill="url(#g-warm)" opacity=".75"/><path d="M-50 0v-34h100v34z" fill="#8a5a2e" stroke="#3a2010" stroke-width="4"/><path d="M-54-34q54-24 108 0z" fill="#a06a36" stroke="#3a2010" stroke-width="4"/><path d="M-50-16h100" stroke="#c9a24a" stroke-width="4"/><circle cy="-40" r="28" fill="url(#g-white)"/><circle cy="-40" r="4" fill="#fff"/></g></g></g>
     <g class="ld-jummar" transform="translate(620 736)"><ellipse class="ld-jmglow" cy="-40" rx="170" ry="110" fill="url(#g-white)"/>
       <ellipse cy="6" rx="90" ry="14" fill="#6b4a2a" opacity=".5"/><path d="M-34 0q-6-54 8-86 26-14 52 0 14 32 8 86z" fill="#f6f0dc" stroke="#d8cba4" stroke-width="3"/>
       <path d="M-18-76q-4 34 0 70M0-82v76M18-76q4 34 0 70" fill="none" stroke="#e2d6b0" stroke-width="3"/><ellipse cy="-84" rx="26" ry="8" fill="#fffbea" stroke="#d8cba4" stroke-width="2"/></g>
@@ -1122,6 +1123,7 @@ function qasr() {
       <g fill="#8a96c8" opacity=".55"><path d="M-180 580v-110h26v110zM-120 580v-64h26v64zM-60 580v-150h26v150zM-70 430h46v-14h-46zM20 580l60-36 80 10 30 26zM120 580v-90h24v90zM190 580v-40h70v40zM300 580v-120l30-12v132zM360 580l40-60 60 60zM-260 580h720v8h-720z"/></g>
     </g>
     <rect x="-700" y="592" width="2600" height="44" fill="url(#g-nile)"/>
+    <g class="qs-tabut"><g class="qs-tbpos"><g class="qs-tbbob"><ellipse cy="-14" rx="110" ry="60" fill="url(#g-warm)" opacity=".7"/><path d="M-50 0v-34h100v34z" fill="#8a5a2e" stroke="#3a2010" stroke-width="4"/><path d="M-54-34q54-24 108 0z" fill="#a06a36" stroke="#3a2010" stroke-width="4"/><path d="M-50-16h100" stroke="#c9a24a" stroke-width="4"/><circle cy="-40" r="26" fill="url(#g-white)"/></g></g></g>
     <path class="qs-shine" d="M-500 606h180M-80 614h240M380 604h200M820 616h220M1240 606h180" stroke="#9fc4ff" stroke-width="3" stroke-linecap="round" opacity=".5"/>
     <path d="${reeds}" stroke="#16302a" stroke-width="4" fill="none" stroke-linecap="round"/>
     <g stroke="#0f241e">${palm(-260, 600, 0.55, -8)}${palm(1300, 600, 0.6, 10)}${palm(1430, 604, 0.45, -6)}</g>
@@ -1153,6 +1155,7 @@ function qasr() {
     <g class="qs-treasure" transform="translate(860 700)"><ellipse class="qs-tglow" cy="-30" rx="190" ry="110" fill="url(#g-warm)"/>
       ${[[-90, 0], [40, 10], [-20, -46]].map(([x, y]) => `<g transform="translate(${x} ${y})"><path d="M-56 0v-52h112v52z" fill="#6b3f1c" stroke="#3a2010" stroke-width="4"/><path d="M-60-52q60-40 120 0z" fill="#8a5428" stroke="#3a2010" stroke-width="4"/><path d="M-56-30h112" stroke="#c9a24a" stroke-width="5"/><g fill="#ffd34a" stroke="#a8741a" stroke-width="2"><ellipse cx="-20" cy="-60" rx="12" ry="5"/><ellipse cx="8" cy="-64" rx="12" ry="5"/><ellipse cx="30" cy="-58" rx="11" ry="5"/></g></g>`).join('')}
       <g class="qs-keys" fill="none" stroke="#e0b44a" stroke-width="7" stroke-linecap="round">${[[-150, -10, -20], [-128, 4, 10], [130, -4, 25], [150, 12, -8]].map(([x, y, a]) => `<g transform="translate(${x} ${y}) rotate(${a})"><circle cy="-34" r="12"/><path d="M0-22v40M0 8h12M0 16h10"/></g>`).join('')}</g></g>
+    <g class="qs-found" transform="translate(560 712)"><ellipse cy="-20" rx="150" ry="90" fill="url(#g-warm)"/><path d="M-50 0v-34h100v34z" fill="#8a5a2e" stroke="#3a2010" stroke-width="4"/><path d="M-54-34q54-24 108 0z" fill="#a06a36" stroke="#3a2010" stroke-width="4"/><path d="M-50-16h100" stroke="#c9a24a" stroke-width="4"/><circle cy="-46" r="40" fill="url(#g-white)"/><circle cy="-46" r="5" fill="#fff"/></g>
     <g class="qs-court" fill="url(#g-cold)">${court}</g>
     <g class="qs-musa"><circle cx="1000" cy="690" r="90" fill="url(#g-white)"/><circle cx="1000" cy="690" r="7" fill="#fff"/></g>
     <g class="qs-lights">
