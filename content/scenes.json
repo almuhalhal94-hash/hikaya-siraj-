@@ -12542,5 +12542,182 @@
         "pair": "warm"
       }
     }
+  },
+  "talut-alnahr": {
+    "thumb": 3,
+    "witness": "river",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "river": "on",
+          "flock": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1150
+          ],
+          "to": [
+            640,
+            660,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wave",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "river": "on",
+          "flock": "on",
+          "light": "mid",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            760
+          ],
+          "to": [
+            640,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "river": "on",
+          "flock": "on",
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            1000
+          ],
+          "to": [
+            600,
+            700,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wave",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "river": "cross",
+          "flock": "on",
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            600,
+            700,
+            700
+          ],
+          "to": [
+            640,
+            780,
+            780
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "army": "on",
+          "flock": "on",
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1150
+          ],
+          "to": [
+            820,
+            620,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "river": "cross",
+          "flock": "on",
+          "light": "mid",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            820,
+            620,
+            900
+          ],
+          "to": [
+            640,
+            770,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "river": "on",
+        "flock": "on",
+        "light": "low"
+      }
+    }
   }
 }
