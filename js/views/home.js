@@ -106,7 +106,7 @@ export default async function home(el, { ui, lines, go, refreshChip }) {
     if (r.type === 'adhkar') return (s.adhkarTotal?.[r.kind] || 0) >= r.n;
     if (r.type === 'gameStars') return Object.values(s.games || {}).flat().reduce((a, v) => a + (v || 0), 0) >= r.n;
     if (r.type === 'days') return s.days.length >= r.n;
-    if (r.type === 'house') return (s.house || []).length >= r.n;
+    if (r.type === 'house') return (s.met || []).length >= r.n;
     return false;
   };
   function paintMine() {

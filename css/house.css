@@ -1,5 +1,5 @@
 /* القسم 5: بيت سِراج — الغرفة، السؤال اليومي، وصندوق الزينة */
-.hs { max-width: 600px; display: grid; gap: 16px; }
+.hs { max-width: 600px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 .hs .page__head { margin-bottom: 0; }
 .hs__room {
   position: relative; aspect-ratio: 4 / 4.4; max-height: 62dvh; width: 100%; margin-inline: auto; overflow: hidden; border-radius: 30px 30px 24px 24px;
@@ -24,11 +24,8 @@
 .hs__siraj .siraj-wrap { pointer-events: auto; }
 .hs__siraj .siraj { width: clamp(88px, 26%, 128px); }
 .hs__siraj .bubble { max-width: min(84%, 380px); font-size: clamp(1rem, 4.2vw, 1.2rem); padding: 9px 16px; }
-.hs__decor { position: absolute; inset: 0; pointer-events: none; }
-.hs__piece { position: absolute; width: clamp(34px, 11%, 52px); aspect-ratio: 1; translate: -50% -50%; rotate: var(--r); pointer-events: auto; animation: hs-bob 4s ease-in-out infinite; animation-delay: var(--d); filter: drop-shadow(0 0 8px rgba(255, 215, 122, .6)) drop-shadow(0 4px 6px rgba(0, 0, 0, .4)); touch-action: manipulation; }
-.hs__piece svg { display: block; width: 100%; height: 100%; }
-.hs__piece.is-new svg { animation: star-pop .6s var(--ease-spring); }
-.hs__piece--palm, .hs__piece--lamp { width: clamp(42px, 14%, 64px); }
+.hs__guest { position: absolute; bottom: calc(70% + 2px); inset-inline-end: 10%; width: clamp(80px, 24%, 120px); pointer-events: none; } /* يقف الزائر على الرف */
+.hs__guest .witness { position: relative; top: auto; inset-inline-start: auto; width: 100%; }
 @keyframes hs-bob { 50% { translate: -50% calc(-50% - 5px); } }
 
 .hs__ask { display: grid; gap: 10px; justify-items: center; text-align: center; animation: door-in .9s var(--ease-out) .3s backwards; }
@@ -38,19 +35,24 @@
 .hs__opt--games { --c: var(--teal); } .hs__opt--adhkar { --c: #ffb35c; }
 .hs__opt:active { transform: translateY(4px); box-shadow: 0 1px 0 #0a1630; }
 
-.hs__tray { padding: 14px 14px 12px; border-radius: 26px; background: linear-gradient(180deg, rgba(30, 60, 107, .55), rgba(10, 22, 48, .75)); border: 1.5px solid rgba(255, 215, 122, .3); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); animation: door-in .9s var(--ease-out) .5s backwards; }
-.hs__tray header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
-.hs__stars { max-width: none; height: 40px; line-height: 38px; min-width: 0; }
-.hs__items { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.hs__item { position: relative; display: grid; justify-items: center; gap: 2px; padding: 10px 4px 8px; border-radius: 18px; font-weight: 800; color: var(--cream); background: rgba(10, 22, 48, .6); border: 2px solid rgba(255, 215, 122, .35); transition: transform .2s var(--ease-spring), border-color .2s, box-shadow .2s, background .2s; }
-.hs__item > svg { width: 44px; height: 44px; filter: drop-shadow(0 0 8px rgba(255, 215, 122, .5)); }
-.hs__item b { font-size: 1rem; }
-.hs__item[aria-pressed="true"] { border-color: var(--teal); background: rgba(95, 214, 200, .2); box-shadow: 0 0 24px rgba(95, 214, 200, .5); transform: translateY(-4px) scale(1.04); }
-.hs__item.is-locked > svg { filter: grayscale(1) brightness(.55); opacity: .7; }
-.hs__item.is-locked b { color: #8fa1c4; }
-.hs__item small { display: flex; align-items: center; gap: 3px; font-size: .85rem; font-weight: 800; color: var(--gold); }
-.hs__lock { width: 13px; height: 13px; }
-.hs__item.is-shake { animation: shake .4s ease; }
-.hs__item:active { transform: scale(.94); }
-.hs__hint { min-height: 1.7em; margin-top: 10px; text-align: center; font-weight: 800; color: var(--teal-soft); text-wrap: balance; }
+/* خزانة الشهود */
+.hs-cab { min-width: 0; padding: 14px 12px 14px; border-radius: 26px; background: linear-gradient(180deg, rgba(74, 48, 28, .75), rgba(40, 26, 16, .85)); border: 2.5px solid var(--gold-deep); box-shadow: 0 16px 36px rgba(0, 0, 0, .45), inset 0 0 40px rgba(0, 0, 0, .35); animation: door-in .9s var(--ease-out) .45s backwards; }
+.hs-cab header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.hs-cab h2 { font-size: clamp(1.25rem, 5.2vw, 1.5rem); font-weight: 800; color: var(--gold); }
+.hs-cab__count { max-width: none; height: 38px; line-height: 36px; }
+.hs-cab__tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+.hs-cab__tab { flex: none; padding: 7px 13px; border-radius: 16px; border: 1.5px solid rgba(255, 215, 122, .3); background: rgba(10, 22, 48, .45); color: #d9c9a8; font: inherit; font-weight: 800; font-size: .92rem; cursor: pointer; }
+.hs-cab__tab small { font-size: .75rem; opacity: .8; }
+.hs-cab__tab[aria-selected="true"] { background: linear-gradient(180deg, #ffe6a3, #e5b65a); color: #3a2a05; border-color: transparent; }
+.hs-cab__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 14px 8px; padding: 12px 6px 6px; background: repeating-linear-gradient(180deg, transparent 0 calc(100% - 10px), transparent 0) ; }
+.hs-cab__cell { position: relative; display: grid; justify-items: center; gap: 4px; padding: 0 0 12px; border: 0; background: none; color: var(--cream); font: inherit; cursor: pointer; animation: door-in .6s var(--ease-out) backwards; animation-delay: calc(var(--i) * 35ms); }
+.hs-cab__cell::after { content: ''; position: absolute; inset: auto -4px 0; height: 9px; border-radius: 4px; background: linear-gradient(180deg, #d9b36a, #8f6b22); box-shadow: 0 5px 8px rgba(0, 0, 0, .45); }
+.hs-cab__pic { display: grid; place-items: center; width: 72px; aspect-ratio: 1; }
+.hs-cab__pic .witness { position: relative; top: auto; inset-inline-start: auto; width: 100%; padding: 4px; }
+.hs-cab__cell b { font-size: .8rem; font-weight: 800; line-height: 1.35; text-align: center; min-height: 2.7em; color: #f3e3c0; }
+.hs-cab__cell.is-locked .hs-cab__pic { border-radius: 50%; border: 2px dashed rgba(255, 215, 122, .3); color: rgba(255, 215, 122, .45); font-size: 1.8rem; font-weight: 800; background: rgba(0, 0, 0, .2); }
+.hs-cab__cell.is-locked b { color: #a08a68; }
+.hs-cab__cell:active { transform: scale(.94); }
+.hs-cab__info { display: grid; justify-items: center; gap: 8px; margin-top: 10px; text-align: center; }
+.hs-cab__info p { min-height: 1.6em; font-weight: 800; color: var(--teal-soft); text-wrap: balance; }
 @media (min-width: 760px) { .hs__room { aspect-ratio: 4 / 3.4; } }
