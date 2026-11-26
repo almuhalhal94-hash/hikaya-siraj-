@@ -859,6 +859,20 @@ function land() {
       <path class="ld-tentdoor" d="M-44 0L0-112 44 0z"/><path d="M0-150v-26" stroke="#4a2d10" stroke-width="6"/><path d="M-170 0h-24M170 0h24" stroke="#4a2d10" stroke-width="4"/>
       <path d="M-120-46h60M60-46h60" stroke="#e8c48a" stroke-width="6" opacity=".55"/></g>
     ${landExtras()}
+    <g class="ld-bigstar" transform="translate(860 170)"><circle r="46" fill="url(#g-warm)" opacity=".8"/><path d="M0-26L6-6 26 0 6 6 0 26-6 6-26 0-6-6z" fill="#fff4cf"/></g>
+    <g class="ld-fullmoon" transform="translate(640 210)"><circle r="120" fill="url(#g-warm)" opacity=".5"/>
+      <path class="ld-mh1" d="M0-62a62 62 0 0 0 0 124z" fill="#fff1c4"/><path class="ld-mh2" d="M0-62a62 62 0 0 1 0 124z" fill="#ffeab0"/></g>
+    <g class="ld-hira" transform="translate(640 690)"><path d="M-170 0L-40-120Q0-150 40-118L170 0z" fill="#3a2f45" opacity=".9"/></g>
+    <g class="ld-bigsun" transform="translate(640 560)"><circle r="160" fill="url(#g-warm)" opacity=".7"/><circle r="70" fill="#ffd36b"/></g>
+    <g class="ld-fil" transform="translate(820 790)"><g class="ld-filbody" fill="#4a4a58" stroke="#2c2c36" stroke-width="4">
+      <path d="M-150-40q0-120 130-130q120-6 150 70q20 60-10 100h-260q-10-10-10-40z"/>
+      <rect x="-130" y="10" width="44" height="90" rx="14"/><rect x="-60" y="10" width="44" height="90" rx="14"/><rect x="40" y="10" width="44" height="90" rx="14"/><rect x="96" y="0" width="40" height="96" rx="14"/>
+      <path d="M120-120q70-20 80 50q6 60-20 120q-8 20-22 8q-6-8 2-20q20-50 10-90q-8-40-40-30z"/>
+      <path d="M90-150q50-30 60 30q-20 30-60 10z" fill="#5a5a6a"/>
+      <path d="M-150-30q-30 20-24 60" fill="none" stroke-width="8" stroke-linecap="round"/></g>
+      <path d="M150-40q30 10 40 0" stroke="#efe6cf" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <circle cx="150" cy="-96" r="5" fill="#111"/></g>
+    <g class="ld-sijjil" fill="#7a4a2a">${[[380,0],[470,.6],[560,1.2],[650,.3],[740,.9],[830,1.5],[920,.45],[1010,1.05]].map(([x,d])=>`<circle cx="${x}" cy="260" r="12" style="animation-delay:${d}s"/>`).join('')}</g>
     <g class="ld-cow" transform="translate(640 772)"><ellipse class="ld-cowglow" cy="-40" rx="190" ry="120" fill="url(#g-warm)"/>
       <ellipse cy="40" rx="110" ry="12" fill="#000" opacity=".22"/>
       <path d="M-62 10v30M-36 14v28M40 14v28M64 10v30" stroke="#b8861c" stroke-width="11" stroke-linecap="round"/>

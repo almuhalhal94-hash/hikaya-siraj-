@@ -1083,3 +1083,23 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 /* بقرة بني إسرائيل: cow=on بقرة صفراء فاقع لونها */
 .ld-cow { opacity: 0; transition: opacity 2.4s ease; }
 [data-cow="on"] .ld-cow { opacity: 1; }
+.ld-fil { opacity: 0; transition: opacity 2.4s ease; }
+[data-fil="on"] .ld-fil, [data-fil="kneel"] .ld-fil { opacity: 1; }
+.ld-filbody { transform-box: fill-box; transform-origin: 50% 100%; transition: transform 2.6s ease; }
+[data-fil="kneel"] .ld-filbody { transform: translateY(40px) scaleY(.72) rotate(4deg); }
+.ld-sijjil { opacity: 0; transition: opacity 2s ease; }
+[data-sijjil="on"] .ld-sijjil { opacity: 1; }
+[data-sijjil="on"] .ld-sijjil circle { animation: ld-sijjil 1.8s linear infinite; }
+@keyframes ld-sijjil { from { transform: translateY(0); opacity: 1; } to { transform: translateY(520px); opacity: 0; } }
+.ld-bigstar, .ld-fullmoon, .ld-hira, .ld-bigsun { opacity: 0; transition: opacity 2.6s ease, transform 6s ease; }
+[data-star="on"] .ld-bigstar { opacity: 1; animation: ld-twinkle 2.4s ease-in-out infinite alternate; }
+[data-star="set"] .ld-bigstar { opacity: 0; transform: translate(900px, 560px); }
+@keyframes ld-twinkle { from { filter: brightness(1); } to { filter: brightness(1.5); } }
+[data-moon2="full"] .ld-fullmoon, [data-moon2="split"] .ld-fullmoon, [data-moon2="set"] .ld-fullmoon { opacity: 1; }
+[data-moon2="set"] .ld-fullmoon { opacity: 0; transform: translate(640px, 600px); }
+.ld-mh1, .ld-mh2 { transition: transform 3s ease; }
+[data-moon2="split"] .ld-mh1 { transform: translate(-150px, 30px); }
+[data-moon2="split"] .ld-mh2 { transform: translate(150px, 30px); }
+[data-hira="on"] .ld-hira { opacity: 1; }
+[data-bigsun="rise"] .ld-bigsun { opacity: 1; transform: translate(640px, 330px); }
+[data-bigsun="set"] .ld-bigsun { opacity: 0; transform: translate(640px, 760px); }
