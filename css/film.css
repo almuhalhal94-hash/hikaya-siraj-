@@ -1004,3 +1004,9 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 [data-orchard="grapes"] .ld-orchard, [data-orchard="ruin"] .ld-orchard { opacity: 1; } [data-orchard="grapes"] .ld-fruit { fill: #7a3a8a; }
 [data-orchard="ruin"] .ld-crown { fill: #201a1c !important; animation: none; } [data-orchard="ruin"] .ld-fruit { opacity: 0; }
 [data-orchard="ruin"] .ld-grove .palm { filter: brightness(.25) saturate(0); animation: none; }
+
+/* كنوز قارون وخسف داره: treasure=on، sink=on */
+.qs-treasure { opacity: 0; transition: opacity 3s ease, translate 6s cubic-bezier(.5, 0, .7, .4); } [data-treasure="on"] .qs-treasure { opacity: 1; }
+.qs-tglow { animation: lt-breathe 3.4s ease-in-out infinite; }
+.qs-palace { transition: filter 4s ease, translate 7s cubic-bezier(.55, 0, .75, .35); }
+[data-sink="on"] .qs-palace { translate: 0 560px; filter: brightness(.5); } [data-sink="on"] .qs-treasure { translate: 0 300px; opacity: 0; }

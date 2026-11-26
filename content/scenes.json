@@ -15734,5 +15734,179 @@
         "pair": "on"
       }
     }
+  },
+  "qarun-almafatih": {
+    "thumb": 5,
+    "witness": "key",
+    "scenes": [
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "treasure": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1100
+          ],
+          "to": [
+            820,
+            640,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "treasure": "on",
+          "court": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            820,
+            640,
+            900
+          ],
+          "to": [
+            620,
+            660,
+            980
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "calm"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "treasure": "on",
+          "court": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            600,
+            1000
+          ],
+          "to": [
+            800,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "treasure": "on",
+          "court": "on",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            800,
+            640,
+            760
+          ],
+          "to": [
+            600,
+            580,
+            1050
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "treasure": "on",
+          "court": "on",
+          "light": "on",
+          "sink": "on",
+          "shake": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1100
+          ],
+          "to": [
+            620,
+            600,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "court": "on",
+          "light": "on",
+          "sink": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            600,
+            1000
+          ],
+          "to": [
+            600,
+            660,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "treasure": "on",
+        "court": "on",
+        "light": "on"
+      }
+    }
   }
 }

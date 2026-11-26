@@ -714,6 +714,13 @@ export const ART = {
       <path d="M40 150 H160" stroke="#e0a060" stroke-width="5" opacity=".6"/>
       ${cheeks(56, 144, 128)}${eyes(78, 122, 108, 14)}${mouth(100, 138, 24, 14)}</g>`
   },
+  key: {
+    skin: '#d8a640', ink: '#5a3a10',
+    svg: `<defs>${lg('wtKy', '#f0c860', '#a87a20')}</defs><g class="wt-body">
+      <path d="M92 150 V196 M92 176 H120 M92 190 H114" stroke="#a87a20" stroke-width="16" stroke-linecap="round" fill="none"/>
+      <circle cx="100" cy="88" r="70" fill="url(#wtKy)" stroke="#6b4a10" stroke-width="4"/><circle cx="100" cy="40" r="12" fill="#3a2a10"/>
+      ${cheeks(56, 144, 112)}${eyes(76, 124, 90, 14)}${mouth(100, 124, 22, 12)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">

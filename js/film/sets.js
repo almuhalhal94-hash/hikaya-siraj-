@@ -1150,6 +1150,9 @@ function qasr() {
     <path class="qs-floor" d="M-700 1400V640h2600v760z"/>
     <path d="${tiles}" stroke="#000" stroke-width="2" opacity=".18"/>
     <path d="M430 640h340l26 22H404zM404 662h392l26 22H378z" fill="#8a6a4a"/>
+    <g class="qs-treasure" transform="translate(860 700)"><ellipse class="qs-tglow" cy="-30" rx="190" ry="110" fill="url(#g-warm)"/>
+      ${[[-90, 0], [40, 10], [-20, -46]].map(([x, y]) => `<g transform="translate(${x} ${y})"><path d="M-56 0v-52h112v52z" fill="#6b3f1c" stroke="#3a2010" stroke-width="4"/><path d="M-60-52q60-40 120 0z" fill="#8a5428" stroke="#3a2010" stroke-width="4"/><path d="M-56-30h112" stroke="#c9a24a" stroke-width="5"/><g fill="#ffd34a" stroke="#a8741a" stroke-width="2"><ellipse cx="-20" cy="-60" rx="12" ry="5"/><ellipse cx="8" cy="-64" rx="12" ry="5"/><ellipse cx="30" cy="-58" rx="11" ry="5"/></g></g>`).join('')}
+      <g class="qs-keys" fill="none" stroke="#e0b44a" stroke-width="7" stroke-linecap="round">${[[-150, -10, -20], [-128, 4, 10], [130, -4, 25], [150, 12, -8]].map(([x, y, a]) => `<g transform="translate(${x} ${y}) rotate(${a})"><circle cy="-34" r="12"/><path d="M0-22v40M0 8h12M0 16h10"/></g>`).join('')}</g></g>
     <g class="qs-court" fill="url(#g-cold)">${court}</g>
     <g class="qs-musa"><circle cx="1000" cy="690" r="90" fill="url(#g-white)"/><circle cx="1000" cy="690" r="7" fill="#fff"/></g>
     <g class="qs-lights">
