@@ -987,3 +987,5 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-lion { opacity: 0; transition: opacity 3s ease; } [data-lion="on"] .ld-lion { opacity: 1; }
 .ld-lionbody { transform-box: fill-box; transform-origin: 50% 100%; animation: ld-beastbreathe 3.4s ease-in-out infinite; }
 .ld-lioneye { animation: ld-lionblink 5s ease-in-out infinite; } @keyframes ld-lionblink { 0%, 46%, 54%, 100% { opacity: 1; } 50% { opacity: .1; } }
+/* نوران دافئان في المسجد (لغير النبي ﷺ): ms=two */
+[data-ms="two"] .ms-a, [data-ms="two"] .ms-b { opacity: 1; } [data-ms="two"] .ms-b circle:first-child { fill: url(#g-warm); }
