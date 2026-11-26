@@ -16965,5 +16965,186 @@
         "glow": "full"
       }
     }
+  },
+  "umm-albintayn": {
+    "thumb": 5,
+    "witness": "tamra",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "pair": "warm",
+          "dates": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            960
+          ],
+          "to": [
+            600,
+            700,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "pair": "warm",
+          "light": "on",
+          "girls": "on",
+          "dates": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            980
+          ],
+          "to": [
+            560,
+            670,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "pair": "warm",
+          "light": "on",
+          "girls": "on",
+          "dates": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            680,
+            820
+          ],
+          "to": [
+            600,
+            720,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "girls": "on",
+          "dates": "one"
+        },
+        "camera": {
+          "from": [
+            520,
+            700,
+            760
+          ],
+          "to": [
+            560,
+            740,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "pair": "warm",
+          "light": "on",
+          "girls": "on",
+          "dates": "split",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            720,
+            700
+          ],
+          "to": [
+            580,
+            700,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on",
+          "dates": "split",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            660,
+            860
+          ],
+          "to": [
+            620,
+            640,
+            960
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "lamp": "on",
+        "light": "on",
+        "girls": "on",
+        "dates": "one",
+        "glow": "full"
+      }
+    }
   }
 }

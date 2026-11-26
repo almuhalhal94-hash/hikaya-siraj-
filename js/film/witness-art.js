@@ -714,6 +714,14 @@ export const ART = {
       <path d="M36 168 H164" stroke="#c9a24a" stroke-width="5"/>
       ${cheeks(56, 144, 146)}${eyes(78, 122, 126, 13)}${mouth(100, 156, 22, 10)}</g>`
   },
+  tamra: {
+    skin: '#7a3a1a', ink: '#3a160a',
+    svg: `<defs>${lg('wtTm', '#9a4e24', '#5a2410')}</defs><g class="wt-body">
+      <path d="M100 26 Q96 12 108 6" stroke="#6b8a3a" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <ellipse cx="100" cy="112" rx="62" ry="88" fill="url(#wtTm)" stroke="#3a160a" stroke-width="4"/>
+      <path d="M70 60 Q64 110 74 160" stroke="#c9783a" stroke-width="5" fill="none" opacity=".55"/>
+      ${cheeks(64, 136, 124)}${eyes(80, 120, 104, 13)}${mouth(100, 134, 20, 10)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">
