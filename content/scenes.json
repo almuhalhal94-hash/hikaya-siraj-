@@ -18578,5 +18578,183 @@
         "glow": "full"
       }
     }
+  },
+  "ummhani-alaman": {
+    "thumb": 5,
+    "witness": "ewer",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "ewer": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            620,
+            1000
+          ],
+          "to": [
+            620,
+            660,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "warm"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            880
+          ],
+          "to": [
+            580,
+            690,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "rise",
+          "light": "on",
+          "pair": "on",
+          "ewer": "on",
+          "blanket": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            660,
+            900
+          ],
+          "to": [
+            640,
+            680,
+            780
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "up",
+          "light": "on",
+          "pair": "on",
+          "musalla": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            680,
+            800
+          ],
+          "to": [
+            640,
+            660,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "up",
+          "light": "on",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            660,
+            880
+          ],
+          "to": [
+            620,
+            690,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            1000
+          ],
+          "to": [
+            600,
+            660,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "sun": "up",
+        "light": "on",
+        "pair": "on",
+        "glow": "full"
+      }
+    }
   }
 }
