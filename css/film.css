@@ -567,6 +567,14 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .dr-day { opacity: 0; transition: opacity 5s ease; } [data-set="dar"][data-sun="up"] .dr-day { opacity: 1; } [data-set="dar"][data-sun="up"] .dr-hills { fill: #c9a878; }
 .dr-far { transition: opacity 2s ease; } [data-set="dar"][data-far="none"] .dr-far { opacity: 0; }
 .stage[data-set="dar"][data-sun="up"] .stars { opacity: 0; } [data-set="dar"][data-sun="up"] .dr-moon { opacity: 0; }
+/* كسوف الشمس في dar (فاطمة بنت المنذر): sun=eclipse قرص مظلم يغطي الشمس، sun=clear ينزاح عنها فتتجلّى */
+.dr-ecl { opacity: 0; translate: 150px 0; transition: translate 9s var(--ease-out), opacity 2.5s ease; }
+[data-set="dar"][data-sun="eclipse"] .dr-sun, [data-set="dar"][data-sun="clear"] .dr-sun { opacity: 1; translate: 0 0; }
+[data-set="dar"][data-sun="eclipse"] .dr-ecl { opacity: 1; translate: 0 0; }
+[data-set="dar"][data-sun="eclipse"] .dr-sun circle:first-child { opacity: .25; }
+[data-set="dar"][data-sun="clear"] .dr-ecl { opacity: 0; translate: -170px 0; }
+[data-set="dar"][data-sun="eclipse"] .dr-moon, [data-set="dar"][data-sun="clear"] .dr-moon { opacity: 0; }
+[data-set="dar"][data-sun="clear"] .dr-day { opacity: 1; } [data-set="dar"][data-sun="clear"] .dr-hills { fill: #c9a878; } .stage[data-set="dar"][data-sun="clear"] .stars { opacity: 0; }
 
 .mh-book { opacity: 0; transition: opacity 3s ease; } [data-book="on"] .mh-book { opacity: 1; }
 .mh-book circle { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
