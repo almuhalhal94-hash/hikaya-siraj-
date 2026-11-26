@@ -324,6 +324,10 @@
           "story": "ribi-alasa"
         },
         {
+          "name": "أبو بُردة بن أبي موسى",
+          "story": "abuburda-alqirba"
+        },
+        {
           "name": "كثير بن مُرّة",
           "story": "kathir-hims"
         },
@@ -348,6 +352,10 @@
           "story": "urwa-alhilal"
         },
         {
+          "name": "أبو سلمة بن عبد الرحمن",
+          "story": "abusalama-alnujum"
+        },
+        {
           "name": "سعيد بن جبير",
           "story": "ibnjubayr-alshihab"
         },
@@ -358,6 +366,10 @@
         {
           "name": "القاسم بن محمد بن أبي بكر",
           "story": "qasim-alqindil"
+        },
+        {
+          "name": "عبيد الله بن عبد الله بن عتبة",
+          "story": "ubaydullah-aldalw"
         },
         {
           "name": "علي بن الحسين (زين العابدين)",
@@ -376,8 +388,16 @@
           "story": "kurayb-alhilal"
         },
         {
+          "name": "عطاء بن يسار",
+          "story": "ata-yasar-alsouq"
+        },
+        {
           "name": "الحسن البصري",
           "story": "hasan-alhasa"
+        },
+        {
+          "name": "يحيى بن يَعمَر",
+          "story": "yahya-ibnyamar"
         },
         {
           "name": "محمد بن سيرين",
