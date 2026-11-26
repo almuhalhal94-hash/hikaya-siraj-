@@ -756,6 +756,13 @@ export const ART = {
       <path d="M70 190 H130" stroke="#6b441d" stroke-width="10" stroke-linecap="round"/>
       ${cheeks(56, 144, 130)}${eyes(78, 122, 110, 13)}${mouth(100, 140, 20, 10)}</g>`
   },
+  cloud: {
+    skin: '#d8dde6', ink: '#5a6270',
+    svg: `<defs>${lg('wtCl', '#f4f6fa', '#b8c0cc')}</defs><g class="wt-body">
+      <g stroke="#9ac8e8" stroke-width="6" stroke-linecap="round"><path d="M64 172v22M100 176v24M136 172v22"/></g>
+      <path d="M40 150 Q10 150 14 120 Q18 92 50 96 Q56 52 100 50 Q144 52 150 92 Q184 90 186 122 Q186 150 158 150 Z" fill="url(#wtCl)" stroke="#5a6270" stroke-width="4"/>
+      ${cheeks(62, 138, 128)}${eyes(80, 120, 106, 13)}${mouth(100, 132, 20, 10)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">

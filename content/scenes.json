@@ -18936,5 +18936,187 @@
         "glow": "full"
       }
     }
+  },
+  "hadiqa-alsahaba": {
+    "thumb": 2,
+    "witness": "cloud",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "cloud": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            640,
+            600,
+            1000
+          ],
+          "to": [
+            640,
+            620,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "cloud": "aside",
+          "harra": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            560,
+            620,
+            1000
+          ],
+          "to": [
+            420,
+            650,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "harra": "flow",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            300,
+            660,
+            940
+          ],
+          "to": [
+            520,
+            670,
+            880
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "harra": "flow",
+          "orchard": "on",
+          "light": "low",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            640,
+            980
+          ],
+          "to": [
+            620,
+            670,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "harra": "flow",
+          "orchard": "on",
+          "light": "low",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            670,
+            860
+          ],
+          "to": [
+            660,
+            690,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "cloud": "rain",
+          "orchard": "on",
+          "harra": "flow",
+          "light": "low",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            940
+          ],
+          "to": [
+            640,
+            610,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "cloud": "rain",
+        "orchard": "on",
+        "harra": "flow",
+        "light": "low",
+        "pair": "on"
+      }
+    }
   }
 }

@@ -859,6 +859,12 @@ function land() {
       <path class="ld-tentdoor" d="M-44 0L0-112 44 0z"/><path d="M0-150v-26" stroke="#4a2d10" stroke-width="6"/><path d="M-170 0h-24M170 0h24" stroke="#4a2d10" stroke-width="4"/>
       <path d="M-120-46h60M60-46h60" stroke="#e8c48a" stroke-width="6" opacity=".55"/></g>
     ${landExtras()}
+    <g class="ld-harra"><g fill="#2a2624" stroke="#14110f" stroke-width="2">${[[-260, 742, 46], [-150, 790, 38], [-40, 736, 30], [60, 800, 44], [160, 748, 34], [260, 796, 30], [-320, 820, 50], [120, 840, 40], [330, 760, 26]].map(([x, y, r]) => `<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${(r * .55).toFixed(0)}"/>`).join('')}</g>
+      <path d="M-420 806Q-120 770 120 786T430 762" fill="none" stroke="#3a3128" stroke-width="30" stroke-linecap="round"/>
+      <path class="ld-sharj" d="M-420 806Q-120 770 120 786T430 762" fill="none" stroke="#5ab0d8" stroke-width="16" stroke-linecap="round"/></g>
+    <g class="ld-cloud" transform="translate(640 250)"><g class="ld-clpos"><g class="ld-rain" stroke="#bfe0f2" stroke-width="4" stroke-linecap="round">${[-150, -100, -50, 0, 50, 100, 150, -125, -25, 75, 125].map((x, i) => `<path style="--d:${(-i * .13).toFixed(2)}s" d="M${x} 40v46"/>`).join('')}</g>
+      <g fill="#d8dde6" stroke="#9aa3b0" stroke-width="3"><ellipse cx="-110" cy="10" rx="90" ry="50"/><ellipse cx="110" cy="10" rx="90" ry="50"/><ellipse cy="-20" rx="120" ry="70"/><ellipse cy="26" rx="190" ry="40"/></g>
+      <g class="ld-clvoice" fill="none" stroke="#fff4cf" stroke-width="5" stroke-linecap="round"><path d="M210-10a60 60 0 0 1 0 60"/><path d="M240-30a90 90 0 0 1 0 100"/></g></g></g>
     <g class="ld-milk" transform="translate(300 720)"><g class="ld-mkpos"><circle class="ld-mkglow" cy="-14" r="80" fill="url(#g-white)"/><path d="M-30-30h60q-4 40-30 42-26-2-30-42z" fill="#b98548" stroke="#4a2d10" stroke-width="3"/><ellipse cy="-30" rx="30" ry="8" fill="#fdf6e6"/><path d="M-18 16h36" stroke="#6b441d" stroke-width="6" stroke-linecap="round"/></g></g>
     <g class="ld-lights">
       <g class="ld-b"><circle cx="722" cy="664" r="80" fill="url(#g-warm)"/><circle cx="722" cy="664" r="6" fill="#fff"/></g>
