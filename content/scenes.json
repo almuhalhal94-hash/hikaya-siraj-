@@ -13963,5 +13963,183 @@
         "herd": "all"
       }
     }
+  },
+  "khuff-albir": {
+    "thumb": 4,
+    "witness": "khuff",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "light": "road"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1150
+          ],
+          "to": [
+            700,
+            660,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "well": "on",
+          "light": "inwell"
+        },
+        "camera": {
+          "from": [
+            760,
+            640,
+            900
+          ],
+          "to": [
+            800,
+            640,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "bubble",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "well": "on",
+          "light": "well",
+          "dog": "thirst"
+        },
+        "camera": {
+          "from": [
+            760,
+            680,
+            700
+          ],
+          "to": [
+            660,
+            720,
+            560
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "well": "on",
+          "light": "inwell",
+          "dog": "thirst",
+          "khuff": "wet"
+        },
+        "camera": {
+          "from": [
+            660,
+            720,
+            560
+          ],
+          "to": [
+            760,
+            700,
+            520
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "bubble",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "well": "on",
+          "light": "well",
+          "dog": "drink",
+          "khuff": "wet",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            700,
+            720,
+            520
+          ],
+          "to": [
+            680,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "well": "on",
+          "dog": "on",
+          "glow": "full",
+          "birds": "on"
+        },
+        "camera": {
+          "from": [
+            680,
+            660,
+            820
+          ],
+          "to": [
+            600,
+            560,
+            1150
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "well": "on",
+        "light": "well",
+        "dog": "thirst"
+      }
+    }
   }
 }
