@@ -19118,5 +19118,183 @@
         "pair": "on"
       }
     }
+  },
+  "ghusn-alshawk": {
+    "thumb": 5,
+    "witness": "branch",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "way": "on",
+          "branch": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            940
+          ],
+          "to": [
+            640,
+            700,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "way": "on",
+          "branch": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            900
+          ],
+          "to": [
+            640,
+            690,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "way": "on",
+          "branch": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            960
+          ],
+          "to": [
+            640,
+            680,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "way": "on",
+          "branch": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            640,
+            690,
+            800
+          ],
+          "to": [
+            640,
+            720,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "way": "on",
+          "branch": "moved",
+          "light": "mid",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            680,
+            680,
+            860
+          ],
+          "to": [
+            700,
+            670,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "way": "on",
+          "branch": "moved",
+          "flock": "on",
+          "light": "mid",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            900
+          ],
+          "to": [
+            640,
+            620,
+            1000
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "way": "on",
+        "branch": "moved",
+        "light": "mid",
+        "glow": "full"
+      }
+    }
   }
 }

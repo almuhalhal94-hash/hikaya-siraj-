@@ -859,6 +859,11 @@ function land() {
       <path class="ld-tentdoor" d="M-44 0L0-112 44 0z"/><path d="M0-150v-26" stroke="#4a2d10" stroke-width="6"/><path d="M-170 0h-24M170 0h24" stroke="#4a2d10" stroke-width="4"/>
       <path d="M-120-46h60M60-46h60" stroke="#e8c48a" stroke-width="6" opacity=".55"/></g>
     ${landExtras()}
+    <g class="ld-way"><path d="M560 640L720 640L1500 1500L-220 1500Z" fill="#c9a072" opacity=".55"/><path d="M640 650V1500" stroke="#e8c898" stroke-width="5" stroke-dasharray="20 30" opacity=".5"/>
+      <g class="ld-branch" transform="translate(640 800)"><ellipse class="ld-brglow2" rx="200" ry="70" fill="url(#g-warm)" opacity=".5"/><g class="ld-brmove">
+        <path d="M-180 10Q0-20 180 6" stroke="#5a3a1c" stroke-width="12" stroke-linecap="round" fill="none"/>
+        <path d="M-120 2l-24-30M-60-6l10-34M0-8l-20-32M60-4l16-34M120 2l-10-34M-90 4l20 26M30-4l-14 30M90 0l22 26" stroke="#5a3a1c" stroke-width="6" stroke-linecap="round"/>
+        <g stroke="#8a6a4a" stroke-width="3" stroke-linecap="round">${[-150, -100, -40, 20, 80, 140].map(x => `<path d="M${x} 0l-8-12M${x + 10} 2l8-12"/>`).join('')}</g></g></g></g>
     <g class="ld-harra"><g fill="#2a2624" stroke="#14110f" stroke-width="2">${[[-260, 742, 46], [-150, 790, 38], [-40, 736, 30], [60, 800, 44], [160, 748, 34], [260, 796, 30], [-320, 820, 50], [120, 840, 40], [330, 760, 26]].map(([x, y, r]) => `<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${(r * .55).toFixed(0)}"/>`).join('')}</g>
       <path d="M-420 806Q-120 770 120 786T430 762" fill="none" stroke="#3a3128" stroke-width="30" stroke-linecap="round"/>
       <path class="ld-sharj" d="M-420 806Q-120 770 120 786T430 762" fill="none" stroke="#5ab0d8" stroke-width="16" stroke-linecap="round"/></g>

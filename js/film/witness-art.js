@@ -763,6 +763,14 @@ export const ART = {
       <path d="M40 150 Q10 150 14 120 Q18 92 50 96 Q56 52 100 50 Q144 52 150 92 Q184 90 186 122 Q186 150 158 150 Z" fill="url(#wtCl)" stroke="#5a6270" stroke-width="4"/>
       ${cheeks(62, 138, 128)}${eyes(80, 120, 106, 13)}${mouth(100, 132, 20, 10)}</g>`
   },
+  branch: {
+    skin: '#7a5a3a', ink: '#3a2412',
+    svg: `<g class="wt-body">
+      <path d="M20 150 Q100 120 184 136" stroke="#6b4a2a" stroke-width="40" stroke-linecap="round" fill="none"/>
+      <path d="M40 132l-14-30M80 122l6-34M130 122l-6-34M170 130l14-30M60 156l-10 30M150 158l12 28" stroke="#4a2e18" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="66" cy="96" rx="22" ry="10" fill="#7a8a5a"/><ellipse cx="140" cy="94" rx="22" ry="10" fill="#7a8a5a"/>
+      ${eyes(80, 124, 138, 11)}${mouth(102, 156, 16, 7)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">
