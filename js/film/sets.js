@@ -974,7 +974,7 @@ function dar() {
     <rect class="dr-day" x="-700" y="-300" width="2600" height="1200" fill="url(#g-day)"/>
     ${stars(90, 37, [-400, 1600], [-300, 400])}
     <path class="dr-moon" d="M930 70a44 44 0 1 0 40 68 36 36 0 0 1-40-68z" fill="#ffe9a8"/>
-    <g class="dr-sun" transform="translate(300 160)"><circle r="230" fill="url(#g-warm)"/><circle r="64" fill="#ffe08a"/><circle r="50" fill="#fff4cf"/></g>
+    <g class="dr-sun" transform="translate(300 160)"><circle r="230" fill="url(#g-warm)"/><circle r="64" fill="#ffe08a"/><circle r="50" fill="#fff4cf"/><circle class="dr-ecl" r="68" fill="#120c1c"/></g>
   </g>
   <g data-d=".3">
     <path class="dr-hills" d="M-700 470-480 330-330 400-170 280 0 380 150 300 330 410 500 330 700 420 860 300 1040 390 1220 290 1400 400 1900 330V1400H-700z"/>

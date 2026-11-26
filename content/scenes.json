@@ -31926,5 +31926,524 @@
         "white": "on"
       }
     }
+  },
+  "fatima-almundhir": {
+    "thumb": 4,
+    "witness": "sun",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "sun": "rise",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            560,
+            660,
+            660
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "sun": "eclipse",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            640
+          ],
+          "to": [
+            620,
+            620,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "wonder"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "ms": "two",
+          "white": "on",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            920,
+            640,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "sun": "clear",
+          "far": "none",
+          "light": "on",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            620,
+            860
+          ],
+          "to": [
+            600,
+            660,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "suhuf": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            560,
+            660,
+            660
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "sun": "up",
+          "far": "none",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            560,
+            660,
+            660
+          ],
+          "to": [
+            620,
+            620,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "sun": "clear",
+        "far": "none",
+        "light": "on",
+        "pair": "warm"
+      }
+    }
+  },
+  "safiyya-almiftah": {
+    "thumb": 4,
+    "witness": "key",
+    "scenes": [
+      {
+        "set": "haram",
+        "state": {
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "light": "on",
+          "white": "on",
+          "tawaf": "off"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            760
+          ],
+          "to": [
+            640,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "wonder"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "suhuf": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            560,
+            660,
+            660
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "blanket": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            640
+          ],
+          "to": [
+            620,
+            620,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "warm",
+          "blanket": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            620,
+            860
+          ],
+          "to": [
+            600,
+            660,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            560,
+            1000
+          ],
+          "to": [
+            620,
+            640,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "on",
+        "pair": "warm",
+        "blanket": "on",
+        "far": "none"
+      }
+    }
+  },
+  "aishasaad-alfirash": {
+    "thumb": 4,
+    "witness": "blanket",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "blanket": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            560,
+            660,
+            660
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "blanket": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            640
+          ],
+          "to": [
+            620,
+            620,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "coins": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            620,
+            620,
+            860
+          ],
+          "to": [
+            600,
+            660,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "blanket": "on",
+          "moon": "glow",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            560,
+            660,
+            660
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "on",
+          "glow": "full",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            560,
+            660,
+            660
+          ],
+          "to": [
+            600,
+            560,
+            1000
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "wonder"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "peep": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            560,
+            660,
+            660
+          ],
+          "to": [
+            620,
+            620,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "on",
+        "pair": "on",
+        "blanket": "on",
+        "far": "none"
+      }
+    }
   }
 }
