@@ -967,6 +967,11 @@ function dar() {
     <g class="dr-vessel" transform="translate(420 700)"><circle class="dr-vsglow" cy="-20" r="110" fill="url(#g-warm)"/>
       <path d="M-46-30h92q-6 50-46 54-40-4-46-54z" fill="#b98548" stroke="#4a2d10" stroke-width="3"/><ellipse cy="-30" rx="46" ry="11" fill="#e8a658"/><path d="M-30 24h60" stroke="#6b441d" stroke-width="6" stroke-linecap="round"/>
       <path d="M-12-52q-6-14 4-26M8-52q-6-14 4-26" fill="none" stroke="#fff4cf" stroke-width="3" stroke-linecap="round" opacity=".7"/></g>
+    <g class="dr-dates" transform="translate(600 830)"><ellipse class="dr-dtglow" cy="-24" rx="200" ry="110" fill="url(#g-warm)"/>
+      <ellipse cy="0" rx="110" ry="26" fill="#b98548" stroke="#4a2d10" stroke-width="3"/><ellipse cy="-6" rx="92" ry="16" fill="#d8a868"/>
+      <g class="dr-dtwhole" fill="#6a2e14" stroke="#3a160a" stroke-width="3"><ellipse cx="-44" cy="-16" rx="24" ry="13"/><ellipse cx="40" cy="-16" rx="24" ry="13"/><ellipse class="dr-dt3" cx="0" cy="-28" rx="24" ry="13"/></g>
+      <g class="dr-dthalf" fill="#7a3a1a" stroke="#3a160a" stroke-width="3" transform="translate(0 -40)"><path d="M-4 12v-24q-30 0-30 12t30 12z"/><path d="M4 12v-24q30 0 30 12t-30 12z"/><path d="M-4 0h-14M4 0h14" stroke="#e8b070" stroke-width="3"/></g>
+      <path d="M-30-18q30 8 60 0" stroke="#a8622e" stroke-width="2" fill="none" opacity=".6"/></g>
     <g class="dr-bread" transform="translate(600 820)"><ellipse class="dr-brglow" cy="-30" rx="230" ry="140" fill="url(#g-warm)"/>
       <path d="M-150 30q-20-60 40-74q110-20 220 0q60 14 40 74q-150 30-300 0z" fill="#e9dcc0" stroke="#8a7458" stroke-width="3" stroke-linejoin="round"/>
       <path d="M-120 20q120 22 240 0M-100-10q100 14 200 0" fill="none" stroke="#c9b48e" stroke-width="3"/>
@@ -1027,6 +1032,7 @@ function dar() {
     <g class="dr-lights">
       <g class="dr-b"><circle cx="680" cy="680" r="90" fill="url(#g-white)"/><circle cx="680" cy="680" r="7" fill="#fff"/></g>
       <g class="dr-a"><circle cx="560" cy="700" r="110" fill="url(#g-warm)"/><circle cx="560" cy="700" r="8" fill="#fff"/></g>
+      <g class="dr-girls"><circle cx="450" cy="756" r="62" fill="url(#g-warm)"/><circle cx="450" cy="756" r="5" fill="#fff"/><circle cx="500" cy="784" r="56" fill="url(#g-warm)"/><circle cx="500" cy="784" r="5" fill="#fff"/></g>
     </g>
     <ellipse class="dr-glow" cx="600" cy="660" rx="900" ry="600" fill="url(#g-warm)"/>
   </g>

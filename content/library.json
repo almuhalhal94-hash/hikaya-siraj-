@@ -425,6 +425,10 @@
       "sub": "من القرآن والسنة",
       "items": [
         {
+          "name": "سارة زوج إبراهيم عليه السلام",
+          "story": "sara-alqasr"
+        },
+        {
           "name": "آسية امرأة فرعون",
           "story": "asiya-alnil"
         },
@@ -437,8 +441,20 @@
           "story": "madyan-albir"
         },
         {
+          "name": "ملكة سبأ",
+          "story": "saba-alarsh"
+        },
+        {
           "name": "امرأة عمران",
           "story": "imran-almihrab"
+        },
+        {
+          "name": "مريم ابنة عمران",
+          "story": "maryam-alrutab"
+        },
+        {
+          "name": "أم البنتين والتمرة",
+          "story": "umm-albintayn"
         }
       ]
     }

@@ -16965,5 +16965,707 @@
         "glow": "full"
       }
     }
+  },
+  "umm-albintayn": {
+    "thumb": 5,
+    "witness": "tamra",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "pair": "warm",
+          "dates": "on"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            960
+          ],
+          "to": [
+            600,
+            700,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "pair": "warm",
+          "light": "on",
+          "girls": "on",
+          "dates": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            980
+          ],
+          "to": [
+            560,
+            670,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "pair": "warm",
+          "light": "on",
+          "girls": "on",
+          "dates": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            680,
+            820
+          ],
+          "to": [
+            600,
+            720,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "girls": "on",
+          "dates": "one"
+        },
+        "camera": {
+          "from": [
+            520,
+            700,
+            760
+          ],
+          "to": [
+            560,
+            740,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "pair": "warm",
+          "light": "on",
+          "girls": "on",
+          "dates": "split",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            720,
+            700
+          ],
+          "to": [
+            580,
+            700,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on",
+          "dates": "split",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            660,
+            860
+          ],
+          "to": [
+            620,
+            640,
+            960
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "lamp": "on",
+        "light": "on",
+        "girls": "on",
+        "dates": "one",
+        "glow": "full"
+      }
+    }
+  },
+  "sara-alqasr": {
+    "thumb": 3,
+    "witness": "palace",
+    "scenes": [
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "throne": "on",
+          "court": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1000
+          ],
+          "to": [
+            600,
+            640,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "musa": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            960
+          ],
+          "to": [
+            600,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "throne": "on",
+          "light": "on",
+          "safe": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            860
+          ],
+          "to": [
+            600,
+            670,
+            740
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "throne": "on",
+          "court": "on",
+          "light": "on",
+          "safe": "on",
+          "shake": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            900
+          ],
+          "to": [
+            600,
+            660,
+            780
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "wonder"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "throne": "on",
+          "light": "on",
+          "safe": "on",
+          "fade": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            780
+          ],
+          "to": [
+            600,
+            640,
+            920
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "tent": "lit",
+          "light": "mid",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            940
+          ],
+          "to": [
+            640,
+            660,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "throne": "on",
+        "light": "on",
+        "safe": "on",
+        "glow": "full"
+      }
+    }
+  },
+  "maryam-alrutab": {
+    "thumb": 5,
+    "witness": "palm",
+    "scenes": [
+      {
+        "set": "mihrab",
+        "state": {
+          "time": "dawn",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            1000
+          ],
+          "to": [
+            640,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            820
+          ],
+          "to": [
+            640,
+            640,
+            960
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "palm": "on",
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            1000
+          ],
+          "to": [
+            620,
+            660,
+            840
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "palm": "on",
+          "spring": "on",
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            920
+          ],
+          "to": [
+            640,
+            670,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "palm": "glow",
+          "spring": "on",
+          "light": "low",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            820
+          ],
+          "to": [
+            640,
+            640,
+            940
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      },
+      {
+        "set": "mihrab",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            780
+          ],
+          "to": [
+            640,
+            620,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "palm": "glow",
+        "spring": "on",
+        "light": "low"
+      }
+    }
+  },
+  "saba-alarsh": {
+    "thumb": 3,
+    "witness": "arsh",
+    "scenes": [
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "throne": "on",
+          "court": "on",
+          "light": "speak"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1000
+          ],
+          "to": [
+            600,
+            640,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "court": "on",
+          "light": "speak"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            880
+          ],
+          "to": [
+            600,
+            660,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "court": "on",
+          "light": "on",
+          "treasure": "on"
+        },
+        "camera": {
+          "from": [
+            660,
+            620,
+            960
+          ],
+          "to": [
+            700,
+            660,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "throne": "on",
+          "light": "on",
+          "glow": "full",
+          "time": "dawn"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            900
+          ],
+          "to": [
+            600,
+            670,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "throne": "on",
+          "light": "on",
+          "safe": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            780
+          ],
+          "to": [
+            600,
+            640,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "safe": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            880
+          ],
+          "to": [
+            600,
+            620,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "throne": "on",
+        "light": "on",
+        "glow": "full"
+      }
+    }
   }
 }

@@ -1021,3 +1021,12 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-tabut { opacity: 0; transition: opacity 2.5s ease; } [data-tabut="float"] .ld-tabut { opacity: 1; }
 .ld-tbpos { translate: 1250px 800px; } [data-tabut="float"] .ld-tbpos { animation: ld-tbdrift 15s ease-in-out forwards; } @keyframes ld-tbdrift { to { translate: 620px 806px; } }
 .ld-tbbob { animation: se-logbob 2.6s ease-in-out infinite; }
+
+/* dar: تمرات على طبق وتمرة تُشقّ نصفين (أم البنتين)، وبنتان نوران صغيران */
+.dr-dates, .dr-girls, .dr-dthalf { opacity: 0; transition: opacity 3s ease; } [data-dates] .dr-dates { opacity: 1; }
+.dr-dt3 { transition: opacity 2s ease; } [data-dates="split"] .dr-dt3 { opacity: 0; } [data-dates="split"] .dr-dthalf { opacity: 1; }
+.dr-dthalf path { transition: translate 4s var(--ease-out, ease); } [data-dates="split"] .dr-dthalf path:nth-child(1) { translate: -14px 0; } [data-dates="split"] .dr-dthalf path:nth-child(2) { translate: 14px 0; }
+[data-dates="none"] .dr-dtwhole { opacity: 0; }
+[data-girls="on"] .dr-girls { opacity: 1; } .dr-girls circle:nth-child(odd) { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
+.dr-dtglow { animation: st-breathe 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.dr-dtwhole ellipse { transition: opacity 2s ease; } [data-dates="one"] .dr-dtwhole ellipse:not(.dr-dt3), [data-dates="split"] .dr-dtwhole ellipse { opacity: 0; }
