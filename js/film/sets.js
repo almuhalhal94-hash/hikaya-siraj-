@@ -859,6 +859,13 @@ function land() {
       <path class="ld-tentdoor" d="M-44 0L0-112 44 0z"/><path d="M0-150v-26" stroke="#4a2d10" stroke-width="6"/><path d="M-170 0h-24M170 0h24" stroke="#4a2d10" stroke-width="4"/>
       <path d="M-120-46h60M60-46h60" stroke="#e8c48a" stroke-width="6" opacity=".55"/></g>
     ${landExtras()}
+    <g class="ld-cow" transform="translate(640 772)"><ellipse class="ld-cowglow" cy="-40" rx="190" ry="120" fill="url(#g-warm)"/>
+      <ellipse cy="40" rx="110" ry="12" fill="#000" opacity=".22"/>
+      <path d="M-62 10v30M-36 14v28M40 14v28M64 10v30" stroke="#b8861c" stroke-width="11" stroke-linecap="round"/>
+      <path d="M-84-30q0-34 40-38h96q34 2 38 32v20q-4 30-40 32h-96q-38-2-38-30z" fill="#f2c230"/>
+      <path d="M-84-24q-14 10-14 34" stroke="#d9a81e" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g transform="translate(96 -46)"><ellipse rx="26" ry="20" fill="#f2c230"/><ellipse cx="14" cy="8" rx="13" ry="10" fill="#f6d88a"/><path d="M-14-16q-14-14-4-26M8-18q10-16 22-14" stroke="#efe3c4" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="2" cy="-4" r="3.4" fill="#3a2a10"/></g>
+      <path class="ld-cowshine" d="M-60-56q40-12 90-6" stroke="#fff6c8" stroke-width="6" fill="none" stroke-linecap="round" opacity=".7"/></g>
     <g class="ld-maida" transform="translate(640 640)"><g class="ld-mdpos"><path class="ld-mdbeam" d="M-90-900L90-900L150 0L-150 0Z" fill="#fff4cf" opacity=".25"/><ellipse cy="-20" rx="200" ry="90" fill="url(#g-white)"/>
       <ellipse rx="130" ry="26" fill="#e8d8a8" stroke="#a8843a" stroke-width="4"/><ellipse cy="-6" rx="110" ry="18" fill="#f6ecd0"/>
       <g stroke="#6b441d" stroke-width="2"><ellipse cx="-60" cy="-14" rx="22" ry="10" fill="#c98a3a"/><ellipse cx="0" cy="-20" rx="26" ry="11" fill="#e8b04a"/><ellipse cx="58" cy="-14" rx="22" ry="10" fill="#7aa04a"/><circle cx="-26" cy="-4" r="9" fill="#d8584a"/><circle cx="30" cy="-4" r="9" fill="#d8584a"/></g></g></g>

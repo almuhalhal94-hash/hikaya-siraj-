@@ -1079,3 +1079,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-maida { opacity: 0; transition: opacity 3s ease; } [data-maida] .ld-maida { opacity: 1; }
 .ld-mdpos { translate: 0 -520px; transition: translate 10s var(--ease-out, ease); } [data-maida="on"] .ld-mdpos { translate: 0 60px; transition-duration: 0s; } [data-maida="down"] .ld-mdpos { animation: ld-mddown 10s var(--ease-out, ease) forwards; }
 @keyframes ld-mddown { from { translate: 0 -520px; } to { translate: 0 60px; } }
+
+/* بقرة بني إسرائيل: cow=on بقرة صفراء فاقع لونها */
+.ld-cow { opacity: 0; transition: opacity 2.4s ease; }
+[data-cow="on"] .ld-cow { opacity: 1; }

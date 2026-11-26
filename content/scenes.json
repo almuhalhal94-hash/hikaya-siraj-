@@ -19990,5 +19990,180 @@
         "glow": "full"
       }
     }
+  },
+  "baqara-alhaql": {
+    "thumb": 4,
+    "witness": "earth",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on",
+          "light": "mid",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            640,
+            980
+          ],
+          "to": [
+            600,
+            660,
+            880
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            940
+          ],
+          "to": [
+            640,
+            670,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "herd": "all",
+          "light": "mid",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            520,
+            650,
+            960
+          ],
+          "to": [
+            560,
+            680,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "cow": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            900
+          ],
+          "to": [
+            640,
+            700,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "cow": "on",
+          "light": "mid",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            650,
+            940
+          ],
+          "to": [
+            640,
+            670,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on",
+          "light": "mid",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            560,
+            640,
+            960
+          ],
+          "to": [
+            600,
+            660,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "cow": "on",
+        "glow": "full"
+      }
+    }
   }
 }
