@@ -312,6 +312,18 @@
           "story": "sulami-almushaf"
         },
         {
+          "name": "عبد الرحمن بن أبي ليلى",
+          "story": "ibnabilayla-albab"
+        },
+        {
+          "name": "عامر الشعبي",
+          "story": "shabi-alsahifa"
+        },
+        {
+          "name": "ربعي بن حراش",
+          "story": "ribi-alasa"
+        },
+        {
           "name": "كثير بن مُرّة",
           "story": "kathir-hims"
         },
@@ -348,12 +360,20 @@
           "story": "qasim-alqindil"
         },
         {
+          "name": "علي بن الحسين (زين العابدين)",
+          "story": "zaynalabidin-alsajjada"
+        },
+        {
           "name": "سالم بن عبد الله بن عمر",
           "story": "salim-alshamla"
         },
         {
           "name": "نافع مولى ابن عمر",
           "story": "nafi-alrahila"
+        },
+        {
+          "name": "كُرَيب مولى ابن عباس",
+          "story": "kurayb-alhilal"
         },
         {
           "name": "الحسن البصري",
