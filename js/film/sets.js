@@ -677,6 +677,17 @@ function landExtras() {
       <path d="M-200 0l40-36h320l40 36z" fill="#d8c8a2" stroke="#9a8460" stroke-width="3"/><path d="M-176-14h352M-150-28h300" stroke="#b07a4a" stroke-width="5" opacity=".7"/>
       <g class="ld-clfood"><g fill="#f0d68a">${Array.from({ length: 22 }, (_, i) => `<ellipse cx="${-110 + (i * 37) % 120}" cy="${-30 - (i % 4) * 8}" rx="6" ry="4"/>`).join('')}</g>
       <g fill="#7a3a1c">${Array.from({ length: 12 }, (_, i) => `<ellipse cx="${30 + (i * 23) % 90}" cy="${-30 - (i % 3) * 9}" rx="9" ry="6"/>`).join('')}</g></g></g>
+    <g class="ld-dog" transform="translate(600 770)"><g class="ld-dogbody"><ellipse cy="22" rx="80" ry="9" fill="#000" opacity=".25"/><g fill="#4e3420">
+      <path d="M-44-20v40h10v-36zM-24-18v38h10v-36zM28-20v40h10v-38zM46-22v42h10v-40z"/>
+      <ellipse cx="4" cy="-32" rx="62" ry="22"/><path d="M44-44q14-10 26-6l10 18-22 8z"/>
+      <ellipse cx="78" cy="-40" rx="20" ry="14"/><path d="M90-40h20q4 8-4 12H92z"/><path d="M70-52l6-20 10 18z"/>
+      <path d="M-56-36q-30-10-36-34" stroke="#4e3420" stroke-width="9" fill="none" stroke-linecap="round"/></g>
+      <circle cx="84" cy="-44" r="3" fill="#fff4cf"/>
+      <path class="ld-dogtongue" d="M104-30q4 12-2 16" stroke="#e07a7a" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+      <g class="ld-dogwater" fill="#9fd4ff"><ellipse cx="112" cy="16" rx="26" ry="7" opacity=".7"/></g></g>
+    <g class="ld-khuff" transform="translate(720 760)"><ellipse class="ld-khglow" cy="-30" rx="110" ry="80" fill="url(#g-warm)"/>
+      <path d="M-24-80h40v60q30 4 40 20v10h-82z" fill="#7a4a24" stroke="#3d2412" stroke-width="3"/><path d="M-24-72h40" stroke="#c9925a" stroke-width="4"/>
+      <g class="ld-khdrip" fill="#9fd4ff"><ellipse cx="-30" cy="-6" rx="4" ry="7"/><ellipse cx="-38" cy="8" rx="3" ry="5"/></g></g>
     <g class="ld-herd">
       <g class="ld-herd1" transform="translate(640 770)"><ellipse cy="-20" rx="90" ry="60" fill="url(#g-warm)"/>${sheep(0, 0, 1)}</g>
       <g class="ld-herdall">${[[180, 780], [240, 810], [300, 776], [360, 820], [420, 790], [210, 850], [330, 860], [470, 840], [140, 820]].map(([x, y], i) => sheep(x, y, .8 + (i % 3) * .1)).join('')}

@@ -975,3 +975,10 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 /* قطيع الأبرص والأقرع والأعمى */
 .ld-herd1, .ld-herdall { opacity: 0; transition: opacity 3s ease; }
 [data-herd="one"] .ld-herd1 { opacity: 1; } [data-herd="all"] .ld-herdall { opacity: 1; } [data-herd="all"] .ld-herd1 { opacity: 0; }
+
+/* ساقي الكلب */
+.ld-dog, .ld-khuff, .ld-dogwater, .ld-khdrip { opacity: 0; transition: opacity 2.6s ease; }
+[data-dog] .ld-dog { opacity: 1; } [data-khuff] .ld-khuff { opacity: 1; }
+[data-dog="thirst"] .ld-dogbody { animation: ld-pant .7s ease-in-out infinite; } @keyframes ld-pant { 50% { translate: 0 2px; } }
+[data-dog="drink"] .ld-dogwater, [data-khuff="wet"] .ld-khdrip { opacity: 1; } .ld-khdrip ellipse { animation: dr-drip 1.8s ease-in infinite; }
+[data-dog="drink"] .ld-dogtongue { opacity: 0; }

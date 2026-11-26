@@ -697,6 +697,14 @@ export const ART = {
       <ellipse cx="100" cy="162" rx="24" ry="13" fill="#e8c8b8"/>
       ${cheeks(72, 128, 134, '#f0a090')}${eyes(82, 118, 106, 13)}${mouth(100, 170, 18, 11)}</g>`
   },
+  khuff: {
+    skin: '#a8743a', ink: '#2a1808',
+    svg: `<defs>${lg('wtKh', '#b8844a', '#6a3e1c')}</defs><g class="wt-body">
+      <path d="M50 20h80v110q50 6 62 34v18H50z" fill="url(#wtKh)" stroke="#3d2412" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M50 34h80" stroke="#e2c48c" stroke-width="5"/><path d="M50 176h142" stroke="#3d2412" stroke-width="6"/>
+      <g fill="#9fd4ff"><ellipse cx="36" cy="150" rx="6" ry="10"/><ellipse cx="26" cy="176" rx="5" ry="8"/></g>
+      ${cheeks(70, 118, 110)}${eyes(78, 112, 84, 12)}${mouth(96, 112, 20, 11)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
