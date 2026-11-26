@@ -664,6 +664,14 @@ export const ART = {
       <path d="M40 112 Q100 130 160 112" stroke="#f0d68a" stroke-width="4" fill="none" opacity=".6"/>
       ${cheeks(62, 150, 138)}${eyes(80, 134, 120, 12)}${mouth(100, 156, 20, 11)}</g>`
   },
+  axe: {
+    skin: '#8f99a6', ink: '#262a30',
+    svg: `<defs>${lg('wtAx', '#dfe6ee', '#6f7986', 1, 1)}</defs><g class="wt-body">
+      <path d="M24 60 L130 30 Q190 70 186 112 Q190 150 130 186 L24 156 Z" fill="url(#wtAx)" stroke="#3a4048" stroke-width="4"/>
+      <path d="M160 46 Q196 108 160 172" stroke="#fff" stroke-width="6" fill="none" opacity=".8"/>
+      <ellipse cx="44" cy="108" rx="14" ry="26" fill="#2a2e36"/>
+      ${cheeks(84, 150, 134)}${eyes(96, 140, 98, 13)}${mouth(118, 144, 22, 12)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
