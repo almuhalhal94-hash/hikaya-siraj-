@@ -12896,5 +12896,183 @@
         "white": "on"
       }
     }
+  },
+  "rabi-alkhabis": {
+    "thumb": 4,
+    "witness": "bowl",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "vessel": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1000
+          ],
+          "to": [
+            480,
+            660,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "one",
+          "suffa": "on",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            920,
+            640,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "pair": "warm",
+          "vessel": "on"
+        },
+        "camera": {
+          "from": [
+            480,
+            660,
+            700
+          ],
+          "to": [
+            600,
+            640,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "pair": "warm",
+          "vessel": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            800
+          ],
+          "to": [
+            560,
+            600,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "time": "dawn",
+          "era": "stone",
+          "ms": "one",
+          "call": "on",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            900,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "light": "road",
+          "flock": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            520,
+            1100
+          ],
+          "to": [
+            800,
+            600,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "far": "none",
+        "light": "on",
+        "pair": "warm",
+        "vessel": "on"
+      }
+    }
   }
 }
