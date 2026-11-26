@@ -16427,5 +16427,185 @@
         "light": "on"
       }
     }
+  },
+  "ummmusa-altabut": {
+    "thumb": 3,
+    "witness": "tabut",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "lamp": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            1000
+          ],
+          "to": [
+            620,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "pair": "warm",
+          "lamp": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            660,
+            820
+          ],
+          "to": [
+            640,
+            640,
+            940
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "river": "on",
+          "grove": "on",
+          "tabut": "float",
+          "light": "low"
+        },
+        "camera": {
+          "from": [
+            700,
+            640,
+            960
+          ],
+          "to": [
+            760,
+            680,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "river": "on",
+          "grove": "on",
+          "tabut": "float",
+          "light": "low",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            760,
+            640,
+            960
+          ],
+          "to": [
+            680,
+            660,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "qasr",
+        "state": {
+          "time": "dawn",
+          "tabut": "found",
+          "court": "on",
+          "light": "speak"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1000
+          ],
+          "to": [
+            590,
+            650,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "warm",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            900
+          ],
+          "to": [
+            620,
+            660,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "river": "on",
+        "grove": "on",
+        "light": "low",
+        "pair": "on",
+        "glow": "full"
+      }
+    }
   }
 }
