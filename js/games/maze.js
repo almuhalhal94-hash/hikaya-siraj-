@@ -1,4 +1,4 @@
-// لعبة «طريق الهجرة»: متاهة مولَّدة ببذرة ثابتة، يقود فيها الطفل الفانوس من البداية إلى النهاية مرورًا بالمحطة.
+// لعبة «متاهات الرحلات» (الهجرة، موسى إلى مدين، ذو القرنين، الحج): متاهة مولَّدة ببذرة ثابتة، يقود فيها الطفل الفانوس من البداية إلى النهاية مرورًا بالمحطة.
 // لا يُرسم فيها أحد: الفانوس وحده يتحرك، والأماكن رموز بلا أشخاص.
 import { fill, html, wait } from '../core.js';
 import { sparkle } from '../sky.js';
@@ -55,12 +55,31 @@ const ICON = {
   stop: `<path d="M-25 20L-8-15q8-12 16 0L25 20z" fill="#3b4c80" stroke="#6d86c4" stroke-width="2" stroke-linejoin="round"/><path class="mz__cave" d="M-8 20q0-17 8-17t8 17z"/>`,
   end: `<g fill="none" stroke="#5fd6a0" stroke-linecap="round"><path d="M-9 20q3-17-1-32" stroke-width="3.500"/><path d="M-10-12q-10-8-17 0M-10-12q-11 0-14 10M-10-12q9-9 17-2M-10-12q11-1 14 9M-10-12q-3-10-12-11M-10-12q4-10 12-10" stroke-width="2.600"/><path d="M12 20q2-11 0-21" stroke-width="3"/><path d="M12-1q-7-6-12 0M12-1q7-7 13-1M12-1q-2-8-9-9M12-1q3-8 9-8" stroke-width="2.300"/></g>`
 };
+// أماكن الرحلات الأخرى (رموز بلا أشخاص)
+const TRIPS = {
+  madyan: {
+    start: `<path d="M-20 18v-22h40v22z" fill="#d9b36a" stroke="#8f6b22" stroke-width="2"/><path d="M-22-4h44" stroke="#8f6b22" stroke-width="3"/><path d="M-6 18v-12h12v12z" fill="#3d2a1c"/><path d="M-24 22q12-5 24 0t24 0" fill="none" stroke="#4fa3d1" stroke-width="3" stroke-linecap="round"/>`,
+    stop: `<ellipse cy="12" rx="18" ry="7" fill="#6b5a44" stroke="#a8946a" stroke-width="2"/><ellipse class="mz__cave" cy="11" rx="11" ry="4"/><path d="M-14 10v-22M14 10v-22M-17-12h34" stroke="#8f6b22" stroke-width="3" stroke-linecap="round"/><path d="M0-12v14" stroke="#e8d3a2" stroke-width="1.5"/>`,
+    end: `<path d="M-20 20v-24l20-12 20 12v24z" fill="#c98f4a" stroke="#8f6b22" stroke-width="2" stroke-linejoin="round"/><path d="M-5 20v-12h10v12z" fill="#3d2a1c"/><rect x="8" y="-2" width="7" height="7" fill="#ffcf6b"/>`
+  },
+  dq: {
+    start: `<path d="M-24 14h48" stroke="#4fa3d1" stroke-width="4"/><path d="M-13 13a13 13 0 0 1 26 0z" fill="#ff8a4a"/><path d="M-20 20h40" stroke="#2a6ab0" stroke-width="3" stroke-dasharray="6 4"/>`,
+    stop: `<g class="mz__cave"><circle r="10"/></g><g stroke="#ffd77a" stroke-width="3" stroke-linecap="round"><path d="M0-16v-6M0 16v6M-16 0h-6M16 0h6M-11-11l-4-4M11-11l4-4M-11 11l-4 4M11 11l4 4"/></g>`,
+    end: `<path d="M-26 20l8-34 8 34z" fill="#6b5a44"/><path d="M26 20l-8-34-8 34z" fill="#6b5a44"/><path d="M-10 20v-26h20v26z" fill="#8a96a8" stroke="#c9a24a" stroke-width="2"/><path d="M-10-2h20M-10 8h20M0-6v26" stroke="#c9a24a" stroke-width="1.5"/>`
+  },
+  hajj: {
+    start: `${[-14, 0, 14].map(x => `<path d="M${x - 8} 18l8-16 8 16z" fill="#fff4cf" stroke="#c9a24a" stroke-width="1.5"/>`).join('')}<path d="M-24 20h48" stroke="#c9a24a" stroke-width="2"/>`,
+    stop: `<path d="M-24 20q8-30 24-34 16 4 24 34z" fill="#8a6a3e" stroke="#c9a24a" stroke-width="2"/><path class="mz__cave" d="M-2-18h4v10h-4z"/>`,
+    end: `<rect x="-15" y="-14" width="30" height="32" rx="2" fill="#0b0b14" stroke="#c9a24a" stroke-width="2"/><path d="M-15-6h30" stroke="#ffd77a" stroke-width="4"/><rect class="mz__cave" x="-4" y="6" width="8" height="12"/>`
+  }
+};
+
 const LANTERN = `<circle class="mz__halo" r="24"/><circle cy="-19" r="3" fill="none" stroke="#c9a24a" stroke-width="2"/><path d="M-8-9q8-13 16 0z" fill="#c9a24a"/><path d="M-9-9H9q7 11 0 22H-9q-7-11 0-22z" fill="#ffd77a" stroke="#c9a24a" stroke-width="2"/><ellipse class="mz__flame" cy="3" rx="4" ry="7" fill="#fff4cf"/><path d="M-7 13H7l-2 5h-10z" fill="#c9a24a"/>`;
 
 export default function maze(board, api) {
-  const { level, data, t } = api, cfg = data.hijra_maze;
+  const { level, data, t } = api, cfg = data.hijra_maze, trip = cfg.trips?.[level.trip] || cfg, icons = TRIPS[level.trip] || ICON;
   const m = build(level), { cols, rows } = m;
-  const names = { start: cfg.start, stop: cfg.stops[0], end: cfg.end };
+  const names = { start: trip.start, stop: trip.stops[0], end: trip.end, trip: trip.title || t.hijra };
   const W = cols * U + PAD * 2, Ht = rows * U + PAD * 2;
   const xy = i => [PAD + (i % cols) * U + U / 2, PAD + Math.floor(i / cols) * U + U / 2];
 
@@ -71,7 +90,7 @@ export default function maze(board, api) {
     if (c > 0 && !m.can(i, i - 1)) walls += `M${x} ${y}v${U}`;
   }
   const cells = Array.from({ length: m.N }, (_, i) => { const [x, y] = xy(i); return { x, y }; });
-  const place = (kind, i) => `<g class="mz__place mz__place--${kind}" transform="translate(${cells[i].x} ${cells[i].y})"><circle class="mz__ring" r="27"/>${ICON[kind]}</g>`;
+  const place = (kind, i) => `<g class="mz__place mz__place--${kind}" transform="translate(${cells[i].x} ${cells[i].y})"><circle class="mz__ring" r="27"/>${icons[kind]}</g>`;
 
   const root = html(`
     <div class="mz${level.dark ? ' mz--dark' : ''}">
@@ -93,7 +112,7 @@ export default function maze(board, api) {
   const route = k => root.querySelector(`.mz__route [data-k="${k}"]`);
   const placeEl = k => root.querySelector(`.mz__place--${k}`);
   svg.setAttribute('aria-label', t.board_label);
-  Object.entries(names).forEach(([k, v]) => { route(k).querySelector('span').textContent = v; });
+  ['start', 'stop', 'end'].forEach(k => { route(k).querySelector('span').textContent = names[k]; });
   route('start').classList.add('is-on');
 
   let pos = m.start, steps = 0, visitedStop = false, done = false, warned = false, down = false;
