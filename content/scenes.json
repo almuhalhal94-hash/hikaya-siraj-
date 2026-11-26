@@ -18756,5 +18756,185 @@
         "glow": "full"
       }
     }
+  },
+  "khawla-aljidar": {
+    "thumb": 5,
+    "witness": "wall",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "out",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            700,
+            640,
+            960
+          ],
+          "to": [
+            660,
+            670,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            670,
+            860
+          ],
+          "to": [
+            580,
+            700,
+            740
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on",
+          "peep": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            620,
+            660,
+            900
+          ],
+          "to": [
+            620,
+            690,
+            780
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            620,
+            690,
+            760
+          ],
+          "to": [
+            620,
+            700,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on",
+          "far": "none",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            680,
+            720
+          ],
+          "to": [
+            620,
+            650,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "up",
+          "light": "on",
+          "pair": "warm",
+          "girls": "on",
+          "far": "none",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            900
+          ],
+          "to": [
+            600,
+            640,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "light": "on",
+        "pair": "on",
+        "far": "none",
+        "glow": "full"
+      }
+    }
   }
 }
