@@ -130,6 +130,10 @@
           "story": "zubayr-alkhandaq"
         },
         {
+          "name": "عبد الرحمن بن عوف",
+          "story": "abdurrahman-alsouq"
+        },
+        {
           "name": "سعد بن أبي وقاص",
           "story": "saad-alqaws"
         },
@@ -160,6 +164,26 @@
         {
           "name": "خالد بن الوليد",
           "story": "khalid-alsayf"
+        },
+        {
+          "name": "معاذ بن جبل",
+          "story": "muadh-ufayr"
+        },
+        {
+          "name": "أبو طلحة الأنصاري",
+          "story": "abutalha-alsiraj"
+        },
+        {
+          "name": "عبد الله بن عمر",
+          "story": "ibnumar-alnakhla"
+        },
+        {
+          "name": "عبد الله بن عباس",
+          "story": "ibnabbas-alibriq"
+        },
+        {
+          "name": "أبو موسى الأشعري",
+          "story": "abumusa-althawb"
         }
       ]
     },
