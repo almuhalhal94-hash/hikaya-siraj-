@@ -197,6 +197,10 @@
           "story": "khadija-alghita"
         },
         {
+          "name": "سودة بنت زمعة",
+          "story": "sawda-alshann"
+        },
+        {
           "name": "عائشة بنت أبي بكر",
           "story": "aisha-aliqd"
         },
@@ -207,6 +211,14 @@
         {
           "name": "أم سلمة",
           "story": "ummsalama-alkhayma"
+        },
+        {
+          "name": "زينب بنت جحش",
+          "story": "zaynab-alqasaba"
+        },
+        {
+          "name": "جويرية بنت الحارث",
+          "story": "juwayriya-almusalla"
         },
         {
           "name": "فاطمة بنت محمد ﷺ",
@@ -223,6 +235,18 @@
         {
           "name": "أم عطية الأنصارية",
           "story": "ummatiyya-alqirba"
+        },
+        {
+          "name": "أم أيمن",
+          "story": "ummayman-alnakhlat"
+        },
+        {
+          "name": "أم حرام بنت ملحان",
+          "story": "ummharam-albahr"
+        },
+        {
+          "name": "أسماء بنت عميس",
+          "story": "asmaumays-alshira"
         }
       ]
     },

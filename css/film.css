@@ -928,3 +928,9 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 @keyframes dr-drip { 0% { opacity: 0; translate: 0 0; } 20% { opacity: 1; } 100% { opacity: 0; translate: 0 110px; } }
 [data-coins="on"] .dr-coins { opacity: 1; }
 [data-set="sea"][data-crowd="on"] .se-crowd { opacity: .85; }
+/* دفعة الصحابيات: القصبة، المغزل، المصلّى */
+.dr-reed, .dr-spindle, .dr-musalla { opacity: 0; transition: opacity 2.4s ease; }
+[data-reed] .dr-reed { opacity: 1; } .dr-rdglow { opacity: 0; transition: opacity 2s ease 1s; } [data-reed="glow"] .dr-rdglow { opacity: 1; }
+[data-spindle="on"] .dr-spindle { opacity: 1; } .dr-spin { animation: dr-spin 1.6s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: 50% 100%; }
+@keyframes dr-spin { from { rotate: -6deg; } to { rotate: 6deg; } }
+[data-musalla="on"] .dr-musalla { opacity: 1; } .dr-muglow { animation: lt-breathe 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }

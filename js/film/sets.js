@@ -940,6 +940,19 @@ function dar() {
       <path d="M-20-110q-4-30 20-34 24 4 20 34" fill="#c98a4a" stroke="#6b3a1c" stroke-width="4"/><path d="M-36-70q-50-10-74-60l14-6q20 40 60 48" fill="#b87333" stroke="#6b3a1c" stroke-width="3"/>
       <path d="M38-90q40 0 40 34 0 30-34 34" fill="none" stroke="#6b3a1c" stroke-width="8"/><path d="M-30-56h60" stroke="#e8b86a" stroke-width="4" opacity=".7"/>
       <circle class="dr-ewdrop" cx="-108" cy="-120" r="5" fill="#bfeee8"/></g>
+    <g class="dr-reed" transform="translate(620 800)"><ellipse class="dr-rdglow" cy="-20" rx="260" ry="80" fill="url(#g-warm)"/>
+      <path d="M-230 6 L230 -14 L232 -4 L-228 16 Z" fill="#d8c48a" stroke="#8a7a3a" stroke-width="2"/>
+      <path d="M-150 3v10M-70 0v10M10-3v10M90-6v10M170-9v10" stroke="#8a7a3a" stroke-width="3"/>
+      <path d="M230-14q24-20 44-10" stroke="#7a9a4a" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+    <g class="dr-spindle" transform="translate(430 790)"><ellipse class="dr-spglow" cy="-40" rx="150" ry="110" fill="url(#g-warm)"/>
+      <ellipse cy="6" rx="70" ry="10" fill="#000" opacity=".2"/>
+      <g class="dr-spin"><path d="M0-120V0" stroke="#7a5230" stroke-width="6" stroke-linecap="round"/><ellipse cy="-22" rx="28" ry="9" fill="#9a6a3a"/></g>
+      <path d="M0-110 q60 10 90 60" stroke="#f3ead6" stroke-width="3" fill="none"/>
+      <circle cx="96" cy="-30" r="30" fill="#efe3c6" stroke="#c9b48e" stroke-width="2"/><path d="M74-40q22 10 44-4M72-24q24 10 48-2" stroke="#c9b48e" stroke-width="2" fill="none"/></g>
+    <g class="dr-musalla" transform="translate(560 812)"><ellipse class="dr-muglow" cy="-30" rx="220" ry="110" fill="url(#g-warm)"/>
+      <path d="M-130 20 L-90-50 H90 L130 20 Z" fill="#a8402e" stroke="#5a2010" stroke-width="3"/>
+      <path d="M-104 8 L-76-38 H76 L104 8 Z" fill="none" stroke="#f0d68a" stroke-width="3" opacity=".8"/>
+      <path d="M-40-38 q40-22 80 0" stroke="#f0d68a" stroke-width="3" fill="none"/></g>
     <g class="dr-coins">${[[560, 800], [690, 800]].map(([x, y]) => `<g transform="translate(${x} ${y})"><ellipse cy="-30" rx="120" ry="70" fill="url(#g-warm)"/>${Array.from({ length: 10 }, (_, i) => `<ellipse cx="${-36 + (i % 4) * 24 + (i > 3 ? 12 : 0) + (i > 6 ? 12 : 0)}" cy="${-(i > 3 ? 14 : 0) - (i > 6 ? 14 : 0)}" rx="16" ry="7" fill="#e8c048" stroke="#9a7420" stroke-width="2"/>`).join('')}</g>`).join('')}</g>
     <g class="dr-siraj" transform="translate(540 760)"><ellipse class="dr-sjglow" cy="-90" rx="220" ry="200" fill="url(#g-warm)"/>
       <path d="M-40 0h80l-10-60h-60z" fill="#6b441d"/><path d="M-56-60h112v-10H-56z" fill="#8a5a2e"/>
