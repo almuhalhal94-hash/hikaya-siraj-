@@ -264,6 +264,12 @@ function sea() {
     <g class="se-boulder" transform="translate(40 650)"><ellipse cy="10" rx="210" ry="22" fill="#000" opacity=".3"/>
       <path d="M-190 10q-20-120 60-170 80-46 170-20 90 30 110 120 8 50-20 70z" fill="#4a4258"/><path d="M60-178q80 30 100 110 6 40-10 70" fill="none" stroke="#8a7e9a" stroke-width="10" stroke-linecap="round" opacity=".6"/>
       <path d="M-120-120q30 20 40 60M20-170q-10 50 20 80" fill="none" stroke="#2a2438" stroke-width="5" stroke-linecap="round"/></g>
+    <g class="se-log"><g class="se-logpos"><g class="se-logbob"><ellipse class="se-logglow" cy="-10" rx="170" ry="90" fill="url(#g-warm)"/>
+      <rect x="-130" y="-30" width="260" height="52" rx="26" fill="url(#g-wood)" stroke="#3d2713" stroke-width="4"/>
+      <ellipse cx="130" cy="-4" rx="14" ry="26" fill="#c9a268" stroke="#3d2713" stroke-width="3"/><path d="M-100-12h90M-60 8h120" stroke="#3d2713" stroke-width="3" opacity=".6"/>
+      <rect class="se-logseal" x="-14" y="-34" width="40" height="14" rx="4" fill="#9fc4e8" stroke="#3a6a9a" stroke-width="2"/>
+      <g class="se-loggold"><g fill="#e8c048" stroke="#9a7420" stroke-width="2">${[[-60, -44], [-36, -52], [-12, -46], [12, -54], [36, -46], [-24, -62], [0, -68]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="15" ry="7"/>`).join('')}</g>
+        <path d="M50-70h40v44h-40z" fill="#f3ead6" stroke="#c9b48e" stroke-width="2"/><path d="M56-60h28M56-50h28M56-40h20" stroke="#8a7a5a" stroke-width="2"/></g></g></g></g>
     <g class="se-hut"><g class="se-jump"><path d="M-34 0q16-22 40-18 16 2 24 12l14-12-2 18 2 18-14-12q-8 10-24 12-24 2-40-18z" fill="#9fc4e8" stroke="#3a6a9a" stroke-width="3"/><circle cx="-18" cy="-6" r="3" fill="#123"/></g>
       <g class="se-splash" fill="none" stroke="#e8fffb" stroke-width="4" stroke-linecap="round"><path d="M560 560q-10-24-26-30M580 556q0-28 0-34M600 560q10-24 26-30"/></g></g>
     <g class="se-split">

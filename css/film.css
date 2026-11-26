@@ -961,3 +961,13 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .cv-man1 circle:first-child { animation-delay: -1.2s; } .cv-man2 circle:first-child { animation-delay: -2.4s; }
 [data-trio="pray0"] .cv-man0, [data-trio="pray1"] .cv-man1, [data-trio="pray2"] .cv-man2 { scale: 1.35; transition: scale 2s ease; transform-box: fill-box; transform-origin: center; }
 [data-trio="out"] .cv-trio { translate: 0 -150px; scale: .6; transition: translate 7s var(--ease-out), scale 7s var(--ease-out), opacity 2s ease; transform-box: fill-box; transform-origin: center; }
+
+/* خشبة الألف دينار */
+.se-log { opacity: 0; transition: opacity 2s ease; } [data-log] .se-log { opacity: 1; }
+.se-logpos { translate: 360px 760px; transition: translate 9s ease-in-out; }
+[data-log="sea"] .se-logpos { translate: 760px 590px; } [data-log="drift"] .se-logpos { translate: 300px 600px; }
+[data-log="sea"] .se-logbob, [data-log="drift"] .se-logbob { animation: se-logbob 3.2s ease-in-out infinite; }
+@keyframes se-logbob { 0%, 100% { translate: 0 0; rotate: -3deg; } 50% { translate: 0 10px; rotate: 3deg; } }
+.se-loggold, .se-logglow { opacity: 0; transition: opacity 2.4s ease; }
+[data-log="open"] .se-loggold, [data-log="fill"] .se-loggold { opacity: 1; } [data-log="open"] .se-logglow, [data-log="fill"] .se-logglow { opacity: .9; }
+[data-log="open"] .se-logseal { opacity: 0; }
