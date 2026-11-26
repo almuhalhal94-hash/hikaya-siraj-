@@ -13784,5 +13784,184 @@
         "log": "on"
       }
     }
+  },
+  "shat-alama": {
+    "thumb": 2,
+    "witness": "sheep",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1100
+          ],
+          "to": [
+            620,
+            680,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "pair": "on",
+          "glow": "full",
+          "herd": "one"
+        },
+        "camera": {
+          "from": [
+            620,
+            680,
+            820
+          ],
+          "to": [
+            640,
+            720,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "pair": "on",
+          "herd": "all",
+          "caravan": "on"
+        },
+        "camera": {
+          "from": [
+            500,
+            700,
+            900
+          ],
+          "to": [
+            700,
+            680,
+            1200
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "far",
+          "flock": "on",
+          "caravan": "gone",
+          "herd": "all"
+        },
+        "camera": {
+          "from": [
+            820,
+            660,
+            1100
+          ],
+          "to": [
+            860,
+            700,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "herd": "all",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            560,
+            700,
+            820
+          ],
+          "to": [
+            600,
+            640,
+            1100
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "herd": "all",
+          "glow": "full",
+          "birds": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            1150
+          ],
+          "to": [
+            400,
+            700,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "light": "far",
+        "flock": "on",
+        "herd": "all"
+      }
+    }
   }
 }

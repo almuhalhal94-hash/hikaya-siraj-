@@ -621,6 +621,9 @@ function hill(x, w, h) {
     <path class="ld-hilllit" d="M${x + w * 0.05} ${-h * 1.02}q${w * 0.45} ${h * 0.1} ${w * 0.6} ${h * 0.7}" fill="none" stroke-width="7" stroke-linecap="round"/>
     <g class="ld-hillrocks">${[-0.6, -0.2, 0.3, 0.6].map((k, i) => `<path d="M${x + k * w} ${-h * (0.18 + (i % 2) * 0.22)}l18-14 22 6 6 16-30 6z"/>`).join('')}</g>`;
 }
+function sheep(x, y, k) {
+  return `<g transform="translate(${x} ${y}) scale(${k})"><path d="M-18 14v18M14 14v18" stroke="#3a2e22" stroke-width="6"/><g fill="#f4ecdc">${[[-22, 0], [-8, -10], [8, -10], [22, 0], [0, 4]].map(([a, b]) => `<circle cx="${a}" cy="${b}" r="14"/>`).join('')}</g><ellipse cx="34" cy="-6" rx="11" ry="9" fill="#3a2e22"/></g>`;
+}
 function landExtras() {
   const r = rng(91); let ants = '', grain = '', leaves = '', olives = '';
   for (let i = 0; i < 14; i++) ants += `<g class="ld-ant" style="--d:${(-i * 1).toFixed(2)}s;--y:${(r() * 16 - 8).toFixed(1)}px"><ellipse cx="-9" rx="7" ry="4.6"/><ellipse rx="4" ry="3.4"/><ellipse cx="8" rx="5.6" ry="4.6"/><path d="M-6 3l-5 7M0 3v8M5 3l5 7M-6-3l-5-7M0-3v-8M5-3l5-7M12-2l7-7M12-1l8-3" stroke="#1a1010" stroke-width="1.6" fill="none"/>${i % 3 ? '' : '<ellipse cx="9" cy="-9" rx="5" ry="3.4" fill="#f0d68a"/>'}</g>`;
@@ -674,6 +677,11 @@ function landExtras() {
       <path d="M-200 0l40-36h320l40 36z" fill="#d8c8a2" stroke="#9a8460" stroke-width="3"/><path d="M-176-14h352M-150-28h300" stroke="#b07a4a" stroke-width="5" opacity=".7"/>
       <g class="ld-clfood"><g fill="#f0d68a">${Array.from({ length: 22 }, (_, i) => `<ellipse cx="${-110 + (i * 37) % 120}" cy="${-30 - (i % 4) * 8}" rx="6" ry="4"/>`).join('')}</g>
       <g fill="#7a3a1c">${Array.from({ length: 12 }, (_, i) => `<ellipse cx="${30 + (i * 23) % 90}" cy="${-30 - (i % 3) * 9}" rx="9" ry="6"/>`).join('')}</g></g></g>
+    <g class="ld-herd">
+      <g class="ld-herd1" transform="translate(640 770)"><ellipse cy="-20" rx="90" ry="60" fill="url(#g-warm)"/>${sheep(0, 0, 1)}</g>
+      <g class="ld-herdall">${[[180, 780], [240, 810], [300, 776], [360, 820], [420, 790], [210, 850], [330, 860], [470, 840], [140, 820]].map(([x, y], i) => sheep(x, y, .8 + (i % 3) * .1)).join('')}
+        ${[[600, 830], [700, 860], [790, 826], [660, 900]].map(([x, y]) => `<g transform="translate(${x} ${y})"><ellipse rx="44" ry="24" fill="#7a4a2a"/><ellipse cx="44" cy="-14" rx="16" ry="12" fill="#6a3a1c"/><path d="M-30 20v22M-10 22v22M14 22v22M32 20v22" stroke="#4a2a12" stroke-width="7"/><path d="M50-26l8-10M40-26l-4-12" stroke="#e8dcc0" stroke-width="4"/></g>`).join('')}</g>
+    </g>
     <g class="ld-donkey" transform="translate(640 718)"><g class="ld-dkbob">
       <ellipse cy="4" rx="120" ry="12" fill="#000" opacity=".25"/>
       <path d="M-70-20v24M-46-18v22M44-18v22M68-20v24" stroke="#4a3e3a" stroke-width="10" stroke-linecap="round"/>

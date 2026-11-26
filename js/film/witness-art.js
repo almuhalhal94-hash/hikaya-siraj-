@@ -688,6 +688,15 @@ export const ART = {
       <g fill="#e8c048" stroke="#9a7420" stroke-width="2"><ellipse cx="84" cy="40" rx="12" ry="6"/><ellipse cx="106" cy="34" rx="12" ry="6"/></g>
       ${cheeks(56, 130, 128)}${eyes(70, 118, 104, 12)}${mouth(94, 132, 22, 11)}</g>`
   },
+  sheep: {
+    skin: '#efe6d6', ink: '#6b5236',
+    svg: `<g class="wt-body">
+      <g fill="#fffaf0" stroke="#d8cfc0" stroke-width="3">${[[56, 60], [80, 42], [120, 42], [144, 60], [100, 32], [40, 92], [160, 92]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="22"/>`).join('')}</g>
+      <ellipse cx="38" cy="96" rx="16" ry="9" fill="#e8d8c0" stroke="#c9bca0" stroke-width="2"/><ellipse cx="162" cy="96" rx="16" ry="9" fill="#e8d8c0" stroke="#c9bca0" stroke-width="2"/>
+      <path d="M58 70 C58 52 142 52 142 70 L134 150 C126 184 74 184 66 150 Z" fill="#f4ecdc" stroke="#c9bca0" stroke-width="3"/>
+      <ellipse cx="100" cy="162" rx="24" ry="13" fill="#e8c8b8"/>
+      ${cheeks(72, 128, 134, '#f0a090')}${eyes(82, 118, 106, 13)}${mouth(100, 170, 18, 11)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
