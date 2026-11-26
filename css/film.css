@@ -1039,3 +1039,8 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ms-dust { opacity: 0; } [data-broom="sweep"] .ms-dust { opacity: 1; } [data-broom="sweep"] .ms-dust circle { animation: ms-dust 2.4s ease-out infinite; animation-delay: var(--d); }
 @keyframes ms-dust { 0% { opacity: .8; translate: 0 0; } 100% { opacity: 0; translate: 0 -40px; } }
 [data-broom="rest"] .ms-brpos { rotate: -80deg; translate: -40px 60px; } [data-broom="rest"] .ms-brglow { opacity: .3; } [data-broom="rest"] .ms-broom { filter: brightness(.75); }
+
+/* dar: toy (on/play) لعبة من العهن: كرة صوف ملونة بأهداب (لا تُرسم دمية بشرية)؛ play تتأرجح نحو البنتين */
+.dr-toy { opacity: 0; transition: opacity 3s ease; } [data-toy] .dr-toy { opacity: 1; }
+.dr-typos { transition: translate 4s var(--ease-out, ease); } [data-toy="play"] .dr-typos { translate: -190px -40px; animation: dr-tyswing 2.6s ease-in-out infinite; }
+@keyframes dr-tyswing { 0%, 100% { rotate: -10deg; } 50% { rotate: 10deg; } }
