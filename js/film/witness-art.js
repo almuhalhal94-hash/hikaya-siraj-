@@ -629,6 +629,14 @@ export const ART = {
       <path d="M40 80 q10-14 22-6 M110 70 q12-14 24-4" stroke="#e8fffb" stroke-width="5" fill="none" stroke-linecap="round"/>
       ${cheeks(56, 156, 144)}${eyes(78, 136, 122, 14)}${mouth(100, 166, 22, 12)}</g>`
   },
+  caravan: {
+    skin: '#c9a06a', ink: '#3a2410',
+    svg: `<defs>${lg('wtCv', '#d8b07a', '#9a6a3a')}</defs><g class="wt-body">
+      <path d="M30 120 Q36 70 80 70 Q96 40 118 66 Q150 64 160 100 L176 96 Q192 60 180 40 L170 46 Q178 66 168 84 L160 86 L158 150 L146 150 L144 124 Q100 136 62 126 L58 196 L46 196 L44 128 Q34 126 30 120 Z" fill="url(#wtCv)" stroke="#5a3a1c" stroke-width="3"/>
+      <path d="M70 70 h60 v-8 h-60 z" fill="#8a2a2a"/><path d="M74 66 h52" stroke="#e8c048" stroke-width="3"/>
+      <path d="M150 150 v46 M70 130 v66" stroke="#5a3a1c" stroke-width="8" stroke-linecap="round"/>
+      ${cheeks(76, 112, 118)}${eyes(84, 100, 106, 9)}${mouth(96, 118, 14, 9)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
