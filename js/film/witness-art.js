@@ -596,6 +596,39 @@ export const ART = {
       <g><ellipse cx="56" cy="178" rx="16" ry="8" fill="#f0d68a"/><ellipse cx="144" cy="178" rx="16" ry="8" fill="#e8c06a"/></g>
       ${cheeks(58, 142, 146)}${eyes(78, 122, 118, 14)}${mouth(100, 156, 22, 12)}</g>`
   },
+  reed: {
+    skin: '#d8c48a', ink: '#4a3a1c',
+    svg: `<defs>${lg('wtRd', '#e8d89a', '#a8904a')}</defs><g class="wt-body">
+      <path d="M78 10 Q72 100 80 196 L122 196 Q128 100 122 10 Z" fill="url(#wtRd)" stroke="#6b5a2a" stroke-width="3"/>
+      <path d="M78 52 H122 M76 100 H124 M78 150 H122" stroke="#6b5a2a" stroke-width="4"/>
+      <path d="M122 30 q30-20 50-6 M78 70 q-30-16-50 0" stroke="#7a9a4a" stroke-width="6" fill="none" stroke-linecap="round"/>
+      ${cheeks(84, 136, 116)}${eyes(90, 110, 118, 9)}${mouth(100, 134, 14, 9)}</g>`
+  },
+  musalla: {
+    skin: '#b8503a', ink: '#3a1a10',
+    svg: `<defs>${lg('wtMs', '#c9604a', '#8a3020')}</defs><g class="wt-body">
+      <path d="M30 40 Q100 4 170 40 L170 190 L30 190 Z" fill="url(#wtMs)" stroke="#5a2010" stroke-width="3"/>
+      <path d="M50 58 Q100 30 150 58 L150 176 L50 176 Z" fill="none" stroke="#f0d68a" stroke-width="4" opacity=".8"/>
+      <path d="M100 46 V62" stroke="#f0d68a" stroke-width="4"/>
+      <g fill="#f0d68a"><path d="M30 190 v10 M50 190 v10 M70 190 v10 M90 190 v10 M110 190 v10 M130 190 v10 M150 190 v10 M170 190 v10" stroke="#f0d68a" stroke-width="3"/></g>
+      ${cheeks(66, 138, 134)}${eyes(80, 120, 114, 13)}${mouth(100, 146, 20, 11)}</g>`
+  },
+  sail: {
+    skin: '#f1e4c3', ink: '#4a3a24',
+    svg: `<defs>${lg('wtSl', '#fbf3dc', '#d8c49a')}</defs><g class="wt-body">
+      <path d="M100 6 V196" stroke="#5a3a1c" stroke-width="8"/>
+      <path d="M106 16 Q190 70 184 176 H106 Z" fill="url(#wtSl)" stroke="#8a7350" stroke-width="3"/>
+      <path d="M94 30 Q24 90 22 176 H94 Z" fill="url(#wtSl)" stroke="#8a7350" stroke-width="3" opacity=".9"/>
+      ${cheeks(118, 136, 170)}${eyes(132, 112, 166, 11)}${mouth(148, 142, 18, 10)}</g>`
+  },
+  sea: {
+    skin: '#2f6f9a', ink: '#0a2030',
+    svg: `<defs>${lg('wtSe', '#4a9aca', '#1a4a7a')}</defs><g class="wt-body">
+      <path d="M10 90 Q40 50 70 80 Q100 40 130 80 Q160 50 190 90 L190 196 L10 196 Z" fill="url(#wtSe)" stroke="#0e3050" stroke-width="3"/>
+      <path d="M20 112 q20-12 40 0 t40 0 t40 0 t40 0" stroke="#bfeee8" stroke-width="4" fill="none" opacity=".7"/>
+      <path d="M40 80 q10-14 22-6 M110 70 q12-14 24-4" stroke="#e8fffb" stroke-width="5" fill="none" stroke-linecap="round"/>
+      ${cheeks(56, 156, 144)}${eyes(78, 136, 122, 14)}${mouth(100, 166, 22, 12)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
