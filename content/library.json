@@ -677,6 +677,10 @@
           "story": "ummmusa-altabut"
         },
         {
+          "name": "أخت موسى",
+          "story": "ukhtmusa-alqasab"
+        },
+        {
           "name": "ابنتا الشيخ الكبير في مدين",
           "story": "madyan-albir"
         },
@@ -685,8 +689,16 @@
           "story": "saba-alarsh"
         },
         {
+          "name": "الأم الرحيمة عند سليمان",
+          "story": "sulayman-alqada"
+        },
+        {
           "name": "امرأة عمران",
           "story": "imran-almihrab"
+        },
+        {
+          "name": "امرأة زكريا",
+          "story": "zakariya-alzawja"
         },
         {
           "name": "مريم ابنة عمران",
@@ -695,6 +707,82 @@
         {
           "name": "أم البنتين والتمرة",
           "story": "umm-albintayn"
+        },
+        {
+          "name": "الأم التي ضمّت ولدها",
+          "story": "umm-alrahima"
+        },
+        {
+          "name": "صاحبة البردة",
+          "story": "burda-almansuja"
+        },
+        {
+          "name": "صاحبة المنبر",
+          "story": "minbar-alansariyya"
+        },
+        {
+          "name": "الجارية المؤمنة",
+          "story": "jariya-alghanam"
+        },
+        {
+          "name": "أم زُفَر الصابرة",
+          "story": "ummzufar-alsabr"
+        },
+        {
+          "name": "المرأة الخثعمية",
+          "story": "khathamiyya-alhajj"
+        },
+        {
+          "name": "أم العلاء الأنصارية",
+          "story": "ummalala-alayn"
+        },
+        {
+          "name": "أم حارثة",
+          "story": "ummharitha-alfirdaws"
+        },
+        {
+          "name": "امرأة جابر يوم الخندق",
+          "story": "jabir-alburma"
+        },
+        {
+          "name": "النساء يطلبن العلم",
+          "story": "yawm-alnisa"
+        },
+        {
+          "name": "أم خالد الصغيرة",
+          "story": "ummkhalid-alqamis"
+        },
+        {
+          "name": "هند بنت عتبة",
+          "story": "hind-alkhiba"
+        },
+        {
+          "name": "بريرة",
+          "story": "barira-alqasa"
+        },
+        {
+          "name": "نساء يتصدقن يوم العيد",
+          "story": "eid-alqurt"
+        },
+        {
+          "name": "المرأة الكثيرة الصلاة",
+          "story": "fulana-alsariya"
+        },
+        {
+          "name": "المرأة التي حجّت بصبيها",
+          "story": "rawha-alsabi"
+        },
+        {
+          "name": "البنت البارّة بأمها",
+          "story": "birr-alumm"
+        },
+        {
+          "name": "أم قيس بنت محصن",
+          "story": "ummqays-alma"
+        },
+        {
+          "name": "نساء الأنصار",
+          "story": "ansar-alnisa"
         }
       ]
     }
