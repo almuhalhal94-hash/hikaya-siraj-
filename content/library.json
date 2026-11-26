@@ -23,6 +23,10 @@
           "story": "salih-alhijr"
         },
         {
+          "name": "إبراهيم عليه السلام: الكوكب",
+          "story": "ibrahim-alkawkab"
+        },
+        {
           "name": "إبراهيم عليه السلام",
           "story": "ibrahim-alnar"
         },
@@ -51,6 +55,10 @@
           "story": "yusuf-alqamis"
         },
         {
+          "name": "يوسف عليه السلام: السنابل",
+          "story": "yusuf-alsanabil"
+        },
+        {
           "name": "أيوب عليه السلام",
           "story": "ayyub-alayn"
         },
@@ -61,6 +69,10 @@
         {
           "name": "موسى عليه السلام",
           "story": "musa-alasa"
+        },
+        {
+          "name": "موسى عليه السلام: الحجر والعيون",
+          "story": "musa-alhajar"
         },
         {
           "name": "موسى عليه السلام: مع الخضر",
@@ -95,6 +107,10 @@
           "story": "isa-almahd"
         },
         {
+          "name": "محمد ﷺ: انشقاق القمر",
+          "story": "muhammad-alqamar"
+        },
+        {
           "name": "محمد ﷺ: الإسراء والمعراج",
           "story": "isra-alaqsa"
         },
@@ -105,6 +121,10 @@
         {
           "name": "محمد ﷺ: حنين الجذع",
           "story": "jidh-alnakhla"
+        },
+        {
+          "name": "محمد ﷺ: الماء بين أصابعه",
+          "story": "muhammad-alrakwa"
         }
       ]
     },
@@ -192,6 +212,46 @@
         {
           "name": "أبو موسى الأشعري",
           "story": "abumusa-althawb"
+        },
+        {
+          "name": "عبد الله بن مسعود",
+          "story": "ibnmasud-almithara"
+        },
+        {
+          "name": "أبو ذر الغفاري",
+          "story": "abudharr-alasa"
+        },
+        {
+          "name": "زيد بن ثابت",
+          "story": "zayd-alasib"
+        },
+        {
+          "name": "أُبيّ بن كعب",
+          "story": "ubayy-alshams"
+        },
+        {
+          "name": "جابر بن عبد الله",
+          "story": "jabir-aljamal"
+        },
+        {
+          "name": "أسامة بن زيد",
+          "story": "usama-alraya"
+        },
+        {
+          "name": "حذيفة بن اليمان",
+          "story": "hudhayfa-alrih"
+        },
+        {
+          "name": "عمار بن ياسر",
+          "story": "ammar-allabina"
+        },
+        {
+          "name": "جعفر بن أبي طالب",
+          "story": "jafar-aluka"
+        },
+        {
+          "name": "سعد بن معاذ",
+          "story": "saadmuadh-alkhayma"
         }
       ]
     },
@@ -231,6 +291,14 @@
         {
           "name": "صفية بنت حُيَيّ",
           "story": "safiyya-alabaa"
+        },
+        {
+          "name": "أم حبيبة",
+          "story": "ummhabiba-alsiraj"
+        },
+        {
+          "name": "ميمونة بنت الحارث",
+          "story": "maymuna-alwisada"
         },
         {
           "name": "فاطمة بنت محمد ﷺ",
@@ -283,6 +351,34 @@
         {
           "name": "خولة بنت ثعلبة (المجادِلة)",
           "story": "khawla-aljidar"
+        },
+        {
+          "name": "أم كلثوم بنت عقبة",
+          "story": "ummkulthum-altariq"
+        },
+        {
+          "name": "أم هشام بنت حارثة",
+          "story": "ummhisham-altannur"
+        },
+        {
+          "name": "الشفاء بنت عبد الله",
+          "story": "shifa-allawh"
+        },
+        {
+          "name": "أم ورقة الأنصارية",
+          "story": "ummwaraqa-albab"
+        },
+        {
+          "name": "أم سنان الأنصارية",
+          "story": "ummsinan-alnadih"
+        },
+        {
+          "name": "أم سليط الأنصارية",
+          "story": "ummsalit-almirt"
+        },
+        {
+          "name": "خولة بنت حكيم",
+          "story": "khawlahakim-almanzil"
         }
       ]
     },
@@ -466,12 +562,20 @@
           "story": "luqman-alsakhra"
         },
         {
+          "name": "سحرة فرعون",
+          "story": "sahara-alhibal"
+        },
+        {
           "name": "مؤمن آل فرعون",
           "story": "mumin-alqasr"
         },
         {
           "name": "قارون والذين أوتوا العلم",
           "story": "qarun-almafatih"
+        },
+        {
+          "name": "أصحاب السبت",
+          "story": "sabt-alhitan"
         },
         {
           "name": "بقرة بني إسرائيل",
@@ -498,8 +602,16 @@
           "story": "ghulam-aljabal"
         },
         {
+          "name": "أصحاب الفيل",
+          "story": "fil-alsijjil"
+        },
+        {
           "name": "أصحاب الغار الثلاثة",
           "story": "ghar-alsakhra"
+        },
+        {
+          "name": "المتحابّان في الله",
+          "story": "mutahabban-alqarya"
         },
         {
           "name": "صاحب الألف دينار",
@@ -512,6 +624,10 @@
         {
           "name": "الأبرص والأقرع والأعمى",
           "story": "shat-alama"
+        },
+        {
+          "name": "البقرة والذئب",
+          "story": "ghanam-aldhib"
         },
         {
           "name": "صاحب الحديقة والسحابة",
@@ -528,6 +644,18 @@
         {
           "name": "صاحب جرّة الذهب",
           "story": "jarra-aldhahab"
+        },
+        {
+          "name": "زيد بن عمرو بن نفيل",
+          "story": "zaydamr-alkaba"
+        },
+        {
+          "name": "النجاشي",
+          "story": "najashi-alshira"
+        },
+        {
+          "name": "صاحب البطاقة",
+          "story": "bitaqa-almizan"
         }
       ]
     },
