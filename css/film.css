@@ -971,3 +971,7 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .se-loggold, .se-logglow { opacity: 0; transition: opacity 2.4s ease; }
 [data-log="open"] .se-loggold, [data-log="fill"] .se-loggold { opacity: 1; } [data-log="open"] .se-logglow, [data-log="fill"] .se-logglow { opacity: .9; }
 [data-log="open"] .se-logseal { opacity: 0; }
+
+/* قطيع الأبرص والأقرع والأعمى */
+.ld-herd1, .ld-herdall { opacity: 0; transition: opacity 3s ease; }
+[data-herd="one"] .ld-herd1 { opacity: 1; } [data-herd="all"] .ld-herdall { opacity: 1; } [data-herd="all"] .ld-herd1 { opacity: 0; }
