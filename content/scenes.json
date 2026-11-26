@@ -18033,5 +18033,189 @@
         "glow": "full"
       }
     }
+  },
+  "zaynabmasud-alhuli": {
+    "thumb": 5,
+    "witness": "necklace",
+    "scenes": [
+      {
+        "set": "mosque",
+        "state": {
+          "time": "dawn",
+          "ms": "pair",
+          "trunk": "off",
+          "suffa": "on"
+        },
+        "camera": {
+          "from": [
+            880,
+            620,
+            980
+          ],
+          "to": [
+            920,
+            660,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "warm",
+          "girls": "on",
+          "coins": "on",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            940
+          ],
+          "to": [
+            580,
+            690,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "lamp": "on",
+          "light": "on",
+          "pair": "warm",
+          "far": "none"
+        },
+        "camera": {
+          "from": [
+            600,
+            670,
+            820
+          ],
+          "to": [
+            620,
+            690,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "out",
+          "peep": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            640,
+            960
+          ],
+          "to": [
+            820,
+            660,
+            840
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            660,
+            860
+          ],
+          "to": [
+            620,
+            690,
+            740
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "sun": "up",
+          "light": "on",
+          "pair": "warm",
+          "girls": "on",
+          "coins": "on",
+          "far": "none",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            690,
+            760
+          ],
+          "to": [
+            600,
+            650,
+            940
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "light": "on",
+        "pair": "warm",
+        "girls": "on",
+        "coins": "on",
+        "far": "none",
+        "glow": "full"
+      }
+    }
   }
 }
