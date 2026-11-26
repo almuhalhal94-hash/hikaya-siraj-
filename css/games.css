@@ -200,3 +200,23 @@
 .ct__cover { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px; padding: 20px; text-align: center; background: rgba(3, 6, 15, .55); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
 .ct__cover p { font-weight: 800; font-size: 1.25rem; color: var(--cream); } .ct__cover p:empty { display: none; }
 @media (max-height: 640px) { .ct__field { height: clamp(260px, calc(100dvh - 290px), 520px); } }
+
+/* «أين حدثت؟»: لقطة الحكاية فوق الخريطة */
+.mp { display: grid; justify-items: center; gap: 10px; width: 100%; }
+.mp__card { position: relative; width: min(100%, 420px); border-radius: 22px; overflow: hidden; border: 3px solid var(--gold-deep); box-shadow: 0 10px 26px rgba(0, 0, 0, .45); }
+.mp__card.is-in { animation: door-in .7s var(--ease-out) backwards; }
+.mp__card .stage--thumb { aspect-ratio: 16 / 7; }
+.mp__card figcaption { position: absolute; inset: auto 0 0; padding: 18px 12px 8px; text-align: center; font-weight: 800; font-size: 1.1rem; color: #fff4cf; background: linear-gradient(transparent, rgba(6, 12, 32, .85)); }
+.mp__frame { width: min(100%, 460px); border-radius: 22px; overflow: hidden; border: 3px solid var(--gold-deep); box-shadow: 0 12px 30px rgba(0, 0, 0, .45); }
+.mp__svg { display: block; width: 100%; height: auto; touch-action: manipulation; }
+.mp__pin { cursor: pointer; outline: none; }
+.mp__hit { fill: transparent; }
+.mp__ring { fill: rgba(18, 48, 86, .25); stroke: #123056; stroke-width: 2.5; transform-box: fill-box; transform-origin: center; animation: mp-ring 2.4s ease-in-out infinite; }
+@keyframes mp-ring { 50% { scale: 1.25; opacity: .6; } }
+.mp__dot { fill: #123056; stroke: #fff4cf; stroke-width: 2.5; transition: fill .3s; }
+.mp__name { font-family: inherit; font-weight: 800; font-size: 15px; fill: #2a1a08; paint-order: stroke; stroke: rgba(255, 244, 207, .85); stroke-width: 4px; pointer-events: none; }
+.mp__pin:focus-visible .mp__ring { stroke: #ffd77a; stroke-width: 4; }
+.mp__pin.is-right .mp__dot { fill: #ffd77a; } .mp__pin.is-right .mp__ring { fill: rgba(255, 215, 122, .5); stroke: #ffd77a; animation: none; scale: 1.4; }
+.mp__pin.is-wrong { animation: mp-shake .4s; } .mp__pin.is-wrong .mp__dot { fill: #e5484d; }
+@keyframes mp-shake { 25% { translate: -4px 0; } 75% { translate: 4px 0; } }
+.mp__why { min-height: 1.6em; max-width: 460px; text-align: center; font-weight: 800; color: var(--teal-soft); line-height: 1.7; }

@@ -9,13 +9,15 @@ import witness from '../games/witness.js';
 import maze from '../games/maze.js';
 import blank from '../games/blank.js';
 import catchStars from '../games/catch.js';
+import map from '../games/map.js';
 
 const GAMES = {
   order: { mount: order, levels: d => d.order_levels },
   witness: { mount: witness, levels: d => d.witness_levels },
   maze: { mount: maze, levels: d => d.hijra_maze.levels },
   blank: { mount: blank, levels: d => d.blank_levels },
-  catch: { mount: catchStars, levels: d => d.catch_levels }
+  catch: { mount: catchStars, levels: d => d.catch_levels },
+  map: { mount: map, levels: d => d.map_levels }
 };
 const CHEVRON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const LOCK = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.500" width="14" height="10" rx="3" fill="currentColor"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round"/></svg>';
@@ -24,6 +26,14 @@ const STAR = `<svg viewBox="0 0 48 48" aria-hidden="true"><path d="${STAR_D}" fi
 
 // رسوم بطاقات الألعاب (زخرفة لا محتوى)
 const ART = {
+  map: `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="320" height="200" fill="#d9b77a"/>
+    <path d="M90 0l30 60 50 70 40 70h-40l-40-66-50-74L60 0z" fill="#2a6ab0"/><path d="M0 0h110l-20 30L0 26z" fill="#2a6ab0"/>
+    <path d="M250 0l70 50v40l-60-50z" fill="#2a6ab0"/>
+    <g class="gm-art__float"><path d="M210 70a16 16 0 0 1 32 0c0 14-16 30-16 30s-16-16-16-30z" fill="#e5484d" stroke="#fff4cf" stroke-width="3"/><circle cx="226" cy="70" r="6" fill="#fff4cf"/></g>
+    <g fill="#123056" opacity=".55"><circle cx="190" cy="130" r="6"/><circle cx="60" cy="90" r="6"/><circle cx="150" cy="60" r="6"/></g>
+    <path d="M190 130Q200 100 226 96" fill="none" stroke="#123056" stroke-width="3" stroke-dasharray="4 6"/>
+  </svg>`,
   order: `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <rect width="320" height="200" fill="#0d3b52"/><circle cx="160" cy="104" r="110" fill="#5fd6c8" opacity=".12"/>
     <g class="gm-art__float"><rect x="62" y="30" width="196" height="40" rx="14" fill="#1e3c6b" stroke="#c9a24a" stroke-width="2.500"/><circle cx="232" cy="50" r="12" fill="#ffd77a"/><path d="M82 50h120" stroke="#8fe0d6" stroke-width="6" stroke-linecap="round" opacity=".7"/></g>
