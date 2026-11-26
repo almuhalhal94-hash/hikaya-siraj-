@@ -188,6 +188,11 @@ function mosque() {
       <path d="M-34-490v460" stroke="#e8e0d0" stroke-width="6" opacity=".35"/></g>
     <g class="ms-call" transform="translate(640 230)" fill="none" stroke="#fff4cf" stroke-width="6" stroke-linecap="round">
       <path style="--d:0s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/><path style="--d:1s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/><path style="--d:2s" d="M60-60a85 85 0 0 1 0 120M-60-60a85 85 0 0 0 0 120"/></g>
+    <g class="ms-broom" transform="translate(800 730) scale(1.5)"><ellipse class="ms-brglow" cy="-60" rx="150" ry="110" fill="url(#g-warm)"/><g class="ms-brpos"><g class="ms-brbody">
+      <path d="M0 0V-150" stroke="#8a6a3a" stroke-width="8" stroke-linecap="round"/><path d="M-8-150h16" stroke="#5a3a1a" stroke-width="6"/>
+      <path d="M-4 0l-30 60M-2 0l-16 64M0 0v66M2 0l16 64M4 0l30 60M-3 0l-24 62M3 0l24 62" stroke="#c9a85a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M-10 4h20" stroke="#6b4a1d" stroke-width="7"/></g></g>
+      <g class="ms-dust" fill="#e8d8b0">${[[-60, 64], [-40, 50], [50, 60], [70, 48], [20, 70]].map(([x, y], i) => `<circle style="--d:${-i * .5}s" cx="${x}" cy="${y}" r="5"/>`).join('')}</g></g>
     <g class="ms-lights"><g class="ms-b"><circle cx="1000" cy="660" r="80" fill="url(#g-white)"/><circle cx="1000" cy="660" r="7" fill="#fff"/></g><g class="ms-a"><circle cx="880" cy="700" r="100" fill="url(#g-warm)"/><circle cx="880" cy="700" r="8" fill="#fff"/></g></g>
     <g class="ms-rays" fill="url(#g-ray)">
       <path d="M560 90h70L500 720H300z"/><path d="M800 90h56L760 740H560z"/><path d="M1010 90h64L1000 700H810z"/>
@@ -972,6 +977,9 @@ function dar() {
       <g class="dr-dtwhole" fill="#6a2e14" stroke="#3a160a" stroke-width="3"><ellipse cx="-44" cy="-16" rx="24" ry="13"/><ellipse cx="40" cy="-16" rx="24" ry="13"/><ellipse class="dr-dt3" cx="0" cy="-28" rx="24" ry="13"/></g>
       <g class="dr-dthalf" fill="#7a3a1a" stroke="#3a160a" stroke-width="3" transform="translate(0 -40)"><path d="M-4 12v-24q-30 0-30 12t30 12z"/><path d="M4 12v-24q30 0 30 12t-30 12z"/><path d="M-4 0h-14M4 0h14" stroke="#e8b070" stroke-width="3"/></g>
       <path d="M-30-18q30 8 60 0" stroke="#a8622e" stroke-width="2" fill="none" opacity=".6"/></g>
+    <g class="dr-toy" transform="translate(720 806)"><ellipse class="dr-tyglow" cy="-30" rx="150" ry="100" fill="url(#g-warm)"/><g class="dr-typos">
+      <circle cy="-34" r="34" fill="#d8584a" stroke="#7a2a22" stroke-width="3"/><path d="M-30-46q30 20 60 0M-32-26q32 20 64 0M-20-62q20 14 40 0" stroke="#f0c060" stroke-width="5" fill="none"/>
+      <path d="M-10 0l-8 26M0 0v28M10 0l8 26" stroke="#4a8ac0" stroke-width="6" stroke-linecap="round"/><circle cx="-18" cy="28" r="6" fill="#7ac060"/><circle cy="31" r="6" fill="#f0c060"/><circle cx="18" cy="28" r="6" fill="#7ac060"/></g></g>
     <g class="dr-bread" transform="translate(600 820)"><ellipse class="dr-brglow" cy="-30" rx="230" ry="140" fill="url(#g-warm)"/>
       <path d="M-150 30q-20-60 40-74q110-20 220 0q60 14 40 74q-150 30-300 0z" fill="#e9dcc0" stroke="#8a7458" stroke-width="3" stroke-linejoin="round"/>
       <path d="M-120 20q120 22 240 0M-100-10q100 14 200 0" fill="none" stroke="#c9b48e" stroke-width="3"/>

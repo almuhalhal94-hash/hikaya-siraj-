@@ -730,6 +730,24 @@ export const ART = {
       <path d="M30 150 H170 V172 H30 Z" fill="#b8282e" stroke="#5a3a10" stroke-width="4"/>
       ${cheeks(64, 136, 116)}${eyes(80, 120, 96, 13)}${mouth(100, 128, 20, 10)}</g>`
   },
+  broom: {
+    skin: '#c9a85a', ink: '#5a3a1a',
+    svg: `<defs>${lg('wtBr', '#e0c070', '#a8843a')}</defs><g class="wt-body">
+      <path d="M100 8 V70" stroke="#8a6a3a" stroke-width="12" stroke-linecap="round"/>
+      <path d="M62 70 H138 L170 196 H30 Z" fill="url(#wtBr)" stroke="#5a3a1a" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M70 150 L56 196M100 150V196M130 150 L144 196M85 150 L78 196M115 150 L122 196" stroke="#8a6a2a" stroke-width="3"/>
+      <path d="M60 82 H140" stroke="#6b4a1d" stroke-width="8"/>
+      ${cheeks(70, 130, 126)}${eyes(84, 116, 108, 12)}${mouth(100, 134, 18, 9)}</g>`
+  },
+  toy: {
+    skin: '#d8584a', ink: '#7a2a22',
+    svg: `<defs>${lg('wtTy', '#e8705a', '#b83a30')}</defs><g class="wt-body">
+      <path d="M80 170 L66 200M100 172V204M120 170 L134 200" stroke="#4a8ac0" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="66" cy="200" r="8" fill="#7ac060"/><circle cx="100" cy="204" r="8" fill="#f0c060"/><circle cx="134" cy="200" r="8" fill="#7ac060"/>
+      <circle cx="100" cy="100" r="76" fill="url(#wtTy)" stroke="#7a2a22" stroke-width="4"/>
+      <path d="M34 70q66 40 132 0M28 132q72 40 144 0" stroke="#f0c060" stroke-width="7" fill="none" opacity=".8"/>
+      ${cheeks(62, 138, 118)}${eyes(80, 120, 96, 13)}${mouth(100, 126, 20, 10)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">
