@@ -34,8 +34,13 @@ function today() {
   const a = store.state.adhkar;
   return a && a.day === dayKey() ? a : { day: dayKey() };
 }
+// وضعان: المختصر للصغار (ما عليه short) والكامل كما في الكتاب؛ لكل وضع تقدّمه.
+const MODES = ['short', 'full'];
+const mode = () => (MODES.includes(store.state.adhkarMode) ? store.state.adhkarMode : 'short');
+const listOf = (data, kind) => (mode() === 'full' ? data[kind] || [] : (data[kind] || []).filter(d => d.short));
+const stateKey = kind => (mode() === 'full' ? `${kind}_full` : kind);
 function sessionState(a, kind, n) {
-  const s = (a[kind] ||= { counts: [], done: false });
+  const s = (a[stateKey(kind)] ||= { counts: [], done: false });
   for (let i = 0; i < n; i++) s.counts[i] ||= 0;
   return s;
 }
@@ -43,7 +48,7 @@ function sessionState(a, kind, n) {
 export default async function adhkar(el, ctx) {
   const data = await content('adhkar');
   const kind = KINDS.includes(ctx.args[0]) ? ctx.args[0] : '';
-  return kind && data[kind]?.length ? session(el, ctx, kind, data[kind]) : hub(el, ctx, data);
+  return kind && listOf(data, kind).length ? session(el, ctx, kind, listOf(data, kind)) : hub(el, ctx, data);
 }
 
 // ——— «حديقة الأيام»: شجرة تكبر مع كل يوم زيارة، ولا تذبل ———
@@ -89,6 +94,7 @@ function hub(el, { ui, go }, data) {
         <a class="backlink" href="#/">${CHEVRON}<span></span></a>
         <h1></h1><p></p>
       </header>
+      <div class="dk-mode" role="radiogroup"></div>
       <div class="cards"></div>
       <section class="garden">
         <h2></h2>
@@ -106,9 +112,18 @@ function hub(el, { ui, go }, data) {
   $('.garden__note').textContent = t.garden_note;
   $('.dk-hub__src').textContent = t.source_note;
   $('.backlink').addEventListener('click', () => sfx.tap());
+  $('.dk-mode').setAttribute('aria-label', t.mode_label);
+  MODES.forEach(m => {
+    const b = html(`<button class="dk-mode__btn" type="button" role="radio"><b></b><small></small></button>`);
+    b.querySelector('b').textContent = t[`mode_${m}`];
+    b.querySelector('small').textContent = fill(t.mode_count, { n: num((m === 'full' ? data.morning : data.morning.filter(d => d.short)).length) });
+    b.setAttribute('aria-checked', String(m === mode()));
+    b.addEventListener('click', () => { if (m === mode()) return; sfx.tap(); store.set({ adhkarMode: m }); el.textContent = ''; hub(el, { ui, go }, data); });
+    $('.dk-mode').append(b);
+  });
 
   (now === 'morning' ? KINDS : [...KINDS].reverse()).forEach((kind, i) => {
-    const list = data[kind] || [], s = a[kind];
+    const list = listOf(data, kind), s = a[stateKey(kind)];
     const done = s ? list.filter((d, k) => (s.counts[k] || 0) >= d.count).length : 0;
     const card = html(`
       <a class="card dk-pick" href="#/adhkar/${kind}" style="--i:${i}">
@@ -140,13 +155,13 @@ async function session(el, ctx, kind, list) {
 
   const root = html(`
     <section class="dk dk--${kind}">
-      <div class="dk__scene" aria-hidden="true">${kind === 'morning' ? MORNING : lamps(n)}</div>
+      <div class="dk__scene" aria-hidden="true">${kind === 'morning' ? MORNING : lamps(Math.min(n, LENS.length))}</div>
       <header class="dk__top">
         <button class="iconbtn dk__close" type="button">${CLOSE}</button>
         <span class="chip dk__step"></span>
       </header>
       <article class="dk__card" aria-live="polite">
-        <h2 class="dk__title"></h2><p class="dk__pre"></p><p class="dk__text"></p><p class="dk__src"></p>
+        <h2 class="dk__title"></h2><p class="dk__pre"></p><p class="dk__text"></p><p class="dk__fadl"></p><p class="dk__src"></p>
       </article>
       <footer class="dk__foot">
         <button class="iconbtn dk__nav dk__nav--prev" type="button">${CHEVRON}</button>
@@ -162,6 +177,7 @@ async function session(el, ctx, kind, list) {
   const $ = s => root.querySelector(s);
   const card = $('.dk__card'), btn = $('.dk__count'), arc = $('.dk__arc'), end = $('.dk__end');
   const lampEls = [...root.querySelectorAll('.dk-lamp')];
+  const lampOf = k => Math.floor((k * lampEls.length) / n);
   $('.dk__close').setAttribute('aria-label', t.close);
   $('.dk__nav--prev').setAttribute('aria-label', t.prev);
   $('.dk__nav--next').setAttribute('aria-label', t.next);
@@ -172,7 +188,8 @@ async function session(el, ctx, kind, list) {
     let p = 0;
     list.forEach((d, k) => { p += Math.min(st.counts[k] / d.count, 1); });
     root.style.setProperty('--p', (p / n).toFixed(3));
-    lampEls.forEach((l, k) => l.classList.toggle('is-lit', isDone(k)));
+    // فانوس لكل مجموعة أذكار (حتى ٩ فوانيس)، ويضيء إذا تمّت مجموعته
+    lampEls.forEach((l, j) => l.classList.toggle('is-lit', list.every((d, k) => lampOf(k) !== j || isDone(k))));
     root.classList.toggle('is-complete', firstOpen() < 0);
   }
 
@@ -194,6 +211,7 @@ async function session(el, ctx, kind, list) {
     $('.dk__title').textContent = d.title || ''; $('.dk__title').hidden = !d.title;
     $('.dk__pre').textContent = d.pre || ''; $('.dk__pre').hidden = !d.pre;
     $('.dk__text').textContent = d.text;
+    $('.dk__fadl').textContent = d.fadl || ''; $('.dk__fadl').hidden = !d.fadl;
     $('.dk__src').textContent = d.source;
     card.classList.toggle('is-quran', !!d.quran);
     card.classList.toggle('is-long', d.text.length > 220);
@@ -258,7 +276,8 @@ async function session(el, ctx, kind, list) {
     if (st.counts[i] < d.count) { sfx.tap(); sparkle(btn, { count: 5, power: 2.5 }); return; }
     busy = true;
     sfx.star(); sparkle(btn, { count: 20, power: 5 });
-    if (lampEls[i]) { await wait(250); sfx.glow(); sparkle(lampEls[i].querySelector('svg'), { count: 12, power: 3 }); }
+    const lamp = lampEls[lampOf(i)];
+    if (lamp?.classList.contains('is-lit')) { await wait(250); sfx.glow(); sparkle(lamp.querySelector('svg'), { count: 12, power: 3 }); }
     else sfx.glow();
     const next = firstOpen();
     if (next < 0) { await finish(); busy = false; return; }
