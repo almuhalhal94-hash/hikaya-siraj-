@@ -418,6 +418,17 @@
           "story": "jarra-aldhahab"
         }
       ]
+    },
+    {
+      "id": "salihat",
+      "title": "قصص الصالحات",
+      "sub": "من القرآن والسنة",
+      "items": [
+        {
+          "name": "آسية امرأة فرعون",
+          "story": "asiya-alnil"
+        }
+      ]
     }
   ]
 }
