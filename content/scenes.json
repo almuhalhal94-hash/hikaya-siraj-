@@ -15908,5 +15908,176 @@
         "light": "on"
       }
     }
+  },
+  "rajul-yasin": {
+    "thumb": 4,
+    "witness": "wall",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on"
+        },
+        "camera": {
+          "from": [
+            500,
+            480,
+            1050
+          ],
+          "to": [
+            420,
+            600,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on",
+          "light": "town",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            420,
+            600,
+            900
+          ],
+          "to": [
+            560,
+            640,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "light": "town",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            560,
+            640,
+            760
+          ],
+          "to": [
+            480,
+            600,
+            960
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "road": "on",
+          "light": "road"
+        },
+        "camera": {
+          "from": [
+            800,
+            620,
+            1000
+          ],
+          "to": [
+            900,
+            660,
+            780
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "dark",
+          "light": "town",
+          "pair": "on",
+          "flock": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            900
+          ],
+          "to": [
+            600,
+            660,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on",
+          "light": "far",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            960
+          ],
+          "to": [
+            640,
+            640,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "town": "dark",
+        "road": "on",
+        "light": "road"
+      }
+    }
   }
 }
