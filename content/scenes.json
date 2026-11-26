@@ -16079,5 +16079,181 @@
         "light": "road"
       }
     }
+  },
+  "qarya-alhimar": {
+    "thumb": 5,
+    "witness": "donkey",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "gone",
+          "donkey": "on"
+        },
+        "camera": {
+          "from": [
+            500,
+            520,
+            1050
+          ],
+          "to": [
+            560,
+            640,
+            820
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "gone",
+          "donkey": "on",
+          "dish": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            560,
+            640,
+            860
+          ],
+          "to": [
+            620,
+            660,
+            740
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "town": "gone",
+          "dish": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            480,
+            1000
+          ],
+          "to": [
+            600,
+            420,
+            1050
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "gone",
+          "dish": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            980
+          ],
+          "to": [
+            620,
+            660,
+            780
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "gone",
+          "dish": "on",
+          "donkey": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            620,
+            660,
+            780
+          ],
+          "to": [
+            640,
+            680,
+            680
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "gone",
+          "donkey": "on",
+          "light": "mid",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            660,
+            760
+          ],
+          "to": [
+            620,
+            640,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "town": "gone",
+        "dish": "on",
+        "light": "mid"
+      }
+    }
   }
 }
