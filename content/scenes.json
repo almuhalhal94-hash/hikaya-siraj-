@@ -12719,5 +12719,182 @@
         "light": "low"
       }
     }
+  },
+  "isra-alaqsa": {
+    "thumb": 2,
+    "witness": "aqsa",
+    "scenes": [
+      {
+        "set": "haram",
+        "state": {
+          "light": "on",
+          "tawaf": "off",
+          "white": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            480,
+            1150
+          ],
+          "to": [
+            640,
+            600,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "one",
+          "suffa": "on",
+          "trunk": "off",
+          "white": "on"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            880,
+            640,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "pleiades": "on",
+          "light": "far",
+          "glow": "full",
+          "white": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            900
+          ],
+          "to": [
+            640,
+            300,
+            1200
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "pleiades": "on",
+          "light": "far",
+          "pair": "on",
+          "white": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            400,
+            1100
+          ],
+          "to": [
+            700,
+            500,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "pleiades": "on",
+          "light": "far",
+          "pair": "on",
+          "glow": "full",
+          "white": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            500,
+            900
+          ],
+          "to": [
+            640,
+            360,
+            1200
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "glow": "full",
+          "white": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            600,
+            800
+          ],
+          "to": [
+            640,
+            480,
+            1150
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "pleiades": "on",
+        "light": "far",
+        "pair": "on",
+        "white": "on"
+      }
+    }
   }
 }
