@@ -11165,5 +11165,296 @@
         32
       ]
     }
+  ],
+  "map_places": [
+    {
+      "id": "makkah",
+      "name": "مكة",
+      "x": 265,
+      "y": 300
+    },
+    {
+      "id": "madina",
+      "name": "المدينة",
+      "x": 245,
+      "y": 245
+    },
+    {
+      "id": "khaybar",
+      "name": "خيبر",
+      "x": 232,
+      "y": 212
+    },
+    {
+      "id": "hijr",
+      "name": "الحِجر",
+      "x": 206,
+      "y": 180
+    },
+    {
+      "id": "madyan",
+      "name": "مدين",
+      "x": 180,
+      "y": 150
+    },
+    {
+      "id": "quds",
+      "name": "بيت المقدس",
+      "x": 168,
+      "y": 92
+    },
+    {
+      "id": "sham",
+      "name": "الشام",
+      "x": 210,
+      "y": 58
+    },
+    {
+      "id": "misr",
+      "name": "مصر",
+      "x": 92,
+      "y": 140
+    },
+    {
+      "id": "iraq",
+      "name": "العراق",
+      "x": 338,
+      "y": 112
+    },
+    {
+      "id": "saba",
+      "name": "سبأ (اليمن)",
+      "x": 318,
+      "y": 392
+    },
+    {
+      "id": "ahqaf",
+      "name": "الأحقاف",
+      "x": 372,
+      "y": 350
+    },
+    {
+      "id": "habasha",
+      "name": "الحبشة",
+      "x": 222,
+      "y": 420
+    }
+  ],
+  "map_questions": [
+    {
+      "story": "ghar-thawr",
+      "place": "makkah",
+      "why": "غار ثور في جبلٍ قرب مكة، اختبأ فيه النبي ﷺ وأبو بكر في طريق الهجرة."
+    },
+    {
+      "story": "jidh-alnakhla",
+      "place": "madina",
+      "why": "كان الجذع في مسجد النبي ﷺ بالمدينة، يخطب عنده قبل أن يُصنع المنبر."
+    },
+    {
+      "story": "zamzam-albir",
+      "place": "makkah",
+      "why": "زمزم في مكة، قريبًا من الكعبة."
+    },
+    {
+      "story": "uthman-rumah",
+      "place": "madina",
+      "why": "بئر رومة في المدينة، وجعلها عثمان للمسلمين."
+    },
+    {
+      "story": "umar-alhajar",
+      "place": "makkah",
+      "why": "الحجر الأسود في ركن الكعبة بمكة."
+    },
+    {
+      "story": "ali-alraya",
+      "place": "khaybar",
+      "why": "خيبر بلدة شمال المدينة، وفي فتحها أُعطي عليٌّ الراية."
+    },
+    {
+      "story": "isra-alaqsa",
+      "place": "quds",
+      "why": "أُسري بالنبي ﷺ من المسجد الحرام إلى المسجد الأقصى في بيت المقدس."
+    },
+    {
+      "story": "talha-uhud",
+      "place": "madina",
+      "why": "جبل أُحد عند المدينة."
+    },
+    {
+      "story": "ismail-alwadi",
+      "place": "makkah",
+      "why": "الوادي هو وادي مكة، وفيه رفع إبراهيم وإسماعيل قواعد البيت."
+    },
+    {
+      "story": "zubayr-alkhandaq",
+      "place": "madina",
+      "why": "حُفر الخندق حول المدينة ليحميها من الأحزاب."
+    },
+    {
+      "story": "musa-alasa",
+      "place": "misr",
+      "why": "كان فرعون ملك مصر، وفيها ألقى موسى عصاه أمام السحرة."
+    },
+    {
+      "story": "yusuf-alqamis",
+      "place": "misr",
+      "why": "عاش يوسف في مصر، وإليها جاء أبواه وإخوته."
+    },
+    {
+      "story": "madyan-albir",
+      "place": "madyan",
+      "why": "خرج موسى من مصر إلى مدين، فسقى للبنتين عند ماء مدين."
+    },
+    {
+      "story": "asiya-alnil",
+      "place": "misr",
+      "why": "آسية امرأة فرعون، وكانت في قصره بمصر حين جاء التابوت في النهر."
+    },
+    {
+      "story": "abubakr-almasjid",
+      "place": "makkah",
+      "why": "بنى أبو بكر مسجده الصغير في فناء داره بمكة."
+    },
+    {
+      "story": "salih-alhijr",
+      "place": "hijr",
+      "why": "الحِجر مساكن ثمود قوم صالح، في شمال جزيرة العرب."
+    },
+    {
+      "story": "hud-alrih",
+      "place": "ahqaf",
+      "why": "الأحقاف مساكن عادٍ قوم هود، في جنوب جزيرة العرب."
+    },
+    {
+      "story": "sulayman-alhudhud",
+      "place": "saba",
+      "why": "جاء الهدهد إلى سليمان بخبر سبأ، وهي في اليمن."
+    },
+    {
+      "story": "saba-alsadd",
+      "place": "saba",
+      "why": "كان سدّ سبأ في اليمن."
+    },
+    {
+      "story": "fil-alsijjil",
+      "place": "makkah",
+      "why": "جاء أصحاب الفيل يريدون هدم الكعبة في مكة."
+    },
+    {
+      "story": "khalid-alsayf",
+      "place": "sham",
+      "why": "كانت غزوة مؤتة في أرض الشام."
+    },
+    {
+      "story": "alqama-dimashq",
+      "place": "sham",
+      "why": "مسجد دمشق في الشام، وفيه لقي علقمةُ أبا الدرداء."
+    },
+    {
+      "story": "hasan-alhasa",
+      "place": "iraq",
+      "why": "عاش الحسن البصري في البصرة بالعراق، وكان شيخ أهلها."
+    },
+    {
+      "story": "masruq-alfas",
+      "place": "iraq",
+      "why": "كان مسروق من علماء الكوفة بالعراق."
+    },
+    {
+      "story": "asmaumays-alshira",
+      "place": "habasha",
+      "why": "هاجرت أسماء بنت عميس إلى الحبشة، ثم ركبت السفينة إلى المدينة."
+    },
+    {
+      "story": "abuidris-alqibla",
+      "place": "sham",
+      "why": "كان أبو إدريس الخولاني قاضي دمشق في الشام."
+    },
+    {
+      "story": "ata-alsitr",
+      "place": "makkah",
+      "why": "كان عطاء مفتي مكة، ورأى المرأة الصابرة عند ستر الكعبة."
+    }
+  ],
+  "map_levels": [
+    {
+      "places": [
+        "makkah",
+        "madina"
+      ],
+      "stories": [
+        "ghar-thawr",
+        "jidh-alnakhla",
+        "zamzam-albir",
+        "uthman-rumah",
+        "umar-alhajar"
+      ]
+    },
+    {
+      "places": [
+        "makkah",
+        "madina",
+        "khaybar",
+        "quds"
+      ],
+      "stories": [
+        "ali-alraya",
+        "isra-alaqsa",
+        "talha-uhud",
+        "ismail-alwadi",
+        "zubayr-alkhandaq"
+      ]
+    },
+    {
+      "places": [
+        "makkah",
+        "madina",
+        "khaybar",
+        "quds",
+        "misr",
+        "madyan"
+      ],
+      "stories": [
+        "musa-alasa",
+        "yusuf-alqamis",
+        "madyan-albir",
+        "asiya-alnil",
+        "abubakr-almasjid"
+      ]
+    },
+    {
+      "places": [
+        "makkah",
+        "madina",
+        "quds",
+        "misr",
+        "madyan",
+        "hijr",
+        "ahqaf",
+        "saba"
+      ],
+      "stories": [
+        "salih-alhijr",
+        "hud-alrih",
+        "sulayman-alhudhud",
+        "saba-alsadd",
+        "fil-alsijjil"
+      ]
+    },
+    {
+      "places": "all",
+      "stories": [
+        "khalid-alsayf",
+        "alqama-dimashq",
+        "hasan-alhasa",
+        "masruq-alfas",
+        "asmaumays-alshira"
+      ]
+    },
+    {
+      "places": "all",
+      "random": 6
+    }
   ]
 }
