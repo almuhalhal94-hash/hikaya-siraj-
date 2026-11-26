@@ -1,0 +1,33 @@
+/* «حديث الأسبوع» */
+.hd { max-width: 640px; display: grid; gap: 14px; }
+.hd .page__head { margin-bottom: 0; }
+.hd__siraj { display: grid; justify-items: center; }
+.hd__siraj .siraj { width: clamp(70px, 20vw, 96px); }
+.hd__siraj .bubble { max-width: min(92%, 420px); }
+.hd-card { position: relative; display: grid; gap: 8px; justify-items: center; padding: 26px 18px 18px; border-radius: 28px; text-align: center; background: linear-gradient(180deg, #fbf3df, #f1e2bd); color: #2b2210; border: 6px double #c9a24a; box-shadow: 0 18px 40px rgba(0, 0, 0, .5), 0 0 50px rgba(255, 215, 122, .25); animation: door-in .8s var(--ease-out) backwards; }
+.hd-card__week { position: absolute; top: -16px; padding: 4px 16px; border-radius: 14px; font-weight: 800; color: #3a2a05; background: linear-gradient(180deg, #ffe6a3, #e5b65a); box-shadow: 0 4px 12px rgba(0, 0, 0, .35); }
+.hd-card__isnad { font-size: .98rem; color: #6b4e12; font-weight: 800; }
+.hd-card__text { font-family: 'Amiri Quran', 'Traditional Arabic', 'Noto Naskh Arabic', serif; font-size: clamp(1.55rem, 6.6vw, 2.1rem); line-height: 2.1; text-wrap: pretty; transition: filter .4s ease, opacity .4s ease; }
+.hd-card.is-hiding .hd-card__text { filter: blur(10px); opacity: .5; }
+.hd-card__src { font-size: .85rem; color: #7a6235; }
+.hd-card__hide { margin-top: 4px; padding: 7px 16px; border-radius: 16px; border: 1.5px solid #c9a24a; background: rgba(201, 162, 74, .15); color: #5a4110; font: inherit; font-weight: 800; cursor: pointer; }
+.hd-card__hide[aria-pressed="true"] { background: #3fb7a8; border-color: transparent; color: #052a2a; }
+.hd-box { padding: 14px 16px; border-radius: 24px; background: linear-gradient(180deg, rgba(30, 60, 107, .65), rgba(10, 22, 48, .85)); border: 1.5px solid rgba(255, 215, 122, .28); text-align: center; display: grid; gap: 8px; animation: door-in .8s var(--ease-out) .15s backwards; }
+.hd-box h2 { font-size: 1.2rem; font-weight: 800; color: var(--gold); }
+.hd-box p { color: var(--cream); font-size: 1.08rem; line-height: 1.8; text-wrap: pretty; }
+.hd-box--chal { border-color: rgba(95, 214, 200, .45); }
+.hd-chal { font-weight: 800; }
+.hd-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.hd-day { display: grid; place-items: center; aspect-ratio: 1; border-radius: 50%; border: 2px dashed rgba(255, 215, 122, .3); }
+.hd-day b { font-size: .62rem; font-weight: 800; color: #9fb2d6; line-height: 1.1; text-align: center; }
+.hd-day.is-today { border-style: solid; border-color: var(--teal); }
+.hd-day.is-done { border: 0; background: radial-gradient(circle at 50% 34%, #fff0be, #ffd77a 55%, #d9a842); box-shadow: 0 0 14px rgba(255, 215, 122, .6); }
+.hd-day.is-done b { color: #3a2a05; }
+.hd-done.is-done { background: linear-gradient(180deg, #8fe0d6, #3fb7a8); color: #052a2a; }
+.hd-msg { min-height: 1.6em; color: var(--teal-soft) !important; font-weight: 800; font-size: 1rem !important; }
+.hd-past { padding: 12px 14px; border-radius: 22px; background: rgba(10, 22, 48, .55); border: 1px solid rgba(255, 215, 122, .2); }
+.hd-past h2 { font-size: 1.1rem; font-weight: 800; color: var(--gold); text-align: center; margin-bottom: 8px; }
+.hd-past ol { list-style: none; padding: 0; display: grid; gap: 6px; }
+.hd-past summary { cursor: pointer; padding: 8px 10px; border-radius: 14px; background: rgba(255, 255, 255, .05); font-family: 'Amiri Quran', serif; font-size: 1.2rem; color: var(--cream); }
+.hd-past__text { font-family: 'Amiri Quran', serif; font-size: 1.3rem; line-height: 2; color: var(--cream); padding: 6px 10px 0; }
+.hd-past small { display: block; padding: 0 10px 6px; color: #9fb2d6; }
