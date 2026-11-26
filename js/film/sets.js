@@ -93,6 +93,9 @@ function cave() {
     <g class="cv-shadows" fill="#01030a">
       <path d="M452 560h80l-60 620h-260z"/><path d="M576 560h84l40 620h-250z"/><path d="M704 560h76l230 620h-250z"/>
     </g>
+    <g class="cv-boulder"><path d="M370 580 L360 470 Q350 330 420 250 Q480 150 600 130 Q740 130 800 220 Q870 320 850 460 L840 580 Z" fill="#4a4a58" stroke="#22222c" stroke-width="6"/>
+      <path d="M440 300 Q520 250 600 270 M520 420 Q620 380 720 430 M430 500 Q500 470 560 520 M700 250 Q760 300 770 360" stroke="#2a2a36" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M420 260 Q480 170 600 150" stroke="#7a7a8c" stroke-width="5" fill="none" opacity=".6"/></g>
     <path fill-rule="evenodd" fill="url(#g-rock)" d="M-700-500h2600v1900h-2600zM408 560l-10-60 20-60-10-48 44-44 18-36 50-12 36-28 54 8 42-18 48 28 42 10 26 48 32 32-8 60 20 60-12 60z"/>
     <path class="cv-rim" d="M408 560l-10-60 20-60-10-48 44-44 18-36 50-12 36-28 54 8 42-18 48 28 42 10 26 48 32 32-8 60 20 60-12 60" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
     <path class="cv-rim cv-rim--soft" d="M408 560l-10-60 20-60-10-48 44-44 18-36 50-12 36-28 54 8 42-18 48 28 42 10 26 48 32 32-8 60 20 60-12 60" fill="none" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
@@ -100,6 +103,7 @@ function cave() {
     <path d="M-700 640l420-60 250 50 130 110 80 660h-880zM1900 640l-380-70-260 60-120 120-90 650h850z" fill="#04060d"/>
     <path class="cv-sun cv-sun--rise" d="M660 300l150 0 520 1100H900z" fill="url(#g-ray)"/><path class="cv-sun cv-sun--set" d="M560 300l-150 0-520 1100H320z" fill="url(#g-ray)"/>
     <g class="cv-dog" fill="#02040b"><path d="M520 560q-4-30 26-38l14-22 10 20q46-6 84 10 30 12 34 30z"/><path d="M546 552h-58q-8 0-8 8h66z"/><path d="M688 560q30-6 40-34-4 30-24 34z"/></g>
+    <g class="cv-trio">${[[480, 690, 0], [600, 720, 1], [720, 690, 2]].map(([x, y, i]) => `<g class="cv-man cv-man${i}"><circle cx="${x}" cy="${y}" r="70" fill="url(#g-warm)"/><circle cx="${x}" cy="${y}" r="7" fill="#fff"/></g>`).join('')}</g>
     <ellipse class="cv-glow" cx="600" cy="900" rx="900" ry="620" fill="url(#g-warm)"/>
   </g>
   <g data-d="1.3">

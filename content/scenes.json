@@ -13420,5 +13420,185 @@
         "trunk": "off"
       }
     }
+  },
+  "ghar-alsakhra": {
+    "thumb": 2,
+    "witness": "rock",
+    "scenes": [
+      {
+        "set": "cave",
+        "state": {
+          "light": "warm",
+          "feet": "none",
+          "trio": "on",
+          "sky": "day",
+          "sun": "set"
+        },
+        "camera": {
+          "from": [
+            600,
+            480,
+            760
+          ],
+          "to": [
+            600,
+            480,
+            600
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "calm"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "faint",
+          "feet": "none",
+          "trio": "on",
+          "boulder": "fall",
+          "shake": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            470,
+            640
+          ],
+          "to": [
+            600,
+            500,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "door",
+        "mood": "worried"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "faint",
+          "feet": "none",
+          "trio": "pray0",
+          "boulder": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            700
+          ],
+          "to": [
+            520,
+            620,
+            480
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "worried"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "warm",
+          "feet": "none",
+          "trio": "pray1",
+          "boulder": "part2",
+          "sky": "day",
+          "sun": "rise"
+        },
+        "camera": {
+          "from": [
+            520,
+            600,
+            520
+          ],
+          "to": [
+            600,
+            480,
+            680
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "creak",
+        "mood": "curious"
+      },
+      {
+        "set": "cave",
+        "state": {
+          "light": "full",
+          "feet": "none",
+          "trio": "out",
+          "boulder": "open",
+          "sky": "day",
+          "sun": "rise"
+        },
+        "camera": {
+          "from": [
+            680,
+            620,
+            520
+          ],
+          "to": [
+            600,
+            460,
+            720
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      },
+      {
+        "set": "mountain",
+        "state": {
+          "time": "dawn",
+          "cave": "bright"
+        },
+        "camera": {
+          "from": [
+            620,
+            330,
+            460
+          ],
+          "to": [
+            600,
+            420,
+            780
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "light": "faint",
+        "feet": "none",
+        "trio": "pray0",
+        "boulder": "on"
+      }
+    }
   }
 }

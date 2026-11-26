@@ -950,3 +950,14 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .dr-meteor { opacity: 0; transition: opacity 1.5s ease; } [data-meteor="on"] .dr-meteor { opacity: 1; }
 .dr-mtrail { translate: 1000px 80px; opacity: 0; } [data-meteor="on"] .dr-mtrail { animation: dr-shoot 5.5s ease-in 1s infinite; }
 @keyframes dr-shoot { 0% { translate: 1060px 60px; opacity: 0; } 8% { opacity: 1; } 40% { translate: 640px 250px; opacity: 1; } 52%, 100% { translate: 560px 290px; opacity: 0; } }
+
+/* صخرة الغار وأصحاب الغار الثلاثة */
+.cv-boulder { opacity: 0; transition: opacity 1.2s ease, translate 4s var(--ease-out); }
+[data-boulder] .cv-boulder { opacity: 1; } [data-boulder="fall"] .cv-boulder { animation: cv-fall 2.2s cubic-bezier(.5, 0, .8, .4) both; }
+@keyframes cv-fall { from { translate: 0 -520px; } to { translate: 0 0; } }
+[data-boulder="part1"] .cv-boulder { translate: 70px 0; } [data-boulder="part2"] .cv-boulder { translate: 150px 0; } [data-boulder="open"] .cv-boulder { translate: 520px 0; }
+.cv-trio { opacity: 0; transition: opacity 2.4s ease; } [data-trio] .cv-trio { opacity: 1; }
+.cv-man circle:first-child { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.6s ease-in-out infinite; }
+.cv-man1 circle:first-child { animation-delay: -1.2s; } .cv-man2 circle:first-child { animation-delay: -2.4s; }
+[data-trio="pray0"] .cv-man0, [data-trio="pray1"] .cv-man1, [data-trio="pray2"] .cv-man2 { scale: 1.35; transition: scale 2s ease; transform-box: fill-box; transform-origin: center; }
+[data-trio="out"] .cv-trio { translate: 0 -150px; scale: .6; transition: translate 7s var(--ease-out), scale 7s var(--ease-out), opacity 2s ease; transform-box: fill-box; transform-origin: center; }
