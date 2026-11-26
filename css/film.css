@@ -989,3 +989,18 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-lioneye { animation: ld-lionblink 5s ease-in-out infinite; } @keyframes ld-lionblink { 0%, 46%, 54%, 100% { opacity: 1; } 50% { opacity: .1; } }
 /* نوران دافئان في المسجد (لغير النبي ﷺ): ms=two */
 [data-ms="two"] .ms-a, [data-ms="two"] .ms-b { opacity: 1; } [data-ms="two"] .ms-b circle:first-child { fill: url(#g-warm); }
+
+/* جرّة ذهب مدفونة (حكاية جرة الذهب): jar (buried/on/gold) */
+.ld-jar { opacity: 0; transition: opacity 2s ease; } [data-jar] .ld-jar { opacity: 1; }
+.ld-jarbody { opacity: 0; translate: 0 50px; transition: opacity 2s ease, translate 3s var(--ease-out); } [data-jar="on"] .ld-jarbody, [data-jar="gold"] .ld-jarbody { opacity: 1; translate: 0 0; }
+.ld-jargold, .ld-jarglow { opacity: 0; transition: opacity 2.5s ease 1s; } [data-jar="gold"] .ld-jargold { opacity: 1; } [data-jar="gold"] .ld-jarglow { opacity: .9; animation: lt-breathe 3.6s ease-in-out infinite; }
+
+/* بستان ثمر (أصحاب الجنة): orchard (on/burnt) */
+.ld-orchard { opacity: 0; transition: opacity 3s ease; } [data-orchard] .ld-orchard { opacity: 1; }
+.ld-crown { fill: #2f7a3e; transition: fill 5s ease; transform-box: fill-box; transform-origin: 50% 100%; animation: sway 8s ease-in-out infinite; } .ld-fruit { fill: #e8642e; transition: opacity 4s ease; }
+[data-set="land"][data-time="dawn"] .ld-crown { fill: #3f9150; }
+[data-orchard="burnt"] .ld-crown { fill: #201a1c !important; animation: none; } [data-orchard="burnt"] .ld-fruit { opacity: 0; }
+/* عنب بدل الثمر الأحمر (صاحب الجنتين): orchard=grapes، وgrapes-burnt */
+[data-orchard="grapes"] .ld-orchard, [data-orchard="ruin"] .ld-orchard { opacity: 1; } [data-orchard="grapes"] .ld-fruit { fill: #7a3a8a; }
+[data-orchard="ruin"] .ld-crown { fill: #201a1c !important; animation: none; } [data-orchard="ruin"] .ld-fruit { opacity: 0; }
+[data-orchard="ruin"] .ld-grove .palm { filter: brightness(.25) saturate(0); animation: none; }

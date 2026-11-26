@@ -15198,5 +15198,541 @@
         "light": "road"
       }
     }
+  },
+  "jarra-aldhahab": {
+    "thumb": 5,
+    "witness": "jar",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "jar": "buried",
+          "palm": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1150
+          ],
+          "to": [
+            700,
+            640,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on",
+          "light": "mid",
+          "pair": "on",
+          "jar": "buried"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1150
+          ],
+          "to": [
+            640,
+            620,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "jar": "gold"
+        },
+        "camera": {
+          "from": [
+            700,
+            640,
+            1000
+          ],
+          "to": [
+            720,
+            700,
+            640
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "tap",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "jar": "gold"
+        },
+        "camera": {
+          "from": [
+            720,
+            700,
+            640
+          ],
+          "to": [
+            680,
+            660,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on",
+          "light": "mid",
+          "pair": "on",
+          "jar": "gold"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            1000
+          ],
+          "to": [
+            700,
+            660,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on",
+          "light": "mid",
+          "pair": "on",
+          "flock": "on",
+          "jar": "gold",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            700,
+            660,
+            800
+          ],
+          "to": [
+            690,
+            650,
+            960
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "light": "mid",
+        "jar": "gold"
+      }
+    }
+  },
+  "ashab-aljanna": {
+    "thumb": 3,
+    "witness": "palm",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            480,
+            1050
+          ],
+          "to": [
+            660,
+            620,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "orchard": "on",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            660,
+            620,
+            900
+          ],
+          "to": [
+            620,
+            640,
+            980
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "orchard": "burnt"
+        },
+        "camera": {
+          "from": [
+            640,
+            580,
+            1000
+          ],
+          "to": [
+            680,
+            640,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "burnt",
+          "road": "on",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            680,
+            640,
+            820
+          ],
+          "to": [
+            640,
+            640,
+            980
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "burnt",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            960
+          ],
+          "to": [
+            660,
+            660,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "tap",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "burnt",
+          "glow": "full",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            660,
+            660,
+            780
+          ],
+          "to": [
+            640,
+            640,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "orchard": "on",
+        "light": "mid",
+        "pair": "on"
+      }
+    }
+  },
+  "jannatayn-alnahr": {
+    "thumb": 4,
+    "witness": "river",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "grapes",
+          "grove": "on",
+          "river": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            480,
+            1050
+          ],
+          "to": [
+            660,
+            620,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "grapes",
+          "grove": "on",
+          "river": "on",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            660,
+            620,
+            900
+          ],
+          "to": [
+            620,
+            640,
+            980
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "grapes",
+          "grove": "on",
+          "river": "on",
+          "light": "mid",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            640,
+            980
+          ],
+          "to": [
+            680,
+            660,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "grapes",
+          "grove": "on",
+          "river": "on",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            680,
+            660,
+            760
+          ],
+          "to": [
+            640,
+            640,
+            960
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "orchard": "ruin",
+          "grove": "on",
+          "river": "on",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            640,
+            600,
+            1000
+          ],
+          "to": [
+            670,
+            650,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "orchard": "ruin",
+          "grove": "on",
+          "river": "on",
+          "light": "mid",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            670,
+            650,
+            800
+          ],
+          "to": [
+            640,
+            630,
+            980
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "orchard": "grapes",
+        "grove": "on",
+        "river": "on",
+        "light": "mid",
+        "pair": "on"
+      }
+    }
   }
 }

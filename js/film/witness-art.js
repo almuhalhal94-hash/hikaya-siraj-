@@ -705,6 +705,15 @@ export const ART = {
       <g fill="#9fd4ff"><ellipse cx="36" cy="150" rx="6" ry="10"/><ellipse cx="26" cy="176" rx="5" ry="8"/></g>
       ${cheeks(70, 118, 110)}${eyes(78, 112, 84, 12)}${mouth(96, 112, 20, 11)}</g>`
   },
+  jar: {
+    skin: '#b8703e', ink: '#5a2e14',
+    svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">
+      <g fill="#ffd34a" stroke="#a8741a" stroke-width="2"><ellipse cx="86" cy="30" rx="13" ry="5"/><ellipse cx="112" cy="26" rx="13" ry="5"/><ellipse cx="100" cy="18" rx="13" ry="5"/></g>
+      <path d="M58 196 C28 160 28 110 56 76 C64 66 68 56 70 44 H130 C132 56 136 66 144 76 C172 110 172 160 142 196 Z" fill="url(#wtJr)" stroke="#5a2e14" stroke-width="3"/>
+      <ellipse cx="100" cy="42" rx="34" ry="9" fill="#4a2410" stroke="#5a2e14" stroke-width="3"/>
+      <path d="M40 150 H160" stroke="#e0a060" stroke-width="5" opacity=".6"/>
+      ${cheeks(56, 144, 128)}${eyes(78, 122, 108, 14)}${mouth(100, 138, 24, 14)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">
