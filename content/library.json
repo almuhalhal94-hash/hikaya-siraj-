@@ -545,6 +545,45 @@
       ]
     },
     {
+      "id": "alimat",
+      "title": "قصص العالمات",
+      "sub": "رحمهن الله",
+      "items": [
+        {
+          "name": "رابعة العدوية",
+          "story": "rabia-albab"
+        },
+        {
+          "name": "أمة الواحد بنت المحاملي",
+          "story": "mahamili-almizan"
+        },
+        {
+          "name": "كريمة المروزية",
+          "story": "karima-alqindil"
+        },
+        {
+          "name": "عائشة الوركانية",
+          "story": "warkaniyya-alamali"
+        },
+        {
+          "name": "فاطمة بنت الدقاق",
+          "story": "daqqaq-alsahar"
+        },
+        {
+          "name": "فاطمة بنت الأقرع",
+          "story": "aqra-alqalam"
+        },
+        {
+          "name": "شهدة الكاتبة",
+          "story": "shuhda-baghdad"
+        },
+        {
+          "name": "تجنّي الوهبانية",
+          "story": "tajanni-alhalqa"
+        }
+      ]
+    },
+    {
       "id": "salihin",
       "title": "قصص الصالحين",
       "sub": "من القرآن والسنة",
