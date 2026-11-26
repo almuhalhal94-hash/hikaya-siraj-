@@ -72,6 +72,17 @@ const SCENES = {
     </svg>`
 };
 
+SCENES.salati = `
+    <svg viewBox="0 0 120 150" preserveAspectRatio="xMidYMax slice">
+      <rect width="120" height="150" fill="#14284f"/>
+      <g fill="#fff4cf"><circle class="tw" cx="16" cy="22" r="1.4"/><circle class="tw tw--b" cx="104" cy="18" r="1.2"/><circle class="tw tw--c" cx="62" cy="10" r="1"/></g>
+      <g class="pulse">${[22, 41, 60, 79, 98].map((x, i) => `<circle cx="${x}" cy="${60 - Math.abs(i - 2) * 6}" r="7" fill="${i < 3 ? '#ffd77a' : '#3d5a8a'}" stroke="#fff4cf" stroke-width="1.5"/>`).join('')}</g>
+      <path d="M18 150v-42q0-30 42-42 42 12 42 42v42z" fill="#2f9c90"/>
+      <path d="M34 150v-36q0-16 26-26 26 10 26 26v36z" fill="#123056"/>
+      <path d="M44 150v-30q0-10 16-16 16 6 16 16v30z" fill="#ffd77a" opacity=".85"/>
+      <path d="M60 66v-14M56 56h8" stroke="#ffd77a" stroke-width="3" stroke-linecap="round"/>
+    </svg>`;
+
 const MEDAL = '<svg viewBox="0 0 48 56" aria-hidden="true"><path d="M14 2h8l4 14h-8zM34 2h-8l-4 14h8z" fill="#5fd6c8"/><circle cx="24" cy="34" r="19" fill="#ffd77a" stroke="#c9a24a" stroke-width="3"/><path d="M24 21l3.800 8 8.800 1-6.500 6 1.800 8.700L24 40.300l-7.900 4.400 1.800-8.700-6.500-6 8.800-1z" fill="#fff4cf"/></svg>';
 const GIFT = '<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="20" width="34" height="23" rx="4" fill="#5fd6c8"/><rect x="4" y="13" width="40" height="10" rx="4" fill="#8fe0d6"/><path d="M21 13h6v30h-6z" fill="#ffd77a"/><path d="M24 13q-12-12-15-4t15 4q12-12 15-4t-15 4z" fill="none" stroke="#ffd77a" stroke-width="3.500" stroke-linejoin="round"/></svg>';
 
@@ -127,6 +138,7 @@ export default async function home(el, { ui, lines, go, refreshChip }) {
     if (r.type === 'gameStars') return Object.values(s.games || {}).flat().reduce((a, v) => a + (v || 0), 0) >= r.n;
     if (r.type === 'days') return s.days.length >= r.n;
     if (r.type === 'house') return (s.met || []).length >= r.n;
+    if (r.type === 'salati') return Object.values(s.salati?.days || {}).filter(d => d.length >= 5).length >= r.n;
     return false;
   };
   function paintMine() {

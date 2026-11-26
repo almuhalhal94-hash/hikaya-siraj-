@@ -171,7 +171,8 @@ body:not(.is-ready) #view, body:not(.is-ready) .topbar { opacity: 0; }
 /* ——— الأبواب ——— */
 .doors { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 14px; width: min(100%, 400px); transition: opacity .6s ease; }
 .door { --c: var(--gold); position: relative; display: block; padding-bottom: 20px; animation: door-in .9s var(--ease-out) backwards; animation-delay: calc(var(--i) * 110ms + 350ms); touch-action: manipulation; }
-.door--games { --c: var(--teal); } .door--adhkar { --c: #ffb35c; } .door--house { --c: #b9a3ff; }
+.door--games { --c: var(--teal); } .door--adhkar { --c: #ffb35c; } .door--house { --c: #b9a3ff; } .door--salati { --c: #8fe0d6; }
+.door:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
 @keyframes door-in { from { opacity: 0; translate: 0 30px; scale: .94; filter: blur(10px); } }
 .door__arch {
   position: relative; display: block; aspect-ratio: 1 / 1.08; overflow: hidden; perspective: 520px;
@@ -252,7 +253,9 @@ body:not(.is-ready) #view, body:not(.is-ready) .topbar { opacity: 0; }
 
 /* ——— شاشات أوسع ——— */
 @media (min-width: 760px) {
-  .doors { grid-template-columns: repeat(3, 1fr); width: min(100%, 820px); gap: 30px; }
+  .doors { grid-template-columns: repeat(4, 1fr); width: min(100%, 980px); gap: 26px; }
+  .door:last-child:nth-child(odd) { grid-column: auto; width: auto; }
+  .door:nth-child(n+5):last-child { grid-column: auto; }
   .siraj { width: 150px; }
   .bubble { font-size: 1.4rem; padding: 14px 28px; }
   .home { gap: 34px; padding-top: 10px; }
