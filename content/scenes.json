@@ -18217,5 +18217,185 @@
         "glow": "full"
       }
     }
+  },
+  "ummfadl-alqadah": {
+    "thumb": 5,
+    "witness": "cup",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "light": "on",
+          "girls": "on",
+          "lamp": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            640,
+            960
+          ],
+          "to": [
+            560,
+            680,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "girls": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            580,
+            680,
+            800
+          ],
+          "to": [
+            600,
+            640,
+            940
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "flock": "on",
+          "caravan": "on",
+          "light": "far"
+        },
+        "camera": {
+          "from": [
+            640,
+            620,
+            1000
+          ],
+          "to": [
+            640,
+            660,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "flock": "on",
+          "milk": "on",
+          "light": "far"
+        },
+        "camera": {
+          "from": [
+            500,
+            660,
+            880
+          ],
+          "to": [
+            400,
+            690,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "flock": "on",
+          "caravan": "on",
+          "milk": "go",
+          "light": "mid",
+          "white": "on"
+        },
+        "camera": {
+          "from": [
+            520,
+            660,
+            900
+          ],
+          "to": [
+            600,
+            670,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "flock": "on",
+          "milk": "go",
+          "light": "mid",
+          "white": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            660,
+            820
+          ],
+          "to": [
+            640,
+            640,
+            960
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "flock": "on",
+        "milk": "on",
+        "light": "far",
+        "glow": "full"
+      }
+    }
   }
 }

@@ -859,6 +859,7 @@ function land() {
       <path class="ld-tentdoor" d="M-44 0L0-112 44 0z"/><path d="M0-150v-26" stroke="#4a2d10" stroke-width="6"/><path d="M-170 0h-24M170 0h24" stroke="#4a2d10" stroke-width="4"/>
       <path d="M-120-46h60M60-46h60" stroke="#e8c48a" stroke-width="6" opacity=".55"/></g>
     ${landExtras()}
+    <g class="ld-milk" transform="translate(300 720)"><g class="ld-mkpos"><circle class="ld-mkglow" cy="-14" r="80" fill="url(#g-white)"/><path d="M-30-30h60q-4 40-30 42-26-2-30-42z" fill="#b98548" stroke="#4a2d10" stroke-width="3"/><ellipse cy="-30" rx="30" ry="8" fill="#fdf6e6"/><path d="M-18 16h36" stroke="#6b441d" stroke-width="6" stroke-linecap="round"/></g></g>
     <g class="ld-lights">
       <g class="ld-b"><circle cx="722" cy="664" r="80" fill="url(#g-warm)"/><circle cx="722" cy="664" r="6" fill="#fff"/></g>
       <g class="ld-a"><circle cx="640" cy="650" r="115" fill="url(#g-warm)"/><circle cx="640" cy="650" r="8" fill="#fff"/></g>
