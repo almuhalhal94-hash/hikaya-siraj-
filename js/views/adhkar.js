@@ -4,6 +4,7 @@ import { store, content, pick, fill, html, wait, dayPart, dayKey, num, reducedMo
 import { createSiraj } from '../siraj.js';
 import { sparkle } from '../sky.js';
 import { sfx } from '../audio.js';
+import daily, { icon } from './daily.js';
 
 const KINDS = ['morning', 'evening'];
 const CHEVRON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -46,6 +47,7 @@ function sessionState(a, kind, n) {
 }
 
 export default async function adhkar(el, ctx) {
+  if (ctx.args[0] === 'daily') return daily(el, ctx);
   const data = await content('adhkar');
   const kind = KINDS.includes(ctx.args[0]) ? ctx.args[0] : '';
   return kind && listOf(data, kind).length ? session(el, ctx, kind, listOf(data, kind)) : hub(el, ctx, data);
@@ -141,6 +143,13 @@ function hub(el, { ui, go }, data) {
     card.addEventListener('click', e => { e.preventDefault(); sfx.door(); go(card.getAttribute('href'), card); });
     $('.cards').append(card);
   });
+  const dc = html(`<a class="card dk-pick dk-pick--daily" href="#/adhkar/daily" style="--i:2">
+      <span class="dk-art dk-art--daily">${['sun', 'drop', 'plate', 'rain', 'stars'].map((k, j) => `<i style="--j:${j}">${icon(k)}</i>`).join('')}</span>
+      <span class="card__body"><b></b><small></small></span></a>`);
+  dc.querySelector('b').textContent = t.daily.title;
+  dc.querySelector('small').textContent = t.daily.card_sub;
+  dc.addEventListener('click', e => { e.preventDefault(); sfx.door(); go('#/adhkar/daily', dc); });
+  $('.cards').append(dc);
   el.append(page);
 }
 

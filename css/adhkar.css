@@ -128,3 +128,39 @@
   .dk { transition: none; }
   .dk-lamp, .dk-sun__rays, .dk-cloud, .lf, .tree__glow, .dk-art__sun { animation: none !important; }
 }
+
+/* «أذكار يومي» */
+.dk-art--daily { background: linear-gradient(270deg, #79b6e2 0%, #ffcf8a 30%, #b9617a 62%, #142a5a 100%); display: flex; align-items: center; justify-content: space-evenly; padding-bottom: 14%; }
+.dk-art--daily i { width: 15%; color: #fff8dc; filter: drop-shadow(0 0 10px rgba(255, 244, 207, .8)); animation: hs-float 3.6s ease-in-out infinite; animation-delay: calc(var(--j) * -.7s); }
+.dk-art--daily i svg { display: block; width: 100%; }
+@keyframes hs-float { 50% { translate: 0 -6px; } }
+.dy { max-width: 680px; display: grid; justify-items: center; gap: 14px; }
+.dy__count { max-width: none; }
+.dy__grid { width: 100%; display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; }
+.dy-tile { position: relative; display: grid; justify-items: center; align-content: center; gap: 6px; min-height: 112px; padding: 12px 6px; border-radius: 22px; border: 1.5px solid rgba(255, 215, 122, .28); background: linear-gradient(180deg, rgba(30, 60, 107, .72), rgba(10, 22, 48, .88)); color: var(--cream); font: inherit; cursor: pointer; box-shadow: 0 6px 16px rgba(0, 0, 0, .35); animation: door-in .6s var(--ease-out) backwards; animation-delay: calc(var(--i) * 35ms); transition: transform .15s ease; }
+.dy-tile:active { transform: scale(.94); }
+.dy-tile > svg { width: 44px; height: 44px; color: #ffd77a; filter: drop-shadow(0 0 8px rgba(255, 215, 122, .45)); }
+.dy-tile--drop > svg, .dy-tile--rain > svg, .dy-tile--wind > svg { color: #8fe0d6; filter: drop-shadow(0 0 8px rgba(143, 224, 214, .45)); }
+.dy-tile--flame > svg { color: #ff9e7a; } .dy-tile--heart > svg { color: #ff9ec4; }
+.dy-tile b { font-size: .95rem; font-weight: 800; line-height: 1.35; text-align: center; }
+.dy-check { position: absolute; top: 8px; inset-inline-start: 8px; width: 22px; height: 22px; padding: 3px; border-radius: 50%; color: #052a2a; background: var(--teal); opacity: 0; transform: scale(.4); transition: opacity .3s, transform .4s var(--ease-spring); }
+.dy-tile.is-said { border-color: var(--teal); }
+.dy-tile.is-said .dy-check { opacity: 1; transform: none; }
+.dy__src { text-align: center; font-size: .88rem; color: #9fb2d6; }
+.dy-sheet { position: fixed; inset: 0; z-index: 40; display: grid; align-items: end; justify-items: center; background: rgba(3, 8, 22, .6); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.dy-sheet__card { position: relative; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 10px; width: min(100%, 620px); max-height: 86dvh; padding: 18px 16px max(16px, env(safe-area-inset-bottom)); border-radius: 28px 28px 0 0; background: linear-gradient(180deg, #14295a, #0a1630); border: 1.5px solid rgba(255, 215, 122, .4); border-bottom: 0; box-shadow: 0 -16px 40px rgba(0, 0, 0, .5); transform: translateY(100%); transition: transform .45s var(--ease-out); }
+.dy-sheet.is-open .dy-sheet__card { transform: none; }
+.dy-sheet__close { position: absolute; top: 12px; inset-inline-end: 12px; }
+.dy-sheet h2 { text-align: center; font-size: 1.35rem; font-weight: 800; color: var(--gold); padding-inline: 48px; }
+.dy-sheet__body { overflow-y: auto; overscroll-behavior: contain; display: grid; gap: 12px; }
+.dy-item { padding: 12px 14px; border-radius: 20px; background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 215, 122, .18); text-align: center; display: grid; gap: 6px; }
+.dy-item__note { color: var(--teal-soft); font-weight: 800; font-size: .95rem; line-height: 1.7; }
+.dy-item__text, .dy-item__quran, .dy-item__line span { font-family: 'Amiri Quran', 'Traditional Arabic', 'Noto Naskh Arabic', serif; color: var(--cream); font-size: clamp(1.35rem, 5.6vw, 1.7rem); line-height: 2; }
+.dy-item__quran { color: #ffe9a8; }
+.dy-item__ref, .dy-item__src { font-size: .8rem; color: #9fb2d6; line-height: 1.6; }
+.dy-item__line { display: grid; gap: 0; }
+.dy-item__line small { font-weight: 800; color: var(--gold); font-size: .85rem; }
+.dy-item__count { justify-self: center; padding: 2px 12px; border-radius: 12px; background: rgba(255, 215, 122, .15); color: var(--gold); font-weight: 800; font-size: .9rem; }
+.dy-item__surahs { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.dy-item__surahs .chip { max-width: none; text-decoration: none; }
+.dy-sheet__said.is-done { background: linear-gradient(180deg, #8fe0d6, #3fb7a8); color: #052a2a; }
