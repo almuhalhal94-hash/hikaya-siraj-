@@ -1,0 +1,33 @@
+/* «صلاتي»: خمس بطاقات بسماء كل صلاة، وقمر يضيء عند اللمس، وأسبوع من الأقمار */
+.sl { max-width: 640px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; justify-items: center; }
+.sl .page__head { margin-bottom: 0; justify-self: stretch; }
+.sl__siraj .siraj { width: clamp(76px, 20vw, 104px); }
+.sl__count { max-width: none; }
+.sl__grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; width: 100%; }
+.sl-tile { position: relative; display: grid; justify-items: center; gap: 4px; padding: 0 0 10px; border-radius: 22px; overflow: hidden; border: 2px solid rgba(255, 215, 122, .3); background: linear-gradient(180deg, var(--a), var(--b) 60%, var(--c)); color: #fff; font: inherit; cursor: pointer; box-shadow: 0 8px 18px rgba(0, 0, 0, .35); animation: door-in .7s var(--ease-out) backwards; animation-delay: calc(var(--i) * 90ms + 200ms); transition: transform .15s, border-color .3s, box-shadow .3s; }
+.sl-tile__sky { width: 100%; aspect-ratio: 1; display: block; }
+.sl-tile b { font-size: clamp(.95rem, 3.8vw, 1.2rem); font-weight: 800; text-shadow: 0 2px 6px rgba(0, 0, 0, .55); }
+.sl-tile__moon { width: 26px; height: 26px; border-radius: 50%; border: 2px dashed rgba(255, 244, 207, .55); background: rgba(6, 16, 42, .35); transition: background .4s, box-shadow .4s, border-color .4s; }
+.sl-tile small { min-height: 1.3em; font-size: .78rem; font-weight: 800; color: #fff4cf; }
+.sl-tile.is-done { border-color: #ffe6a3; box-shadow: 0 8px 18px rgba(0, 0, 0, .35), 0 0 22px rgba(255, 215, 122, .55); }
+.sl-tile.is-done .sl-tile__moon { border: 2px solid #fff4cf; background: radial-gradient(circle at 40% 40%, #fffbe6, #ffd77a 70%); box-shadow: 0 0 16px 4px rgba(255, 215, 122, .8); animation: sl-pop .6s var(--ease-spring); }
+@keyframes sl-pop { 40% { scale: 1.5; } }
+.sl-tile:active { transform: scale(.94); }
+.sl__msg { min-height: 1.4em; font-weight: 800; color: var(--teal-soft); text-align: center; }
+.sl-week, .sl-hd { width: 100%; padding: 14px; border-radius: 24px; background: rgba(10, 22, 48, .55); border: 2px solid rgba(255, 215, 122, .25); }
+.sl-week h2, .sl-hd h2 { font-size: 1.25rem; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+.sl-week__rows { display: grid; gap: 6px; }
+.sl-day { display: grid; grid-template-columns: 5.5em 1fr; align-items: center; padding: 5px 10px; border-radius: 14px; }
+.sl-day b { font-weight: 800; font-size: .95rem; color: #e8d9b8; }
+.sl-day span { display: flex; gap: 8px; }
+.sl-day i { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(255, 244, 207, .25); }
+.sl-day i.is-on { border-color: #fff4cf; background: radial-gradient(circle at 40% 40%, #fffbe6, #ffd77a 70%); box-shadow: 0 0 8px rgba(255, 215, 122, .7); }
+.sl-day.is-today { background: rgba(255, 215, 122, .12); outline: 1.5px solid rgba(255, 215, 122, .4); }
+.sl-day.is-full b::after { content: ' ★'; color: #ffd77a; }
+.sl-day.is-future { opacity: .4; }
+.sl-week__streak { margin-top: 8px; font-weight: 800; color: var(--teal-soft); }
+.sl-hd__text { font-size: 1.15rem; line-height: 2; font-weight: 700; color: #fff4cf; }
+.sl-hd__src { display: block; margin-top: 4px; color: #d9c9a8; font-weight: 800; }
+.sl-hd__sharh, .sl-hd__two { margin-top: 8px; line-height: 1.8; color: #e8d9b8; }
+.sl__note { font-size: .88rem; line-height: 1.7; color: #9fb0d0; text-align: center; max-width: 520px; }
+@media (max-width: 420px) { .sl__grid { gap: 5px; } .sl-tile { border-radius: 16px; } .sl-tile__moon { width: 22px; height: 22px; } }

@@ -11,9 +11,10 @@ import house from './views/house.js';
 import parents from './views/parents.js';
 import quran from './views/quran.js';
 import hadith from './views/hadith.js';
+import salati from './views/salati.js';
 
 // كل قسم يُسجَّل هنا عند بنائه؛ ما لم يُبنَ بعد يعرض صفحة «قريبًا».
-const routes = { '': home, stories, quran, hadith, games, adhkar, house, parents };
+const routes = { '': home, stories, quran, hadith, salati, games, adhkar, house, parents };
 
 const view = document.getElementById('view');
 const veil = document.getElementById('veil');
