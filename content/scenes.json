@@ -14141,5 +14141,181 @@
         "dog": "thirst"
       }
     }
+  },
+  "salim-alshamla": {
+    "thumb": 4,
+    "witness": "cloth",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "time": "dawn",
+          "light": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1050
+          ],
+          "to": [
+            560,
+            660,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "pair": "warm"
+        },
+        "camera": {
+          "from": [
+            560,
+            660,
+            760
+          ],
+          "to": [
+            620,
+            660,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "one",
+          "suffa": "on",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            920,
+            640,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "souq": "busy",
+          "cloth": "empty",
+          "light": "mid"
+        },
+        "camera": {
+          "from": [
+            600,
+            620,
+            1100
+          ],
+          "to": [
+            620,
+            700,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "souq": "on",
+          "cloth": "empty",
+          "light": "mid",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            700,
+            760
+          ],
+          "to": [
+            600,
+            600,
+            1050
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "one",
+          "suffa": "on",
+          "trunk": "off",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            920,
+            640,
+            760
+          ],
+          "to": [
+            760,
+            560,
+            1050
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "souq": "busy",
+        "cloth": "empty",
+        "light": "mid"
+      }
+    }
   }
 }
