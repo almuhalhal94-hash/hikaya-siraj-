@@ -15021,5 +15021,182 @@
         "trunk": "off"
       }
     }
+  },
+  "aswad-albair": {
+    "thumb": 5,
+    "witness": "caravan",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "light": "road"
+        },
+        "camera": {
+          "from": [
+            700,
+            600,
+            1150
+          ],
+          "to": [
+            880,
+            660,
+            840
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "town": "on",
+          "light": "mid",
+          "pair": "on",
+          "palm": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1150
+          ],
+          "to": [
+            640,
+            600,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "curious"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "two",
+          "trunk": "off",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            940,
+            660,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "light": "road"
+        },
+        "camera": {
+          "from": [
+            880,
+            660,
+            840
+          ],
+          "to": [
+            640,
+            640,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "light": "on",
+          "vessel": "on",
+          "siraj": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            620,
+            560,
+            1000
+          ],
+          "to": [
+            580,
+            640,
+            720
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "time": "dawn",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            520,
+            1150
+          ],
+          "to": [
+            620,
+            560,
+            860
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "road": "on",
+        "caravan": "on",
+        "light": "road"
+      }
+    }
   }
 }
