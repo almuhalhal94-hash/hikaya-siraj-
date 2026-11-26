@@ -252,7 +252,7 @@ body:not(.is-ready) #view, body:not(.is-ready) .topbar { opacity: 0; }
 
 /* ——— شاشات أوسع ——— */
 @media (min-width: 760px) {
-  .doors { grid-template-columns: repeat(4, 1fr); width: min(100%, 1060px); gap: 30px; }
+  .doors { grid-template-columns: repeat(3, 1fr); width: min(100%, 820px); gap: 30px; }
   .siraj { width: 150px; }
   .bubble { font-size: 1.4rem; padding: 14px 28px; }
   .home { gap: 34px; padding-top: 10px; }

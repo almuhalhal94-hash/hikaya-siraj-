@@ -47,6 +47,16 @@ const SCENES = {
       <g stroke="#a07a22" stroke-width="2" stroke-linecap="round" opacity=".7"><path d="M30 78h22M30 86h22M30 94h22M68 78h22M68 86h22M68 94h22"/></g>
       <path d="M26 122l34-12 34 12M34 132l26-18 26 18" fill="none" stroke="#8a5f38" stroke-width="5" stroke-linecap="round"/>
     </svg>`,
+  hadith: `
+    <svg viewBox="0 0 120 150" preserveAspectRatio="xMidYMax slice">
+      <rect width="120" height="150" fill="#3a2350"/>
+      <g fill="#fff4cf"><circle class="tw" cx="20" cy="20" r="1.4"/><circle class="tw tw--b" cx="98" cy="26" r="1.2"/><circle class="tw tw--c" cx="60" cy="12" r="1"/></g>
+      <ellipse class="pulse" cx="60" cy="84" rx="36" ry="34" fill="#ffd77a" opacity=".28"/>
+      <path d="M34 50h44l8 8v58H34z" fill="#fbf3df" stroke="#c9a24a" stroke-width="2.500" stroke-linejoin="round"/>
+      <path d="M78 50v8h8" fill="#f1e2bd" stroke="#c9a24a" stroke-width="2.500" stroke-linejoin="round"/>
+      <g stroke="#a07a22" stroke-width="2.200" stroke-linecap="round" opacity=".75"><path d="M44 68h32M44 78h32M44 88h24M44 98h30"/></g>
+      <g class="spin spin--slow"><path d="M88 106l4 9 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="#ffd77a" stroke="#fff4cf" stroke-width="1.500" stroke-linejoin="round"/></g>
+    </svg>`,
   house: `
     <svg viewBox="0 0 120 150" preserveAspectRatio="xMidYMax slice">
       <rect width="120" height="150" fill="#2a1f5c"/>
