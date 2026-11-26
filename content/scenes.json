@@ -13248,5 +13248,177 @@
         "axe": "bag"
       }
     }
+  },
+  "ibnjubayr-alshihab": {
+    "thumb": 4,
+    "witness": "meteor",
+    "scenes": [
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "meteor": "on"
+        },
+        "camera": {
+          "from": [
+            600,
+            420,
+            1100
+          ],
+          "to": [
+            700,
+            380,
+            900
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "wonder"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "light": "on",
+          "halqa": "big"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1100
+          ],
+          "to": [
+            640,
+            640,
+            800
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "curious"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "light": "maqam",
+          "halqa": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            640,
+            640,
+            820
+          ],
+          "to": [
+            600,
+            560,
+            1100
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "happy"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "one",
+          "suffa": "on",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            920,
+            640,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "curious"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "one",
+          "suffa": "on",
+          "trunk": "off",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            920,
+            640,
+            760
+          ],
+          "to": [
+            760,
+            560,
+            1050
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      },
+      {
+        "set": "dar",
+        "state": {
+          "far": "none",
+          "time": "dawn",
+          "light": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            560,
+            640,
+            760
+          ],
+          "to": [
+            600,
+            520,
+            1100
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "calm"
+      }
+    ],
+    "choice": {
+      "state": {
+        "era": "stone",
+        "ms": "one",
+        "suffa": "on",
+        "trunk": "off"
+      }
+    }
   }
 }

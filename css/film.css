@@ -945,3 +945,8 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .dr-axe { opacity: 0; transition: opacity 2.4s ease; } [data-axe] .dr-axe { opacity: 1; }
 .dr-axhead, .dr-axglow { opacity: 0; transition: opacity 2s ease, translate 3s var(--ease-out); }
 [data-axe="out"] .dr-axhead { opacity: 1; translate: 0 -60px; } [data-axe="out"] .dr-axglow { opacity: .8; }
+
+/* الشهاب المنقضّ (سعيد بن جبير) */
+.dr-meteor { opacity: 0; transition: opacity 1.5s ease; } [data-meteor="on"] .dr-meteor { opacity: 1; }
+.dr-mtrail { translate: 1000px 80px; opacity: 0; } [data-meteor="on"] .dr-mtrail { animation: dr-shoot 5.5s ease-in 1s infinite; }
+@keyframes dr-shoot { 0% { translate: 1060px 60px; opacity: 0; } 8% { opacity: 1; } 40% { translate: 640px 250px; opacity: 1; } 52%, 100% { translate: 560px 290px; opacity: 0; } }

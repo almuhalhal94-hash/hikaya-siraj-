@@ -672,6 +672,13 @@ export const ART = {
       <ellipse cx="44" cy="108" rx="14" ry="26" fill="#2a2e36"/>
       ${cheeks(84, 150, 134)}${eyes(96, 140, 98, 13)}${mouth(118, 144, 22, 12)}</g>`
   },
+  meteor: {
+    skin: '#fff4cf', ink: '#3a3020',
+    svg: `<defs>${lg('wtMt', '#fffdf2', '#f0c860', 1, 1)}</defs><g class="wt-body">
+      <path d="M100 100 L10 190 M110 110 L40 196 M90 90 L4 160" stroke="#fff4cf" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+      <path d="M100 20 L118 72 L172 74 L128 106 L144 160 L100 128 L56 160 L72 106 L28 74 L82 72 Z" fill="url(#wtMt)" stroke="#c9a040" stroke-width="3" stroke-linejoin="round"/>
+      ${cheeks(76, 124, 112)}${eyes(86, 114, 92, 10)}${mouth(100, 116, 18, 10)}</g>`
+  },
   cloth: {
     skin: '#c9a87a', ink: '#4a3220',
     svg: `<defs>${lg('wtCl', '#ead8b4', '#b8956a')}</defs><g class="wt-body">

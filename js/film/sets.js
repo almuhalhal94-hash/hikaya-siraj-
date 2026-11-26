@@ -957,6 +957,7 @@ function dar() {
       <path d="M-130 20 L-90-50 H90 L130 20 Z" fill="#a8402e" stroke="#5a2010" stroke-width="3"/>
       <path d="M-104 8 L-76-38 H76 L104 8 Z" fill="none" stroke="#f0d68a" stroke-width="3" opacity=".8"/>
       <path d="M-40-38 q40-22 80 0" stroke="#f0d68a" stroke-width="3" fill="none"/></g>
+    <g class="dr-meteor"><g class="dr-mtrail"><path d="M0 0 L-260 120" stroke="url(#g-white)" stroke-width="10" stroke-linecap="round" opacity=".9"/><path d="M0 0 L-200 92" stroke="#fffbe8" stroke-width="3" stroke-linecap="round"/><circle r="9" fill="#fff"/><circle r="26" fill="url(#g-white)"/></g></g>
     <g class="dr-axe" transform="translate(720 812)"><ellipse class="dr-axglow" cy="-110" rx="200" ry="160" fill="url(#g-warm)"/>
       <path d="M-110 10 Q-120-70-70-80 H70 Q120-70 110 10 Z" fill="#8a5a2e" stroke="#4a2d10" stroke-width="3"/>
       <path d="M-100-40 H100" stroke="#c9a060" stroke-width="5" opacity=".7"/><path d="M-60-80 Q0-120 60-80" stroke="#4a2d10" stroke-width="6" fill="none"/>
