@@ -229,6 +229,10 @@
           "story": "juwayriya-almusalla"
         },
         {
+          "name": "صفية بنت حُيَيّ",
+          "story": "safiyya-alabaa"
+        },
+        {
           "name": "فاطمة بنت محمد ﷺ",
           "story": "fatima-alraha"
         },
@@ -267,6 +271,18 @@
         {
           "name": "زينب امرأة عبد الله بن مسعود",
           "story": "zaynabmasud-alhuli"
+        },
+        {
+          "name": "أم الفضل لبابة بنت الحارث",
+          "story": "ummfadl-alqadah"
+        },
+        {
+          "name": "أم هانئ بنت أبي طالب",
+          "story": "ummhani-alaman"
+        },
+        {
+          "name": "خولة بنت ثعلبة (المجادِلة)",
+          "story": "khawla-aljidar"
         }
       ]
     },
