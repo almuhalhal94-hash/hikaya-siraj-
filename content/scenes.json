@@ -14317,5 +14317,183 @@
         "light": "mid"
       }
     }
+  },
+  "nafi-alrahila": {
+    "thumb": 2,
+    "witness": "caravan",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "light": "road",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            600,
+            1150
+          ],
+          "to": [
+            900,
+            680,
+            820
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "steps",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "light": "far",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            900,
+            680,
+            820
+          ],
+          "to": [
+            700,
+            620,
+            1150
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "dust"
+        ],
+        "sfx": "wind",
+        "mood": "curious"
+      },
+      {
+        "set": "haram",
+        "state": {
+          "light": "stone",
+          "stone": "glow"
+        },
+        "camera": {
+          "from": [
+            600,
+            560,
+            1050
+          ],
+          "to": [
+            600,
+            600,
+            700
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "glow",
+        "mood": "wonder"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "one",
+          "suffa": "on",
+          "trunk": "off"
+        },
+        "camera": {
+          "from": [
+            800,
+            560,
+            1000
+          ],
+          "to": [
+            920,
+            640,
+            720
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "tap",
+        "mood": "curious"
+      },
+      {
+        "set": "mosque",
+        "state": {
+          "era": "stone",
+          "ms": "one",
+          "suffa": "on",
+          "trunk": "off",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            920,
+            640,
+            760
+          ],
+          "to": [
+            760,
+            560,
+            1050
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "star",
+        "mood": "happy"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "road": "on",
+          "caravan": "on",
+          "light": "road",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            600,
+            600,
+            900
+          ],
+          "to": [
+            800,
+            600,
+            1200
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "steps",
+        "mood": "happy"
+      }
+    ],
+    "choice": {
+      "state": {
+        "era": "stone",
+        "ms": "one",
+        "suffa": "on",
+        "trunk": "off"
+      }
+    }
   }
 }
