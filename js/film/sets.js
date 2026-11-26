@@ -650,6 +650,10 @@ function landExtras() {
     <g class="ld-anthill">${[[470, 726], [760, 732]].map(([x, y]) => `<path transform="translate(${x} ${y})" d="M-60 0q30-44 60-46 30 2 60 46z" fill="#7a5634"/><ellipse transform="translate(${x} ${y - 30})" rx="10" ry="6" fill="#1c120a"/>`).join('')}</g>
     <g class="ld-grain" fill="#f0d68a" transform="translate(620 744)">${grain}</g>
     <g class="ld-grove">${[[160, 700, 1.1, -6], [290, 690, 0.9, 5], [1010, 696, 1, 4], [1140, 704, 1.15, -5], [870, 690, 0.8, -3]].map(([x, y, k, l]) => `<g stroke="#1c5238">${palm(x, y, k, l)}</g>`).join('')}</g>
+    <g class="ld-river"><path d="M-700 770 Q-200 740 300 760 T1300 745 L1900 750 V840 Q1300 830 800 845 T-100 840 L-700 855 Z" fill="#2f6f9a"/>
+      <path class="ld-rvshine" d="M-600 790 Q-200 770 300 785 T1300 775" stroke="#bfeee8" stroke-width="4" fill="none" stroke-dasharray="40 60" opacity=".7"/>
+      <path class="ld-rvshine" d="M-650 818 Q-150 800 350 812 T1350 804" stroke="#bfeee8" stroke-width="3" fill="none" stroke-dasharray="30 70" opacity=".5"/>
+      <path d="M-700 770 Q-200 740 300 760 T1300 745 L1900 750 M1900 840 Q1300 830 800 845 T-100 840 L-700 855" stroke="#c9b48e" stroke-width="6" fill="none" opacity=".6"/></g>
     <g class="ld-jummar" transform="translate(620 736)"><ellipse class="ld-jmglow" cy="-40" rx="170" ry="110" fill="url(#g-white)"/>
       <ellipse cy="6" rx="90" ry="14" fill="#6b4a2a" opacity=".5"/><path d="M-34 0q-6-54 8-86 26-14 52 0 14 32 8 86z" fill="#f6f0dc" stroke="#d8cba4" stroke-width="3"/>
       <path d="M-18-76q-4 34 0 70M0-82v76M18-76q4 34 0 70" fill="none" stroke="#e2d6b0" stroke-width="3"/><ellipse cy="-84" rx="26" ry="8" fill="#fffbea" stroke="#d8cba4" stroke-width="2"/></g>
