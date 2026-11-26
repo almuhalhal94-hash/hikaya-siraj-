@@ -1063,3 +1063,9 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-way, .ld-branch { opacity: 0; transition: opacity 3s ease; } [data-way] .ld-way, [data-branch] .ld-branch { opacity: 1; }
 .ld-brmove { transition: translate 4s var(--ease-out, ease), rotate 4s var(--ease-out, ease); } [data-branch="moved"] .ld-brmove { translate: 430px -40px; rotate: -24deg; }
 .ld-brglow2 { opacity: 0; transition: opacity 3s ease; } [data-branch="moved"] .ld-brglow2 { opacity: .5; }
+
+/* land: qurban (on/taken) قربانان على حجرين، taken ينزل نور على الأول (تُقبّل منه)؛ crow=on غراب أسود ينقر الأرض */
+.ld-qurban, .ld-crow { opacity: 0; transition: opacity 3s ease; } [data-qurban] .ld-qurban, [data-crow] .ld-crow { opacity: 1; }
+.ld-qbbeam { transition: opacity 4s ease; } [data-qurban="taken"] .ld-qb-a .ld-qbbeam { opacity: .35; } [data-qurban="taken"] .ld-qb-b { filter: brightness(.6); }
+[data-crow="on"] .ld-crowpos { animation: ld-peck 1.8s ease-in-out infinite; transform-origin: 20px 0; }
+@keyframes ld-peck { 0%, 60%, 100% { rotate: 0deg; } 30% { rotate: 22deg; } }

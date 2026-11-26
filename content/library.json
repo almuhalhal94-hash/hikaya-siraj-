@@ -386,6 +386,10 @@
       "sub": "من القرآن والسنة",
       "items": [
         {
+          "name": "ابنا آدم",
+          "story": "ibnay-adam"
+        },
+        {
           "name": "أصحاب الكهف",
           "story": "ashab-alkahf"
         },

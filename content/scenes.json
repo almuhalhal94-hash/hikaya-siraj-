@@ -19472,5 +19472,177 @@
         "glow": "full"
       }
     }
+  },
+  "ibnay-adam": {
+    "thumb": 2,
+    "witness": "crow",
+    "scenes": [
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "pair": "on",
+          "crow": "on"
+        },
+        "camera": {
+          "from": [
+            700,
+            620,
+            1000
+          ],
+          "to": [
+            700,
+            660,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "qurban": "taken",
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            600,
+            1000
+          ],
+          "to": [
+            640,
+            640,
+            880
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "wonder"
+      },
+      {
+        "set": "land",
+        "state": {
+          "qurban": "taken",
+          "light": "mid",
+          "pair": "on",
+          "shake": "on"
+        },
+        "camera": {
+          "from": [
+            640,
+            650,
+            880
+          ],
+          "to": [
+            660,
+            680,
+            760
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "mid",
+          "pair": "on"
+        },
+        "camera": {
+          "from": [
+            660,
+            680,
+            760
+          ],
+          "to": [
+            680,
+            700,
+            680
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      },
+      {
+        "set": "land",
+        "state": {
+          "time": "dawn",
+          "light": "mid",
+          "pair": "on",
+          "glow": "full"
+        },
+        "camera": {
+          "from": [
+            680,
+            690,
+            720
+          ],
+          "to": [
+            660,
+            660,
+            860
+          ],
+          "dur": 15
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "chime",
+        "mood": "calm"
+      },
+      {
+        "set": "land",
+        "state": {
+          "light": "low",
+          "crow": "on"
+        },
+        "camera": {
+          "from": [
+            820,
+            660,
+            880
+          ],
+          "to": [
+            880,
+            690,
+            760
+          ],
+          "dur": 16
+        },
+        "fx": [
+          "motes"
+        ],
+        "sfx": "wind",
+        "mood": "worried"
+      }
+    ],
+    "choice": {
+      "state": {
+        "time": "dawn",
+        "light": "mid",
+        "pair": "on",
+        "glow": "full"
+      }
+    }
   }
 }

@@ -859,6 +859,8 @@ function land() {
       <path class="ld-tentdoor" d="M-44 0L0-112 44 0z"/><path d="M0-150v-26" stroke="#4a2d10" stroke-width="6"/><path d="M-170 0h-24M170 0h24" stroke="#4a2d10" stroke-width="4"/>
       <path d="M-120-46h60M60-46h60" stroke="#e8c48a" stroke-width="6" opacity=".55"/></g>
     ${landExtras()}
+    <g class="ld-qurban">${[[500, 'a'], [780, 'b']].map(([x, k]) => `<g class="ld-qb-${k}" transform="translate(${x} 740)"><path class="ld-qbbeam" d="M-40-700L40-700L70 0L-70 0Z" fill="#fff4cf" opacity="0"/><ellipse cy="4" rx="70" ry="16" fill="#3a2a1a" opacity=".4"/><path d="M-56 0q8-40 56-46q48 6 56 46z" fill="#7a6a58" stroke="#3a2e22" stroke-width="3"/><ellipse cy="-46" rx="34" ry="10" fill="#c9a24a"/></g>`).join('')}</g>
+    <g class="ld-crow" transform="translate(900 700) scale(1.5)"><g class="ld-crowpos"><path d="M-40 0q20-30 50-24q24 4 30 20l26 6-26 6q-14 18-46 14q-30-4-34-22z" fill="#1a1a22"/><path d="M-34-8q20-20 50-8q-10 14-50 8z" fill="#33333f"/><path d="M-40 0l-26-8l8 14z" fill="#1a1a22"/><circle cx="20" cy="-10" r="3" fill="#e8e0c0"/><path d="M-10 18l-6 14M6 18l4 14" stroke="#1a1a22" stroke-width="4"/></g></g>
     <g class="ld-way"><path d="M560 640L720 640L1500 1500L-220 1500Z" fill="#c9a072" opacity=".55"/><path d="M640 650V1500" stroke="#e8c898" stroke-width="5" stroke-dasharray="20 30" opacity=".5"/>
       <g class="ld-branch" transform="translate(640 800)"><ellipse class="ld-brglow2" rx="200" ry="70" fill="url(#g-warm)" opacity=".5"/><g class="ld-brmove">
         <path d="M-180 10Q0-20 180 6" stroke="#5a3a1c" stroke-width="12" stroke-linecap="round" fill="none"/>

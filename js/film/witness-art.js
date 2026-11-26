@@ -771,6 +771,15 @@ export const ART = {
       <ellipse cx="66" cy="96" rx="22" ry="10" fill="#7a8a5a"/><ellipse cx="140" cy="94" rx="22" ry="10" fill="#7a8a5a"/>
       ${eyes(80, 124, 138, 11)}${mouth(102, 156, 16, 7)}</g>`
   },
+  crow: {
+    skin: '#2a2a34', ink: '#0e0e14',
+    svg: `<defs>${lg('wtCw', '#3a3a48', '#16161e')}</defs><g class="wt-body">
+      <path d="M60 196l-6-26M140 196l6-26" stroke="#c9a24a" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="100" cy="116" rx="74" ry="66" fill="url(#wtCw)" stroke="#0e0e14" stroke-width="4"/>
+      <path d="M100 126l34 10-34 12z" fill="#c9a24a" stroke="#6b4a1d" stroke-width="2"/>
+      <path d="M30 120q-24-10-20-40q24 8 34 30z" fill="#22222c"/><path d="M170 120q24-10 20-40q-24 8-34 30z" fill="#22222c"/>
+      ${eyes(78, 122, 100, 13)}${mouth(100, 158, 16, 8)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">
