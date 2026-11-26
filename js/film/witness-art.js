@@ -780,6 +780,22 @@ export const ART = {
       <path d="M30 120q-24-10-20-40q24 8 34 30z" fill="#22222c"/><path d="M170 120q24-10 20-40q-24 8-34 30z" fill="#22222c"/>
       ${eyes(78, 122, 100, 13)}${mouth(100, 158, 16, 8)}</g>`
   },
+  dam: {
+    skin: '#8a7a62', ink: '#3a2e22',
+    svg: `<defs>${lg('wtDm', '#a8977c', '#6b5c46')}</defs><g class="wt-body">
+      <path d="M0 40Q60 20 100 30Q140 20 200 40V70H0Z" fill="#3a7ab0"/>
+      <path d="M24 60H176L186 196H14Z" fill="url(#wtDm)" stroke="#3a2e22" stroke-width="4"/>
+      <path d="M20 96H180M18 170H182" stroke="#5a4e3e" stroke-width="4"/>
+      ${cheeks(56, 144, 146)}${eyes(78, 122, 124, 13)}${mouth(100, 154, 20, 10)}</g>`
+  },
+  maida: {
+    skin: '#e8d8a8', ink: '#6b4a1d',
+    svg: `<defs>${lg('wtMd', '#f6ecd0', '#d8c088')}</defs><g class="wt-body">
+      <path d="M40 40l-10-24M100 34V8M160 40l10-24" stroke="#fff4cf" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="100" cy="130" rx="92" ry="62" fill="url(#wtMd)" stroke="#6b4a1d" stroke-width="4"/>
+      <g stroke="#6b441d" stroke-width="2"><ellipse cx="54" cy="96" rx="16" ry="8" fill="#c98a3a"/><ellipse cx="146" cy="96" rx="16" ry="8" fill="#7aa04a"/><circle cx="100" cy="84" r="8" fill="#d8584a"/></g>
+      ${cheeks(56, 144, 146)}${eyes(78, 122, 124, 13)}${mouth(100, 156, 20, 10)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">
