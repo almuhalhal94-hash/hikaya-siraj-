@@ -685,6 +685,16 @@ function landExtras() {
       <circle cx="84" cy="-44" r="3" fill="#fff4cf"/>
       <path class="ld-dogtongue" d="M104-30q4 12-2 16" stroke="#e07a7a" stroke-width="6" fill="none" stroke-linecap="round"/></g>
       <g class="ld-dogwater" fill="#9fd4ff"><ellipse cx="112" cy="16" rx="26" ry="7" opacity=".7"/></g></g>
+    <g class="ld-lion" transform="translate(1010 712)"><g class="ld-lionbody">
+      <ellipse cy="6" rx="230" ry="18" fill="#000" opacity=".35"/>
+      <path d="M150-118q70-14 84 44 6 34-8 48" fill="none" stroke="#120d0a" stroke-width="11" stroke-linecap="round"/><ellipse cx="226" cy="-24" rx="15" ry="20" fill="#24160c"/>
+      <path d="M94-92h40l8 92h-36zM44-92h38l2 92h-34zM-104-92h40l-4 92h-36zM-56-92h38l4 92h-36z" fill="#100c12"/>
+      <path d="M-134-100q0-74 84-76h150q66 0 74 54 4 46-44 48h-208q-56 0-56-26z" fill="#141018"/>
+      <path d="${Array.from({ length: 22 }, (_, i) => { const a = i / 22 * Math.PI * 2, d = i % 2 ? 72 : 96; return `${i ? 'L' : 'M'}${(-140 + Math.cos(a) * d).toFixed(0)} ${(-150 + Math.sin(a) * d * .92).toFixed(0)}`; }).join('')}z" fill="#24160c"/>
+      <circle cx="-150" cy="-192" r="13" fill="#141018"/><circle cx="-196" cy="-180" r="12" fill="#141018"/>
+      <ellipse cx="-172" cy="-142" rx="46" ry="50" fill="#16111a"/><ellipse cx="-206" cy="-116" rx="24" ry="19" fill="#1c1620"/>
+      <circle class="ld-lioneye" cx="-190" cy="-152" r="4.5" fill="#f0b040"/>
+    </g></g>
     <g class="ld-khuff" transform="translate(720 760)"><ellipse class="ld-khglow" cy="-30" rx="110" ry="80" fill="url(#g-warm)"/>
       <path d="M-24-80h40v60q30 4 40 20v10h-82z" fill="#7a4a24" stroke="#3d2412" stroke-width="3"/><path d="M-24-72h40" stroke="#c9925a" stroke-width="4"/>
       <g class="ld-khdrip" fill="#9fd4ff"><ellipse cx="-30" cy="-6" rx="4" ry="7"/><ellipse cx="-38" cy="8" rx="3" ry="5"/></g></g>
