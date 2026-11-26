@@ -756,6 +756,30 @@ export const ART = {
       <path d="M70 190 H130" stroke="#6b441d" stroke-width="10" stroke-linecap="round"/>
       ${cheeks(56, 144, 130)}${eyes(78, 122, 110, 13)}${mouth(100, 140, 20, 10)}</g>`
   },
+  cloud: {
+    skin: '#d8dde6', ink: '#5a6270',
+    svg: `<defs>${lg('wtCl', '#f4f6fa', '#b8c0cc')}</defs><g class="wt-body">
+      <g stroke="#9ac8e8" stroke-width="6" stroke-linecap="round"><path d="M64 172v22M100 176v24M136 172v22"/></g>
+      <path d="M40 150 Q10 150 14 120 Q18 92 50 96 Q56 52 100 50 Q144 52 150 92 Q184 90 186 122 Q186 150 158 150 Z" fill="url(#wtCl)" stroke="#5a6270" stroke-width="4"/>
+      ${cheeks(62, 138, 128)}${eyes(80, 120, 106, 13)}${mouth(100, 132, 20, 10)}</g>`
+  },
+  branch: {
+    skin: '#7a5a3a', ink: '#3a2412',
+    svg: `<g class="wt-body">
+      <path d="M20 150 Q100 120 184 136" stroke="#6b4a2a" stroke-width="40" stroke-linecap="round" fill="none"/>
+      <path d="M40 132l-14-30M80 122l6-34M130 122l-6-34M170 130l14-30M60 156l-10 30M150 158l12 28" stroke="#4a2e18" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="66" cy="96" rx="22" ry="10" fill="#7a8a5a"/><ellipse cx="140" cy="94" rx="22" ry="10" fill="#7a8a5a"/>
+      ${eyes(80, 124, 138, 11)}${mouth(102, 156, 16, 7)}</g>`
+  },
+  crow: {
+    skin: '#2a2a34', ink: '#0e0e14',
+    svg: `<defs>${lg('wtCw', '#3a3a48', '#16161e')}</defs><g class="wt-body">
+      <path d="M60 196l-6-26M140 196l6-26" stroke="#c9a24a" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="100" cy="116" rx="74" ry="66" fill="url(#wtCw)" stroke="#0e0e14" stroke-width="4"/>
+      <path d="M100 126l34 10-34 12z" fill="#c9a24a" stroke="#6b4a1d" stroke-width="2"/>
+      <path d="M30 120q-24-10-20-40q24 8 34 30z" fill="#22222c"/><path d="M170 120q24-10 20-40q-24 8-34 30z" fill="#22222c"/>
+      ${eyes(78, 122, 100, 13)}${mouth(100, 158, 16, 8)}</g>`
+  },
   jar: {
     skin: '#b8703e', ink: '#5a2e14',
     svg: `<defs>${lg('wtJr', '#c98450', '#8a4a24')}</defs><g class="wt-body">

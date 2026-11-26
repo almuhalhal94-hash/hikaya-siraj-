@@ -1049,3 +1049,23 @@ body.in-film .topbar, body.in-film #ground, body.in-film .moon { display: none; 
 .ld-milk { opacity: 0; transition: opacity 3s ease; } [data-milk] .ld-milk { opacity: 1; }
 .ld-mkpos { transition: translate 7s var(--ease-out, ease); } [data-milk="go"] .ld-mkpos { translate: 300px -110px; }
 .ld-mkglow { transform-box: fill-box; transform-origin: center; animation: st-breathe 3.4s ease-in-out infinite; }
+
+/* land: cloud (on/rain/aside) سحابة يُسمع منها صوت، تمطر، aside تتنحّى يسارًا وتمطر على الحرّة؛ harra (on/flow) حجارة سود وشَرْجة تمتلئ ماءً نحو البستان */
+.ld-cloud, .ld-harra { opacity: 0; transition: opacity 3s ease; } [data-cloud] .ld-cloud, [data-harra] .ld-harra { opacity: 1; }
+.ld-clpos { transition: translate 6s var(--ease-out, ease); } [data-cloud="aside"] .ld-clpos { translate: -620px 140px; }
+.ld-rain { opacity: 0; } [data-cloud="rain"] .ld-rain, [data-cloud="aside"] .ld-rain { opacity: 1; } .ld-rain path { animation: ld-raindrop .9s linear infinite; animation-delay: var(--d); }
+@keyframes ld-raindrop { 0% { translate: 0 -10px; opacity: 0; } 20% { opacity: 1; } 100% { translate: -8px 120px; opacity: 0; } }
+.ld-clvoice { opacity: 0; } [data-cloud="on"] .ld-clvoice path { animation: ld-voice 2.4s ease-out infinite; } [data-cloud="on"] .ld-clvoice { opacity: 1; } .ld-clvoice path:last-child { animation-delay: .6s; }
+@keyframes ld-voice { 0% { opacity: 0; } 30% { opacity: .9; } 100% { opacity: 0; } }
+.ld-sharj { stroke-dasharray: 1000; stroke-dashoffset: 1000; transition: stroke-dashoffset 8s ease 1s; } [data-harra="flow"] .ld-sharj { stroke-dashoffset: 0; }
+
+/* land: way=on طريق ترابي؛ branch (on/moved) غصن شوك يسدّ الطريق، moved يُزاح إلى جانبه */
+.ld-way, .ld-branch { opacity: 0; transition: opacity 3s ease; } [data-way] .ld-way, [data-branch] .ld-branch { opacity: 1; }
+.ld-brmove { transition: translate 4s var(--ease-out, ease), rotate 4s var(--ease-out, ease); } [data-branch="moved"] .ld-brmove { translate: 430px -40px; rotate: -24deg; }
+.ld-brglow2 { opacity: 0; transition: opacity 3s ease; } [data-branch="moved"] .ld-brglow2 { opacity: .5; }
+
+/* land: qurban (on/taken) قربانان على حجرين، taken ينزل نور على الأول (تُقبّل منه)؛ crow=on غراب أسود ينقر الأرض */
+.ld-qurban, .ld-crow { opacity: 0; transition: opacity 3s ease; } [data-qurban] .ld-qurban, [data-crow] .ld-crow { opacity: 1; }
+.ld-qbbeam { transition: opacity 4s ease; } [data-qurban="taken"] .ld-qb-a .ld-qbbeam { opacity: .35; } [data-qurban="taken"] .ld-qb-b { filter: brightness(.6); }
+[data-crow="on"] .ld-crowpos { animation: ld-peck 1.8s ease-in-out infinite; transform-origin: 20px 0; }
+@keyframes ld-peck { 0%, 60%, 100% { rotate: 0deg; } 30% { rotate: 22deg; } }

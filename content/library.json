@@ -386,6 +386,10 @@
       "sub": "من القرآن والسنة",
       "items": [
         {
+          "name": "ابنا آدم",
+          "story": "ibnay-adam"
+        },
+        {
           "name": "أصحاب الكهف",
           "story": "ashab-alkahf"
         },
@@ -434,12 +438,24 @@
           "story": "khashaba-albahr"
         },
         {
+          "name": "التاجر الذي يتجاوز عن المعسر",
+          "story": "tajir-aldukkan"
+        },
+        {
           "name": "الأبرص والأقرع والأعمى",
           "story": "shat-alama"
         },
         {
+          "name": "صاحب الحديقة والسحابة",
+          "story": "hadiqa-alsahaba"
+        },
+        {
           "name": "ساقي الكلب",
           "story": "khuff-albir"
+        },
+        {
+          "name": "الذي أزاح غصن الشوك",
+          "story": "ghusn-alshawk"
         },
         {
           "name": "صاحب جرّة الذهب",
