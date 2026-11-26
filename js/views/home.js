@@ -37,6 +37,16 @@ const SCENES = {
       </g>
       <path d="M-4 150v-30q30-16 64-6t64-8v44z" fill="#0c1c3d"/>
     </svg>`,
+  quran: `
+    <svg viewBox="0 0 120 150" preserveAspectRatio="xMidYMax slice">
+      <rect width="120" height="150" fill="#123a3a"/>
+      <g fill="#fff4cf"><circle class="tw" cx="18" cy="24" r="1.4"/><circle class="tw tw--b" cx="100" cy="30" r="1.2"/><circle class="tw tw--c" cx="70" cy="14" r="1"/></g>
+      <ellipse class="pulse" cx="60" cy="86" rx="40" ry="30" fill="#ffd77a" opacity=".3"/>
+      <path d="M60 70q-18-8-38-4v42q20-4 38 4z" fill="#fbf3df" stroke="#c9a24a" stroke-width="2.500" stroke-linejoin="round"/>
+      <path d="M60 70q18-8 38-4v42q-20-4-38 4z" fill="#f1e2bd" stroke="#c9a24a" stroke-width="2.500" stroke-linejoin="round"/>
+      <g stroke="#a07a22" stroke-width="2" stroke-linecap="round" opacity=".7"><path d="M30 78h22M30 86h22M30 94h22M68 78h22M68 86h22M68 94h22"/></g>
+      <path d="M26 122l34-12 34 12M34 132l26-18 26 18" fill="none" stroke="#8a5f38" stroke-width="5" stroke-linecap="round"/>
+    </svg>`,
   house: `
     <svg viewBox="0 0 120 150" preserveAspectRatio="xMidYMax slice">
       <rect width="120" height="150" fill="#2a1f5c"/>

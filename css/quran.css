@@ -1,0 +1,45 @@
+/* قسم «قرآني»: قائمة السور وصفحة السورة بتظليل الكلمة المتلوّة */
+.qr-hub { max-width: 640px; }
+.qr-hub__stats { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
+.qr-hub__stats .chip { display: inline-flex; align-items: center; gap: 6px; max-width: none; }
+.qr-hub__stats svg { width: 18px; height: 18px; color: var(--gold); }
+.qr-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; padding: 0; }
+.qr-item { animation: door-in .7s var(--ease-out) backwards; animation-delay: calc(var(--i) * 40ms); }
+.qr-item a { display: flex; align-items: center; gap: 10px; min-height: 66px; padding: 8px 12px; border-radius: 20px; color: var(--cream); text-decoration: none; background: linear-gradient(180deg, rgba(30, 60, 107, .7), rgba(10, 22, 48, .85)); border: 1.5px solid rgba(255, 215, 122, .25); box-shadow: 0 6px 16px rgba(0, 0, 0, .35); transition: transform .15s ease; }
+.qr-item a:active { transform: scale(.96); }
+.qr-item__no { flex: none; display: grid; place-items: center; width: 38px; aspect-ratio: 1; border-radius: 50%; font-weight: 800; font-size: .95rem; color: var(--gold); border: 2px solid rgba(255, 215, 122, .5); background: radial-gradient(circle, rgba(255, 215, 122, .15), transparent 70%); }
+.qr-item__body { flex: 1; min-width: 0; display: grid; }
+.qr-item__body b { font-family: 'Amiri Quran', 'Noto Naskh Arabic', serif; font-weight: 400; font-size: 1.3rem; line-height: 1.5; }
+.qr-item__body small { font-size: .8rem; color: #9fb2d6; }
+.qr-item__mark svg { width: 22px; height: 22px; color: var(--gold); filter: drop-shadow(0 0 6px rgba(255, 215, 122, .6)); }
+.qr-item.is-heard .qr-item__mark svg { color: var(--teal-soft); filter: none; }
+.qr-item.is-hifz a { border-color: var(--gold); background: linear-gradient(180deg, rgba(96, 72, 20, .75), rgba(40, 28, 8, .85)); }
+.qr-item.is-next a { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(95, 214, 200, .35), 0 8px 22px rgba(0, 0, 0, .4); }
+.qr-item.is-next small { color: var(--teal-soft); font-weight: 800; }
+.qr-hub__src { margin-top: 18px; text-align: center; font-size: .88rem; color: #9fb2d6; line-height: 1.7; }
+
+.qr { max-width: 720px; display: grid; gap: 12px; padding-bottom: 150px; }
+.qr__top { margin-bottom: 0; }
+.qr__top h1 { font-family: 'Amiri Quran', 'Noto Naskh Arabic', serif; font-weight: 400; font-size: clamp(1.7rem, 7vw, 2.2rem); color: var(--gold); }
+.qr__mushaf { position: relative; padding: 22px 18px; border-radius: 26px; background: linear-gradient(180deg, #fbf3df, #f1e2bd); color: #2b2210; border: 6px double #c9a24a; box-shadow: 0 18px 40px rgba(0, 0, 0, .5), inset 0 0 40px rgba(201, 162, 74, .25); animation: door-in .8s var(--ease-out) backwards; }
+.qr__bism, .qr__text { font-family: 'Amiri Quran', 'Traditional Arabic', 'Noto Naskh Arabic', serif; }
+.qr__bism { text-align: center; font-size: clamp(1.4rem, 6vw, 1.8rem); line-height: 2; color: #6b4e12; margin-bottom: 6px; border-radius: 12px; transition: background .3s ease; }
+.qr__bism.is-now { background: rgba(255, 215, 122, .45); }
+.qr__text { text-align: justify; text-align-last: center; font-size: clamp(1.55rem, 6.6vw, 2.1rem); line-height: 2.35; }
+.qr-ayah { cursor: pointer; border-radius: 10px; transition: background .3s ease, filter .4s ease; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.qr-ayah.is-now { background: rgba(95, 214, 200, .16); }
+.qr-w { border-radius: 8px; transition: background .12s ease, color .12s ease; }
+.qr-w.is-now { background: #ffd77a; color: #3a2a05; box-shadow: 0 0 0 3px #ffd77a; }
+.qr-end { color: #a07a22; font-size: .9em; white-space: nowrap; }
+.qr.is-hiding .qr-ayah:not(.is-shown) .qr-w { filter: blur(9px); opacity: .55; }
+.qr.is-hiding .qr-ayah:not(.is-shown) { background: rgba(160, 122, 34, .12); }
+.qr__msg { min-height: 1.6em; text-align: center; font-weight: 800; color: var(--teal-soft); text-wrap: balance; }
+.qr__bar { position: fixed; z-index: 20; left: 50%; bottom: max(12px, env(safe-area-inset-bottom)); translate: -50% 0; display: grid; grid-template-columns: 1fr auto 1fr; grid-template-rows: auto auto; align-items: center; gap: 8px 10px; width: min(calc(100% - 24px), 520px); padding: 10px 12px; border-radius: 26px; background: rgba(8, 18, 42, .88); border: 1.5px solid rgba(255, 215, 122, .35); box-shadow: 0 14px 34px rgba(0, 0, 0, .55); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.qr__play { grid-row: 1; grid-column: 2; width: 66px; aspect-ratio: 1; border: 0; border-radius: 50%; cursor: pointer; color: #3a2a05; background: radial-gradient(circle at 50% 34%, #fff0be, #ffd77a 50%, #d9a842); box-shadow: 0 5px 0 #9a7426, 0 0 26px rgba(255, 215, 122, .45); }
+.qr__play svg { width: 34px; height: 34px; }
+.qr__play:active { transform: translateY(4px); box-shadow: 0 1px 0 #9a7426; }
+.qr__opt { min-height: 46px; padding: 0 10px; border-radius: 16px; border: 1.5px solid rgba(255, 215, 122, .3); background: rgba(30, 60, 107, .5); color: var(--cream); font: inherit; font-weight: 800; font-size: .9rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.qr__opt svg { width: 20px; height: 20px; }
+.qr__hide[aria-pressed="true"] { background: var(--teal); color: #052a2a; border-color: transparent; }
+.qr__done { grid-row: 2; grid-column: 1 / -1; min-height: 46px; }
+.qr__done.is-done { background: linear-gradient(180deg, #ffe6a3, #e5b65a); color: #3a2a05; }

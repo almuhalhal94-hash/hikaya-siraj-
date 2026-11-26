@@ -9,9 +9,10 @@ import adhkar from './views/adhkar.js';
 import games from './views/games.js';
 import house from './views/house.js';
 import parents from './views/parents.js';
+import quran from './views/quran.js';
 
 // كل قسم يُسجَّل هنا عند بنائه؛ ما لم يُبنَ بعد يعرض صفحة «قريبًا».
-const routes = { '': home, stories, games, adhkar, house, parents };
+const routes = { '': home, stories, quran, games, adhkar, house, parents };
 
 const view = document.getElementById('view');
 const veil = document.getElementById('veil');
