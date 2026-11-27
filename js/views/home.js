@@ -80,7 +80,6 @@ SCENES.salati = `
       <path d="M18 150v-42q0-30 42-42 42 12 42 42v42z" fill="#2f9c90"/>
       <path d="M34 150v-36q0-16 26-26 26 10 26 26v36z" fill="#123056"/>
       <path d="M44 150v-30q0-10 16-16 16 6 16 16v30z" fill="#ffd77a" opacity=".85"/>
-      <path d="M60 66v-14M56 56h8" stroke="#ffd77a" stroke-width="3" stroke-linecap="round"/>
     </svg>`;
 
 const MEDAL = '<svg viewBox="0 0 48 56" aria-hidden="true"><path d="M14 2h8l4 14h-8zM34 2h-8l-4 14h8z" fill="#5fd6c8"/><circle cx="24" cy="34" r="19" fill="#ffd77a" stroke="#c9a24a" stroke-width="3"/><path d="M24 21l3.800 8 8.800 1-6.500 6 1.800 8.700L24 40.300l-7.900 4.400 1.800-8.700-6.500-6 8.800-1z" fill="#fff4cf"/></svg>';
