@@ -64,7 +64,7 @@ export default function salati(el, { ui, lines }) {
     const tile = html(`<button class="sl-tile" type="button" aria-pressed="false" style="--a:${a};--b:${b};--c:${c};--i:${i}">
       <svg class="sl-tile__sky" viewBox="0 0 64 64" aria-hidden="true">${SUN[kind]}${MOSQUE}</svg>
       <b></b><span class="sl-tile__moon" aria-hidden="true"></span><small></small></button>`);
-    tile.querySelector('b').textContent = p.name;
+    tile.querySelector('b').textContent = p.friday && new Date().getDay() === 5 ? p.friday : p.name; // يوم الجمعة: الجمعة مكان الظهر
     tile.addEventListener('click', () => toggle(i, tile));
     $('.sl__grid').append(tile);
     return tile;
