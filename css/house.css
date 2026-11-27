@@ -15,7 +15,7 @@
 
 .hs__window { position: absolute; top: 8%; right: 6%; width: 22%; aspect-ratio: 1 / 1.35; overflow: hidden; border-radius: 50% 50% 10px 10px / 38% 38% 10px 10px; border: 4px solid var(--gold-deep); background: linear-gradient(180deg, #06102a, #16305a); box-shadow: inset 0 0 20px rgba(0, 0, 0, .6), 0 0 24px rgba(143, 224, 214, .25); }
 .hs--morning .hs__window { background: linear-gradient(180deg, #2c69ad 0%, #79b6e2 60%, #ffdfa6 100%); }
-.hs__window::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 48%, var(--gold-deep) 48% 52%, transparent 52%), linear-gradient(180deg, transparent 54%, var(--gold-deep) 54% 57%, transparent 57%); }
+.hs__window::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 48%, var(--gold-deep) 48% 52%, transparent 52%); }
 .hs__orb { position: absolute; top: 16%; left: 22%; width: 30%; aspect-ratio: 1; border-radius: 50%; box-shadow: -6px 4px 0 0 #ffe9a8; rotate: -12deg; filter: drop-shadow(0 0 8px rgba(255, 233, 168, .7)); }
 .hs--morning .hs__orb { left: 50%; top: 30%; width: 38%; translate: -50% 0; rotate: 0deg; box-shadow: 0 0 22px 8px rgba(255, 221, 140, .8); background: radial-gradient(circle, #fffbe6 0 40%, #ffd77a 70%); }
 .hs__wstar { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #fff4cf; animation: tw 2.6s ease-in-out infinite; }
